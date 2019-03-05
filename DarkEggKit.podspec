@@ -29,7 +29,6 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/darkzero_mk2'
 
   s.ios.deployment_target = '10.0'
-/Users/huyuhua/Solutions/darkzero/DarkEggKit/.travis.yml
   #s.source_files = 'DarkEggKit/Classes/**/*'
   #s.resources = ['DarkEggKit/Classes/PopupMessage/*.xcassets']
   s.default_subspec = 'Common'
