@@ -57,9 +57,10 @@ UIImage.imageWithGradient(colors: CGColor...)
 
 #### Logger
 
+    Will auto print out the file name, function name, line number and column number
+
 * **Debug Log**
 
-Will auto print out the file name, function name, line number and column number
 
 ```Swift
 Logger.debug("{message}")
