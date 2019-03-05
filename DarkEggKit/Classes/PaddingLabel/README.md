@@ -16,3 +16,6 @@ import DarkEggKit
 ```
 
 ### How to use
+
+* **StoryBoard**
+Can set padding in storyboard
