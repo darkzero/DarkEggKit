@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DarkEggKit'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'DarkEgg UI Kit.'
 
 # This description is used to generate tags and improve search results.
@@ -18,7 +18,12 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  * 0.1.1 (2019/03/05)
+    Common, PaddingLabel, PopupMessage and SideMenu.
+    Please check README.md on git repo.
+  ---
+  * 0.1.0
+    First commit, with Common, PaddingLabel, PopupMessage and SideMenu
                        DESC
 
   s.homepage         = 'https://github.com/darkzero/DarkEggKit'
