@@ -87,6 +87,7 @@
 		B0704D2C8E687831AD88019ECC850ABE /* Pods-DarkEggKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DarkEggKit_Example-dummy.m"; sourceTree = "<group>"; };
 		B760C499222D24D8003035C5 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Logger.swift; path = DarkEggKit/Classes/Common/Logger.swift; sourceTree = "<group>"; };
 		B760C49F222E628E003035C5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = DarkEggKit/Classes/PopupMessage/README.md; sourceTree = "<group>"; };
+		B760C4A1222E63D6003035C5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = DarkEggKit/Classes/Common/README.md; sourceTree = "<group>"; };
 		C03CAE5CA0E33B017099730E530996FA /* DarkEggKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DarkEggKit-prefix.pch"; sourceTree = "<group>"; };
 		C9699CBB25336BF1C283B7F87BFD9EB2 /* Pods_DarkEggKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DarkEggKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA4526EF29BA70266383F40494008519 /* Pods-DarkEggKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DarkEggKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -246,6 +247,7 @@
 				40C03F3F77558E0DE0619F34BC612E64 /* UIColor+Hex.swift */,
 				4C6AF26DD3A0373B6CDCEAF704C74070 /* UIImage+Color.swift */,
 				B760C499222D24D8003035C5 /* Logger.swift */,
+				B760C4A1222E63D6003035C5 /* README.md */,
 			);
 			name = Common;
 			sourceTree = "<group>";
