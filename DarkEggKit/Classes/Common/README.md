@@ -2,7 +2,7 @@
 
 ## Common Class for DarkEggKit
 
-### How to use
+### Installation and Import
 
 * **Installation**
 ```ruby
@@ -14,6 +14,8 @@ pod 'DarkEggKit'
 ```Swift
 import DarkEggKit
 ```
+
+### How to use
 
 #### Extension of UIColor
 
@@ -37,21 +39,25 @@ RGB_HEX("ff0000", 0.5)
 
 #### Extension of UIImage
 
-```Swift
-imageWithColor( _ color:UIColor, size: CGSize)
-imageWithColor( _ color:UIColor)
-```
-
-Create a image with color, default size is 1x1
+* **Create a image with color, default size is 1x1s**
 
 ```Swift
-imageWithGradient(colors: CGColor..., size: CGSize = CGSize(width: 64, height: 64), direction: GradientDirection = .horizontal)
+UIImage.imageWithColor( _ color:UIColor, size: CGSize)
+UIImage.imageWithColor( _ color:UIColor)
 ```
-Create a gradient with colors, default size is 64x64, default direction is horizontal
+
+* **Create a gradient with colors, default size is 64x64, default direction is horizontal**
+
+```Swift
+UIImage.imageWithGradient(colors: CGColor..., size: CGSize, direction: GradientDirection)
+UIImage.imageWithGradient(colors: CGColor..., size: CGSize)
+UIImage.imageWithGradient(colors: CGColor..., direction: GradientDirection)
+UIImage.imageWithGradient(colors: CGColor...)
+```
 
 #### Logger
 
-##### Debug
+* **Debug Log**
 
 Will auto print out the file name, function name, line number and column number
 
@@ -59,7 +65,7 @@ Will auto print out the file name, function name, line number and column number
 Logger.debug("{message}")
 ```
 
-#### Error
+* **Error Log**
 
 ```Swift
 Logger.error("{message}")

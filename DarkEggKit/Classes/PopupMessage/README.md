@@ -2,7 +2,7 @@
 
 ## simple message display queue
 
-### How to use
+### Installation and Import
 
 * **Installation**
 ```ruby
@@ -14,6 +14,8 @@ pod 'DarkEggKit/PopupMessageView'
 ```Swift
 import DarkEggKit
 ```
+
+### How to use
 
 * **Show message**
 
@@ -50,7 +52,7 @@ DZPopupMessage.show({msg text}, theme: {theme}, type: {type}, display: {display}
 #### Can be used like these
 
 ```Swift
-DZPopupMessage.show("Message body");
+DZPopupMessage.show({msg text});
 DZPopupMessage.show({msg text}, theme: {theme}, type: {type}, display: {display});
 DZPopupMessage.show({msg text}, theme: {theme}, type: {type});
 ...
@@ -58,23 +60,3 @@ DZPopupMessage.show({msg text}, theme: {theme}, type: {type});
 
 ## Blog post(中文使用说明)
 [DZPopupMessageView更新](https://darkzero.me/blog/2019/01/27/dzpopupmessageview%E6%9B%B4%E6%96%B0/)
-
-## Requirements
-Xcode
-
-## Installation
-
-DZPopupMessageView is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod 'DarkEggKit/PopupMessageView'
-```
-
-## Author
-
-darkzero, darkzero_mk2@hotmail.com
-
-## License
-
-DZPopupMessageView is available under the MIT license. See the LICENSE file for more info.
