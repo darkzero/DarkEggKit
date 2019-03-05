@@ -20,14 +20,9 @@ extension UIImage {
     ///   - color: color
     ///   - size: image size
     /// - Returns: image
-    public class func imageWithColor( _ color:UIColor, size: CGSize? = nil) -> UIImage {
+    public class func imageWithColor( _ color:UIColor, size: CGSize = CGSize(width: 1, height: 1)) -> UIImage {
         var rect:CGRect
-        if let _size = size {
-            rect = CGRect(origin: CGPoint.zero, size: _size)
-        }
-        else {
-            rect = CGRect(origin: CGPoint.zero, size: CGSize(width: 1, height: 1));
-        }
+        rect = CGRect(origin: CGPoint.zero, size: size);
         
         UIGraphicsBeginImageContext(rect.size)
         let context:CGContext = UIGraphicsGetCurrentContext()!
