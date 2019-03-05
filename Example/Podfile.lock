@@ -1,0 +1,24 @@
+PODS:
+  - DarkEggKit/Common (0.1.0)
+  - DarkEggKit/PaddingLabel (0.1.0):
+    - DarkEggKit/Common
+  - DarkEggKit/PopupMessage (0.1.0):
+    - DarkEggKit/Common
+  - DarkEggKit/SideMenu (0.1.0):
+    - DarkEggKit/Common
+
+DEPENDENCIES:
+  - DarkEggKit/PaddingLabel (from `../`)
+  - DarkEggKit/PopupMessage (from `../`)
+  - DarkEggKit/SideMenu (from `../`)
+
+EXTERNAL SOURCES:
+  DarkEggKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DarkEggKit: e62659368e5cc5b7592dd13a2085a1fd04da17bf
+
+PODFILE CHECKSUM: 019206b9d7a4736bddae55f60fec5decbd5be048
+
+COCOAPODS: 1.6.1
