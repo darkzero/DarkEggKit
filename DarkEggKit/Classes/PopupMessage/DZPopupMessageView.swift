@@ -1,9 +1,9 @@
 //
 //  DZPopupMessageView.swift
-//  Pods
+//  DarkEggKit/PopupMessage
 //
-//  Created by darkzero on 16/5/15.
-//
+//  Created by darkzero on 2019/01/24.
+//  Copyright © 2019 darkzero. All rights reserved.
 //
 
 import UIKit
@@ -117,7 +117,7 @@ extension DZPopupMessageView {
     internal func showWithAnimation(_ animation: Bool, in: UIView? = nil, callback: (()->Void)? = nil) {
         //
         self.parentView?.addSubview(self)
-        let inset = DZPopupMessageView.safeAreaInsetsOf(self.parentView!)
+        let inset = DZUtility.safeAreaInsetsOf(self.parentView!)
         //print(inset)
         switch self.message.display {
         case .rise, .bubbleBottom:
@@ -150,7 +150,6 @@ extension DZPopupMessageView {
     internal func hideWithAnimation(_ animation: Bool) {
         UIView.animate(withDuration: 0.5, delay: self.message.disappearDelay, options: .curveLinear, animations: {
             self.alpha = 0.5
-            //self.center = CGPoint(x: UIScreen.main.bounds.width/2, y: UIScreen.main.bounds.height/4)
         }) { (finished) in
             DZPopupMessageQueue.shared.messageList.removeLast()
             DZPopupMessageQueueManager.shared.next()
@@ -174,17 +173,6 @@ extension DZPopupMessageView {
                 self.removeFromSuperview()
                 self.callback?()
             })
-        }
-    }
-}
-
-extension DZPopupMessageView {
-    class func safeAreaInsetsOf(_ view: UIView) -> UIEdgeInsets {
-        if #available(iOS 11.0, *) {
-            return view.safeAreaInsets
-        } else {
-            // Fallback on earlier versions
-            return UIEdgeInsets.zero;
         }
     }
 }

@@ -2,7 +2,7 @@
 //  CommonViewController.swift
 //  DarkEggKit_Example
 //
-//  Created by Yuhua Hu on 2019/03/05.
+//  Created by darkzero on 2019/03/05.
 //  Copyright © 2019 CocoaPods. All rights reserved.
 //
 

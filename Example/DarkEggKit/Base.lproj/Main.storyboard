@@ -60,6 +60,7 @@
                         <outlet property="tableView" destination="xhc-Zk-hWa" id="FXV-Ms-cdD"/>
                         <segue destination="if8-SY-xbM" kind="show" identifier="ShowPopupMessageScene" id="BT4-iJ-Oet"/>
                         <segue destination="mkl-0T-xWW" kind="show" identifier="ShowCommonScene" id="BcC-mQ-cgs"/>
+                        <segue destination="LTL-xl-Fdy" kind="show" identifier="ShowButtonMenuScene" id="exl-QU-PYc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -276,7 +277,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Padding Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYq-QO-K4e" customClass="DZPaddingLabel" customModule="DarkEggKit">
-                                <rect key="frame" x="117.5" y="438" width="140.5" height="44.5"/>
+                                <rect key="frame" x="133.5" y="438" width="108.5" height="20.5"/>
                                 <color key="backgroundColor" red="0.0" green="0.69019607839999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -343,6 +344,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eRw-hh-BY4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1541.5999999999999" y="-753.37331334332839"/>
+        </scene>
+        <!--Button Menu View Controller-->
+        <scene sceneID="BIq-2Q-CAA">
+            <objects>
+                <viewController id="LTL-xl-Fdy" customClass="ButtonMenuViewController" customModule="DarkEggKit_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wqn-kE-yGf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="gfK-KD-Fah"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="huf-bJ-aYx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1542" y="751"/>
         </scene>
     </scenes>
 </document>

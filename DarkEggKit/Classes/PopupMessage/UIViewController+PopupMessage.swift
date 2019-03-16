@@ -1,8 +1,9 @@
 //
 //  UIViewController+PopupMessage.swift
-//  DarkEggKit
+//  DarkEggKit/PopupMessage
 //
-//  Created by Yuhua Hu on 2019/03/04.
+//  Created by darkzero on 2019/01/24.
+//  Copyright © 2019 darkzero. All rights reserved.
 //
 
 import UIKit

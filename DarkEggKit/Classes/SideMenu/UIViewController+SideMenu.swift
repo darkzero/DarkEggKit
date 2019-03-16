@@ -1,9 +1,9 @@
 //
-//  ViewController+SideMenu.swift
-//  UIUX_iOS_App
+//  UIViewController+SideMenu.swift
+//  DarkEggKit/SideMenu
 //
-//  Created by Yuhua Hu on 2019/02/02.
-//  Copyright © 2019 Yuhua Hu. All rights reserved.
+//  Created by darkzero on 2019/02/02.
+//  Copyright © 2019 darkzero. All rights reserved.
 //
 
 import UIKit

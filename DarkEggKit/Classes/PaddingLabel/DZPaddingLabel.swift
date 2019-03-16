@@ -1,9 +1,9 @@
 //
-//  PaddingLabel.swift
-//  UIUX_iOS_App
+//  DZPaddingLabel.swift
+//  DarkEggKit/Common
 //
-//  Created by Yuhua Hu on 2019/03/01.
-//  Copyright © 2019 Yuhua Hu. All rights reserved.
+//  Created by darkzero on 2019/03/01.
+//  Copyright © 2019 darkzero. All rights reserved.
 //
 
 import UIKit

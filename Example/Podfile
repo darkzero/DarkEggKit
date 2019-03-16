@@ -1,10 +1,11 @@
 use_frameworks!
 
 target 'DarkEggKit_Example' do
-  #pod 'DarkEggKit', :path => '../'
+  pod 'DarkEggKit', :path => '../'
   pod 'DarkEggKit/PaddingLabel', :path => '../'
   pod 'DarkEggKit/PopupMessage', :path => '../'
   pod 'DarkEggKit/SideMenu', :path => '../'
+  pod 'DarkEggKit/ButtonMenu', :path => '../'
 
   target 'DarkEggKit_Tests' do
     inherit! :search_paths

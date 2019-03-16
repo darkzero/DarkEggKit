@@ -3,7 +3,7 @@ This application makes use of the following third party libraries:
 
 ## DarkEggKit
 
-MIT License
+The MIT License (MIT)
 
 Copyright (c) 2019 darkzero
 

@@ -1,9 +1,9 @@
 //
 //  DZPopupMessageQueue.swift
-//  Pods
+//  DarkEggKit/PopupMessage
 //
-//  Created by darkzero on 16/5/15.
-//
+//  Created by darkzero on 2019/01/24.
+//  Copyright © 2019 darkzero. All rights reserved.
 //
 
 import UIKit

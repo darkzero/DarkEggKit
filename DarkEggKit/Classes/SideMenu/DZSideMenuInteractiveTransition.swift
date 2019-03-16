@@ -1,9 +1,9 @@
 //
 //  DZSideMenuInteractiveTransition.swift
-//  UIUX_iOS_App
+//  DarkEggKit/SideMenu
 //
-//  Created by Yuhua Hu on 2019/02/02.
-//  Copyright © 2019 Yuhua Hu. All rights reserved.
+//  Created by darkzero on 2019/02/02.
+//  Copyright © 2019 darkzero. All rights reserved.
 //
 
 import UIKit

@@ -38,23 +38,34 @@ Pod::Spec.new do |s|
   #s.resources = ['DarkEggKit/Classes/PopupMessage/*.xcassets']
   s.default_subspec = 'Common'
   
+  # DarkEggKit/Common
   s.subspec 'Common' do |common|
     common.source_files = 'DarkEggKit/Classes/Common/*'
   end
   
+  # DarkEggKit/PaddingLabel
   s.subspec 'PaddingLabel' do |paddingLabel|
     paddingLabel.source_files = 'DarkEggKit/Classes/PaddingLabel/*'
     paddingLabel.dependency 'DarkEggKit/Common'
   end
   
+  # DarkEggKit/PopupMessage
   s.subspec 'PopupMessage' do |popupMessage|
     popupMessage.source_files = 'DarkEggKit/Classes/PopupMessage/*'
-    popupMessage.dependency 'DarkEggKit/Common'
     popupMessage.resources = ['DarkEggKit/Classes/PopupMessage/*.xcassets']
+    popupMessage.dependency 'DarkEggKit/Common'
   end
   
+  # DarkEggKit/SideMenu
   s.subspec 'SideMenu' do |sideMenu|
     sideMenu.source_files = 'DarkEggKit/Classes/SideMenu/*'
     sideMenu.dependency 'DarkEggKit/Common'
+  end
+  
+  # TODO: DarkEggKit/ButtonMenu
+  s.subspec 'ButtonMenu' do |buttonMenu|
+    buttonMenu.source_files = 'DarkEggKit/Classes/ButtonMenu/*'
+    buttonMenu.resources = ['DarkEggKit/Classes/ButtonMenu/*.xcassets']
+    buttonMenu.dependency 'DarkEggKit/Common'
   end
 end

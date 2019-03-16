@@ -1,9 +1,9 @@
 //
 //  DZPopupMessageQueueManager.swift
-//  Pods
+//  DarkEggKit/PopupMessage
 //
-//  Created by darkzero on 16/5/15.
-//
+//  Created by darkzero on 2019/01/24.
+//  Copyright © 2019 darkzero. All rights reserved.
 //
 
 import UIKit
@@ -23,7 +23,6 @@ public class DZPopupMessageQueueManager: NSObject {
     // MARK: - init
     override init() {
         super.init()
-        //self.messageQueuse.addObserver(self, forKeyPath: "messageList", options: NSKeyValueObservingOptions([.old,.new]), context: nil)
         self.messageQueuse.addObserver(self, forKeyPath: #keyPath(DZPopupMessageQueue.messageList), options: NSKeyValueObservingOptions([.old,.new]), context: nil)
     }
     

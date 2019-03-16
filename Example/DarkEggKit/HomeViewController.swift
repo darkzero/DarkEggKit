@@ -29,7 +29,7 @@ class HomeViewController: UIViewController {
 // MARK: - UITableViewDataSource
 extension HomeViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 4
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -40,6 +40,8 @@ extension HomeViewController: UITableViewDataSource {
             return 1
         case 2:
             return 4
+        case 3:
+            return 1
         default:
             return 0
         }
@@ -53,6 +55,8 @@ extension HomeViewController: UITableViewDataSource {
             return "Popup Message"
         case 2:
             return "Side Menu"
+        case 3:
+            return "Button Menu"
         default:
             return nil
         }
@@ -78,6 +82,8 @@ extension HomeViewController: UITableViewDataSource {
             default:
                 cell.textLabel?.text = ""
             }
+        case 3:
+            cell.textLabel?.text = "Sample Page"
         default:
             cell.textLabel?.text = ""
         }
@@ -126,6 +132,9 @@ extension HomeViewController: UITableViewDelegate {
             default:
                 break
             }
+        case 3:
+            self.performSegue(withIdentifier: "ShowButtonMenuScene", sender: self)
+            break
         default:
             self.showPopupWarning("Nothing is here.")
             break

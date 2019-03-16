@@ -17,6 +17,7 @@
 		B760C494222D01A2003035C5 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B760C493222D01A2003035C5 /* MenuViewController.swift */; };
 		B760C496222D1631003035C5 /* PopupMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B760C495222D1631003035C5 /* PopupMessageViewController.swift */; };
 		B760C49C222E23A6003035C5 /* CommonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B760C49B222E23A6003035C5 /* CommonViewController.swift */; };
+		B760C4A7222F78ED003035C5 /* ButtonMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B760C4A6222F78ED003035C5 /* ButtonMenuViewController.swift */; };
 		DBFA5E0C8C976ACB63A67B73 /* Pods_DarkEggKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E751D432D30C44D306E72F1 /* Pods_DarkEggKit_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		B760C493222D01A2003035C5 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		B760C495222D1631003035C5 /* PopupMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupMessageViewController.swift; sourceTree = "<group>"; };
 		B760C49B222E23A6003035C5 /* CommonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewController.swift; sourceTree = "<group>"; };
+		B760C4A6222F78ED003035C5 /* ButtonMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonMenuViewController.swift; sourceTree = "<group>"; };
 		DDB057709B7B342F63356373 /* Pods-DarkEggKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DarkEggKit_Example.release.xcconfig"; path = "Target Support Files/Pods-DarkEggKit_Example/Pods-DarkEggKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		DF4F79FD8A091ED75A5061BE /* Pods-DarkEggKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DarkEggKit_Tests.debug.xcconfig"; path = "Target Support Files/Pods-DarkEggKit_Tests/Pods-DarkEggKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F053341F27CE34CDE4151EAA /* DarkEggKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DarkEggKit.podspec; path = ../DarkEggKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -112,6 +114,7 @@
 				607FACD71AFB9204008FA782 /* HomeViewController.swift */,
 				B760C49B222E23A6003035C5 /* CommonViewController.swift */,
 				B760C495222D1631003035C5 /* PopupMessageViewController.swift */,
+				B760C4A6222F78ED003035C5 /* ButtonMenuViewController.swift */,
 				B760C493222D01A2003035C5 /* MenuViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
@@ -346,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* HomeViewController.swift in Sources */,
+				B760C4A7222F78ED003035C5 /* ButtonMenuViewController.swift in Sources */,
 				B760C494222D01A2003035C5 /* MenuViewController.swift in Sources */,
 				B760C49C222E23A6003035C5 /* CommonViewController.swift in Sources */,
 				B760C496222D1631003035C5 /* PopupMessageViewController.swift in Sources */,
