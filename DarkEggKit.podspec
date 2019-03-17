@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DarkEggKit'
-  s.version          = '0.1.1'
+  s.version          = '0.2.0'
   s.summary          = 'DarkEgg UI Kit.'
 
 # This description is used to generate tags and improve search results.
@@ -18,6 +18,8 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
+  * 0.2.0 (2019/03/17)
+    Fix some bugs
   * 0.1.1 (2019/03/05)
     Common, PaddingLabel, PopupMessage and SideMenu.
     Please check README.md on git repo.
@@ -63,9 +65,10 @@ Pod::Spec.new do |s|
   end
   
   # TODO: DarkEggKit/ButtonMenu
-  s.subspec 'ButtonMenu' do |buttonMenu|
-    buttonMenu.source_files = 'DarkEggKit/Classes/ButtonMenu/*'
-    buttonMenu.resources = ['DarkEggKit/Classes/ButtonMenu/*.xcassets']
-    buttonMenu.dependency 'DarkEggKit/Common'
-  end
+  # not release in this version
+#  s.subspec 'ButtonMenu' do |buttonMenu|
+#    buttonMenu.source_files = 'DarkEggKit/Classes/ButtonMenu/*'
+#    buttonMenu.resources = ['DarkEggKit/Classes/ButtonMenu/*.xcassets']
+#    buttonMenu.dependency 'DarkEggKit/Common'
+#  end
 end

@@ -164,10 +164,13 @@ extension DZButtonMenu {
         self.superview?.bringSubviewToFront(self);
         
         for (index, item) in self.items.enumerated() {
-            item.show(at: self.superview!, index: index)
-            
             if index >= (self.items.count-1) {
-                self.afterShow()
+                item.show(at: self.superview!, index: index, callback: {
+                    self.afterShow()
+                })
+            }
+            else {
+                item.show(at: self.superview!, index: index)
             }
         }
         return
@@ -203,7 +206,6 @@ extension DZButtonMenu {
 // MARK: - layoutSubviews
 extension DZButtonMenu {
     public override func layoutSubviews() {
-        Logger.debug()
         super.layoutSubviews()
         if ( self.superview != nil ) {
             self.frame = self.attributes.mainFrameOf(location: self.configuration.location, inView: self.superview!)

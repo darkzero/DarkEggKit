@@ -15,11 +15,6 @@ class ButtonMenuViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        if #available(iOS 11.0, *) {
-            Logger.debug(self.view.safeAreaInsets)
-        }
         
         let config = DZButtonMenuConfiguration.default()
         config.location = .rightBottom
@@ -52,12 +47,5 @@ class ButtonMenuViewController: UIViewController {
             self.showPopupInfo("Button Ccc clicked")
         }
         self.view.addSubview(btnMenu)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        if #available(iOS 11.0, *) {
-            Logger.debug(self.view.safeAreaInsets)
-        }
-        //self.buttonMenu.layoutSubviews()
     }
 }

@@ -141,7 +141,7 @@ extension DZButtonMenuItem {
 }
 
 extension DZButtonMenuItem {
-    internal func show(at view: UIView, index: Int, animated: Bool = true) {
+    internal func show(at view: UIView, index: Int, animated: Bool = true, callback: (()->Void)? = nil) {
         view.addSubview(self.button)
         self.button.frame.origin = self.attributes.initialFrame.origin
         switch self.configuration.style {
@@ -152,8 +152,7 @@ extension DZButtonMenuItem {
                 self.label.frame = self.targetFrame(for: self.index)
                 self.label.alpha = 1.0;
             }) { (finished) in
-                //self.button.removeFromSuperview()
-                //self.label.removeFromSuperview()
+                callback?()
             }
         case .line:
             UIView.animateKeyframes(withDuration: 0.3+0.3*Double(index), delay: 0.0, options: [], animations: {
@@ -170,8 +169,7 @@ extension DZButtonMenuItem {
                     self.label.alpha = 1.0;
                 })
             }) { (finished) in
-                //self.button.removeFromSuperview()
-                //self.label.removeFromSuperview()
+                callback?()
             }
         }
     }
