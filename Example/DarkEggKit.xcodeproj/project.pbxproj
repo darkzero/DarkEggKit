@@ -19,7 +19,6 @@
 		B760C49C222E23A6003035C5 /* CommonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B760C49B222E23A6003035C5 /* CommonViewController.swift */; };
 		B77BA51C224A121C0065D879 /* AnimationImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77BA51B224A121C0065D879 /* AnimationImageViewController.swift */; };
 		B77BA51E224A1A910065D879 /* elephant.png in Resources */ = {isa = PBXBuildFile; fileRef = B77BA51D224A1A900065D879 /* elephant.png */; };
-		B77BA520224A1AEF0065D879 /* colon_animation.png in Resources */ = {isa = PBXBuildFile; fileRef = B77BA51F224A1AEF0065D879 /* colon_animation.png */; };
 		B77BA522224A2D9A0065D879 /* mario.png in Resources */ = {isa = PBXBuildFile; fileRef = B77BA521224A2D990065D879 /* mario.png */; };
 		DBFA5E0C8C976ACB63A67B73 /* Pods_DarkEggKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E751D432D30C44D306E72F1 /* Pods_DarkEggKit_Example.framework */; };
 /* End PBXBuildFile section */
@@ -56,7 +55,6 @@
 		B760C49B222E23A6003035C5 /* CommonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewController.swift; sourceTree = "<group>"; };
 		B77BA51B224A121C0065D879 /* AnimationImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationImageViewController.swift; sourceTree = "<group>"; };
 		B77BA51D224A1A900065D879 /* elephant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = elephant.png; sourceTree = "<group>"; };
-		B77BA51F224A1AEF0065D879 /* colon_animation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = colon_animation.png; sourceTree = "<group>"; };
 		B77BA521224A2D990065D879 /* mario.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mario.png; sourceTree = "<group>"; };
 		DDB057709B7B342F63356373 /* Pods-DarkEggKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DarkEggKit_Example.release.xcconfig"; path = "Target Support Files/Pods-DarkEggKit_Example/Pods-DarkEggKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		DF4F79FD8A091ED75A5061BE /* Pods-DarkEggKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DarkEggKit_Tests.debug.xcconfig"; path = "Target Support Files/Pods-DarkEggKit_Tests/Pods-DarkEggKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -96,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				B77BA521224A2D990065D879 /* mario.png */,
-				B77BA51F224A1AEF0065D879 /* colon_animation.png */,
 				B77BA51D224A1A900065D879 /* elephant.png */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for DarkEggKit */,
@@ -273,7 +270,6 @@
 				B77BA51E224A1A910065D879 /* elephant.png in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
-				B77BA520224A1AEF0065D879 /* colon_animation.png in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
