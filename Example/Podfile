@@ -5,7 +5,8 @@ target 'DarkEggKit_Example' do
   pod 'DarkEggKit/PaddingLabel', :path => '../'
   pod 'DarkEggKit/PopupMessage', :path => '../'
   pod 'DarkEggKit/SideMenu', :path => '../'
-  pod 'DarkEggKit/ButtonMenu', :path => '../'
+  # pod 'DarkEggKit/ButtonMenu', :path => '../'
+  pod 'DarkEggKit/AniImageView', :path => '../'
 
   target 'DarkEggKit_Tests' do
     inherit! :search_paths

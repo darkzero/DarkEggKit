@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fas-fZ-DYr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fas-fZ-DYr">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -60,7 +60,7 @@
                         <outlet property="tableView" destination="xhc-Zk-hWa" id="FXV-Ms-cdD"/>
                         <segue destination="if8-SY-xbM" kind="show" identifier="ShowPopupMessageScene" id="BT4-iJ-Oet"/>
                         <segue destination="mkl-0T-xWW" kind="show" identifier="ShowCommonScene" id="BcC-mQ-cgs"/>
-                        <segue destination="LTL-xl-Fdy" kind="show" identifier="ShowButtonMenuScene" id="exl-QU-PYc"/>
+                        <segue destination="LTL-xl-Fdy" kind="show" identifier="ShowAnimationImageScene" id="exl-QU-PYc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -345,20 +345,34 @@
             </objects>
             <point key="canvasLocation" x="1541.5999999999999" y="-753.37331334332839"/>
         </scene>
-        <!--Button Menu View Controller-->
+        <!--Animation Image View Controller-->
         <scene sceneID="BIq-2Q-CAA">
             <objects>
-                <viewController id="LTL-xl-Fdy" customClass="ButtonMenuViewController" customModule="DarkEggKit_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="LTL-xl-Fdy" customClass="AnimationImageViewController" customModule="DarkEggKit_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wqn-kE-yGf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z5E-GB-6ty" customClass="AImageView" customModule="DarkEggKit">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="z5E-GB-6ty" firstAttribute="trailing" secondItem="gfK-KD-Fah" secondAttribute="trailing" id="I9n-0T-wn9"/>
+                            <constraint firstItem="z5E-GB-6ty" firstAttribute="bottom" secondItem="gfK-KD-Fah" secondAttribute="bottom" id="MQV-PZ-g53"/>
+                            <constraint firstItem="z5E-GB-6ty" firstAttribute="top" secondItem="gfK-KD-Fah" secondAttribute="top" id="N54-Ca-s4P"/>
+                            <constraint firstItem="z5E-GB-6ty" firstAttribute="leading" secondItem="gfK-KD-Fah" secondAttribute="leading" id="jpQ-kd-uCW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gfK-KD-Fah"/>
                     </view>
+                    <connections>
+                        <outlet property="aniImgView" destination="z5E-GB-6ty" id="Wo2-m5-F7V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="huf-bJ-aYx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1542" y="751"/>
+            <point key="canvasLocation" x="1541.5999999999999" y="750.67466266866575"/>
         </scene>
     </scenes>
 </document>

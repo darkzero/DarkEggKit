@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DarkEggKit'
-  s.version          = '0.2.0'
+  s.version          = '0.3.0'
   s.summary          = 'DarkEgg UI Kit.'
 
 # This description is used to generate tags and improve search results.
@@ -18,8 +18,12 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
+  * 0.3.0 (2019/03/28)
+    Add subspec: Animation Image View
+  ---
   * 0.2.0 (2019/03/17)
     Fix some bugs
+  ---
   * 0.1.1 (2019/03/05)
     Common, PaddingLabel, PopupMessage and SideMenu.
     Please check README.md on git repo.
@@ -62,6 +66,12 @@ Pod::Spec.new do |s|
   s.subspec 'SideMenu' do |sideMenu|
     sideMenu.source_files = 'DarkEggKit/Classes/SideMenu/*'
     sideMenu.dependency 'DarkEggKit/Common'
+  end
+  
+  # DarkEggKit/AniImageView
+  s.subspec 'AniImageView' do |aImageView|
+    aImageView.source_files = 'DarkEggKit/Classes/AniImageView/*'
+    aImageView.dependency 'DarkEggKit/Common'
   end
   
   # TODO: DarkEggKit/ButtonMenu

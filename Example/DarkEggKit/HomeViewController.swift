@@ -56,7 +56,7 @@ extension HomeViewController: UITableViewDataSource {
         case 2:
             return "Side Menu"
         case 3:
-            return "Button Menu"
+            return "Animation Image"
         default:
             return nil
         }
@@ -133,7 +133,7 @@ extension HomeViewController: UITableViewDelegate {
                 break
             }
         case 3:
-            self.performSegue(withIdentifier: "ShowButtonMenuScene", sender: self)
+            self.performSegue(withIdentifier: "ShowAnimationImageScene", sender: self)
             break
         default:
             self.showPopupWarning("Nothing is here.")
