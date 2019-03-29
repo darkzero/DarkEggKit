@@ -11,12 +11,14 @@ public class AniImageCache {
     private var cache: NSCache<NSObject, CGImageSource> = NSCache()
     
     internal func loadImage(from url: String) -> CGImageSource? {
+        Logger.debug("start load")
         let key = NSString(string: url)
         // check cache
         if let src = cache.object(forKey: key) {
+            Logger.debug("end load from cache")
             return src
         }
-        // check storage
+        // TODO: check storage
         
         // load from url
         if let _url = URL(string: url) {
@@ -25,6 +27,7 @@ public class AniImageCache {
             }
             // save in cache
             self.cache.setObject(src, forKey: key)
+            Logger.debug("end load from url")
             return src
         }
         return nil

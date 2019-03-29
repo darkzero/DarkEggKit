@@ -10,24 +10,21 @@ import UIKit
 import ImageIO
 
 #if swift(>=4.2)
-let KFRunLoopModeCommon = RunLoop.Mode.common
+let kFRunLoopModeCommon = RunLoop.Mode.common
 #else
-let KFRunLoopModeCommon = RunLoopMode.commonModes
+let kFRunLoopModeCommon = RunLoopMode.commonModes
 #endif
 
 /// Protocol of 'AImageViewDelegate'
 public protocol AImageViewDelegate: AnyObject {
-    
     /// Called after the 'AnimatedImageView' has finished each animation loop.
-    ///
-    /// - Parameters:
-    ///   - imageView: The `AnimatedImageView` that is being animated.
-    ///   - count: The looped count.
+    /// - Parameters
+    ///   - imageView: The 'AnimatedImageView' that is being animated
+    ///   - count: The looped count
     func animatedImageView(_ imageView: AImageView, didPlayAnimationLoops count: UInt)
     
-    /// Called after the 'AnimatedImageView' has reached the max repeat count.
-    ///
-    /// - Parameter imageView: The `AnimatedImageView` that is being animated.
+    /// Called after the 'AnimatedImageView' has reached the max repeat count
+    /// - Parameter imageView: The 'AnimatedImageView' that is being animated
     func animatedImageViewDidFinishAnimating(_ imageView: AImageView)
 }
 
@@ -46,6 +43,7 @@ public class AImageView: UIImageView {
         case finite(_ count: UInt)
         case infinite
         
+        /// Equatable '=='
         public static func ==(lhs: RepeatMode, rhs: RepeatMode) -> Bool {
             switch (lhs, rhs) {
             case let (.finite(l), .finite(r)):
@@ -64,35 +62,37 @@ public class AImageView: UIImageView {
         }
     }
 
-    /// Repeat Mode
-    public var repeatMode: RepeatMode = .once {
+    /// Repeat Mode (default is infinite)
+    public var repeatMode: RepeatMode = .infinite {
         didSet {
             if oldValue != repeatMode {
-                reset()
-                setNeedsDisplay()
+                self.reset()
+                self.setNeedsDisplay()
                 self.layer.setNeedsDisplay()
             }
         }
     }
-    
-    public var finishCallback: ((_: Bool)->Void)?
+    /// auto start animation (default is True)
     public var autoPlay: Bool = true
-    public var stopAtLastFrame: Bool = true
+    /// preload frame count
     public var framePreloadCount = 10
+    /// pre scaling
     public var needsPrescaling = true
+    
+    public var placeHolder: UIImage?
     
     public var delegate: AImageViewDelegate?
     
     /// The run loop mode of animation timer
     /// Default is 'RunLoop.Mode.common'
     /// 'RunLoop.Mode.default' will make the animation pause during UIScrollView scrolling
-    public var runLoopMode = KFRunLoopModeCommon {
+    public var runLoopMode = kFRunLoopModeCommon {
         willSet {
             guard runLoopMode == newValue else { return }
-            stopAnimating()
-            displayLink.remove(from: .main, forMode: runLoopMode)
-            displayLink.add(to: .main, forMode: newValue)
-            startAnimating()
+            self.stopAnimating()
+            self.displayLink.remove(from: .main, forMode: runLoopMode)
+            self.displayLink.add(to: .main, forMode: newValue)
+            self.startAnimating()
         }
     }
     
@@ -108,6 +108,7 @@ public class AImageView: UIImageView {
         }
     }
     
+    /// AImage
     public var aImage: AImage? {
         didSet {
             if aImage != oldValue {
@@ -148,15 +149,6 @@ public class AImageView: UIImageView {
             self.displayLink.invalidate()
         }
     }
-    
-//    private class func image(from source: CGImageSource, at index: Int = 0) -> UIImage? {
-//        if let cgImage: CGImage = CGImageSourceCreateImageAtIndex(source, index, nil) {
-//            return UIImage(cgImage: cgImage)
-//        }
-//        return nil
-//        //return UIImage(cgImage: CGImageSourceCreateImageAtIndex(source, 0, nil)!)
-//    }
-    
 }
 
 extension AImageView {
@@ -164,24 +156,18 @@ extension AImageView {
         guard let animator = animator else {
             return
         }
-        
+        // If finished
+        // call finish callback
         guard !animator.isFinished else {
             stopAnimating()
             delegate?.animatedImageViewDidFinishAnimating(self)
             return
         }
-        
         let duration: CFTimeInterval
-        
-        // CA based display link is opt-out from ProMotion by default.
-        // So the duration and its FPS might not match.
-        // See [#718](https://github.com/onevcat/Kingfisher/issues/718)
-        // By setting CADisableMinimumFrameDuration to YES in Info.plist may
-        // cause the preferredFramesPerSecond being 0
         if displayLink.preferredFramesPerSecond == 0 {
             duration = displayLink.duration
         } else {
-            // Some devices (like iPad Pro 10.5) will have a different FPS.
+            // Some devices may have different FPS.
             duration = 1.0 / Double(displayLink.preferredFramesPerSecond)
         }
         
@@ -202,7 +188,7 @@ extension AImageView {
         }
     }
     
-    /// Starts the animation.
+    /// Start the animation.
     override open func startAnimating() {
         guard !isAnimating else { return }
         if animator?.isReachMaxRepeatCount ?? false {
@@ -212,7 +198,7 @@ extension AImageView {
         displayLink.isPaused = false
     }
     
-    /// Stops the animation.
+    /// Stop the animation.
     override open func stopAnimating() {
         super.stopAnimating()
         if isDisplayLinkInitialized {
@@ -238,8 +224,8 @@ extension AImageView {
         didMove()
     }
     
+    /// Clear data when disappear, free the memory
     override open func willMove(toWindow newWindow: UIWindow?) {
-        Logger.debug(newWindow)
         guard let _ = newWindow else {
             self.clear()
             return
@@ -256,7 +242,7 @@ extension AImageView {
         }
     }
     
-    // Reset the animator.
+    /// Reset the animator.
     private func reset() {
         animator = nil
         if let imageSource = self.aImage?.imageSource {
