@@ -32,6 +32,8 @@
 		B77BA52F224C895F0065D879 /* AniImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77BA52D224C895F0065D879 /* AniImageCache.swift */; };
 		B77BA531224C92410065D879 /* AImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77BA530224C92410065D879 /* AImageView.swift */; };
 		B77BA533224CA4570065D879 /* AImageView+Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77BA532224CA4570065D879 /* AImageView+Animator.swift */; };
+		B77BA535224FC5360065D879 /* CGRect+Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77BA534224FC5360065D879 /* CGRect+Scale.swift */; };
+		B77BA537224FC5A60065D879 /* Array+SafeIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77BA536224FC5A60065D879 /* Array+SafeIndex.swift */; };
 		BBDA94DABEF9E51056A2221823E66F02 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = AC3639B7C3B896E1BE67E9E1A9B0A665 /* README.md */; };
 		BD6A4D45D3449DA17803845853979019 /* Pods-DarkEggKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EA6A68EBF0C1805AB2D6762373B3D15A /* Pods-DarkEggKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD3D6D8B9CDB755CE5A40FC28277A8C6 /* DZPopupMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD9B6077730392DA56F1939E155B8E1 /* DZPopupMessageView.swift */; };
@@ -100,6 +102,8 @@
 		B77BA52D224C895F0065D879 /* AniImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AniImageCache.swift; path = DarkEggKit/Classes/AniImageView/AniImageCache.swift; sourceTree = "<group>"; };
 		B77BA530224C92410065D879 /* AImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AImageView.swift; path = DarkEggKit/Classes/AniImageView/AImageView.swift; sourceTree = "<group>"; };
 		B77BA532224CA4570065D879 /* AImageView+Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AImageView+Animator.swift"; path = "DarkEggKit/Classes/AniImageView/AImageView+Animator.swift"; sourceTree = "<group>"; };
+		B77BA534224FC5360065D879 /* CGRect+Scale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CGRect+Scale.swift"; path = "DarkEggKit/Classes/Common/CGRect+Scale.swift"; sourceTree = "<group>"; };
+		B77BA536224FC5A60065D879 /* Array+SafeIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Array+SafeIndex.swift"; path = "DarkEggKit/Classes/Common/Array+SafeIndex.swift"; sourceTree = "<group>"; };
 		B9405E8D6C5671344945FBBEE38A6D36 /* DZSideMenuConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZSideMenuConfiguration.swift; path = DarkEggKit/Classes/SideMenu/DZSideMenuConfiguration.swift; sourceTree = "<group>"; };
 		BBA6A553DD662EBC6EE03CC39C90ED4C /* DarkEggKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DarkEggKit-Info.plist"; sourceTree = "<group>"; };
 		C8ACFA82D9DB45EF85A06970DAB7D16E /* DarkEggKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DarkEggKit.xcconfig; sourceTree = "<group>"; };
@@ -337,6 +341,8 @@
 				017F8E90BB2C435E8D53213AD4A3024F /* README.md */,
 				06EFCD0CE2A7314C00BA44429ED63EB9 /* UIColor+Hex.swift */,
 				CBEF1CE00A438540404D7DE15EBBCC1D /* UIImage+Color.swift */,
+				B77BA534224FC5360065D879 /* CGRect+Scale.swift */,
+				B77BA536224FC5A60065D879 /* Array+SafeIndex.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -508,8 +514,10 @@
 				BBDA94DABEF9E51056A2221823E66F02 /* README.md in Sources */,
 				AA92F740AD57AF2EFD5E20EAE8C7132A /* README.md in Sources */,
 				5F84CAFFAD539D2099667BD9782EF070 /* UIColor+Hex.swift in Sources */,
+				B77BA537224FC5A60065D879 /* Array+SafeIndex.swift in Sources */,
 				A0122A124F4C536B570FFB8B27A0501E /* UIImage+Color.swift in Sources */,
 				7D80DE5105866D0FCB14E72E95CF43BA /* UIViewController+PopupMessage.swift in Sources */,
+				B77BA535224FC5360065D879 /* CGRect+Scale.swift in Sources */,
 				9CC2624A093314F9F24B6C5B5060DD06 /* UIViewController+SideMenu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -267,10 +267,3 @@ extension AImageView {
         self.reset()
     }
 }
-
-extension CGRect {
-    func scaled(_ scale: CGFloat) -> CGRect {
-        return CGRect(x: origin.x * scale, y: origin.y * scale,
-                      width: size.width * scale, height: size.height * scale)
-    }
-}
