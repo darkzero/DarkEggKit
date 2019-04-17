@@ -2,7 +2,7 @@
 //  AnimationImageViewController.swift
 //  DarkEggKit_Example
 //
-//  Created by Yuhua Hu on 2019/03/26.
+//  Created by darkzero on 2019/03/26.
 //  Copyright © 2019 CocoaPods. All rights reserved.
 //
 
@@ -22,13 +22,26 @@ class AnimationImageViewController: UIViewController {
         //let apng = AImage(data: data)
         
         Logger.debug("Start")
-        //let apng = AImage(url: "https://apng.onevcat.com/assets/elephant.png")
-        let apng = AImage(url: "https://orig00.deviantart.net/df6e/f/2012/287/f/8/i_want_to_be_a_hero__apng_animated__by_tamalesyatole-d5ht8eu.png")
+        var apng: AnimationImage? // = AImage(url: "https://apng.onevcat.com/assets/elephant.png")
+        switch Int.random(in: 1...4) {
+        case 1:
+            apng = AnimationImage(url: "http://ics-web.jp/lab-data/140930_apng/images/elephant_apng_zopfli.png")
+        case 2:
+            apng = AnimationImage(url: "https://orig00.deviantart.net/df6e/f/2012/287/f/8/i_want_to_be_a_hero__apng_animated__by_tamalesyatole-d5ht8eu.png")
+        case 3:
+            apng = AnimationImage(url: "https://media2.giphy.com/media/xUPGcLbQtBlro61bdm/giphy.gif")
+        case 4:
+            apng = AnimationImage(url: "https://upload.wikimedia.org/wikipedia/commons/f/ff/Pizigani_1367_Chart_10MB.jpg")
+        default:
+            break
+        }
+        //let apng = AImage(url: "https://orig00.deviantart.net/df6e/f/2012/287/f/8/i_want_to_be_a_hero__apng_animated__by_tamalesyatole-d5ht8eu.png")
         //let apng = AImage(url: "https://www.bram.us/wordpress/wp-content/uploads/2017/06/GenevaDrive.png")
         //let apng = AImage(url: "https://pbs.twimg.com/media/D2pMC1nVAAA2VQn.jpg")
         //let apng = AImage(url: "https://media.tenor.com/images/39fe167bdab90223bcc890bcb067b761/tenor.gif")
+        //https://media2.giphy.com/media/xUPGcLbQtBlro61bdm/giphy.gif
         aniImgView.aImage = apng
-        aniImgView.placeHolder = UIImage(named: "")
+        //aniImgView.placeHolder = UIImage(named: "")
         aniImgView.repeatMode = .infinite
         aniImgView.delegate = self
         Logger.debug("End")
