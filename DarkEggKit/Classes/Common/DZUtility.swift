@@ -2,7 +2,7 @@
 //  DZUtility.swift
 //  DarkEggKit
 //
-//  Created by Yuhua Hu on 2019/03/06.
+//  Created by darkzero on 2019/03/06.
 //
 
 import UIKit
