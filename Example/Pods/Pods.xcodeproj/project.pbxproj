@@ -25,23 +25,22 @@
 		9CC2624A093314F9F24B6C5B5060DD06 /* UIViewController+SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F64284FEFDB6A087649CCFEAEDC4B4 /* UIViewController+SideMenu.swift */; };
 		9D465DCBCCC88ED5675D54297FF1DFC4 /* DZPopupMessageQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E525D19281CE3EAE91E84D50068E6572 /* DZPopupMessageQueue.swift */; };
 		9E2442996FAAB7850ADB74141749018A /* DZSideMenuInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EBF3A8E225D121AE1A8F9DAF8883DE /* DZSideMenuInteractiveTransition.swift */; };
-		9E8BC946B14947027948111093702AEA /* AImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13F97F9B58832801CF7254DA97DC10B /* AImage.swift */; };
+		9E8BC946B14947027948111093702AEA /* AnimationImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13F97F9B58832801CF7254DA97DC10B /* AnimationImage.swift */; };
 		A0122A124F4C536B570FFB8B27A0501E /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEF1CE00A438540404D7DE15EBBCC1D /* UIImage+Color.swift */; };
 		A5B5D276C5527F4B3D899B77F2E96BBD /* DZSideMenuAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF33B7B47526E174F80908ADDF3B583 /* DZSideMenuAnimator.swift */; };
-		AA92F740AD57AF2EFD5E20EAE8C7132A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 017F8E90BB2C435E8D53213AD4A3024F /* README.md */; };
-		B77BA52F224C895F0065D879 /* AniImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77BA52D224C895F0065D879 /* AniImageCache.swift */; };
+		B77BA52F224C895F0065D879 /* SourceCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77BA52D224C895F0065D879 /* SourceCache.swift */; };
 		B77BA531224C92410065D879 /* AImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77BA530224C92410065D879 /* AImageView.swift */; };
 		B77BA533224CA4570065D879 /* AImageView+Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77BA532224CA4570065D879 /* AImageView+Animator.swift */; };
 		B77BA535224FC5360065D879 /* CGRect+Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77BA534224FC5360065D879 /* CGRect+Scale.swift */; };
 		B77BA537224FC5A60065D879 /* Array+SafeIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77BA536224FC5A60065D879 /* Array+SafeIndex.swift */; };
-		BBDA94DABEF9E51056A2221823E66F02 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = AC3639B7C3B896E1BE67E9E1A9B0A665 /* README.md */; };
+		B7A6DBE82266BF8900494A06 /* SourceDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6DBE72266BF8900494A06 /* SourceDownloader.swift */; };
+		B7A6DBEA226706DC00494A06 /* SessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6DBE9226706DC00494A06 /* SessionDataTask.swift */; };
+		B7A6DBED226722D700494A06 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7A6DBEC226722D700494A06 /* Image.xcassets */; };
 		BD6A4D45D3449DA17803845853979019 /* Pods-DarkEggKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EA6A68EBF0C1805AB2D6762373B3D15A /* Pods-DarkEggKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD3D6D8B9CDB755CE5A40FC28277A8C6 /* DZPopupMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD9B6077730392DA56F1939E155B8E1 /* DZPopupMessageView.swift */; };
 		D7E3D85E4175E4CF24D8538902A7DC2D /* Pods-DarkEggKit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 303F4FC45AB5F2B4E6235CFFD7138163 /* Pods-DarkEggKit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D88C22ECAE0D1FC1FBA143CC60F39F03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
-		DBDAED0255B567E02B327618B685F049 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 7AA780ACD138F5B6CE4E83C1188D210F /* README.md */; };
 		E437783499EA3D934A6FA474425B16D7 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240E258686A4540ECA018A761F11AA83 /* Logger.swift */; };
-		EE5DA7AB10B9420777CEF60628191137 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 0E9557736FB3DBE9F4458D327FD89812 /* README.md */; };
 		F08C80F6A5D80231E39C8E47DDB05A6B /* Pods-DarkEggKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0AA40AE53A9E4728E8ED3B68F6FFB /* Pods-DarkEggKit_Tests-dummy.m */; };
 /* End PBXBuildFile section */
 
@@ -97,13 +96,17 @@
 		AC3639B7C3B896E1BE67E9E1A9B0A665 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = DarkEggKit/Classes/PaddingLabel/README.md; sourceTree = "<group>"; };
 		AD051817B609BDBA8746CC5E74BAD469 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B0704D2C8E687831AD88019ECC850ABE /* Pods-DarkEggKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DarkEggKit_Example-dummy.m"; sourceTree = "<group>"; };
-		B13F97F9B58832801CF7254DA97DC10B /* AImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AImage.swift; path = DarkEggKit/Classes/AniImageView/AImage.swift; sourceTree = "<group>"; };
+		B13F97F9B58832801CF7254DA97DC10B /* AnimationImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationImage.swift; path = DarkEggKit/Classes/AniImageView/AnimationImage.swift; sourceTree = "<group>"; };
 		B199B276AB450413FEC368CDFD9AC309 /* DZPopupMessageQueueManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZPopupMessageQueueManager.swift; path = DarkEggKit/Classes/PopupMessage/DZPopupMessageQueueManager.swift; sourceTree = "<group>"; };
-		B77BA52D224C895F0065D879 /* AniImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AniImageCache.swift; path = DarkEggKit/Classes/AniImageView/AniImageCache.swift; sourceTree = "<group>"; };
+		B77BA52D224C895F0065D879 /* SourceCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SourceCache.swift; path = DarkEggKit/Classes/AniImageView/SourceCache.swift; sourceTree = "<group>"; };
 		B77BA530224C92410065D879 /* AImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AImageView.swift; path = DarkEggKit/Classes/AniImageView/AImageView.swift; sourceTree = "<group>"; };
 		B77BA532224CA4570065D879 /* AImageView+Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AImageView+Animator.swift"; path = "DarkEggKit/Classes/AniImageView/AImageView+Animator.swift"; sourceTree = "<group>"; };
 		B77BA534224FC5360065D879 /* CGRect+Scale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CGRect+Scale.swift"; path = "DarkEggKit/Classes/Common/CGRect+Scale.swift"; sourceTree = "<group>"; };
 		B77BA536224FC5A60065D879 /* Array+SafeIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Array+SafeIndex.swift"; path = "DarkEggKit/Classes/Common/Array+SafeIndex.swift"; sourceTree = "<group>"; };
+		B7A6DBE2225F2F5300494A06 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = DarkEggKit/Classes/AniImageView/README.md; sourceTree = "<group>"; };
+		B7A6DBE72266BF8900494A06 /* SourceDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SourceDownloader.swift; path = DarkEggKit/Classes/AniImageView/SourceDownloader.swift; sourceTree = "<group>"; };
+		B7A6DBE9226706DC00494A06 /* SessionDataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SessionDataTask.swift; path = DarkEggKit/Classes/AniImageView/SessionDataTask.swift; sourceTree = "<group>"; };
+		B7A6DBEC226722D700494A06 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Image.xcassets; path = DarkEggKit/Classes/AniImageView/Image.xcassets; sourceTree = "<group>"; };
 		B9405E8D6C5671344945FBBEE38A6D36 /* DZSideMenuConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZSideMenuConfiguration.swift; path = DarkEggKit/Classes/SideMenu/DZSideMenuConfiguration.swift; sourceTree = "<group>"; };
 		BBA6A553DD662EBC6EE03CC39C90ED4C /* DarkEggKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DarkEggKit-Info.plist"; sourceTree = "<group>"; };
 		C8ACFA82D9DB45EF85A06970DAB7D16E /* DarkEggKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DarkEggKit.xcconfig; sourceTree = "<group>"; };
@@ -185,10 +188,14 @@
 		5F22DD71160EDB3C3367ED73510D66DB /* AniImageView */ = {
 			isa = PBXGroup;
 			children = (
+				B7A6DBEC226722D700494A06 /* Image.xcassets */,
+				B77BA52D224C895F0065D879 /* SourceCache.swift */,
+				B7A6DBE72266BF8900494A06 /* SourceDownloader.swift */,
+				B7A6DBE9226706DC00494A06 /* SessionDataTask.swift */,
+				B13F97F9B58832801CF7254DA97DC10B /* AnimationImage.swift */,
 				B77BA530224C92410065D879 /* AImageView.swift */,
 				B77BA532224CA4570065D879 /* AImageView+Animator.swift */,
-				B77BA52D224C895F0065D879 /* AniImageCache.swift */,
-				B13F97F9B58832801CF7254DA97DC10B /* AImage.swift */,
+				B7A6DBE2225F2F5300494A06 /* README.md */,
 			);
 			name = AniImageView;
 			sourceTree = "<group>";
@@ -196,8 +203,8 @@
 		61A13CAB82390BAE0EDA60BD91094568 /* PaddingLabel */ = {
 			isa = PBXGroup;
 			children = (
-				AA607DAE04CDEB300507C57F38A77B46 /* DZPaddingLabel.swift */,
 				AC3639B7C3B896E1BE67E9E1A9B0A665 /* README.md */,
+				AA607DAE04CDEB300507C57F38A77B46 /* DZPaddingLabel.swift */,
 			);
 			name = PaddingLabel;
 			sourceTree = "<group>";
@@ -312,11 +319,11 @@
 		E0FD4B7D793677986E96D2E713909DE3 /* PopupMessage */ = {
 			isa = PBXGroup;
 			children = (
+				7AA780ACD138F5B6CE4E83C1188D210F /* README.md */,
 				3CF239B47CB4525C85037EA0D8786011 /* DZPopupMessage.swift */,
 				E525D19281CE3EAE91E84D50068E6572 /* DZPopupMessageQueue.swift */,
 				B199B276AB450413FEC368CDFD9AC309 /* DZPopupMessageQueueManager.swift */,
 				1DD9B6077730392DA56F1939E155B8E1 /* DZPopupMessageView.swift */,
-				7AA780ACD138F5B6CE4E83C1188D210F /* README.md */,
 				252D2063FAC4FF3EFA97BA491F71D14F /* UIViewController+PopupMessage.swift */,
 				C5AA4D8206B918DFF53EE9F10780BD9B /* Resources */,
 			);
@@ -336,9 +343,9 @@
 		FC731800F63AFAC0B608C48E6665AD0E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				017F8E90BB2C435E8D53213AD4A3024F /* README.md */,
 				6A4FCBCD13585032B0F24B707A9222AE /* DZUtility.swift */,
 				240E258686A4540ECA018A761F11AA83 /* Logger.swift */,
-				017F8E90BB2C435E8D53213AD4A3024F /* README.md */,
 				06EFCD0CE2A7314C00BA44429ED63EB9 /* UIColor+Hex.swift */,
 				CBEF1CE00A438540404D7DE15EBBCC1D /* UIImage+Color.swift */,
 				B77BA534224FC5360065D879 /* CGRect+Scale.swift */,
@@ -440,7 +447,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1020;
 				TargetAttributes = {
 					B122AEF769E949883382421DB7647539 = {
 						LastSwiftMigration = 1020;
@@ -487,6 +494,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3070F436295881DF5FF93D230953843D /* Image.xcassets in Resources */,
+				B7A6DBED226722D700494A06 /* Image.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,27 +505,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E8BC946B14947027948111093702AEA /* AImage.swift in Sources */,
+				9E8BC946B14947027948111093702AEA /* AnimationImage.swift in Sources */,
 				358DAC88739B2FCCAB3E001384B721F2 /* DarkEggKit-dummy.m in Sources */,
 				6B5251D89DA4BB6EF2F3A92F5E449CB5 /* DZPaddingLabel.swift in Sources */,
 				0D14F04C315EFFF7872A86745B7B8F2B /* DZPopupMessage.swift in Sources */,
 				9D465DCBCCC88ED5675D54297FF1DFC4 /* DZPopupMessageQueue.swift in Sources */,
 				56C0B774FB0D509C2212742A629EE47D /* DZPopupMessageQueueManager.swift in Sources */,
 				CD3D6D8B9CDB755CE5A40FC28277A8C6 /* DZPopupMessageView.swift in Sources */,
+				B7A6DBEA226706DC00494A06 /* SessionDataTask.swift in Sources */,
 				A5B5D276C5527F4B3D899B77F2E96BBD /* DZSideMenuAnimator.swift in Sources */,
 				5ADCD775FD3A6B4C2C2AEF2D7DBE8E0B /* DZSideMenuConfiguration.swift in Sources */,
 				9E2442996FAAB7850ADB74141749018A /* DZSideMenuInteractiveTransition.swift in Sources */,
+				B7A6DBE82266BF8900494A06 /* SourceDownloader.swift in Sources */,
 				1F262134E7EA24CA79F1E5784B01BF88 /* DZSideMenuMask.swift in Sources */,
 				B77BA533224CA4570065D879 /* AImageView+Animator.swift in Sources */,
 				0B4793098F1FE74A80ED0DFAB2CB8FD0 /* DZSideMenuTransitioning.swift in Sources */,
 				8E255C4A2699AA533FB7DAF2290E2E61 /* DZUtility.swift in Sources */,
-				B77BA52F224C895F0065D879 /* AniImageCache.swift in Sources */,
+				B77BA52F224C895F0065D879 /* SourceCache.swift in Sources */,
 				E437783499EA3D934A6FA474425B16D7 /* Logger.swift in Sources */,
 				B77BA531224C92410065D879 /* AImageView.swift in Sources */,
-				EE5DA7AB10B9420777CEF60628191137 /* README.md in Sources */,
-				DBDAED0255B567E02B327618B685F049 /* README.md in Sources */,
-				BBDA94DABEF9E51056A2221823E66F02 /* README.md in Sources */,
-				AA92F740AD57AF2EFD5E20EAE8C7132A /* README.md in Sources */,
 				5F84CAFFAD539D2099667BD9782EF070 /* UIColor+Hex.swift in Sources */,
 				B77BA537224FC5A60065D879 /* Array+SafeIndex.swift in Sources */,
 				A0122A124F4C536B570FFB8B27A0501E /* UIImage+Color.swift in Sources */,
@@ -565,6 +571,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -690,6 +697,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
