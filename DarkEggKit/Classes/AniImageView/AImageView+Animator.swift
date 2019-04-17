@@ -176,7 +176,7 @@ extension AImageView {
             var duration: TimeInterval = 0
             
             (0..<frameCount).forEach { index in
-                let frameDuration = AImage.getFrameDuration(from: imageSource, at: index)
+                let frameDuration = AnimationImage.getFrameDuration(from: imageSource, at: index)
                 duration += min(frameDuration, maxTimeStep)
                 animatedFrames += [AnimatedFrame(image: nil, duration: frameDuration)]
                 

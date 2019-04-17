@@ -2,8 +2,8 @@
 //  AImageView.swift
 //  VTuberApp_iOS
 //
-//  Created by Yuhua Hu on 2018/11/26.
-//  Copyright © 2018年 Yuhua Hu. All rights reserved.
+//  Created by darkzero on 2018/11/26.
+//  Copyright © 2018年 darkzero. All rights reserved.
 //
 
 import UIKit
@@ -14,6 +14,8 @@ let kFRunLoopModeCommon = RunLoop.Mode.common
 #else
 let kFRunLoopModeCommon = RunLoopMode.commonModes
 #endif
+
+private let placeHolderName = "darkegg_image_place_holder"
 
 /// Protocol of 'AImageViewDelegate'
 public protocol AImageViewDelegate: AnyObject {
@@ -78,9 +80,7 @@ public class AImageView: UIImageView {
     public var framePreloadCount = 10
     /// pre scaling
     public var needsPrescaling = true
-    
-    public var placeHolder: UIImage?
-    
+    public var placeHolder: UIImage? = UIImage(named: placeHolderName, in: Bundle(for: AImageView.self), compatibleWith: nil) //.withRenderingMode(.alwaysTemplate) //UIImage(named: placeHolderName)
     public var delegate: AImageViewDelegate?
     
     /// The run loop mode of animation timer
@@ -104,14 +104,16 @@ public class AImageView: UIImageView {
             self.target = target
         }
         @objc func onScreenUpdate() {
-            target?.updateFrameIfNeeded()
-        }
+            target?.updateFrameIfNeeded()        }
     }
     
     /// AImage
-    public var aImage: AImage? {
+    public var aImage: AnimationImage? {
         didSet {
             if aImage != oldValue {
+                Logger.debug("set animation Image")
+                aImage?.delegate = self
+                aImage?.startLoad()
                 reset()
             }
             setNeedsDisplay()
@@ -145,6 +147,7 @@ public class AImageView: UIImageView {
     public var play: Bool = false
     
     deinit {
+        self.aImage = nil
         if self.isDisplayLinkInitialized {
             self.displayLink.invalidate()
         }
@@ -194,7 +197,6 @@ extension AImageView {
         if animator?.isReachMaxRepeatCount ?? false {
             return
         }
-        
         displayLink.isPaused = false
     }
     
@@ -208,9 +210,11 @@ extension AImageView {
     
     override open func display(_ layer: CALayer) {
         if let currentFrame = animator?.currentFrameImage {
+            //Logger.debug("display animation")
             layer.contents = currentFrame.cgImage
         } else {
-            layer.contents = image?.cgImage
+            //Logger.debug("display placeHolder")
+            layer.contents = self.placeHolder?.cgImage
         }
     }
     
@@ -265,5 +269,16 @@ extension AImageView {
     public func clear() {
         self.aImage = nil
         self.reset()
+    }
+}
+
+extension AImageView: AnimationImageDelegate {
+    public func animationImage(_ img: AnimationImage, loadSuccess: Bool) {
+        Logger.debug("aimage loading end, success: \(loadSuccess)")
+        DispatchQueue.main.async {
+            self.reset()
+            self.setNeedsDisplay()
+            self.layer.setNeedsDisplay()
+        }
     }
 }
