@@ -107,6 +107,8 @@
 		B7A6DBE72266BF8900494A06 /* SourceDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SourceDownloader.swift; path = DarkEggKit/Classes/AniImageView/SourceDownloader.swift; sourceTree = "<group>"; };
 		B7A6DBE9226706DC00494A06 /* SessionDataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SessionDataTask.swift; path = DarkEggKit/Classes/AniImageView/SessionDataTask.swift; sourceTree = "<group>"; };
 		B7A6DBEC226722D700494A06 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Image.xcassets; path = DarkEggKit/Classes/AniImageView/Image.xcassets; sourceTree = "<group>"; };
+		B7BE28B022684B5B00F33D90 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+		B7BE28B222684B8F00F33D90 /* .swift-version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ".swift-version"; sourceTree = "<group>"; };
 		B9405E8D6C5671344945FBBEE38A6D36 /* DZSideMenuConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZSideMenuConfiguration.swift; path = DarkEggKit/Classes/SideMenu/DZSideMenuConfiguration.swift; sourceTree = "<group>"; };
 		BBA6A553DD662EBC6EE03CC39C90ED4C /* DarkEggKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DarkEggKit-Info.plist"; sourceTree = "<group>"; };
 		C8ACFA82D9DB45EF85A06970DAB7D16E /* DarkEggKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DarkEggKit.xcconfig; sourceTree = "<group>"; };
@@ -275,6 +277,8 @@
 		CCC5E4FF6BE55973536F8FD01EEA0515 /* DarkEggKit */ = {
 			isa = PBXGroup;
 			children = (
+				B7BE28B222684B8F00F33D90 /* .swift-version */,
+				B7BE28B022684B5B00F33D90 /* .travis.yml */,
 				5F22DD71160EDB3C3367ED73510D66DB /* AniImageView */,
 				FC731800F63AFAC0B608C48E6665AD0E /* Common */,
 				61A13CAB82390BAE0EDA60BD91094568 /* PaddingLabel */,
