@@ -9,19 +9,9 @@
 import ImageIO
 import UIKit
 
-protocol AnimationImageDelegate {
-    func animationImage(_ img: AnimationImage, loadSuccess: Bool)
-}
-
-extension AnimationImageDelegate {
-    func animationImage(_ img: AnimationImage, loadSuccess: Bool){}
-}
-
 public class AnimationImage: NSObject {
     private let urlString: String
     internal var imageSource: CGImageSource?
-    internal var delegate: AnimationImageDelegate?
-    internal var loadCompletion: ((UIImage?) -> Void) = {(img) in }
     
     public static func ==(l: AnimationImage, r: AnimationImage) -> Bool {
         return l.urlString == r.urlString
@@ -38,20 +28,61 @@ public class AnimationImage: NSObject {
         }
     }
     
-    private init(source: CGImageSource, urlStr: String) {
+    private init(source: CGImageSource? = nil, urlStr: String) {
+        Logger.debug()
         self.imageSource = source
-        self.urlString = urlStr
-        super.init()
-        self.delegate?.animationImage(self, loadSuccess: true)
-    }
-    
-    private init(urlStr: String) {
         self.urlString = urlStr
         super.init()
         //self.delegate?.animationImage(self, loadSuccess: true)
     }
+    
+    deinit {
+        Logger.debug()
+        self.imageSource = nil
+    }
 }
 
+// MARK: - Load Task
+extension AnimationImage {
+    internal func startLoad(completion: ((Bool, AnimationImage)->Void)?, progress: ((Float)->Void)? = nil) -> SessionDataTask.CancelToken {
+        guard self.imageSource == nil else {
+            return -1
+        }
+        Logger.debug("start download")
+        // completion handle
+        let onCompleted = { (result: DownloadResult) -> Void in
+            switch result {
+            case .success(let src):
+                Logger.debug("download success")
+                self.imageSource = src
+                SourceCache.default.add(url: self.urlString, source: src)
+                SourceDownloader.default.releaseTask(url: self.urlString)
+                completion?(true, self)
+                break
+            case .failure:
+                Logger.debug("download failure")
+                completion?(false, self)
+                break
+            }
+        }
+        // progress handle
+        let onProgress = { (precent: Float)->Void in
+            progress?(precent)
+        }
+        let cancelToken = SourceDownloader.default.downloadImage(from: self.urlString, completion: onCompleted, progress: onProgress)
+        return cancelToken
+    }
+    
+    internal func cancelLoad(token: SessionDataTask.CancelToken) {
+        SourceDownloader.default.cancelDownload(self.urlString, token: token)
+    }
+}
+
+extension AnimationImage {
+    
+}
+
+// MARK: - Get frame duration for animator
 extension AnimationImage {
     internal class func getFrameDuration(from imageSource: CGImageSource, at idx: Int) -> TimeInterval {
         guard let property = CGImageSourceCopyPropertiesAtIndex(imageSource, idx, nil) as? [String: Any] else {
@@ -82,30 +113,5 @@ extension AnimationImage {
             return defaultDuration
         }
         return frameDuration.doubleValue > 0.011 ? frameDuration.doubleValue : defaultDuration
-    }
-}
-
-
-// MARK: - Load Task
-extension AnimationImage {
-    internal func startLoad() {
-        guard self.imageSource == nil else {
-            return
-        }
-        Logger.debug("start download")
-        SourceDownloader.default.downloadImage(from: self.urlString) { (result) in
-            switch result {
-            case .success(let src):
-                Logger.debug("download success")
-                self.imageSource = src
-                SourceCache.default.add(url: self.urlString, source: src)
-                self.delegate?.animationImage(self, loadSuccess: true)
-                break
-            case .failure:
-                Logger.debug("download failure")
-                self.delegate?.animationImage(self, loadSuccess: false)
-                break
-            }
-        }
     }
 }

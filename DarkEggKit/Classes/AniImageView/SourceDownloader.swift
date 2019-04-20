@@ -7,17 +7,16 @@
 
 import UIKit
 
-class SourceDownloader: NSObject {
-    public static let `default` = SourceDownloader(name: "default")
+internal class SourceDownloader: NSObject {
+    internal static let `default` = SourceDownloader(name: "default")
+    internal var sessionTasks: [String: SessionDataTask] = [:]
     
-    public var tasks: [String: SessionDataTask] = [:]
+//    internal struct DownloadTask {
+//        public let sessionTask: SessionDataTask
+//        public let cancelToken: SessionDataTask.CancelToken
+//    }
+    
     private let name: String
-    
-    public struct DownloadTask {
-        public let sessionTask: SessionDataTask
-        public let cancelToken: SessionDataTask.CancelToken
-    }
-    
     private init(name: String) {
         if name.isEmpty {
             fatalError("You should specify a name for the downloader. A downloader with empty name is not permitted.")
@@ -27,18 +26,37 @@ class SourceDownloader: NSObject {
 }
 
 extension SourceDownloader {
-    public func downloadImage(from url: String, completion: @escaping ((DownloadResult)->Void)) {
-        if let task = self.tasks[url] {
-            task.addCallback(SessionDataTask.TaskCallback(onCompleted: completion))
-            return
+    internal func downloadImage(from url: String,
+                              completion: @escaping ((DownloadResult)->Void),
+                              progress: ((Float)->Void)? = nil) -> SessionDataTask.CancelToken {
+        let taskCallback = SessionDataTask.TaskCallback(onCompleted: completion, onProgress: progress)
+        
+        if let task = self.sessionTasks[url] {
+            let cancelToken = task.addCallback(taskCallback)
+            return cancelToken
         }
+        // make new task
         let task = SessionDataTask(url: url)
-        self.tasks[url] = task
-        task.addCallback(SessionDataTask.TaskCallback(onCompleted: { (result) in
-            self.tasks.removeValue(forKey: url)
-            completion(result)
-        }))
+        self.sessionTasks[url] = task
+        let cancelToken = task.addCallback(taskCallback)
         task.start()
-        return
+        return cancelToken
+    }
+    
+    internal func cancelDownload(_ url: String, token: SessionDataTask.CancelToken) {
+        if let task = self.sessionTasks[url] {
+            task.cancel(token: token)
+//            if !task.containsCallbacks {
+//                let sessionTask = self.sessionTasks.data
+//            }
+        }
+    }
+    
+    internal func releaseTask(url: String) {
+        Logger.debug()
+        self.sessionTasks[url]?.sessionDataTask?.cancel()
+        self.sessionTasks[url]?.sessionDataTask = nil
+        //let t = self.sessionTasks[url]
+        self.sessionTasks[url] = nil
     }
 }

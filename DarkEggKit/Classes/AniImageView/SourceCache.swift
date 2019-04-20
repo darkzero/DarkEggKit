@@ -6,12 +6,16 @@
 
 import UIKit
 
-public class SourceCache: NSObject {
-    static let `default`: SourceCache = {SourceCache()}();
+internal class SourceCache: NSObject {
+    internal static let `default`: SourceCache = {SourceCache()}();
     private var cache: NSCache<NSObject, CGImageSource> = NSCache()
     
+    override init() {
+        self.cache.countLimit = 5
+    }
+    
     internal func findSource(from url: String) -> CGImageSource? {
-        Logger.debug("start load")
+        Logger.debug("find source in cache")
         let key = NSString(string: url)
         // check cache
         if let src = cache.object(forKey: key) {
@@ -28,5 +32,14 @@ public class SourceCache: NSObject {
             cache.setObject(source, forKey: key)
             return
         }
+    }
+    
+    internal func remove(url: String) {
+        let key = NSString(string: url)
+        cache.removeObject(forKey: key)
+    }
+    
+    internal func clear() {
+        self.cache.removeAllObjects()
     }
 }

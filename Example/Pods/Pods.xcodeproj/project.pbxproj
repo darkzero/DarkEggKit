@@ -29,8 +29,8 @@
 		A0122A124F4C536B570FFB8B27A0501E /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEF1CE00A438540404D7DE15EBBCC1D /* UIImage+Color.swift */; };
 		A5B5D276C5527F4B3D899B77F2E96BBD /* DZSideMenuAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF33B7B47526E174F80908ADDF3B583 /* DZSideMenuAnimator.swift */; };
 		B77BA52F224C895F0065D879 /* SourceCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77BA52D224C895F0065D879 /* SourceCache.swift */; };
-		B77BA531224C92410065D879 /* AImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77BA530224C92410065D879 /* AImageView.swift */; };
-		B77BA533224CA4570065D879 /* AImageView+Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77BA532224CA4570065D879 /* AImageView+Animator.swift */; };
+		B77BA531224C92410065D879 /* AnimationImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77BA530224C92410065D879 /* AnimationImageView.swift */; };
+		B77BA533224CA4570065D879 /* AnimationImageView+Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77BA532224CA4570065D879 /* AnimationImageView+Animator.swift */; };
 		B77BA535224FC5360065D879 /* CGRect+Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77BA534224FC5360065D879 /* CGRect+Scale.swift */; };
 		B77BA537224FC5A60065D879 /* Array+SafeIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77BA536224FC5A60065D879 /* Array+SafeIndex.swift */; };
 		B7A6DBE82266BF8900494A06 /* SourceDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6DBE72266BF8900494A06 /* SourceDownloader.swift */; };
@@ -99,8 +99,8 @@
 		B13F97F9B58832801CF7254DA97DC10B /* AnimationImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationImage.swift; path = DarkEggKit/Classes/AniImageView/AnimationImage.swift; sourceTree = "<group>"; };
 		B199B276AB450413FEC368CDFD9AC309 /* DZPopupMessageQueueManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZPopupMessageQueueManager.swift; path = DarkEggKit/Classes/PopupMessage/DZPopupMessageQueueManager.swift; sourceTree = "<group>"; };
 		B77BA52D224C895F0065D879 /* SourceCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SourceCache.swift; path = DarkEggKit/Classes/AniImageView/SourceCache.swift; sourceTree = "<group>"; };
-		B77BA530224C92410065D879 /* AImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AImageView.swift; path = DarkEggKit/Classes/AniImageView/AImageView.swift; sourceTree = "<group>"; };
-		B77BA532224CA4570065D879 /* AImageView+Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AImageView+Animator.swift"; path = "DarkEggKit/Classes/AniImageView/AImageView+Animator.swift"; sourceTree = "<group>"; };
+		B77BA530224C92410065D879 /* AnimationImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimationImageView.swift; path = DarkEggKit/Classes/AniImageView/AnimationImageView.swift; sourceTree = "<group>"; };
+		B77BA532224CA4570065D879 /* AnimationImageView+Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AnimationImageView+Animator.swift"; path = "DarkEggKit/Classes/AniImageView/AnimationImageView+Animator.swift"; sourceTree = "<group>"; };
 		B77BA534224FC5360065D879 /* CGRect+Scale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CGRect+Scale.swift"; path = "DarkEggKit/Classes/Common/CGRect+Scale.swift"; sourceTree = "<group>"; };
 		B77BA536224FC5A60065D879 /* Array+SafeIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Array+SafeIndex.swift"; path = "DarkEggKit/Classes/Common/Array+SafeIndex.swift"; sourceTree = "<group>"; };
 		B7A6DBE2225F2F5300494A06 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = DarkEggKit/Classes/AniImageView/README.md; sourceTree = "<group>"; };
@@ -192,11 +192,11 @@
 			children = (
 				B7A6DBEC226722D700494A06 /* Image.xcassets */,
 				B77BA52D224C895F0065D879 /* SourceCache.swift */,
-				B7A6DBE72266BF8900494A06 /* SourceDownloader.swift */,
 				B7A6DBE9226706DC00494A06 /* SessionDataTask.swift */,
+				B7A6DBE72266BF8900494A06 /* SourceDownloader.swift */,
 				B13F97F9B58832801CF7254DA97DC10B /* AnimationImage.swift */,
-				B77BA530224C92410065D879 /* AImageView.swift */,
-				B77BA532224CA4570065D879 /* AImageView+Animator.swift */,
+				B77BA530224C92410065D879 /* AnimationImageView.swift */,
+				B77BA532224CA4570065D879 /* AnimationImageView+Animator.swift */,
 				B7A6DBE2225F2F5300494A06 /* README.md */,
 			);
 			name = AniImageView;
@@ -522,12 +522,12 @@
 				9E2442996FAAB7850ADB74141749018A /* DZSideMenuInteractiveTransition.swift in Sources */,
 				B7A6DBE82266BF8900494A06 /* SourceDownloader.swift in Sources */,
 				1F262134E7EA24CA79F1E5784B01BF88 /* DZSideMenuMask.swift in Sources */,
-				B77BA533224CA4570065D879 /* AImageView+Animator.swift in Sources */,
+				B77BA533224CA4570065D879 /* AnimationImageView+Animator.swift in Sources */,
 				0B4793098F1FE74A80ED0DFAB2CB8FD0 /* DZSideMenuTransitioning.swift in Sources */,
 				8E255C4A2699AA533FB7DAF2290E2E61 /* DZUtility.swift in Sources */,
 				B77BA52F224C895F0065D879 /* SourceCache.swift in Sources */,
 				E437783499EA3D934A6FA474425B16D7 /* Logger.swift in Sources */,
-				B77BA531224C92410065D879 /* AImageView.swift in Sources */,
+				B77BA531224C92410065D879 /* AnimationImageView.swift in Sources */,
 				5F84CAFFAD539D2099667BD9782EF070 /* UIColor+Hex.swift in Sources */,
 				B77BA537224FC5A60065D879 /* Array+SafeIndex.swift in Sources */,
 				A0122A124F4C536B570FFB8B27A0501E /* UIImage+Color.swift in Sources */,
