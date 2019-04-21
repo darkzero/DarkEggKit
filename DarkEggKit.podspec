@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-  * 0.3.0 (2019/03/28)
+  * 0.4.0 (2019/04/20)
     Add subspec: Animation Image View
   ---
   * 0.2.0 (2019/03/17)
