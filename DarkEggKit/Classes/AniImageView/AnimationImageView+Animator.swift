@@ -196,7 +196,7 @@ extension AnimationImageView {
                 return nil
             }
             return UIImage(cgImage: image)
-            
+//            let img = UIImage(cgImage: image)
 //            let scaledImage: CGImage
 //            if needsPrescaling, size != .zero {
 //                scaledImage = image.resize(to: size, for: contentMode)

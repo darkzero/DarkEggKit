@@ -88,7 +88,7 @@ extension AnimationImage {
         guard let property = CGImageSourceCopyPropertiesAtIndex(imageSource, idx, nil) as? [String: Any] else {
             return 0.0
         }
-        let defaultDuration: TimeInterval = 0.1
+        let defaultDuration: TimeInterval = 0.0167
         var aniInfo: [String: Any]?
         
         if property[kCGImagePropertyGIFDictionary as String] as? [String: Any] != nil {         // gif
@@ -112,6 +112,7 @@ extension AnimationImage {
         guard let frameDuration = duration else {
             return defaultDuration
         }
-        return frameDuration.doubleValue > 0.011 ? frameDuration.doubleValue : defaultDuration
+        //return frameDuration.doubleValue > 0.0167 ? frameDuration.doubleValue : defaultDuration
+        return max(frameDuration.doubleValue, defaultDuration)
     }
 }

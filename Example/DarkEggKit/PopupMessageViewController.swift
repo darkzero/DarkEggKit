@@ -16,7 +16,7 @@ class PopupMessageViewController: UIViewController {
     @IBOutlet var typeSegment: UISegmentedControl!
     @IBOutlet var displaySegment: UISegmentedControl!
     
-    @IBOutlet var imageView: UIImageView!
+    @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

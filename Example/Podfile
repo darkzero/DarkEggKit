@@ -7,6 +7,9 @@ target 'DarkEggKit_Example' do
   pod 'DarkEggKit/SideMenu', :path => '../'
   # pod 'DarkEggKit/ButtonMenu', :path => '../'
   pod 'DarkEggKit/AniImageView', :path => '../'
+  
+  # test SDWebImage
+  #pod 'SDWebImage', '~> 4.0'
 
   target 'DarkEggKit_Tests' do
     inherit! :search_paths

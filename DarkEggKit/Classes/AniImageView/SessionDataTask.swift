@@ -110,8 +110,8 @@ extension SessionDataTask: URLSessionDataDelegate {
     public func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive data: Data) {
         recievedData.append(data)
         let isloadFinish = (self.expectedLeght == self.recievedData.count)
-        CGImageSourceUpdateData(incrementalImgSrc, self.recievedData as CFData, isloadFinish)
         if isloadFinish {
+            CGImageSourceUpdateData(incrementalImgSrc, self.recievedData as CFData, isloadFinish)
             self.onUrlSessionLoadEnd(source: incrementalImgSrc)
             self.recievedData = Data()
             session.invalidateAndCancel()

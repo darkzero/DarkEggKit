@@ -11,7 +11,7 @@ internal class SourceCache: NSObject {
     private var cache: NSCache<NSObject, CGImageSource> = NSCache()
     
     override init() {
-        self.cache.countLimit = 5
+        self.cache.countLimit = 10
     }
     
     internal func findSource(from url: String) -> CGImageSource? {
@@ -41,5 +41,17 @@ internal class SourceCache: NSObject {
     
     internal func clear() {
         self.cache.removeAllObjects()
+    }
+}
+
+// MARK: - File cache
+extension SourceCache {
+    private func saveToFile(url: String, src: CGImageSource) {
+        fatalError("TODO: ")
+    }
+    
+    private func loadFromFile(url: String) -> CGImageSource? {
+        fatalError("TODO: ")
+        //return nil
     }
 }

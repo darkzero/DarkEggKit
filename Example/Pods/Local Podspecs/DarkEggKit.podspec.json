@@ -2,7 +2,7 @@
   "name": "DarkEggKit",
   "version": "0.3.0",
   "summary": "DarkEgg UI Kit.",
-  "description": "* 0.3.0 (2019/03/28)\n  Add subspec: Animation Image View\n---\n* 0.2.0 (2019/03/17)\n  Fix some bugs\n---\n* 0.1.1 (2019/03/05)\n  Common, PaddingLabel, PopupMessage and SideMenu.\n  Please check README.md on git repo.\n---\n* 0.1.0\n  First commit, with Common, PaddingLabel, PopupMessage and SideMenu",
+  "description": "* 0.4.0 (2019/04/20)\n  Add subspec: Animation Image View\n---\n* 0.2.0 (2019/03/17)\n  Fix some bugs\n---\n* 0.1.1 (2019/03/05)\n  Common, PaddingLabel, PopupMessage and SideMenu.\n  Please check README.md on git repo.\n---\n* 0.1.0\n  First commit, with Common, PaddingLabel, PopupMessage and SideMenu",
   "homepage": "https://github.com/darkzero/DarkEggKit",
   "license": {
     "type": "MIT",
