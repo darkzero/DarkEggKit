@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class DZPaddingLabel: UILabel {
+public class DZPaddingLabel: UILabel {
     /// Padding
     private var padding: UIEdgeInsets = UIEdgeInsets.zero
     
@@ -46,13 +46,13 @@ extension DZPaddingLabel {
     /// drawText
     ///
     /// - Parameter rect: Label frame
-    override func drawText(in rect: CGRect) {
+    override public func drawText(in rect: CGRect) {
         let newRect = rect.inset(by: self.padding)
         super.drawText(in: newRect)
     }
     
     /// Intrinsic ContentSize
-    override var intrinsicContentSize: CGSize {
+    override public var intrinsicContentSize: CGSize {
         var contentSize = super.intrinsicContentSize
         contentSize.height += padding.top + padding.bottom*2
         contentSize.width += padding.left + padding.right
@@ -62,7 +62,7 @@ extension DZPaddingLabel {
     /// draw
     ///
     /// - Parameter rect: Label frame
-    override func draw(_ rect: CGRect) {
+    override public func draw(_ rect: CGRect) {
         // draw underline
         let ctx = UIGraphicsGetCurrentContext();
         ctx?.setStrokeColor(self.underLineColor.cgColor)

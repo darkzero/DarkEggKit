@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DZUtility: NSObject {
+public class DZUtility: NSObject {
     class func safeAreaInsetsOf(_ view: UIView) -> UIEdgeInsets {
         if #available(iOS 11.0, *) {
             return view.safeAreaInsets
