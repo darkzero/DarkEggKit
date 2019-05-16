@@ -181,10 +181,17 @@
                                     <segment title="Bubble Bottom"/>
                                 </segments>
                             </segmentedControl>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pizigani_1367_Chart_10MB" translatesAutoresizingMaskIntoConstraints="NO" id="t2V-zI-ZEF">
+                                <rect key="frame" x="20" y="447" width="335" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="fDE-qn-0l6"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Q2W-Ad-jGB" firstAttribute="top" secondItem="kmJ-rq-Wf6" secondAttribute="bottom" constant="16" id="9N3-Hg-gFW"/>
+                            <constraint firstItem="3pk-Ut-7CC" firstAttribute="bottom" secondItem="t2V-zI-ZEF" secondAttribute="bottom" constant="20" id="CaN-W9-AP2"/>
                             <constraint firstItem="ufJ-Ld-RgP" firstAttribute="leading" secondItem="3pk-Ut-7CC" secondAttribute="leading" constant="16" id="Dbc-b5-QYd"/>
                             <constraint firstItem="Q2W-Ad-jGB" firstAttribute="centerX" secondItem="4U4-6I-mCi" secondAttribute="centerX" id="FL7-vc-PLy"/>
                             <constraint firstItem="bHa-Nc-w14" firstAttribute="top" secondItem="3pk-Ut-7CC" secondAttribute="top" constant="64" id="O2D-yE-Sf0"/>
@@ -195,7 +202,9 @@
                             <constraint firstItem="kmJ-rq-Wf6" firstAttribute="centerX" secondItem="4U4-6I-mCi" secondAttribute="centerX" id="p1N-tw-shb"/>
                             <constraint firstItem="kmJ-rq-Wf6" firstAttribute="top" secondItem="UTm-Yw-kLj" secondAttribute="bottom" constant="8" id="pJs-Ij-CPl"/>
                             <constraint firstItem="kmJ-rq-Wf6" firstAttribute="leading" secondItem="3pk-Ut-7CC" secondAttribute="leading" constant="16" id="rG5-MF-UUF"/>
+                            <constraint firstItem="t2V-zI-ZEF" firstAttribute="leading" secondItem="3pk-Ut-7CC" secondAttribute="leading" constant="20" id="uX3-0t-ZJ7"/>
                             <constraint firstItem="bHa-Nc-w14" firstAttribute="leading" secondItem="3pk-Ut-7CC" secondAttribute="leading" constant="16" id="uYJ-f2-2uD"/>
+                            <constraint firstItem="t2V-zI-ZEF" firstAttribute="centerX" secondItem="4U4-6I-mCi" secondAttribute="centerX" id="vAp-pZ-y1k"/>
                             <constraint firstItem="UTm-Yw-kLj" firstAttribute="centerX" secondItem="4U4-6I-mCi" secondAttribute="centerX" id="wYs-Uy-ufq"/>
                             <constraint firstItem="UTm-Yw-kLj" firstAttribute="leading" secondItem="3pk-Ut-7CC" secondAttribute="leading" constant="16" id="xEl-3K-X2t"/>
                         </constraints>
@@ -203,6 +212,7 @@
                     </view>
                     <connections>
                         <outlet property="displaySegment" destination="kmJ-rq-Wf6" id="qzw-eS-CL7"/>
+                        <outlet property="imageView" destination="t2V-zI-ZEF" id="pX8-YI-zT2"/>
                         <outlet property="messageField" destination="bHa-Nc-w14" id="wBH-VS-mr4"/>
                         <outlet property="themeSegment" destination="ufJ-Ld-RgP" id="ga9-VL-fbp"/>
                         <outlet property="typeSegment" destination="UTm-Yw-kLj" id="wP4-ar-FCA"/>
@@ -353,21 +363,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z5E-GB-6ty" customClass="AImageView" customModule="DarkEggKit">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z5E-GB-6ty" customClass="AnimationImageView" customModule="DarkEggKit">
+                                <rect key="frame" x="16" y="80" width="163.5" height="163.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="z5E-GB-6ty" secondAttribute="height" id="wBv-LB-cnh"/>
+                                </constraints>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t0S-Ph-kSB" customClass="AnimationImageView" customModule="DarkEggKit">
+                                <rect key="frame" x="195.5" y="80" width="163.5" height="163.5"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xEZ-80-Qfq" customClass="AnimationImageView" customModule="DarkEggKit">
+                                <rect key="frame" x="16" y="259.5" width="163.5" height="163.5"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gqs-Xn-Ihi" customClass="AnimationImageView" customModule="DarkEggKit">
+                                <rect key="frame" x="195.5" y="259.5" width="163.5" height="163.5"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FOc-KN-vyf">
+                                <rect key="frame" x="32" y="617" width="311" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.69019607839999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Clear Cache">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onClearCacheButtonClicked:" destination="LTL-xl-Fdy" eventType="touchUpInside" id="Xhj-W5-6nh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="z5E-GB-6ty" firstAttribute="trailing" secondItem="gfK-KD-Fah" secondAttribute="trailing" id="I9n-0T-wn9"/>
-                            <constraint firstItem="z5E-GB-6ty" firstAttribute="bottom" secondItem="gfK-KD-Fah" secondAttribute="bottom" id="MQV-PZ-g53"/>
-                            <constraint firstItem="z5E-GB-6ty" firstAttribute="top" secondItem="gfK-KD-Fah" secondAttribute="top" id="N54-Ca-s4P"/>
-                            <constraint firstItem="z5E-GB-6ty" firstAttribute="leading" secondItem="gfK-KD-Fah" secondAttribute="leading" id="jpQ-kd-uCW"/>
+                            <constraint firstItem="t0S-Ph-kSB" firstAttribute="height" secondItem="z5E-GB-6ty" secondAttribute="height" id="0RX-pm-8VU"/>
+                            <constraint firstItem="z5E-GB-6ty" firstAttribute="top" secondItem="gfK-KD-Fah" secondAttribute="top" constant="16" id="3bS-AQ-cSK"/>
+                            <constraint firstItem="t0S-Ph-kSB" firstAttribute="leading" secondItem="z5E-GB-6ty" secondAttribute="trailing" constant="16" id="6R8-aI-Mo6"/>
+                            <constraint firstItem="gfK-KD-Fah" firstAttribute="trailing" secondItem="t0S-Ph-kSB" secondAttribute="trailing" constant="16" id="EKL-22-Pvq"/>
+                            <constraint firstItem="FOc-KN-vyf" firstAttribute="centerX" secondItem="Wqn-kE-yGf" secondAttribute="centerX" id="Kh7-z0-8yz"/>
+                            <constraint firstItem="z5E-GB-6ty" firstAttribute="leading" secondItem="gfK-KD-Fah" secondAttribute="leading" constant="16" id="LdC-NZ-qFo"/>
+                            <constraint firstItem="gfK-KD-Fah" firstAttribute="bottom" secondItem="FOc-KN-vyf" secondAttribute="bottom" constant="20" id="MWM-dt-ZHg"/>
+                            <constraint firstItem="t0S-Ph-kSB" firstAttribute="width" secondItem="z5E-GB-6ty" secondAttribute="width" id="Otc-QB-aXq"/>
+                            <constraint firstItem="gfK-KD-Fah" firstAttribute="trailing" secondItem="Gqs-Xn-Ihi" secondAttribute="trailing" constant="16" id="RW2-gc-zNj"/>
+                            <constraint firstItem="FOc-KN-vyf" firstAttribute="leading" secondItem="gfK-KD-Fah" secondAttribute="leading" constant="32" id="Uak-tR-zl5"/>
+                            <constraint firstItem="Gqs-Xn-Ihi" firstAttribute="height" secondItem="z5E-GB-6ty" secondAttribute="height" id="aaA-Vs-xXY"/>
+                            <constraint firstItem="xEZ-80-Qfq" firstAttribute="top" secondItem="z5E-GB-6ty" secondAttribute="bottom" constant="16" id="bIo-pd-XUS"/>
+                            <constraint firstItem="Gqs-Xn-Ihi" firstAttribute="leading" secondItem="xEZ-80-Qfq" secondAttribute="trailing" constant="16" id="giz-sz-pRP"/>
+                            <constraint firstItem="Gqs-Xn-Ihi" firstAttribute="top" secondItem="t0S-Ph-kSB" secondAttribute="bottom" constant="16" id="i4q-Vu-9ce"/>
+                            <constraint firstItem="xEZ-80-Qfq" firstAttribute="width" secondItem="z5E-GB-6ty" secondAttribute="width" id="oKn-fi-BNt"/>
+                            <constraint firstItem="t0S-Ph-kSB" firstAttribute="top" secondItem="gfK-KD-Fah" secondAttribute="top" constant="16" id="pR2-p7-LXc"/>
+                            <constraint firstItem="xEZ-80-Qfq" firstAttribute="height" secondItem="z5E-GB-6ty" secondAttribute="height" id="r4h-lT-ahI"/>
+                            <constraint firstItem="Gqs-Xn-Ihi" firstAttribute="width" secondItem="z5E-GB-6ty" secondAttribute="width" id="sWd-iy-wvF"/>
+                            <constraint firstItem="xEZ-80-Qfq" firstAttribute="leading" secondItem="gfK-KD-Fah" secondAttribute="leading" constant="16" id="tst-Pz-aSN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gfK-KD-Fah"/>
                     </view>
                     <connections>
-                        <outlet property="aniImgView" destination="z5E-GB-6ty" id="Wo2-m5-F7V"/>
+                        <outlet property="aniImgView_1" destination="z5E-GB-6ty" id="Ytc-X4-DDS"/>
+                        <outlet property="aniImgView_2" destination="t0S-Ph-kSB" id="xtv-jL-bLW"/>
+                        <outlet property="aniImgView_3" destination="xEZ-80-Qfq" id="klh-ev-5BF"/>
+                        <outlet property="aniImgView_4" destination="Gqs-Xn-Ihi" id="BZl-YY-cze"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="huf-bJ-aYx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -375,4 +425,7 @@
             <point key="canvasLocation" x="1541.5999999999999" y="750.67466266866575"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Pizigani_1367_Chart_10MB" width="5157.5" height="3524.5"/>
+    </resources>
 </document>

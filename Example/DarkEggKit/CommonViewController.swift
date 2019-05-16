@@ -10,7 +10,7 @@ import UIKit
 
 import DarkEggKit
 
-class CommonViewController: UIViewController {
+class CommonViewController: UIViewController, DarkEggPopupMessageProtocol {
     @IBOutlet weak var startHexField: UITextField!
     @IBOutlet weak var endHexField: UITextField!
     @IBOutlet weak var colorView: UIImageView!

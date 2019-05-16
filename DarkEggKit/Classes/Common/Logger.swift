@@ -17,13 +17,13 @@ public class Logger: NSObject {
     ///   - function: function name
     ///   - line: line number
     ///   - column: column number
-    public class func debug(_ msg: Any..., file: String = #file, function: String = #function, line: Int = #line, column: Int = #column) {
+    public class func debug(_ msg: Any..., file: String = #file, function: String = #function, line: Int = #line) {
         #if DEBUG
         var str = "";
         for i in 0 ..< msg.count {
             str += String(describing: msg[i]);
         }
-        print("[DEBUG] \((file as NSString).lastPathComponent) [L:\(line)|C:\(column)] - \(function) :\(str)");
+        print("[DEBUG] \((file as NSString).lastPathComponent) [Line:\(line)] - \(function) : \(str)");
         #endif
     }
     
@@ -36,12 +36,12 @@ public class Logger: NSObject {
     ///   - function: function name
     ///   - line: line number
     ///   - column: column number
-    public class func error(_ msg: Any..., file: String = #file, function: String = #function, line: Int = #line, column: Int = #column) {
+    public class func error(_ msg: Any..., file: String = #file, function: String = #function, line: Int = #line) {
         var str = "";
         for i in 0 ..< msg.count {
             str += String(describing: msg[i]);
         }
-        print("[ERROR] \((file as NSString).lastPathComponent) [L:\(line)|C:\(column)] - \(function) :\(str)");
+        print("[ERROR] \((file as NSString).lastPathComponent) [Line:\(line)] - \(function) : \(str)");
     }
     
 }
