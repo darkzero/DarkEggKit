@@ -10,7 +10,7 @@ import UIKit
 
 import DarkEggKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, DarkEggPopupMessageProtocol {
     @IBOutlet var tableView: UITableView!
     private var sideMenu: MenuViewController!
 
