@@ -51,54 +51,18 @@ public class DZPopupMessageView: UIView {
         self.messageLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
         self.messageLabel.text = message.text
         
-        self.layer.shadowColor = UIColor.black.cgColor
-        self.layer.shadowOpacity = 0.5
-        switch message.theme {
-        case .dark:
-            self.messageLabel.textColor = .white
-            self.backgroundColor = UIColor(white: 0.5, alpha: 0.7)
-            self.layer.shadowColor = UIColor.black.cgColor
-            self.layer.shadowOpacity = 0.5
-            self.layer.borderColor = UIColor.white.cgColor
-            self.iconImageView.tintColor = .white
-        case .light:
-            self.messageLabel.textColor = .darkGray
-            self.backgroundColor = UIColor(white: 1.0, alpha: 0.9)
-            self.layer.shadowColor = UIColor.gray.cgColor
-            self.layer.shadowOpacity = 0.3
-            self.layer.borderColor = UIColor.gray.cgColor
-            self.iconImageView.tintColor = .gray
-        }
-        self.layer.borderWidth = 1
+        self.messageLabel.textColor = message.textColor
+        self.backgroundColor = message.backColor
         
-        var imageStr = ""
-        switch message.type {
-        case .info:
-            imageStr = "dz_icon_info"
-            break
-        case .warning:
-            self.layer.borderColor = UIColor.orange.cgColor
-            if message.theme == .dark {
-                self.backgroundColor = UIColor(white: 0.7, alpha: 0.9)
-            }
-            self.messageLabel.textColor = .orange
-            imageStr = "dz_icon_warning"
-            self.iconImageView.tintColor = .orange
-            break
-        case .error:
-            self.layer.borderColor = UIColor.red.cgColor
-            if message.theme == .dark {
-                self.backgroundColor = UIColor(white: 0.7, alpha: 0.9)
-            }
-            self.messageLabel.textColor = .red
-            //self.messageLabel.font = UIFont.boldSystemFont(ofSize: 14.0)
-            imageStr = "dz_icon_error"
-            self.iconImageView.tintColor = .red
-            break
-        }
-        let image = UIImage(named: imageStr, in: Bundle(for: DZPopupMessageView.self), compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
+        self.layer.borderColor = message.textColor.cgColor
+        self.layer.borderWidth = 1
+        self.layer.shadowColor = message.textColor.cgColor
+        self.layer.shadowOpacity = 0.3
+
+        let image = UIImage(named: message.imageName, in: Bundle(for: DZPopupMessageView.self), compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
         self.iconImageView.image = image
         self.iconImageView.contentMode = .scaleAspectFill
+        self.iconImageView.tintColor = message.textColor
         self.addSubview(iconImageView)
         
         self.layer.masksToBounds = false
@@ -109,6 +73,8 @@ public class DZPopupMessageView: UIView {
         self.layer.shouldRasterize = true
         self.layer.rasterizationScale = UIScreen.main.scale
         self.layer.cornerRadius = radius
+        
+        self.setNeedsLayout()
     }
 }
 
