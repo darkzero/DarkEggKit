@@ -15,7 +15,7 @@ extension UIViewController {
     
     private var animator: DZSideMenuAnimator? {
         set {
-            objc_setAssociatedObject(self, &AssociatedKeys.kDZSideMenuAnimator, animator, .OBJC_ASSOCIATION_RETAIN)
+            objc_setAssociatedObject(self, &AssociatedKeys.kDZSideMenuAnimator, newValue, .OBJC_ASSOCIATION_RETAIN)
         }
         get {
             return (objc_getAssociatedObject(self, &AssociatedKeys.kDZSideMenuAnimator) as? DZSideMenuAnimator)
@@ -23,6 +23,11 @@ extension UIViewController {
     }
     
     public func dz_showSideMenu(_ vc: UIViewController, configuration: DZSideMenuConfiguration? = nil) {
+        // fix for iOS 13,
+        // in iOS 13 default modalPresentationStyle is .automatic
+        // must be .currentContext
+        vc.modalPresentationStyle = .currentContext
+        
         var _config = configuration
         if _config == nil {
             _config = DZSideMenuConfiguration()
@@ -44,7 +49,7 @@ extension UIViewController {
         
         self.present(vc, animated: true, completion: nil)
         
-//        NotificationCenter.default.addObserver(self, selector: #selector(self.onMaskViewTapped(_:)), name: NSNotification.Name.DZSideMenu.Tap, object: nil)
+        //NotificationCenter.default.addObserver(self, selector: #selector(self.onMaskViewTapped(_:)), name: NSNotification.Name.DZSideMenu.Tap, object: nil)
     }
 }
 
