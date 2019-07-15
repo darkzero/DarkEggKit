@@ -13,7 +13,6 @@ public struct Message {
     var display: DZPopupMessage.DisplayType = .rise
     var disappearDelay: TimeInterval = 1.5
     
-    
     var imageName: String {
         switch self.type {
         case .info:
@@ -75,36 +74,9 @@ public struct Message {
         }
         return color.withAlphaComponent(0.8)
     }
-    
-//    var foreColor: UIColor {
-//        switch self.type {
-//        case .info:
-//            if #available(iOS 13, *) {
-//                return .label
-//            }
-//            else {
-//                return .darkText
-//            }
-//        case .warning:
-//            if #available(iOS 13, *) {
-//                return .systemOrange
-//            }
-//            else {
-//                return .orange
-//            }
-//        case .error:
-//            if #available(iOS 13, *) {
-//                return .systemRed
-//            }
-//            else {
-//                return .red
-//            }
-//        }
-//    }
 }
 
 public class DZPopupMessage {
-    
     public enum DisplayType: String {
         case rise
         case drop
