@@ -201,6 +201,7 @@
                                 <segments>
                                     <segment title="Light"/>
                                     <segment title="Dark"/>
+                                    <segment title="Undefined"/>
                                 </segments>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UTm-Yw-kLj">
