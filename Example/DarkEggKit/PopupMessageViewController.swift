@@ -50,6 +50,8 @@ extension PopupMessageViewController {
                 return .light
             case 1:
                 return .dark
+            case 2:
+                return .undefined
             default:
                 return .light
             }
