@@ -18,7 +18,7 @@ class DZSideMenuMask: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.backgroundColor = .black
+        self.backgroundColor = .systemGray
         self.alpha = 0.0;
         self.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         
