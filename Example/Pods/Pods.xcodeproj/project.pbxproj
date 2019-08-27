@@ -10,7 +10,7 @@
 		00A9359B2D3C4069EEC0B4C4BC861503 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4BEA8A65A14E162A6FBE7DE08612B8B /* Image.xcassets */; };
 		0455A97B6E0211C28728302C4BF08A0A /* DZSideMenuConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F98922BE32819B4FCDD8E0C8A520C7 /* DZSideMenuConfiguration.swift */; };
 		1252A463271249785120106DA00D5031 /* DZSideMenuInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6964D243B8DD7AF9E49032E991B8A1A7 /* DZSideMenuInteractiveTransition.swift */; };
-		477400CE93A18521B625AA4C3C16EBF1 /* AnimationImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D728C5DDA2FD8AC6141598A5F02A6C /* AnimationImage.swift */; };
+		477400CE93A18521B625AA4C3C16EBF1 /* AnimatedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D728C5DDA2FD8AC6141598A5F02A6C /* AnimatedImage.swift */; };
 		47A1B85EF029091065A2B6F060BB2662 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 		4BFB48A8D3B30F8AA55C595B1715B513 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 244AFBC2E07B7E3DB4019137F600F6C0 /* README.md */; };
 		510DD7A51E8118EBE9192C8F135113A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
@@ -33,7 +33,7 @@
 		B539E18A045F5DB9D257C3984B194131 /* DZPopupMessageQueueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CF4293ED0DC0F1DD877296730A699C /* DZPopupMessageQueueManager.swift */; };
 		B71B4D42226D9D4600E90390 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B71B4D41226D9D4500E90390 /* Image.xcassets */; };
 		BD6A4D45D3449DA17803845853979019 /* Pods-DarkEggKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EA6A68EBF0C1805AB2D6762373B3D15A /* Pods-DarkEggKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C065545432C56E939DA0D71EF6D5618E /* AnimationImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F4834BB10F1FFB366D0AE2F11CD480 /* AnimationImageView.swift */; };
+		C065545432C56E939DA0D71EF6D5618E /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F4834BB10F1FFB366D0AE2F11CD480 /* AnimatedImageView.swift */; };
 		C223C8031C5E70C0AC56E1AF6B1F8FCA /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 91099AB36FBF95FCEBCD09510E3430C9 /* README.md */; };
 		C47C2738BC4467B11B217B9C5168A214 /* UIViewController+PopupMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D52F3D1FDE8A17C000AF49AD3B80C4 /* UIViewController+PopupMessage.swift */; };
 		CEC44859C9998208B87702FBB829899B /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875EC3CDE6E7FA92E1A43A801EC342B2 /* Logger.swift */; };
@@ -46,7 +46,7 @@
 		F08C80F6A5D80231E39C8E47DDB05A6B /* Pods-DarkEggKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0AA40AE53A9E4728E8ED3B68F6FFB /* Pods-DarkEggKit_Tests-dummy.m */; };
 		F299B800BA0C215977BB943663E5DC1A /* CGRect+Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7627DF068BF51D3F4CC4D48A4C270BCF /* CGRect+Scale.swift */; };
 		F697734DBF6628D019B1A8DF508ACDA8 /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194785921F2E35A86EEECBD19DDEFB23 /* UIImage+Color.swift */; };
-		FF9D31402ADF283531A83693A5A2053B /* AnimationImageView+Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAB70397D0C9210B0FD1649DF11FCDA /* AnimationImageView+Animator.swift */; };
+		FF9D31402ADF283531A83693A5A2053B /* AnimatedImageViewImageView+Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAB70397D0C9210B0FD1649DF11FCDA /* AnimatedImageViewImageView+Animator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +74,7 @@
 		1331DD4BD62F68B39CFDA6BC63CF87DC /* DZSideMenuTransitioning.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZSideMenuTransitioning.swift; path = DarkEggKit/Classes/SideMenu/DZSideMenuTransitioning.swift; sourceTree = "<group>"; };
 		1419625B7914CBA637661EC4A45EB16A /* DarkEggKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = DarkEggKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		194785921F2E35A86EEECBD19DDEFB23 /* UIImage+Color.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Color.swift"; path = "DarkEggKit/Classes/Common/UIImage+Color.swift"; sourceTree = "<group>"; };
-		1FAB70397D0C9210B0FD1649DF11FCDA /* AnimationImageView+Animator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AnimationImageView+Animator.swift"; path = "DarkEggKit/Classes/AniImageView/AnimationImageView+Animator.swift"; sourceTree = "<group>"; };
+		1FAB70397D0C9210B0FD1649DF11FCDA /* AnimatedImageViewImageView+Animator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AnimatedImageViewImageView+Animator.swift"; path = "DarkEggKit/Classes/AniImageView/AnimatedImageViewImageView+Animator.swift"; sourceTree = "<group>"; };
 		200F3851007B2574B10C78F06ECF965D /* Pods-DarkEggKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DarkEggKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		209246F036E34EDE53CE090777ABCA13 /* DZPopupMessageQueue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZPopupMessageQueue.swift; path = DarkEggKit/Classes/PopupMessage/DZPopupMessageQueue.swift; sourceTree = "<group>"; };
 		227CBED15F674E67BEA356E300853103 /* UIViewController+SideMenu.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+SideMenu.swift"; path = "DarkEggKit/Classes/SideMenu/UIViewController+SideMenu.swift"; sourceTree = "<group>"; };
@@ -87,13 +87,13 @@
 		4FFC56A642B94DFC23D6B7C56717169C /* DarkEggKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DarkEggKit-dummy.m"; sourceTree = "<group>"; };
 		50CB2B7419D70C9B878CD767606C6D62 /* Pods-DarkEggKit_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DarkEggKit_Tests-Info.plist"; sourceTree = "<group>"; };
 		5146F0C088114CE43107B7637BD361FF /* DarkEggKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DarkEggKit-prefix.pch"; sourceTree = "<group>"; };
-		52F4834BB10F1FFB366D0AE2F11CD480 /* AnimationImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationImageView.swift; path = DarkEggKit/Classes/AniImageView/AnimationImageView.swift; sourceTree = "<group>"; };
+		52F4834BB10F1FFB366D0AE2F11CD480 /* AnimatedImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedImageView.swift; path = DarkEggKit/Classes/AniImageView/AnimatedImageView.swift; sourceTree = "<group>"; };
 		5AF01CAFCF9B6BD31449F105A6AFCCAB /* DZPaddingLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZPaddingLabel.swift; path = DarkEggKit/Classes/PaddingLabel/DZPaddingLabel.swift; sourceTree = "<group>"; };
 		5B3C4421B96A7596204FCDE7A960E24C /* DarkEggKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DarkEggKit-Info.plist"; sourceTree = "<group>"; };
 		5BF7C144C31D7F88055DB468C3FF4FDD /* DZPopupMessageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZPopupMessageView.swift; path = DarkEggKit/Classes/PopupMessage/DZPopupMessageView.swift; sourceTree = "<group>"; };
 		5CDCB9C9B43DF69534A22A19E212F807 /* Pods-DarkEggKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DarkEggKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5E0E3099BF3BFEE3561DA539DF831BD6 /* DarkEggKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DarkEggKit.modulemap; sourceTree = "<group>"; };
-		65D728C5DDA2FD8AC6141598A5F02A6C /* AnimationImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationImage.swift; path = DarkEggKit/Classes/AniImageView/AnimationImage.swift; sourceTree = "<group>"; };
+		65D728C5DDA2FD8AC6141598A5F02A6C /* AnimatedImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedImage.swift; path = DarkEggKit/Classes/AniImageView/AnimatedImage.swift; sourceTree = "<group>"; };
 		676D14E2BDEA5454A51845B2F74B6D1A /* Pods-DarkEggKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DarkEggKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		6964D243B8DD7AF9E49032E991B8A1A7 /* DZSideMenuInteractiveTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZSideMenuInteractiveTransition.swift; path = DarkEggKit/Classes/SideMenu/DZSideMenuInteractiveTransition.swift; sourceTree = "<group>"; };
 		7627DF068BF51D3F4CC4D48A4C270BCF /* CGRect+Scale.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGRect+Scale.swift"; path = "DarkEggKit/Classes/Common/CGRect+Scale.swift"; sourceTree = "<group>"; };
@@ -194,7 +194,7 @@
 		50FCA36CB94F2609C1F1A9D4A7C81099 /* DarkEggKit */ = {
 			isa = PBXGroup;
 			children = (
-				EB6099C2DD6DBF8F711CDEAADC725835 /* AniImageView */,
+				EB6099C2DD6DBF8F711CDEAADC725835 /* AnimatedImageView */,
 				3F742C7819D15E098544063E56434302 /* Common */,
 				82D632546085C0F8543F2A8F0D052717 /* PaddingLabel */,
 				356B3E3F8A56ABDE046359CD4F8CEB47 /* Pod */,
@@ -344,19 +344,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EB6099C2DD6DBF8F711CDEAADC725835 /* AniImageView */ = {
+		EB6099C2DD6DBF8F711CDEAADC725835 /* AnimatedImageView */ = {
 			isa = PBXGroup;
 			children = (
 				B71B4D41226D9D4500E90390 /* Image.xcassets */,
-				65D728C5DDA2FD8AC6141598A5F02A6C /* AnimationImage.swift */,
-				52F4834BB10F1FFB366D0AE2F11CD480 /* AnimationImageView.swift */,
-				1FAB70397D0C9210B0FD1649DF11FCDA /* AnimationImageView+Animator.swift */,
+				65D728C5DDA2FD8AC6141598A5F02A6C /* AnimatedImage.swift */,
+				52F4834BB10F1FFB366D0AE2F11CD480 /* AnimatedImageView.swift */,
+				1FAB70397D0C9210B0FD1649DF11FCDA /* AnimatedImageViewImageView+Animator.swift */,
 				244AFBC2E07B7E3DB4019137F600F6C0 /* README.md */,
 				BE84F6AEC27520F6B23B02A9ED823F2B /* SessionDataTask.swift */,
 				C5BAAB695F23B1E4931D4E20DD757549 /* SourceCache.swift */,
 				F963330BF416B98E2AE6B67CACB317C1 /* SourceDownloader.swift */,
 			);
-			name = AniImageView;
+			name = AnimatedImageView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -505,9 +505,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				477400CE93A18521B625AA4C3C16EBF1 /* AnimationImage.swift in Sources */,
-				FF9D31402ADF283531A83693A5A2053B /* AnimationImageView+Animator.swift in Sources */,
-				C065545432C56E939DA0D71EF6D5618E /* AnimationImageView.swift in Sources */,
+				477400CE93A18521B625AA4C3C16EBF1 /* AnimatedImage.swift in Sources */,
+				FF9D31402ADF283531A83693A5A2053B /* AnimatedImageViewImageView+Animator.swift in Sources */,
+				C065545432C56E939DA0D71EF6D5618E /* AnimatedImageView.swift in Sources */,
 				AD214D6942D2546A0DAB3021B36512A3 /* Array+SafeIndex.swift in Sources */,
 				F299B800BA0C215977BB943663E5DC1A /* CGRect+Scale.swift in Sources */,
 				63147A98CDA8DFE25CD46AAA6FBF43F4 /* DarkEggKit-dummy.m in Sources */,

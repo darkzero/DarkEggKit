@@ -17,28 +17,28 @@ let kFRunLoopModeCommon = RunLoopMode.commonModes
 
 private let placeHolderName = "darkegg_image_place_holder"
 
-/// Protocol of 'AnimationImageViewDelegate'
-public protocol AnimationImageViewDelegate: AnyObject {
+/// Protocol of 'AnimatedImageViewDelegate'
+public protocol AnimatedImageViewDelegate: AnyObject {
     /// Called after the 'AnimatedImageView' has finished each animation loop.
     /// - Parameters
     ///   - imageView: The 'AnimatedImageView' that is being animated
     ///   - count: The looped count
-    func animatedImageView(_ imageView: AnimationImageView, didPlayAnimationLoops count: UInt)
+    func animatedImageView(_ imageView: AnimatedImageView, didPlayAnimationLoops count: UInt)
     
     /// Called after the 'AnimatedImageView' has reached the max repeat count
     /// - Parameter imageView: The 'AnimatedImageView' that is being animated
-    func animatedImageViewDidFinishAnimating(_ imageView: AnimationImageView)
+    func animatedImageView(_ imageView: AnimatedImageView, didFinishAnimating: Void)
 }
 
-extension AnimationImageViewDelegate {
-    public func animatedImageView(_ imageView: AnimationImageView, didPlayAnimationLoops count: UInt) {}
-    public func animatedImageViewDidFinishAnimating(_ imageView: AnimationImageView) {}
+extension AnimatedImageViewDelegate {
+    public func animatedImageView(_ imageView: AnimatedImageView, didPlayAnimationLoops count: UInt) {}
+    public func animatedImageView(_ imageView: AnimatedImageView, didFinishAnimating: Void) {}
 }
 
-public class AnimationImageView: UIImageView {
+public class AnimatedImageView: UIImageView {
     /// Repeat mode
     ///   - once
-    ///   - finite
+    ///   - finite(with count)
     ///   - infinite
     public enum RepeatMode: Equatable {
         case once
@@ -80,13 +80,13 @@ public class AnimationImageView: UIImageView {
     public var framePreloadCount = 10
     /// pre scaling
     public var needsPrescaling = true
-    public var delegate: AnimationImageViewDelegate?
+    public var delegate: AnimatedImageViewDelegate?
     
     private var downloadCancelToken: SessionDataTask.CancelToken = -1
     
     private var progressLayer = CAShapeLayer()
     
-    public var placeHolder: UIImage? = UIImage(named: placeHolderName, in: Bundle(for: AnimationImageView.self), compatibleWith: nil)
+    public var placeHolder: UIImage? = UIImage(named: placeHolderName, in: Bundle(for: AnimatedImageView.self), compatibleWith: nil)
     public var willShowProgress: Bool = true
     
     /// The run loop mode of animation timer
@@ -105,8 +105,8 @@ public class AnimationImageView: UIImageView {
     /// Proxy object for preventing a reference cycle
     /// between the 'CADDisplayLink' and 'AnimatedImageView'
     class TargetProxy {
-        private weak var target: AnimationImageView?
-        init(target: AnimationImageView) {
+        private weak var target: AnimatedImageView?
+        init(target: AnimatedImageView) {
             self.target = target
         }
         @objc func onScreenUpdate() {
@@ -118,9 +118,7 @@ public class AnimationImageView: UIImageView {
     public var aImage: AnimationImage? {
         didSet {
             if aImage != oldValue {
-                Logger.debug("set animation Image")
                 self.downloadCancelToken = aImage?.startLoad(completion: { [weak self] (result, aImage) in
-                    Logger.debug("aimage loading end, success: \(result)")
                     if result {
                         DispatchQueue.main.async {
                             self?.progressLayer.removeFromSuperlayer()
@@ -145,7 +143,7 @@ public class AnimationImageView: UIImageView {
     
     // Dispatch queue used for preloading images.
     private lazy var preloadQueue: DispatchQueue = {
-        return DispatchQueue(label: "cn.darkzero.DarkEggKit.AImageView.preloadQueue")
+        return DispatchQueue(label: "cn.darkzero.DarkEggKit.AnimatedImageView.preloadQueue")
     }()
     
     // A flag to avoid invalidating the displayLink on deinit if it was never created
@@ -172,7 +170,7 @@ public class AnimationImageView: UIImageView {
     }
 }
 
-extension AnimationImageView {
+extension AnimatedImageView {
     private func updateFrameIfNeeded() {
         guard let animator = animator else {
             return
@@ -181,7 +179,7 @@ extension AnimationImageView {
         // call finish callback
         guard !animator.isFinished else {
             stopAnimating()
-            delegate?.animatedImageViewDidFinishAnimating(self)
+            delegate?.animatedImageView(self, didFinishAnimating: ())
             return
         }
         let duration: CFTimeInterval
@@ -200,7 +198,7 @@ extension AnimationImageView {
     }
 }
 
-extension AnimationImageView {
+extension AnimatedImageView {
     override open var isAnimating: Bool {
         if isDisplayLinkInitialized {
             return !displayLink.isPaused
@@ -221,6 +219,7 @@ extension AnimationImageView {
     /// Stop the animation.
     override open func stopAnimating() {
         super.stopAnimating()
+        self.animator?.resetAnimatedFrames()
         if isDisplayLinkInitialized {
             displayLink.isPaused = true
         }
@@ -228,11 +227,9 @@ extension AnimationImageView {
     
     override open func display(_ layer: CALayer) {
         if let currentFrame = animator?.currentFrameImage {
-            //Logger.debug("display animation")
             layer.contents = currentFrame.cgImage
         } else {
-            //Logger.debug("display placeHolder")
-            layer.contents = self.placeHolder?.cgImage
+            //layer.contents = self.placeHolder?.cgImage
         }
     }
     
@@ -249,7 +246,6 @@ extension AnimationImageView {
     /// Clear data when disappear, free the memory
     override open func willMove(toWindow newWindow: UIWindow?) {
         guard let _ = newWindow else {
-            Logger.debug()
             self.clear()
             return
         }
@@ -268,8 +264,8 @@ extension AnimationImageView {
     /// Reset the animator.
     private func reset() {
         animator = nil
-        if let imageSource = self.aImage?.imageSource {
-            let targetSize = bounds.scaled(UIScreen.main.scale).size
+        if let aImg = self.aImage, let imageSource = aImg.imageSource {
+            let targetSize = self.bounds.size //bounds.scaled(UIScreen.main.scale).size
             let animator = Animator(
                 imageSource: imageSource,
                 contentMode: contentMode,
@@ -287,24 +283,26 @@ extension AnimationImageView {
     
     public func clear() {
         self.aImage = nil
+        self.animator?.resetAnimatedFrames()
+        self.animator = nil
         self.reset()
     }
 }
 
-extension AnimationImageView {
+extension AnimatedImageView {
     public func cancelDownloading() {
         self.aImage?.cancelLoad(token: self.downloadCancelToken)
         self.progressLayer.removeFromSuperlayer()
     }
 }
 
-extension AnimationImageView {
+extension AnimatedImageView {
     internal func showDownloadProgress(precent: Float) {
-        //Logger.debug(precent)
         guard self.willShowProgress else {
             return
         }
         DispatchQueue.main.async {
+            self.layer.contents = self.placeHolder?.cgImage
             let width = max(min(self.bounds.width, self.bounds.height)/2.0, 40.0)
             let processPath = UIBezierPath();
             processPath.lineCapStyle    = CGLineCap.butt;
@@ -314,7 +312,7 @@ extension AnimationImageView {
             let center = CGPoint(x: self.progressLayer.bounds.midX, y: self.progressLayer.bounds.midY)
             
             if self.progressLayer.superlayer == nil, self.progressLayer.frame.width == 0 {
-                Logger.debug("add progress")
+                //Logger.debug("add progress")
                 self.progressLayer.frame = CGRect(origin: CGPoint(x: (self.bounds.width-width)/2, y: (self.bounds.height-width)/2),
                                                   size: CGSize(width: width, height: width))
                 self.progressLayer.strokeColor = UIColor.white.cgColor
@@ -335,7 +333,7 @@ extension AnimationImageView {
 }
 
 // MARK: - Class function for test
-extension AnimationImageView {
+extension AnimatedImageView {
     public class func clearCache() {
         SourceCache.default.clear()
     }

@@ -32,12 +32,12 @@ public class SessionDataTask: NSObject {
     }
     
     init(url: String) {
-        Logger.debug()
+        //Logger.debug()
         self.urlString = url
     }
     
     deinit {
-        Logger.debug()
+        //Logger.debug()
     }
 }
 
@@ -103,8 +103,8 @@ extension SessionDataTask: URLSessionDataDelegate {
     
     public func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive response: URLResponse, completionHandler: @escaping (URLSession.ResponseDisposition) -> Void) {
         completionHandler(.allow)
-        self.expectedLeght = response.expectedContentLength;
-        Logger.debug("_expectedLeght: ", expectedLeght);
+        self.expectedLeght = response.expectedContentLength
+        //Logger.debug("_expectedLeght: ", expectedLeght);
     }
     
     public func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive data: Data) {

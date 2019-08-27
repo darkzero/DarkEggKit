@@ -6,7 +6,7 @@ target 'DarkEggKit_Example' do
   pod 'DarkEggKit/PopupMessage', :path => '../'
   pod 'DarkEggKit/SideMenu', :path => '../'
   # pod 'DarkEggKit/ButtonMenu', :path => '../'
-  pod 'DarkEggKit/AniImageView', :path => '../'
+  pod 'DarkEggKit/AnimatedImageView', :path => '../'
   
   # test SDWebImage
   #pod 'SDWebImage', '~> 4.0'
