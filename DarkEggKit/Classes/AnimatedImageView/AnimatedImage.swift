@@ -20,16 +20,13 @@ public class AnimationImage: NSObject {
     public convenience init?(url: String) {
         // if already in cache
         if let src = SourceCache.default.findSource(from: url) {
-            Logger.debug("from cache")
             self.init(source: src, urlStr: url)
         } else {
-            Logger.debug("from url")
             self.init(urlStr: url)
         }
     }
     
     private init(source: CGImageSource? = nil, urlStr: String) {
-        Logger.debug()
         self.imageSource = source
         self.urlString = urlStr
         super.init()
@@ -37,7 +34,6 @@ public class AnimationImage: NSObject {
     }
     
     deinit {
-        Logger.debug()
         self.imageSource = nil
     }
 }
@@ -48,19 +44,16 @@ extension AnimationImage {
         guard self.imageSource == nil else {
             return -1
         }
-        Logger.debug("start download")
         // completion handle
         let onCompleted = { (result: DownloadResult) -> Void in
             switch result {
             case .success(let src):
-                Logger.debug("download success")
                 self.imageSource = src
                 SourceCache.default.add(url: self.urlString, source: src)
                 SourceDownloader.default.releaseTask(url: self.urlString)
                 completion?(true, self)
                 break
             case .failure:
-                Logger.debug("download failure")
                 completion?(false, self)
                 break
             }
@@ -79,7 +72,6 @@ extension AnimationImage {
 }
 
 extension AnimationImage {
-    
 }
 
 // MARK: - Get frame duration for animator

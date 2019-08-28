@@ -53,7 +53,7 @@ extension SourceDownloader {
     }
     
     internal func releaseTask(url: String) {
-        Logger.debug()
+        //Logger.debug()
         self.sessionTasks[url]?.sessionDataTask?.cancel()
         self.sessionTasks[url]?.sessionDataTask = nil
         //let t = self.sessionTasks[url]

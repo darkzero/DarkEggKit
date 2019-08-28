@@ -297,15 +297,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-DarkEggKit_Example/Pods-DarkEggKit_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/DarkEggKit/DarkEggKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DarkEggKit.framework",
 			);

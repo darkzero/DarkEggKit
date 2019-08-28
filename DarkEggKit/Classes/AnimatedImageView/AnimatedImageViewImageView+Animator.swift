@@ -9,16 +9,16 @@ import UIKit
 
 
 protocol AnimatorDelegate: AnyObject {
-    func animator(_ animator: AnimationImageView.Animator, didPlayAnimationLoops count: UInt)
+    func animator(_ animator: AnimatedImageView.Animator, didPlayAnimationLoops count: UInt)
 }
 
-extension AnimationImageView: AnimatorDelegate {
+extension AnimatedImageView: AnimatorDelegate {
     func animator(_ animator: Animator, didPlayAnimationLoops count: UInt) {
         delegate?.animatedImageView(self, didPlayAnimationLoops: count)
     }
 }
 
-extension AnimationImageView {
+extension AnimatedImageView {
     
     // Represents a single frame in a GIF.
     struct AnimatedFrame {
@@ -50,7 +50,7 @@ extension AnimationImageView {
     }
 }
 
-extension AnimationImageView {
+extension AnimatedImageView {
     // MARK: - Animator
     class Animator {
         private let size: CGSize
@@ -143,6 +143,10 @@ extension AnimationImageView {
             self.preloadQueue = preloadQueue
         }
         
+        deinit {
+            //Logger.debug()
+        }
+        
         func frame(at index: Int) -> UIImage? {
             return animatedFrames[safe: index]?.image
         }
@@ -171,23 +175,20 @@ extension AnimationImageView {
         }
         
         private func setupAnimatedFrames() {
-            resetAnimatedFrames()
-            
+            self.resetAnimatedFrames()
             var duration: TimeInterval = 0
-            
             (0..<frameCount).forEach { index in
                 let frameDuration = AnimationImage.getFrameDuration(from: imageSource, at: index)
                 duration += min(frameDuration, maxTimeStep)
                 animatedFrames += [AnimatedFrame(image: nil, duration: frameDuration)]
-                
                 if index > maxFrameCount { return }
                 animatedFrames[index] = animatedFrames[index].makeAnimatedFrame(image: loadFrame(at: index))
             }
-            
             self.loopDuration = duration
         }
         
-        private func resetAnimatedFrames() {
+        internal func resetAnimatedFrames() {
+            animatedFrames.removeAll()
             animatedFrames = []
         }
         
@@ -195,16 +196,31 @@ extension AnimationImageView {
             guard let image = CGImageSourceCreateImageAtIndex(imageSource, index, nil) else {
                 return nil
             }
-            return UIImage(cgImage: image)
-//            let img = UIImage(cgImage: image)
-//            let scaledImage: CGImage
-//            if needsPrescaling, size != .zero {
-//                scaledImage = image.resize(to: size, for: contentMode)
-//            } else {
-//                scaledImage = image
-//            }
-//
-//            return UIImage(cgImage: scaledImage)
+            let scaledImage: UIImage
+            if needsPrescaling, size != .zero {
+                let img = UIImage(cgImage: image)
+                let viewMaxWidth = max(size.width, size.height)
+                var imgWidth = img.size.width
+                var imgHeight = img.size.height
+                let scope = imgWidth/imgHeight
+                if imgWidth > imgHeight {
+                    imgHeight = min(viewMaxWidth, imgHeight)
+                    imgWidth = scope * imgHeight
+                }
+                else {
+                    imgWidth = min(viewMaxWidth, imgWidth)
+                    imgHeight = imgWidth/scope
+                }
+                let scaleSize = CGSize(width: imgWidth*UIScreen.main.scale, height: imgHeight*UIScreen.main.scale)
+                UIGraphicsBeginImageContext(scaleSize)
+                img.draw(in: CGRect(origin: .zero, size: scaleSize))
+                scaledImage = UIGraphicsGetImageFromCurrentImageContext()!
+                UIGraphicsEndImageContext()
+            } else {
+                scaledImage = UIImage(cgImage: image)
+            }
+
+            return scaledImage
         }
         
         private func updatePreloadedFrames() {
