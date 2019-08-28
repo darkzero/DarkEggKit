@@ -298,14 +298,19 @@ extension AnimatedImageView {
 
 extension AnimatedImageView {
     internal func showDownloadProgress(precent: Float) {
+        // show placeholder image
+        DispatchQueue.main.async {
+            self.layer.contents = self.placeHolder?.cgImage
+        }
+        // return when willShowProgress if false
         guard self.willShowProgress else {
             return
         }
+        // show progress
         DispatchQueue.main.async {
-            self.layer.contents = self.placeHolder?.cgImage
             let width = max(min(self.bounds.width, self.bounds.height)/2.0, 40.0)
             let processPath = UIBezierPath();
-            processPath.lineCapStyle    = CGLineCap.butt;
+            processPath.lineCapStyle    = CGLineCap.round;
             let radius: CGFloat = width*0.75;
             let startAngle              = -(Float.pi) / 2;
             let endAngle                = (precent * 2 * Float.pi) + startAngle;
@@ -319,7 +324,8 @@ extension AnimatedImageView {
                 self.progressLayer.cornerRadius = 8.0
                 self.progressLayer.backgroundColor = UIColor.gray.withAlphaComponent(0.5).cgColor
                 self.progressLayer.fillColor = UIColor.clear.cgColor
-                self.progressLayer.lineWidth = 4
+                self.progressLayer.lineWidth = 6
+                self.progressLayer.lineCap = .round
                 self.layer.addSublayer(self.progressLayer)
             }
             

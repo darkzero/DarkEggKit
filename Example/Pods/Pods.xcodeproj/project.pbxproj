@@ -38,6 +38,7 @@
 		AA1AA91D8BB004FA19047F7518063412 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DB59152AC79AC1D715049513FF777E /* Logger.swift */; };
 		B10CB6A30F024CABB962FC9EDFA0F0FE /* SessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB9BA6278EC81CE4307BC297D45BC24 /* SessionDataTask.swift */; };
 		B3745AB890BAE94BFFB1CFEFEE469E61 /* DZSideMenuAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6C1F36C87CC2797ED95A0D462C9573 /* DZSideMenuAnimator.swift */; };
+		B7B59344231627D40064B732 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7B59343231627D30064B732 /* Image.xcassets */; };
 		CAF4970B24E156A5E36BF05AAC4AE7A9 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A77DFFC9023B3F41748016408981C2 /* UIColor+Hex.swift */; };
 		CCB352E945C29266D572D4B44B2CA260 /* DZPopupMessageQueueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BC1AE9D2B64C81D1A55DCD5B6BB222 /* DZPopupMessageQueueManager.swift */; };
 		E707295F38CC8D53B4020003C336855B /* SourceCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064BC2817E9F06C4476B6DC5DE723107 /* SourceCache.swift */; };
@@ -75,7 +76,7 @@
 		182B8EBAA477859F5C8864CDEFDAFDFC /* DarkEggKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DarkEggKit-prefix.pch"; sourceTree = "<group>"; };
 		1A81F09FFC431204D7CED418C8FC1E6C /* SourceDownloader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SourceDownloader.swift; path = DarkEggKit/Classes/AnimatedImageView/SourceDownloader.swift; sourceTree = "<group>"; };
 		20D948EE3EAEE8514295C9E5CEEDD2ED /* Pods-DarkEggKit_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DarkEggKit_Tests-Info.plist"; sourceTree = "<group>"; };
-		2467DB535A8F739895E876F241E51D81 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		2467DB535A8F739895E876F241E51D81 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2BB9BA6278EC81CE4307BC297D45BC24 /* SessionDataTask.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDataTask.swift; path = DarkEggKit/Classes/AnimatedImageView/SessionDataTask.swift; sourceTree = "<group>"; };
 		2E7C1F19CC6FE844316BCEAF3A4D789F /* AnimatedImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedImageView.swift; path = DarkEggKit/Classes/AnimatedImageView/AnimatedImageView.swift; sourceTree = "<group>"; };
 		31DB59152AC79AC1D715049513FF777E /* Logger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Logger.swift; path = DarkEggKit/Classes/Common/Logger.swift; sourceTree = "<group>"; };
@@ -85,11 +86,11 @@
 		3A6C1F36C87CC2797ED95A0D462C9573 /* DZSideMenuAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZSideMenuAnimator.swift; path = DarkEggKit/Classes/SideMenu/DZSideMenuAnimator.swift; sourceTree = "<group>"; };
 		3BDD4819497F24074D049BB6EB4CAC2C /* Pods-DarkEggKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DarkEggKit_Example-umbrella.h"; sourceTree = "<group>"; };
 		42DAC4B91B0B92A54E55A6F98536B612 /* Pods-DarkEggKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DarkEggKit_Example.release.xcconfig"; sourceTree = "<group>"; };
-		4ECE7EF7C544E1B1A189E58253D3496D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = DarkEggKit/Classes/AnimatedImageView/README.md; sourceTree = "<group>"; };
-		5A6E846EC1F89D3D09CE25B9DD3415F2 /* DarkEggKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = DarkEggKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		4ECE7EF7C544E1B1A189E58253D3496D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = DarkEggKit/Classes/AnimatedImageView/README.md; sourceTree = "<group>"; };
+		5A6E846EC1F89D3D09CE25B9DD3415F2 /* DarkEggKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = DarkEggKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		5C7259F22F2FC01C7E5E7F7BF107B92C /* Pods-DarkEggKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DarkEggKit_Example-dummy.m"; sourceTree = "<group>"; };
-		5E574CB34B7F8034F78CE883D8A70F57 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = DarkEggKit/Classes/SideMenu/README.md; sourceTree = "<group>"; };
-		5F4E7B16ABD784AA4156C2DA9AD9774B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = DarkEggKit/Classes/PopupMessage/README.md; sourceTree = "<group>"; };
+		5E574CB34B7F8034F78CE883D8A70F57 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = DarkEggKit/Classes/SideMenu/README.md; sourceTree = "<group>"; };
+		5F4E7B16ABD784AA4156C2DA9AD9774B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = DarkEggKit/Classes/PopupMessage/README.md; sourceTree = "<group>"; };
 		6758553620E57B8693699A82AF7C84AE /* AnimatedImageViewImageView+Animator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AnimatedImageViewImageView+Animator.swift"; path = "DarkEggKit/Classes/AnimatedImageView/AnimatedImageViewImageView+Animator.swift"; sourceTree = "<group>"; };
 		6846BD2B4C93EC09FDC468D4E5D0684B /* AnimatedImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedImage.swift; path = DarkEggKit/Classes/AnimatedImageView/AnimatedImage.swift; sourceTree = "<group>"; };
 		6A5CD77B814FF73F6512DB7A6D00FD64 /* DZSideMenuMask.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZSideMenuMask.swift; path = DarkEggKit/Classes/SideMenu/DZSideMenuMask.swift; sourceTree = "<group>"; };
@@ -100,30 +101,31 @@
 		81BC1AE9D2B64C81D1A55DCD5B6BB222 /* DZPopupMessageQueueManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZPopupMessageQueueManager.swift; path = DarkEggKit/Classes/PopupMessage/DZPopupMessageQueueManager.swift; sourceTree = "<group>"; };
 		81F98A618BD4DFB5213B5C20478439A4 /* DZSideMenuTransitioning.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZSideMenuTransitioning.swift; path = DarkEggKit/Classes/SideMenu/DZSideMenuTransitioning.swift; sourceTree = "<group>"; };
 		8933093AC49CFCE4CD0B6EBFA695D13B /* Pods-DarkEggKit_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DarkEggKit_Tests-umbrella.h"; sourceTree = "<group>"; };
-		8B51143E831EFFFF63E8193E032302B8 /* Pods_DarkEggKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DarkEggKit_Tests.framework; path = "Pods-DarkEggKit_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B51143E831EFFFF63E8193E032302B8 /* Pods_DarkEggKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DarkEggKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		927238AC13B17FEABCE063E2FE9120C9 /* UIViewController+PopupMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+PopupMessage.swift"; path = "DarkEggKit/Classes/PopupMessage/UIViewController+PopupMessage.swift"; sourceTree = "<group>"; };
-		963E98F714CB6DB3D471FA78B3EC9504 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = DarkEggKit/Classes/Common/README.md; sourceTree = "<group>"; };
+		963E98F714CB6DB3D471FA78B3EC9504 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = DarkEggKit/Classes/Common/README.md; sourceTree = "<group>"; };
 		97AE19BE08AA616B0868A722D07B22D0 /* DZSideMenuConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZSideMenuConfiguration.swift; path = DarkEggKit/Classes/SideMenu/DZSideMenuConfiguration.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A2EABCF18DF885E68E8C0E5BB4016885 /* DarkEggKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DarkEggKit-Info.plist"; sourceTree = "<group>"; };
 		AA9E8AA7D027D53E371A7A6C69EC65E6 /* UIViewController+SideMenu.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+SideMenu.swift"; path = "DarkEggKit/Classes/SideMenu/UIViewController+SideMenu.swift"; sourceTree = "<group>"; };
 		AB6006CB2252F2ED2B8270BA1EFC2B52 /* Pods-DarkEggKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DarkEggKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		ABE5073E64DA249ADDE8A876E445FE79 /* Pods-DarkEggKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DarkEggKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		AFC1AE83739A860D053E469B7D324FFA /* DarkEggKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DarkEggKit.framework; path = DarkEggKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFC1AE83739A860D053E469B7D324FFA /* DarkEggKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DarkEggKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0DA92C7541997C6C57241A0A017A40B /* DZPopupMessageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZPopupMessageView.swift; path = DarkEggKit/Classes/PopupMessage/DZPopupMessageView.swift; sourceTree = "<group>"; };
 		B248AFF3D59D4FE0805A95F1D41033D9 /* DZUtility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZUtility.swift; path = DarkEggKit/Classes/Common/DZUtility.swift; sourceTree = "<group>"; };
 		B30AC4C87A41BA5AFEE3E24A8228E5CD /* Pods-DarkEggKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DarkEggKit_Tests-dummy.m"; sourceTree = "<group>"; };
-		BB18F3E242B1CD6AA830549C1E0FE230 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		B7B59343231627D30064B732 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Image.xcassets; path = DarkEggKit/Classes/AnimatedImageView/Image.xcassets; sourceTree = "<group>"; };
+		BB18F3E242B1CD6AA830549C1E0FE230 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		C407C87E054462B6F032994059A1A3D7 /* Pods-DarkEggKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DarkEggKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		CF7CBD82869E23AB26927F0FC4ED56FD /* Pods-DarkEggKit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DarkEggKit_Example-frameworks.sh"; sourceTree = "<group>"; };
 		D1FF73BB6A262CF0ECC80F6AD7D6255B /* DZPopupMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZPopupMessage.swift; path = DarkEggKit/Classes/PopupMessage/DZPopupMessage.swift; sourceTree = "<group>"; };
 		D4547D4E5E72BB2C126BD1BBCCBE2CE2 /* Image.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Image.xcassets; path = DarkEggKit/Classes/PopupMessage/Image.xcassets; sourceTree = "<group>"; };
-		D4728A798F1F7F091FC858447341DEA4 /* Pods_DarkEggKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DarkEggKit_Example.framework; path = "Pods-DarkEggKit_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4728A798F1F7F091FC858447341DEA4 /* Pods_DarkEggKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DarkEggKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC1767E474F3627770FCEDE1E5FD47F3 /* Pods-DarkEggKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DarkEggKit_Example.modulemap"; sourceTree = "<group>"; };
 		DDD283F5D006671865B41B61CA55B5B3 /* DZPaddingLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZPaddingLabel.swift; path = DarkEggKit/Classes/PaddingLabel/DZPaddingLabel.swift; sourceTree = "<group>"; };
 		E123E7AA4151C12F7C35D44C74BD4A63 /* Pods-DarkEggKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DarkEggKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		E6B37F0FA3A74D3AC88C00381129A6D6 /* Pods-DarkEggKit_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DarkEggKit_Example-Info.plist"; sourceTree = "<group>"; };
-		E959AC29DEC2D2FE53A9C3266EC3E30A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = DarkEggKit/Classes/PaddingLabel/README.md; sourceTree = "<group>"; };
+		E959AC29DEC2D2FE53A9C3266EC3E30A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = DarkEggKit/Classes/PaddingLabel/README.md; sourceTree = "<group>"; };
 		EE47B0B7B397525B6F607EDA2EF0385F /* Pods-DarkEggKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DarkEggKit_Tests.modulemap"; sourceTree = "<group>"; };
 		EEF87951D77670378B53AE193876022E /* Pods-DarkEggKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DarkEggKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F93B901925846D059F15116B90852460 /* CGRect+Scale.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGRect+Scale.swift"; path = "DarkEggKit/Classes/Common/CGRect+Scale.swift"; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 		3736DBF38BF8DC3EE04A121DE46ACDBD /* AnimatedImageView */ = {
 			isa = PBXGroup;
 			children = (
+				B7B59343231627D30064B732 /* Image.xcassets */,
 				6846BD2B4C93EC09FDC468D4E5D0684B /* AnimatedImage.swift */,
 				2E7C1F19CC6FE844316BCEAF3A4D789F /* AnimatedImageView.swift */,
 				6758553620E57B8693699A82AF7C84AE /* AnimatedImageViewImageView+Animator.swift */,
@@ -483,6 +486,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EEA46E00047D8C408710887DDAE3604 /* Image.xcassets in Resources */,
+				B7B59344231627D40064B732 /* Image.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -784,8 +788,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

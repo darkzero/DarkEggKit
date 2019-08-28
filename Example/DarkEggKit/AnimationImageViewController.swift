@@ -66,6 +66,10 @@ class AnimatedImageViewController: UIViewController {
         //aniImgView_2.needsPrescaling = false
         //aniImgView_3.needsPrescaling = false
         //aniImgView_4.needsPrescaling = false
+        aniImgView_1.willShowProgress = false
+        aniImgView_1.placeHolder = nil
+        aniImgView_2.willShowProgress = false
+        aniImgView_3.placeHolder = nil
         
         Logger.debug("---- End ----")
     }
