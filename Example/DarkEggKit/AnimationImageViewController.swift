@@ -1,5 +1,5 @@
 //
-//  AnimationImageViewController.swift
+//  AnimatedImageViewController.swift
 //  DarkEggKit_Example
 //
 //  Created by darkzero on 2019/03/26.
@@ -10,11 +10,11 @@ import UIKit
 
 import DarkEggKit
 
-class AnimationImageViewController: UIViewController {
-    @IBOutlet weak var aniImgView_1: AnimationImageView!
-    @IBOutlet weak var aniImgView_2: AnimationImageView!
-    @IBOutlet weak var aniImgView_3: AnimationImageView!
-    @IBOutlet weak var aniImgView_4: AnimationImageView!
+class AnimatedImageViewController: UIViewController {
+    @IBOutlet weak var aniImgView_1: AnimatedImageView!
+    @IBOutlet weak var aniImgView_2: AnimatedImageView!
+    @IBOutlet weak var aniImgView_3: AnimatedImageView!
+    @IBOutlet weak var aniImgView_4: AnimatedImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,7 @@ class AnimationImageViewController: UIViewController {
         //let data = try! Data(contentsOf: URL(fileReferenceLiteralResourceName: "colon_animation.png"))
         //let apng = AImage(data: data)
         
-        Logger.debug("Start")
+        Logger.debug("---- Start ----")
         var apng: AnimationImage? // = AImage(url: "https://apng.onevcat.com/assets/elephant.png")
         switch Int.random(in: 1...4) {
         case 1:
@@ -38,20 +38,13 @@ class AnimationImageViewController: UIViewController {
         default:
             break
         }
+        //apng = AnimationImage(url: "https://media2.giphy.com/media/xUPGcLbQtBlro61bdm/giphy.gif")
+        //apng = AnimationImage(url: "https://upload.wikimedia.org/wikipedia/commons/f/ff/Pizigani_1367_Chart_10MB.jpg")
         //let apng = AImage(url: "https://orig00.deviantart.net/df6e/f/2012/287/f/8/i_want_to_be_a_hero__apng_animated__by_tamalesyatole-d5ht8eu.png")
         //let apng = AImage(url: "https://www.bram.us/wordpress/wp-content/uploads/2017/06/GenevaDrive.png")
         //let apng = AImage(url: "https://pbs.twimg.com/media/D2pMC1nVAAA2VQn.jpg")
         //let apng = AImage(url: "https://media.tenor.com/images/39fe167bdab90223bcc890bcb067b761/tenor.gif")
         //https://media2.giphy.com/media/xUPGcLbQtBlro61bdm/giphy.gif
-        
-        //let dummyImg = UIImage(named: "pipboy_01")
-        
-//        let imageView = AnimationImageView(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: 100, height: 100)))
-//        imageView.aImage = apng
-//        imageView.delegate = self
-//        //imageView.repeatMode = .finite(10)
-//        self.view.addSubview(imageView)
-//        return
         
         aniImgView_1.aImage = apng
         aniImgView_1.repeatMode = .infinite
@@ -69,27 +62,38 @@ class AnimationImageViewController: UIViewController {
         aniImgView_4.repeatMode = .infinite
         aniImgView_4.delegate = self
         
-        Logger.debug("End")
+        //aniImgView_1.needsPrescaling = false
+        //aniImgView_2.needsPrescaling = false
+        //aniImgView_3.needsPrescaling = false
+        //aniImgView_4.needsPrescaling = false
+        aniImgView_1.willShowProgress = false
+        aniImgView_1.placeHolder = nil
+        aniImgView_2.willShowProgress = false
+        aniImgView_3.placeHolder = nil
+        
+        Logger.debug("---- End ----")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        //aniImgView.clear()
+    }
+    
+    deinit {
     }
 }
 
-extension AnimationImageViewController: AnimationImageViewDelegate {
+extension AnimatedImageViewController: AnimatedImageViewDelegate {
 //    func animatedImageView(_ imageView: AImageView, didPlayAnimationLoops count: UInt) {
 //        Logger.debug()
 //    }
     
-    func animatedImageViewDidFinishAnimating(_ imageView: AnimationImageView) {
+    func animatedImageView(_ imageView: AnimatedImageView, didFinishAnimating: Void) {
         imageView.removeFromSuperview()
         Logger.debug()
     }
 }
 
-extension AnimationImageViewController {
+extension AnimatedImageViewController {
     @IBAction func onClearCacheButtonClicked(_ sender: UIButton) {
-        AnimationImageView.clearCache()
+        AnimatedImageView.clearCache()
     }
 }
