@@ -10,6 +10,8 @@ Pod::Spec.new do |s|
   s.name             = 'DarkEggKit'
   s.version          = '0.3.0'
   s.summary          = 'DarkEgg UI Kit.'
+  s.swift_version         = '5.0'
+  s.ios.deployment_target = '12.0'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?

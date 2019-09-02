@@ -34,7 +34,9 @@ public struct Message {
                 return .white
             case .undefined:
                 if #available(iOS 13, *) {
-                    return .label
+                    // TODO: wait for xcode 11
+                    //return .label
+                    return .darkText
                 }
                 else {
                     return .darkText
@@ -42,14 +44,18 @@ public struct Message {
             }
         case .warning:
             if #available(iOS 13, *) {
-                return .systemOrange
+                // TODO: wait for xcode 11
+                //return .systemOrange
+                return .orange
             }
             else {
                 return .orange
             }
         case .error:
             if #available(iOS 13, *) {
-                return .systemRed
+                // TODO: wait for xcode 11
+                //return .systemRed
+                return .red
             }
             else {
                 return .red
@@ -66,7 +72,8 @@ public struct Message {
             color = RGB_HEX("1c1c1e", 1.0)
         case .undefined:
             if #available(iOS 13, *) {
-                color = .tertiarySystemBackground
+                //color = .tertiarySystemBackground
+                color = .white
             }
             else {
                 color = .white
