@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0560594A13422E7348CA58D12C3B5281 /* AnimatedImageViewImageView+Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6758553620E57B8693699A82AF7C84AE /* AnimatedImageViewImageView+Animator.swift */; };
+		0560594A13422E7348CA58D12C3B5281 /* AnimatedImageView+Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6758553620E57B8693699A82AF7C84AE /* AnimatedImageView+Animator.swift */; };
 		07B789E6DEAF42D2707F8FAFCC91CC8A /* Pods-DarkEggKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7259F22F2FC01C7E5E7F7BF107B92C /* Pods-DarkEggKit_Example-dummy.m */; };
 		0855A0186B1F3E519B5A5AC9C2E4FE77 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		0C3F814B785F451494B950EC3D5FE5F0 /* DZSideMenuConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AE19BE08AA616B0868A722D07B22D0 /* DZSideMenuConfiguration.swift */; };
@@ -91,7 +91,7 @@
 		5C7259F22F2FC01C7E5E7F7BF107B92C /* Pods-DarkEggKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DarkEggKit_Example-dummy.m"; sourceTree = "<group>"; };
 		5E574CB34B7F8034F78CE883D8A70F57 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = DarkEggKit/Classes/SideMenu/README.md; sourceTree = "<group>"; };
 		5F4E7B16ABD784AA4156C2DA9AD9774B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = DarkEggKit/Classes/PopupMessage/README.md; sourceTree = "<group>"; };
-		6758553620E57B8693699A82AF7C84AE /* AnimatedImageViewImageView+Animator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AnimatedImageViewImageView+Animator.swift"; path = "DarkEggKit/Classes/AnimatedImageView/AnimatedImageViewImageView+Animator.swift"; sourceTree = "<group>"; };
+		6758553620E57B8693699A82AF7C84AE /* AnimatedImageView+Animator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AnimatedImageView+Animator.swift"; path = "DarkEggKit/Classes/AnimatedImageView/AnimatedImageView+Animator.swift"; sourceTree = "<group>"; };
 		6846BD2B4C93EC09FDC468D4E5D0684B /* AnimatedImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedImage.swift; path = DarkEggKit/Classes/AnimatedImageView/AnimatedImage.swift; sourceTree = "<group>"; };
 		6A5CD77B814FF73F6512DB7A6D00FD64 /* DZSideMenuMask.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZSideMenuMask.swift; path = DarkEggKit/Classes/SideMenu/DZSideMenuMask.swift; sourceTree = "<group>"; };
 		6C87D89624DF9B28FF0EB36D3737419E /* Array+SafeIndex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+SafeIndex.swift"; path = "DarkEggKit/Classes/Common/Array+SafeIndex.swift"; sourceTree = "<group>"; };
@@ -216,7 +216,7 @@
 				B7B59343231627D30064B732 /* Image.xcassets */,
 				6846BD2B4C93EC09FDC468D4E5D0684B /* AnimatedImage.swift */,
 				2E7C1F19CC6FE844316BCEAF3A4D789F /* AnimatedImageView.swift */,
-				6758553620E57B8693699A82AF7C84AE /* AnimatedImageViewImageView+Animator.swift */,
+				6758553620E57B8693699A82AF7C84AE /* AnimatedImageView+Animator.swift */,
 				4ECE7EF7C544E1B1A189E58253D3496D /* README.md */,
 				2BB9BA6278EC81CE4307BC297D45BC24 /* SessionDataTask.swift */,
 				064BC2817E9F06C4476B6DC5DE723107 /* SourceCache.swift */,
@@ -514,7 +514,7 @@
 			files = (
 				A9DDC78109333B4089F56834C3886C85 /* AnimatedImage.swift in Sources */,
 				4A3928A94F5C83000A66449DF08E376F /* AnimatedImageView.swift in Sources */,
-				0560594A13422E7348CA58D12C3B5281 /* AnimatedImageViewImageView+Animator.swift in Sources */,
+				0560594A13422E7348CA58D12C3B5281 /* AnimatedImageView+Animator.swift in Sources */,
 				F07129CB62C2DB0AC54DF9CEB7C7B4BA /* Array+SafeIndex.swift in Sources */,
 				9FDE23939DECACA34E73875FB91C1F8F /* CGRect+Scale.swift in Sources */,
 				335B2565126B8A35C7B134A4521C4639 /* DarkEggKit-dummy.m in Sources */,
