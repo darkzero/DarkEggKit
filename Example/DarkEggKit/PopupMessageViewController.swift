@@ -16,18 +16,13 @@ class PopupMessageViewController: UIViewController {
     @IBOutlet var typeSegment: UISegmentedControl!
     @IBOutlet var displaySegment: UISegmentedControl!
     
-    @IBOutlet weak var imageView: UIImageView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        //let image = UIImage(named: "dz_icon_info", in: Bundle(for: DZPopupMessageView.self), compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
-        //self.imageView.image = image
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hideKeyboard)))
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         Logger.debug()
-        self.imageView.image = UIImage()
     }
     
     deinit {
@@ -91,3 +86,8 @@ extension PopupMessageViewController {
     }
 }
 
+extension PopupMessageViewController {
+    @objc private func hideKeyboard() {
+        self.view.endEditing(true)
+    }
+}
