@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/DarkEggKit.svg?style=flat)](https://cocoapods.org/pods/DarkEggKit)
 [![Platform](https://img.shields.io/cocoapods/p/DarkEggKit.svg?style=flat)](https://cocoapods.org/pods/DarkEggKit)
 
+## [Wiki](https://github.com/darkzero/DarkEggKit/wiki)
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
