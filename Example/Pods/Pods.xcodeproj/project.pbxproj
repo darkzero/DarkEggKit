@@ -38,6 +38,7 @@
 		AA1AA91D8BB004FA19047F7518063412 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DB59152AC79AC1D715049513FF777E /* Logger.swift */; };
 		B10CB6A30F024CABB962FC9EDFA0F0FE /* SessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB9BA6278EC81CE4307BC297D45BC24 /* SessionDataTask.swift */; };
 		B3745AB890BAE94BFFB1CFEFEE469E61 /* DZSideMenuAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6C1F36C87CC2797ED95A0D462C9573 /* DZSideMenuAnimator.swift */; };
+		B790FE6A2341CDEA000B284D /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790FE692341CDEA000B284D /* Common.swift */; };
 		B7B59344231627D40064B732 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7B59343231627D30064B732 /* Image.xcassets */; };
 		CAF4970B24E156A5E36BF05AAC4AE7A9 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A77DFFC9023B3F41748016408981C2 /* UIColor+Hex.swift */; };
 		CCB352E945C29266D572D4B44B2CA260 /* DZPopupMessageQueueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BC1AE9D2B64C81D1A55DCD5B6BB222 /* DZPopupMessageQueueManager.swift */; };
@@ -114,6 +115,7 @@
 		B0DA92C7541997C6C57241A0A017A40B /* DZPopupMessageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZPopupMessageView.swift; path = DarkEggKit/Classes/PopupMessage/DZPopupMessageView.swift; sourceTree = "<group>"; };
 		B248AFF3D59D4FE0805A95F1D41033D9 /* DZUtility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZUtility.swift; path = DarkEggKit/Classes/Common/DZUtility.swift; sourceTree = "<group>"; };
 		B30AC4C87A41BA5AFEE3E24A8228E5CD /* Pods-DarkEggKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DarkEggKit_Tests-dummy.m"; sourceTree = "<group>"; };
+		B790FE692341CDEA000B284D /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Common.swift; path = DarkEggKit/Classes/Common/Common.swift; sourceTree = "<group>"; };
 		B7B59343231627D30064B732 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Image.xcassets; path = DarkEggKit/Classes/AnimatedImageView/Image.xcassets; sourceTree = "<group>"; };
 		BB18F3E242B1CD6AA830549C1E0FE230 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		C407C87E054462B6F032994059A1A3D7 /* Pods-DarkEggKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DarkEggKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 		331E6ED2BFE634C4900F3505E096FB43 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				B790FE692341CDEA000B284D /* Common.swift */,
 				6C87D89624DF9B28FF0EB36D3737419E /* Array+SafeIndex.swift */,
 				F93B901925846D059F15116B90852460 /* CGRect+Scale.swift */,
 				B248AFF3D59D4FE0805A95F1D41033D9 /* DZUtility.swift */,
@@ -515,6 +518,7 @@
 			files = (
 				A9DDC78109333B4089F56834C3886C85 /* AnimatedImage.swift in Sources */,
 				4A3928A94F5C83000A66449DF08E376F /* AnimatedImageView.swift in Sources */,
+				B790FE6A2341CDEA000B284D /* Common.swift in Sources */,
 				0560594A13422E7348CA58D12C3B5281 /* AnimatedImageView+Animator.swift in Sources */,
 				F07129CB62C2DB0AC54DF9CEB7C7B4BA /* Array+SafeIndex.swift in Sources */,
 				9FDE23939DECACA34E73875FB91C1F8F /* CGRect+Scale.swift in Sources */,
@@ -645,7 +649,7 @@
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 20190927;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -839,7 +843,7 @@
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 20190927;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;

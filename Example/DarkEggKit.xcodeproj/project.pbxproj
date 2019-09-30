@@ -195,6 +195,7 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				AB6F7F4C90D96DC0FE71C9B4 /* [CP] Embed Pods Frameworks */,
+				B790FE68233E1CB0000B284D /* Run Script - Show TODO/FIXME/WARNING/???/!!! as warning */,
 			);
 			buildRules = (
 			);
@@ -308,6 +309,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DarkEggKit_Example/Pods-DarkEggKit_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		B790FE68233E1CB0000B284D /* Run Script - Show TODO/FIXME/WARNING/???/!!! as warning */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script - Show TODO/FIXME/WARNING/???/!!! as warning";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Show warning for comment as TODO:, FIXME:, WARNING:, ???:, !!!:\nKEYWORDS=\"TODO:|FIXME:|WARNING:|\\?\\?\\?:|\\!\\!\\!:\"\nfind \"${SRCROOT}\" -path \"${SRCROOT}/Pods\" -prune -o \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | perl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"\n";
 		};
 		E792D40318C379B3DEF0EBDA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -520,6 +539,7 @@
 				DEVELOPMENT_TEAM = XA393XM8GG;
 				INFOPLIST_FILE = DarkEggKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 0.3.3;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -535,6 +555,7 @@
 				DEVELOPMENT_TEAM = XA393XM8GG;
 				INFOPLIST_FILE = DarkEggKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 0.3.3;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
