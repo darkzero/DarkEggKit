@@ -1,0 +1,32 @@
+name: Check Build
+#
+on: 
+  push:
+    branches:
+      - fix/xcode11
+    tag:
+      - *
+
+jobs:
+  build:
+    name: Build and Test(TODO)
+    runs-on: macOS-latest
+    strategy:
+      matrix:
+        destination: ['platform=iOS Simulator,OS=13.1,name=iPhone X']
+
+    steps:
+      # Checkout
+      - name: Checkout source code
+        uses: actions/checkout@master
+      # Pod install
+      - name: Run pod install
+        run: |
+          cd Example
+          pod install
+      # Build
+      - name: Use Node.js ${{ matrix.node-version }}
+        run: |
+          xcodebuild -workspace Example/DarkEggKit.xcworkspace -scheme DarkEggKit-Example -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone X,OS=12.1' ONLY_ACTIVE_ARCH=NO | xcprettyTIVE_ARCH=NO | xcpretty
+      env:
+        CI: true
