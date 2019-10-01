@@ -28,6 +28,6 @@ jobs:
       # Build
       - name: Build
         run: |
-          xcodebuild -workspace Example/DarkEggKit.xcworkspace -scheme DarkEggKit-Example -sdk iphonesimulator -destination '${destination}' ONLY_ACTIVE_ARCH=NO
+          echo "aaaa"
       env:
         CI: true
