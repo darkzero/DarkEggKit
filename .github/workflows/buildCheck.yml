@@ -29,6 +29,6 @@ jobs:
       - name: Build
         run: |
           echo "Start building"
-          xcodebuild -workspace Example/DarkEggKit.xcworkspace -scheme DarkEggKit-Example -sdk iphonesimulator -destination '${destination}' ONLY_ACTIVE_ARCH=NO
+          xcodebuild -workspace Example/DarkEggKit.xcworkspace -scheme DarkEggKit-Example -sdk iphonesimulator -destination '${{ matrix.destination }}' ONLY_ACTIVE_ARCH=NO
         env:
           CI: true
