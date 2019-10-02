@@ -16,19 +16,29 @@ jobs:
         destination: ['platform=iOS Simulator,OS=12.4,name=iPhone X']
 
     steps:
-      # Checkout
-      - name: Checkout source code
-        uses: actions/checkout@master
-      # Pod install
-      - name: Run pod install
-        run: |
-          cd Example
-          pod install
-      
-      # Build
-      - name: Build
-        run: |
-          echo "Start building"
-          xcodebuild -workspace Example/DarkEggKit.xcworkspace -scheme DarkEggKit-Example -sdk iphonesimulator -destination '${{ matrix.destination }}' ONLY_ACTIVE_ARCH=NO
-        env:
-          CI: true
+    # Checkout
+    - name: Checkout source code
+      uses: actions/checkout@master
+    # Pod install
+    - name: Run pod install
+      run: |
+        cd Example
+        pod install
+    # Build
+    - name: Build
+      run: |
+        echo "Start building"
+        xcodebuild -workspace Example/DarkEggKit.xcworkspace -scheme DarkEggKit-Example -sdk iphonesimulator -destination '${{ matrix.destination }}' ONLY_ACTIVE_ARCH=NO
+      env:
+        CI: true
+  publish:
+    name: Publish to cocoapods
+    runs-on: macOS-latest
+    needs: build
+    steps:
+    - name: Publish to cocoapods
+      run: |
+        ls
+        pod trunk push DarkEggKit.podspec
+      env:
+        CI: true
