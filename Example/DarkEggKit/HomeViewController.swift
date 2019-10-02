@@ -17,7 +17,7 @@ class HomeViewController: UIViewController, DarkEggPopupMessageProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.sideMenu = (storyboard?.instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController);
-        let _ = RGB_HEX("ffffff", 1.0)
+        //let _ = RGB_HEX("ffffff", 1.0)
     }
 
     override func didReceiveMemoryWarning() {

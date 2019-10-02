@@ -7,11 +7,16 @@
 //
 
 import UIKit
+//
+import DarkEggKit
 
 class MenuViewController: UIViewController {
-    @IBOutlet var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var versionLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.versionLabel.text = DarkEggKit.Common.fullVersionString
     }
 }
 

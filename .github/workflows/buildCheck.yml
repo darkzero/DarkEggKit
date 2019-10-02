@@ -1,0 +1,46 @@
+name: Check Build
+#
+on: 
+  push:
+    branches:
+      - develop
+      - master
+
+jobs:
+  build:
+    name: Build
+    runs-on: macOS-latest
+    strategy:
+      matrix:
+        destination: ['platform=iOS Simulator,OS=12.4,name=iPhone X']
+    steps:
+    # Checkout
+    - name: Checkout source code
+      uses: actions/checkout@master
+    # Pod install
+    - name: Run pod install
+      run: |
+        cd Example
+        pod install
+    # Build
+    - name: Build
+      run: |
+        echo "Start building"
+        xcodebuild -workspace Example/DarkEggKit.xcworkspace -scheme DarkEggKit-Example -sdk iphonesimulator -destination '${{ matrix.destination }}' ONLY_ACTIVE_ARCH=NO
+      env:
+        CI: true
+  check_cocoapods:
+    name: Check cocoapods
+    runs-on: macOS-latest
+    needs: build
+    steps:
+    # Checkout
+    - name: Checkout source code
+      uses: actions/checkout@master
+    # Check cocoapods
+    - name: Check cocoapods spec
+      run: |
+        ls
+        pod lib lint
+      env:
+        CI: true
