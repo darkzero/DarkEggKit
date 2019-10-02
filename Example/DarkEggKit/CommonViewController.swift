@@ -20,7 +20,7 @@ class CommonViewController: UIViewController, DarkEggPopupMessageProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hideKeyboard)))
     }
 }
 
@@ -45,5 +45,11 @@ extension CommonViewController {
         default:
             self.showPopupWarning("Unknow Button.")
         }
+    }
+}
+
+extension CommonViewController {
+    @objc private func hideKeyboard() {
+        self.view.endEditing(true)
     }
 }

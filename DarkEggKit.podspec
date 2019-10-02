@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DarkEggKit'
-  s.version          = '0.3.0'
+  s.version          = '0.3.1'
   s.summary          = 'DarkEgg UI Kit.'
   s.swift_version         = '5.0'
   s.ios.deployment_target = '12.0'
@@ -20,11 +20,15 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
+  * 0.3.1 (2019/09/30)
+    Update to iOS 11
+  ---
   * 0.3.0 (2019/08/31)
     Add AnimatedImageView
     ```
     pod 'DarkEggKit/AnimatedImageView'
     ```
+  ---
   * 0.2.1 (2019/05/16)
     Set DZPaddinLabel to public
     Delete column in Logger.debug and Logger.error

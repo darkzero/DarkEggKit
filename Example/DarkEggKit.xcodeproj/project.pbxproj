@@ -20,6 +20,8 @@
 		B77BA51C224A121C0065D879 /* AnimationImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77BA51B224A121C0065D879 /* AnimationImageViewController.swift */; };
 		B77BA51E224A1A910065D879 /* elephant.png in Resources */ = {isa = PBXBuildFile; fileRef = B77BA51D224A1A900065D879 /* elephant.png */; };
 		B77BA522224A2D9A0065D879 /* mario.png in Resources */ = {isa = PBXBuildFile; fileRef = B77BA521224A2D990065D879 /* mario.png */; };
+		B790FE6C2341F523000B284D /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790FE6B2341F523000B284D /* AboutViewController.swift */; };
+		B790FE7023438771000B284D /* buildCheck.yml in Resources */ = {isa = PBXBuildFile; fileRef = B790FE6F23438771000B284D /* buildCheck.yml */; };
 		B7CA18A622DC74E900796008 /* .swift-version in Resources */ = {isa = PBXBuildFile; fileRef = B7CA18A422DC74E800796008 /* .swift-version */; };
 		B7CA18A722DC74E900796008 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = B7CA18A522DC74E900796008 /* .travis.yml */; };
 		DBFA5E0C8C976ACB63A67B73 /* Pods_DarkEggKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E751D432D30C44D306E72F1 /* Pods_DarkEggKit_Example.framework */; };
@@ -58,6 +60,8 @@
 		B77BA51B224A121C0065D879 /* AnimationImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationImageViewController.swift; sourceTree = "<group>"; };
 		B77BA51D224A1A900065D879 /* elephant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = elephant.png; sourceTree = "<group>"; };
 		B77BA521224A2D990065D879 /* mario.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mario.png; sourceTree = "<group>"; };
+		B790FE6B2341F523000B284D /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		B790FE6F23438771000B284D /* buildCheck.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = buildCheck.yml; sourceTree = "<group>"; };
 		B7CA18A422DC74E800796008 /* .swift-version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ".swift-version"; path = "../.swift-version"; sourceTree = "<group>"; };
 		B7CA18A522DC74E900796008 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
 		DDB057709B7B342F63356373 /* Pods-DarkEggKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DarkEggKit_Example.release.xcconfig"; path = "Target Support Files/Pods-DarkEggKit_Example/Pods-DarkEggKit_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -97,6 +101,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				B790FE6D23438771000B284D /* .github */,
 				B7CA18A422DC74E800796008 /* .swift-version */,
 				B7CA18A522DC74E900796008 /* .travis.yml */,
 				B77BA521224A2D990065D879 /* mario.png */,
@@ -128,6 +133,7 @@
 				B760C495222D1631003035C5 /* PopupMessageViewController.swift */,
 				B760C493222D01A2003035C5 /* MenuViewController.swift */,
 				B77BA51B224A121C0065D879 /* AnimationImageViewController.swift */,
+				B790FE6B2341F523000B284D /* AboutViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -172,6 +178,23 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		B790FE6D23438771000B284D /* .github */ = {
+			isa = PBXGroup;
+			children = (
+				B790FE6E23438771000B284D /* workflows */,
+			);
+			name = .github;
+			path = ../.github;
+			sourceTree = "<group>";
+		};
+		B790FE6E23438771000B284D /* workflows */ = {
+			isa = PBXGroup;
+			children = (
+				B790FE6F23438771000B284D /* buildCheck.yml */,
+			);
+			path = workflows;
+			sourceTree = "<group>";
+		};
 		D98426D7A148F9A2AD109D23 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +218,7 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				AB6F7F4C90D96DC0FE71C9B4 /* [CP] Embed Pods Frameworks */,
+				B790FE68233E1CB0000B284D /* Run Script - Show TODO/FIXME/WARNING/???/!!! as warning */,
 			);
 			buildRules = (
 			);
@@ -249,10 +273,9 @@
 			};
 			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "DarkEggKit" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
@@ -276,6 +299,7 @@
 				B77BA51E224A1A910065D879 /* elephant.png in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				B790FE7023438771000B284D /* buildCheck.yml in Resources */,
 				B7CA18A622DC74E900796008 /* .swift-version in Resources */,
 				B7CA18A722DC74E900796008 /* .travis.yml in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
@@ -309,6 +333,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DarkEggKit_Example/Pods-DarkEggKit_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		B790FE68233E1CB0000B284D /* Run Script - Show TODO/FIXME/WARNING/???/!!! as warning */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script - Show TODO/FIXME/WARNING/???/!!! as warning";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Show warning for comment as TODO:, FIXME:, WARNING:, ???:, !!!:\nKEYWORDS=\"TODO:|FIXME:|WARNING:|\\?\\?\\?:|\\!\\!\\!:\"\nfind \"${SRCROOT}\" -path \"${SRCROOT}/Pods\" -prune -o \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | perl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"\n";
 		};
 		E792D40318C379B3DEF0EBDA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -364,6 +406,7 @@
 				607FACD81AFB9204008FA782 /* HomeViewController.swift in Sources */,
 				B760C494222D01A2003035C5 /* MenuViewController.swift in Sources */,
 				B760C49C222E23A6003035C5 /* CommonViewController.swift in Sources */,
+				B790FE6C2341F523000B284D /* AboutViewController.swift in Sources */,
 				B77BA51C224A121C0065D879 /* AnimationImageViewController.swift in Sources */,
 				B760C496222D1631003035C5 /* PopupMessageViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
@@ -521,6 +564,7 @@
 				DEVELOPMENT_TEAM = XA393XM8GG;
 				INFOPLIST_FILE = DarkEggKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 0.3.3;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -536,6 +580,7 @@
 				DEVELOPMENT_TEAM = XA393XM8GG;
 				INFOPLIST_FILE = DarkEggKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 0.3.3;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
