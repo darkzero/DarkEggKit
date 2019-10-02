@@ -39,6 +39,6 @@ jobs:
     - name: Publish to cocoapods
       run: |
         ls
-        pod trunk lint
+        pod spec lint DarkEggKit.podspec
       env:
         CI: true
