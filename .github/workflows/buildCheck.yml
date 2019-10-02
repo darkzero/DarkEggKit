@@ -3,9 +3,8 @@ name: Check Build
 on: 
   push:
     branches:
-      - fix/xcode11
-    tag:
-      - 0.3.1
+      - develop
+      - master
 
 jobs:
   build:
@@ -14,7 +13,6 @@ jobs:
     strategy:
       matrix:
         destination: ['platform=iOS Simulator,OS=12.4,name=iPhone X']
-
     steps:
     # Checkout
     - name: Checkout source code
@@ -31,7 +29,7 @@ jobs:
         xcodebuild -workspace Example/DarkEggKit.xcworkspace -scheme DarkEggKit-Example -sdk iphonesimulator -destination '${{ matrix.destination }}' ONLY_ACTIVE_ARCH=NO
       env:
         CI: true
-  publish:
+  check_cocoapods:
     name: Check cocoapods
     runs-on: macOS-latest
     needs: build
@@ -39,6 +37,7 @@ jobs:
     # Checkout
     - name: Checkout source code
       uses: actions/checkout@master
+    # Check cocoapods
     - name: Check cocoapods spec
       run: |
         ls
