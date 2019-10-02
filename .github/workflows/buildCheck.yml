@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    name: Build and Test(TODO)
+    name: Build
     runs-on: macOS-latest
     strategy:
       matrix:
@@ -36,7 +36,10 @@ jobs:
     runs-on: macOS-latest
     needs: build
     steps:
-    - name: Publish to cocoapods
+    # Checkout
+    - name: Checkout source code
+      uses: actions/checkout@master
+    - name: Check cocoapods spec
       run: |
         ls
         pod spec lint DarkEggKit.podspec
