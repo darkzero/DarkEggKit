@@ -10,7 +10,7 @@ import UIKit
 
 import DarkEggKit
 
-class ButtonMenuViewController: UIViewController {
+class ButtonMenuViewController: UIViewController, DarkEggPopupMessageProtocol {
     var buttonMenu: DZButtonMenu = DZButtonMenu()
 
     override func viewDidLoad() {
@@ -31,7 +31,7 @@ class ButtonMenuViewController: UIViewController {
             self.showPopupInfo("Button Ccc clicked")
         }
         self.view.addSubview(self.buttonMenu)
-        
+
         let config1 = DZButtonMenuConfiguration.default()
         config1.location = .leftBottom
         config1.style = .sector

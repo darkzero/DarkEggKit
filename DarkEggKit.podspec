@@ -80,18 +80,18 @@ Pod::Spec.new do |s|
     sideMenu.dependency 'DarkEggKit/Common'
   end
   
-  # TODO: DarkEggKit/AniImageView
+  # DarkEggKit/AnimatedImageView
   # not release in this version
   s.subspec 'AnimatedImageView' do |aImageView|
     aImageView.source_files = 'DarkEggKit/Classes/AnimatedImageView/*'
     aImageView.dependency 'DarkEggKit/Common'
   end
 
-  # TODO: DarkEggKit/ButtonMenu
+  # DarkEggKit/ButtonMenu
   # not release in this version
-#  s.subspec 'ButtonMenu' do |buttonMenu|
-#    buttonMenu.source_files = 'DarkEggKit/Classes/ButtonMenu/*'
-#    buttonMenu.resources = ['DarkEggKit/Classes/ButtonMenu/*.xcassets']
-#    buttonMenu.dependency 'DarkEggKit/Common'
-#  end
+  s.subspec 'ButtonMenu' do |buttonMenu|
+    buttonMenu.source_files = 'DarkEggKit/Classes/ButtonMenu/*'
+    buttonMenu.resources = ['DarkEggKit/Classes/ButtonMenu/*.xcassets']
+    buttonMenu.dependency 'DarkEggKit/Common'
+  end
 end
