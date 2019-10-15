@@ -189,6 +189,7 @@ extension DZButtonMenu {
     
     private func showMenu(withAnimation animation: Bool = true) {
         self.menuState = .opening
+        self.mainButton.isEnabled = false
         if let superView = self.superview {
             superView.addSubview(self.maskBg!);
             self.maskBg?.isHidden = false;
@@ -211,11 +212,13 @@ extension DZButtonMenu {
     private func afterShow() {
         let mainBtn = self.viewWithTag(self.attributes.mainButtonTag) as! UIButton
         mainBtn.isSelected = true
+        mainBtn.isEnabled = true
         self.menuState = .opened
     }
     
     fileprivate func hideMenu(withAnimation animation:Bool = true) {
-        self.menuState = .closing;
+        self.menuState = .closing
+        self.mainButton.isEnabled = false
         for (index, item) in self.items.enumerated() {
             if index >= (self.items.count-1) {
                 item.hide(of: self.items.count, callback: {
@@ -233,6 +236,7 @@ extension DZButtonMenu {
         self.maskBg?.isHidden = true;
         let mainBtn = self.viewWithTag(self.attributes.mainButtonTag) as! UIButton;
         mainBtn.isSelected = false
+        mainBtn.isEnabled = true
         self.menuState = .closed;
     }
     

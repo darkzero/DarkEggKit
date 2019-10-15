@@ -17,7 +17,7 @@ class DZButtonMenuItem: NSObject {
     private var action: (()->Void)?
 
     private let buttonAniDuration = 0.33
-    private let labelAniDuration = 0.33
+    private var labelAniDuration = 0.33
     
     internal var attributes: DZButtonMenuAttributes = DZButtonMenuAttributes.default() {
         didSet {
@@ -229,30 +229,36 @@ extension DZButtonMenuItem {
                 self.makeLabel()
                 view.addSubview(self.label!)
             default:
+                self.labelAniDuration = 0.0
                 break
             }
             
-            let preparingAniDuration = Double(self.index)*self.buttonAniDuration
-            let tempDuration = preparingAniDuration+self.buttonAniDuration
-            UIView.animateKeyframes(withDuration: tempDuration, delay: 0.0, options: [], animations: {
-                UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: preparingAniDuration/tempDuration, animations: {
+            let preparingAniDuration: Double = Double(self.index)*self.buttonAniDuration
+            let fullDuration: Double = preparingAniDuration+self.buttonAniDuration+self.labelAniDuration
+            let relativeDuration1 = preparingAniDuration/fullDuration
+            let relativeDuration2 = self.buttonAniDuration/fullDuration
+            let relativeDuration3 = (self.labelAniDuration+self.buttonAniDuration)/fullDuration
+            UIView.animateKeyframes(withDuration: fullDuration, delay: 0.0, options: [], animations: {
+                // step 1: move button to prepare position
+                UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: preparingAniDuration/fullDuration, animations: {
                     self.button.frame.origin = self.buttonPreparePos
                     self.button.alpha = 0.0
                     if let lbl = self.label {
-                        let lblStartPos = CGPoint(x: self.button.frame.minX,
-                                                  y: self.button.frame.midY-lbl.frame.height/2)
-                        lbl.frame.origin = lblStartPos
+                        lbl.frame.origin = self.labelTargetPos
                         lbl.alpha = 0.0
                     }
                 })
-                UIView.addKeyframe(withRelativeStartTime: preparingAniDuration/tempDuration, relativeDuration: self.buttonAniDuration/tempDuration, animations: {
+                // step 2: move button to target position & fade in
+                UIView.addKeyframe(withRelativeStartTime: preparingAniDuration/fullDuration, relativeDuration: self.buttonAniDuration/fullDuration, animations: {
                     self.button.frame.origin = self.buttonTargetPos
                     self.button.alpha = 1.0
-                    if let lbl = self.label {
-                        lbl.frame.origin = self.labelTargetPos
-                        lbl.alpha = 1.0;
-                    }
                 })
+                // step 3: label fade in
+                if let lbl = self.label {
+                    UIView.addKeyframe(withRelativeStartTime: preparingAniDuration/fullDuration, relativeDuration: (self.labelAniDuration+self.buttonAniDuration)/fullDuration, animations: {
+                        lbl.alpha = 1.0;
+                    })
+                }
             }) { (finished) in
                 callback?()
             }
@@ -274,21 +280,27 @@ extension DZButtonMenuItem {
             }
         case .line:
             let kDelay = count - self.index - 1
-            let fullDuration = self.buttonAniDuration*Double(self.index+1)
-            let delayDuration = self.buttonAniDuration*Double(kDelay)
-            let endingDuration = fullDuration - self.buttonAniDuration
+            let fullDuration = self.buttonAniDuration * Double(self.index) + self.labelAniDuration
+            let delayDuration = self.buttonAniDuration * Double(kDelay)
+            let endingDuration = fullDuration - self.buttonAniDuration - self.labelAniDuration
             UIView.animateKeyframes(withDuration: fullDuration, delay: delayDuration, options: [], animations: {
-                UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: self.buttonAniDuration/fullDuration, animations: {
+                // step 1: label fade out
+                if let lbl = self.label {
+                    UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: self.labelAniDuration/fullDuration, animations: {
+                        lbl.alpha = 0.0;
+                    })
+                }
+                // step 2: move button to prepare position
+                UIView.addKeyframe(withRelativeStartTime: self.labelAniDuration, relativeDuration: self.buttonAniDuration/fullDuration, animations: {
                     self.button.frame.origin = self.buttonPreparePos
                     self.button.alpha = 0.0;
                     if let lbl = self.label {
-                        lbl.frame.origin = self.buttonPreparePos
                         lbl.alpha = 0.0;
                     }
                 })
-                UIView.addKeyframe(withRelativeStartTime: self.buttonAniDuration/fullDuration, relativeDuration: endingDuration/fullDuration, animations: {
+                // step 3: move button to initial position
+                UIView.addKeyframe(withRelativeStartTime: (self.buttonAniDuration+self.labelAniDuration)/fullDuration, relativeDuration: endingDuration/fullDuration, animations: {
                     self.button.frame = self.attributes.initialFrame
-                    self.button.alpha = 0.0;
                 })
             }) { (finished) in
                 self.button.removeFromSuperview()
