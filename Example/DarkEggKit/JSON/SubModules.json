@@ -1,0 +1,42 @@
+[
+    {
+        "section_title": "Common",
+        "cells": [{
+            "title": "Color to Image Sample",
+            "segue_id": "ShowCommonScene"
+        }]
+    },
+    {
+        "section_title": "Popup Message",
+        "cells": [{
+            "title": "Popup Message Sample Page",
+            "segue_id": "ShowPopupMessageScene"
+        }]
+    },
+    {
+        "section_title": "Side Menu",
+        "cells": [{
+            "title": "Left - (default)"
+        },{
+            "title": "Right - (default)"
+        },{
+            "title": "Left - (cover)"
+        },{
+            "title": "Right - (cover)"
+        }]
+    },
+    {
+        "section_title": "Animated Image",
+        "cells": [{
+            "title": "Animated Image Sample",
+            "segue_id": "ShowAnimationImageScene"
+        }]
+    },
+    {
+        "section_title": "Button Menu",
+        "cells": [{
+            "title": "ButtonMenu Sample",
+            "segue_id": "ShowButtonMenuScene"
+        }]
+    },
+]

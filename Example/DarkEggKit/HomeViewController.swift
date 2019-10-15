@@ -10,14 +10,38 @@ import UIKit
 
 import DarkEggKit
 
+fileprivate let menuTable = [
+    [
+        "section_title": "Common",
+        "cells": [
+            ["title": "Color to Image Sample"]
+        ]
+    ]
+]
+
 class HomeViewController: UIViewController, DarkEggPopupMessageProtocol {
     @IBOutlet var tableView: UITableView!
     private var sideMenu: MenuViewController!
-
+    
+    private var menuTable: [ModuleSection] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.sideMenu = (storyboard?.instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController);
         //let _ = RGB_HEX("ffffff", 1.0)
+        
+        // TODO:
+        SubModuleManager.shared.loadJsonFile { (ret) in
+            Logger.debug(ret)
+            guard ret.count > 0 else {
+                self.showPopupError("Error in Loading JSON!")
+                return
+            }
+            self.menuTable = ret
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,64 +53,21 @@ class HomeViewController: UIViewController, DarkEggPopupMessageProtocol {
 // MARK: - UITableViewDataSource
 extension HomeViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+        return self.menuTable.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0:
-            return 1
-        case 1:
-            return 1
-        case 2:
-            return 4
-        case 3:
-            return 1
-        default:
-            return 0
-        }
+        return self.menuTable[section].cells?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch section {
-        case 0:
-            return "Common"
-        case 1:
-            return "Popup Message"
-        case 2:
-            return "Side Menu"
-        case 3:
-            return "Animation Image"
-        default:
-            return nil
-        }
+        return self.menuTable[section].section_title ?? "-"
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableCell", for: indexPath)
-        switch indexPath.section {
-        case 0:
-            cell.textLabel?.text = "Color to Image Sample"
-        case 1:
-            cell.textLabel?.text = "Sample Page"
-        case 2:
-            switch indexPath.row {
-            case 0:
-                cell.textLabel?.text = "Left"
-            case 1:
-                cell.textLabel?.text = "Right"
-            case 2:
-                cell.textLabel?.text = "Left Cover"
-            case 3:
-                cell.textLabel?.text = "Right Cover"
-            default:
-                cell.textLabel?.text = ""
-            }
-        case 3:
-            cell.textLabel?.text = "Sample Page"
-        default:
-            cell.textLabel?.text = ""
-        }
+        let title = self.menuTable[indexPath.section].cells?[indexPath.row]?.title ?? "--"
+        cell.textLabel?.text = title
         return cell
     }
 }
@@ -95,49 +76,44 @@ extension HomeViewController: UITableViewDataSource {
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-        //
-        switch indexPath.section {
-        case 0:
-            self.performSegue(withIdentifier: "ShowCommonScene", sender: self)
-            break
-        case 1:
-            self.performSegue(withIdentifier: "ShowPopupMessageScene", sender: self)
-            break
-        case 2:
-            switch indexPath.row {
-            case 0:
-                var config = DZSideMenuConfiguration()
-                config.position = .left
-                config.animationType = .default
-                self.dz_showSideMenu(self.sideMenu, configuration: config)
-                break
-            case 1:
-                var config = DZSideMenuConfiguration()
-                config.position = .right
-                config.animationType = .default
-                self.dz_showSideMenu(self.sideMenu, configuration: config)
-                break
+        if let segueId = self.menuTable[indexPath.section].cells?[indexPath.row]?.segue_id {
+            self.performSegue(withIdentifier: segueId, sender: self)
+        }
+        else {
+            switch indexPath.section {
             case 2:
-                var config = DZSideMenuConfiguration()
-                config.position = .left
-                config.animationType = .cover
-                self.dz_showSideMenu(self.sideMenu, configuration: config)
-                break
-            case 3:
-                var config = DZSideMenuConfiguration()
-                config.position = .right
-                config.animationType = .cover
-                self.dz_showSideMenu(self.sideMenu, configuration: config)
-                break
+                switch indexPath.row {
+                case 0:
+                    var config = DZSideMenuConfiguration()
+                    config.position = .left
+                    config.animationType = .default
+                    self.dz_showSideMenu(self.sideMenu, configuration: config)
+                    break
+                case 1:
+                    var config = DZSideMenuConfiguration()
+                    config.position = .right
+                    config.animationType = .default
+                    self.dz_showSideMenu(self.sideMenu, configuration: config)
+                    break
+                case 2:
+                    var config = DZSideMenuConfiguration()
+                    config.position = .left
+                    config.animationType = .cover
+                    self.dz_showSideMenu(self.sideMenu, configuration: config)
+                    break
+                case 3:
+                    var config = DZSideMenuConfiguration()
+                    config.position = .right
+                    config.animationType = .cover
+                    self.dz_showSideMenu(self.sideMenu, configuration: config)
+                    break
+                default:
+                    break
+                }
             default:
+                self.showPopupWarning("Nothing is here.")
                 break
             }
-        case 3:
-            self.performSegue(withIdentifier: "ShowAnimationImageScene", sender: self)
-            break
-        default:
-            self.showPopupWarning("Nothing is here.")
-            break
         }
     }
 }

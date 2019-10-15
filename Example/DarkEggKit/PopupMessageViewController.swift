@@ -81,7 +81,8 @@ extension PopupMessageViewController {
         }()
         
         DZPopupMessage.show(msg, theme: theme, type: type, display: display, callback: {
-            // TODO: Add callback here
+            // Add callback here
+            Logger.debug("aa")
         })
     }
 }

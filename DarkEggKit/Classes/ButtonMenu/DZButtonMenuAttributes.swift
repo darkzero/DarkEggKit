@@ -16,10 +16,8 @@ public class DZButtonMenuAttributes: NSObject {
     internal var mainButtonTag: Int {
         get { return 10000 }
     }
-    
-    internal var closedColor: UIColor {
-        get { return RGBA(47, 47, 47, 0.6) }
-    }
+
+    internal var closedColor: UIColor = RGBA(47, 47, 47, 0.7)
     
     private var _initialFrame: CGRect = .zero
     internal var initialFrame: CGRect {
@@ -31,12 +29,20 @@ public class DZButtonMenuAttributes: NSObject {
     public class func `default`() -> DZButtonMenuAttributes {
         return DZButtonMenuAttributes()
     }
+    
+    public override init() {
+        if #available(iOS 13, *) {
+            closedColor = UIColor.label.withAlphaComponent(0.7)
+        }
+        else {
+            closedColor = RGBA(47, 47, 47, 0.7)
+        }
+    }
 }
 
 extension DZButtonMenuAttributes {
     internal func initialLocation(of index: Int) -> CGPoint {
         let point: CGPoint = .zero
-        
         return point
     }
 }

@@ -40,11 +40,23 @@ public class DZButtonMenu : UIView {
     /// - leftBottom: left + bottom
     /// - rightBottom: right + bottom
     public enum Location: UInt {
-        case rightBottom    = 0b000;
-        case leftBottom     = 0b001;
-        case rightTop       = 0b010;
-        case leftTop        = 0b011;
-        case free           = 0b100;
+        case rightBottom    = 0b000
+        case leftBottom     = 0b001
+        // TODO: deprecated in version 0.4.0, should be fixed in 0.4.1
+        @available(*, deprecated, message: "Not available in this version(0.4.0) ...")
+        case rightTop       = 0b010
+        @available(*, deprecated, message: "Not available in this version(0.4.0) ...")
+        case leftTop        = 0b011
+        @available(*, deprecated, message: "Not available in this version(0.4.0) ...")
+        case free           = 0b100
+        
+        var isLeft: Bool {
+            return ((self.rawValue & 0b001) > 0)
+        }
+        
+        var isTop: Bool {
+            return ((self.rawValue & 0b010) > 0)
+        }
     }
     
     /// Menu direction
@@ -66,6 +78,7 @@ public class DZButtonMenu : UIView {
     /// - sector: sector
     public enum Style: String {
         case line   = "line"
+        @available(*, deprecated, message: "Not available(can use, not prefect) in this version(0.4.0) ...")
         case sector = "sector"
     }
     
@@ -93,11 +106,22 @@ public class DZButtonMenu : UIView {
         super.init(frame: .zero)
         self.attributes = attributes
         self.configuration = configuration
+        // adjust direction with location(20191007)
+        self.configuration.adjustDirection()
         
         self.frame.size = CGSize(width: self.attributes.buttonDiameter, height: self.attributes.buttonDiameter)
         // Mask
-        self.maskBg = UIView.init(frame: UIScreen.main.bounds);
-        self.maskBg?.backgroundColor = RGB_HEX("ffffff", 0.7);
+        self.maskBg = UIView.init(frame: UIScreen.main.bounds)
+        if #available(iOS 13, *) {
+            #if swift(>=5.1)
+            self.maskBg?.backgroundColor = UIColor.tertiarySystemBackground.withAlphaComponent(0.6)
+            #else
+            self.maskBg?.backgroundColor = UIColor.white.withAlphaComponent(0.6)
+            #endif
+        }
+        else {
+            self.maskBg?.backgroundColor = UIColor.white.withAlphaComponent(0.6)
+        }
         self.maskBg?.isHidden = true;
         self.clipsToBounds = false;
         self.createMainButton(closeImage: nil, openImage: nil);
@@ -118,25 +142,32 @@ public class DZButtonMenu : UIView {
     {
         let btnMain = self.mainButton
         btnMain.frame = CGRect(origin: .zero, size: CGSize(width: self.attributes.buttonDiameter, height: self.attributes.buttonDiameter))
-        btnMain.backgroundColor = self.attributes.closedColor;
+        btnMain.backgroundColor = self.attributes.closedColor
         btnMain.imageEdgeInsets = UIEdgeInsets(top: 4, left: 4, bottom: 4, right: 4)
     
         // image
         if( closeImage != nil ) {
-            btnMain.setImage(UIImage(named: closeImage!), for: .normal);
-            btnMain.setImage(UIImage(named: openImage!), for: .selected);
+            btnMain.setImage(UIImage(named: closeImage!), for: .normal)
+            btnMain.setImage(UIImage(named: openImage!), for: .selected)
         }
         else {
-            let closeImage = UIImage(named: "main_close", in: Bundle(for: DZButtonMenu.self), compatibleWith: nil) //?//.withRenderingMode(.alwaysTemplate)
-            let openImage = UIImage(named: "main_open", in: Bundle(for: DZButtonMenu.self), compatibleWith: nil) //?//.withRenderingMode(.alwaysTemplate)
-            btnMain.setImage(openImage, for: .normal);
-            btnMain.setImage(closeImage, for: .selected);
+            let closeImage = UIImage(named: "main_close", in: Bundle(for: DZButtonMenu.self), compatibleWith: nil)//?.withRenderingMode(.alwaysTemplate)
+            let openImage = UIImage(named: "main_open", in: Bundle(for: DZButtonMenu.self), compatibleWith: nil)//?.withRenderingMode(.alwaysTemplate)
+            btnMain.setImage(openImage, for: .normal)
+            btnMain.setImage(closeImage, for: .selected)
         }
         
-        btnMain.tag = self.attributes.mainButtonTag;
-        btnMain.layer.cornerRadius = self.attributes.buttonDiameter/2;
-        self.addSubview(btnMain);
-        btnMain.addTarget(self, action: #selector(DZButtonMenu.switchMenuStatus), for: .touchUpInside);
+        if #available(iOS 13, *) {
+            btnMain.tintColor = .systemBackground
+        }
+        else {
+            btnMain.tintColor = .white
+        }
+        
+        btnMain.tag = self.attributes.mainButtonTag
+        btnMain.layer.cornerRadius = self.attributes.buttonDiameter/2
+        self.addSubview(btnMain)
+        btnMain.addTarget(self, action: #selector(DZButtonMenu.switchMenuStatus), for: .touchUpInside)
     }
     
     // MARK: - button action
@@ -149,34 +180,35 @@ public class DZButtonMenu : UIView {
 extension DZButtonMenu {
     @objc internal func switchMenuStatus() {
         if ( self.menuState == .closed ) {
-            self.showMenu(withAnimation: true);
+            self.showMenu(withAnimation: true)
         }
         else if ( self.menuState == .opened ) {
-            self.hideMenu(withAnimation: true);
+            self.hideMenu(withAnimation: true)
         }
     }
     
-    fileprivate func showMenu(withAnimation animation: Bool = true) {
-        self.menuState = .opening;
-        
-        self.superview?.addSubview(self.maskBg!);
-        self.maskBg?.isHidden = false;
-        self.superview?.bringSubviewToFront(self);
-        
-        for (index, item) in self.items.enumerated() {
-            if index >= (self.items.count-1) {
-                item.show(at: self.superview!, index: index, callback: {
-                    self.afterShow()
-                })
-            }
-            else {
-                item.show(at: self.superview!, index: index)
+    private func showMenu(withAnimation animation: Bool = true) {
+        self.menuState = .opening
+        if let superView = self.superview {
+            superView.addSubview(self.maskBg!);
+            self.maskBg?.isHidden = false;
+            superView.bringSubviewToFront(self);
+            
+            for (index, item) in self.items.enumerated() {
+                if index >= (self.items.count-1) {
+                    item.show(at: superView, callback: {
+                        self.afterShow()
+                    })
+                }
+                else {
+                    item.show(at: superView)
+                }
             }
         }
         return
     }
     
-    fileprivate func afterShow() {
+    private func afterShow() {
         let mainBtn = self.viewWithTag(self.attributes.mainButtonTag) as! UIButton
         mainBtn.isSelected = true
         self.menuState = .opened
@@ -184,11 +216,14 @@ extension DZButtonMenu {
     
     fileprivate func hideMenu(withAnimation animation:Bool = true) {
         self.menuState = .closing;
-        
         for (index, item) in self.items.enumerated() {
-            item.hide(index: index, of: self.items.count)
             if index >= (self.items.count-1) {
-                self.afterHide()
+                item.hide(of: self.items.count, callback: {
+                    self.afterHide()
+                })
+            }
+            else {
+                item.hide(of: self.items.count)
             }
         }
     }
