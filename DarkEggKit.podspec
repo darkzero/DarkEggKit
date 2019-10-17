@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DarkEggKit'
-  s.version          = '0.3.1'
+  s.version          = '0.4.0'
   s.summary          = 'DarkEgg UI Kit.'
   s.swift_version         = '5.0'
   s.ios.deployment_target = '12.0'
@@ -20,6 +20,13 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
+  * 0.4.0 (2019/10/20)
+    - Add ButtonMenu (Is not prefect now)
+    ```
+    pod 'DarkEggKit/ButtonMenu'
+    ```
+    - Fix some bugs
+  ---
   * 0.3.1 (2019/09/30)
     Update to iOS 11
   ---

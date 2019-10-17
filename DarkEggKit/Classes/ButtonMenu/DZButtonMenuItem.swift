@@ -151,6 +151,7 @@ extension DZButtonMenuItem {
         let btn = self.button
         btn.frame = CGRect(x: 0, y: 0, width: attributes.buttonDiameter, height: attributes.buttonDiameter);
         if let _img = image {
+            btn.setTitle(nil, for: .normal)
             btn.setImage(_img, for: .normal)
             if #available(iOS 13, *) {
                 btn.tintColor = .systemBackground

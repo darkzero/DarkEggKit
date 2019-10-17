@@ -21,13 +21,13 @@ class ButtonMenuViewController: UIViewController, DarkEggPopupMessageProtocol {
         config.style = .line
         config.direction = .up
         self.buttonMenu = DZButtonMenu(configuration: config)
-        self.buttonMenu.addButton(title: "Automatic") {
-            self.showPopupInfo("Button [Automatic] clicked")
+        self.buttonMenu.addButton(title: "Facebook", image: UIImage(named: "icon_facebook")) {
+            self.showPopupInfo("Button [Facebook] clicked")
         }
-        self.buttonMenu.addButton(title: "Block User") {
-            self.showPopupInfo("Button [Block User] clicked")
+        self.buttonMenu.addButton(title: "Twitter", image: UIImage(named: "icon_twitter")) {
+            self.showPopupInfo("Button [Twitter] clicked")
         }
-        self.buttonMenu.addButton(title: "Call for help") {
+        self.buttonMenu.addButton(title: "Call for help", image: UIImage(named: "icon_heart")) {
             self.showPopupInfo("Button [Call for help] clicked")
         }
         self.view.addSubview(self.buttonMenu)
