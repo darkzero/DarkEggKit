@@ -10,7 +10,7 @@ import UIKit
 
 import DarkEggKit
 
-class ButtonMenuViewController: UIViewController {
+class ButtonMenuViewController: UIViewController, DarkEggPopupMessageProtocol {
     var buttonMenu: DZButtonMenu = DZButtonMenu()
 
     override func viewDidLoad() {
@@ -21,30 +21,30 @@ class ButtonMenuViewController: UIViewController {
         config.style = .line
         config.direction = .up
         self.buttonMenu = DZButtonMenu(configuration: config)
-        self.buttonMenu.addButton(title: "Aaa") {
-            self.showPopupInfo("Button Aaa clicked")
+        self.buttonMenu.addButton(title: "Facebook", image: UIImage(named: "icon_facebook")) {
+            self.showPopupInfo("Button [Facebook] clicked")
         }
-        self.buttonMenu.addButton(title: "Bbb") {
-            self.showPopupInfo("Button Bbb clicked")
+        self.buttonMenu.addButton(title: "Twitter", image: UIImage(named: "icon_twitter")) {
+            self.showPopupInfo("Button [Twitter] clicked")
         }
-        self.buttonMenu.addButton(title: "Ccc") {
-            self.showPopupInfo("Button Ccc clicked")
+        self.buttonMenu.addButton(title: "Call for help", image: UIImage(named: "icon_heart")) {
+            self.showPopupInfo("Button [Call for help] clicked")
         }
         self.view.addSubview(self.buttonMenu)
-        
+
         let config1 = DZButtonMenuConfiguration.default()
         config1.location = .leftBottom
         config1.style = .sector
-        config1.direction = .up
+        config1.direction = .down
         let btnMenu = DZButtonMenu(configuration: config1)
-        btnMenu.addButton(title: "Aaa") {
-            self.showPopupInfo("Button Aaa clicked")
+        btnMenu.addButton(title: "A") {
+            self.showPopupInfo("Button A clicked")
         }
         btnMenu.addButton(title: "Bbb") {
-            self.showPopupInfo("Button Bbb clicked")
+            self.showPopupInfo("Button B clicked")
         }
         btnMenu.addButton(title: "Ccc") {
-            self.showPopupInfo("Button Ccc clicked")
+            self.showPopupInfo("Button C clicked")
         }
         self.view.addSubview(btnMenu)
     }
