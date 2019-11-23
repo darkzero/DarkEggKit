@@ -1,16 +1,16 @@
 PODS:
-  - DarkEggKit (0.3.1):
-    - DarkEggKit/Common (= 0.3.1)
-  - DarkEggKit/AnimatedImageView (0.3.1):
+  - DarkEggKit (0.4.0):
+    - DarkEggKit/Common (= 0.4.0)
+  - DarkEggKit/AnimatedImageView (0.4.0):
     - DarkEggKit/Common
-  - DarkEggKit/ButtonMenu (0.3.1):
+  - DarkEggKit/ButtonMenu (0.4.0):
     - DarkEggKit/Common
-  - DarkEggKit/Common (0.3.1)
-  - DarkEggKit/PaddingLabel (0.3.1):
+  - DarkEggKit/Common (0.4.0)
+  - DarkEggKit/PaddingLabel (0.4.0):
     - DarkEggKit/Common
-  - DarkEggKit/PopupMessage (0.3.1):
+  - DarkEggKit/PopupMessage (0.4.0):
     - DarkEggKit/Common
-  - DarkEggKit/SideMenu (0.3.1):
+  - DarkEggKit/SideMenu (0.4.0):
     - DarkEggKit/Common
 
 DEPENDENCIES:
@@ -26,8 +26,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  DarkEggKit: cc18293969d1958ee14204728241b00729481bf3
+  DarkEggKit: 77c7ab5e9fe4b94cc4b5104873b0cb802678eb07
 
 PODFILE CHECKSUM: 4495e418e0e1025e141a09005b3dd67b05dafe64
 
-COCOAPODS: 1.7.3
+COCOAPODS: 1.8.4
