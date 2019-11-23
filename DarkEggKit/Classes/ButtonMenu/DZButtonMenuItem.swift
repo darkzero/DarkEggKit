@@ -236,9 +236,9 @@ extension DZButtonMenuItem {
             
             let preparingAniDuration: Double = Double(self.index)*self.buttonAniDuration
             let fullDuration: Double = preparingAniDuration+self.buttonAniDuration+self.labelAniDuration
-            let relativeDuration1 = preparingAniDuration/fullDuration
-            let relativeDuration2 = self.buttonAniDuration/fullDuration
-            let relativeDuration3 = (self.labelAniDuration+self.buttonAniDuration)/fullDuration
+            //let relativeDuration1 = preparingAniDuration/fullDuration
+            //let relativeDuration2 = self.buttonAniDuration/fullDuration
+            //let relativeDuration3 = (self.labelAniDuration+self.buttonAniDuration)/fullDuration
             UIView.animateKeyframes(withDuration: fullDuration, delay: 0.0, options: [], animations: {
                 // step 1: move button to prepare position
                 UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: preparingAniDuration/fullDuration, animations: {
