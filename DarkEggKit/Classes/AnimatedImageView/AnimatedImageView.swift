@@ -80,7 +80,7 @@ public class AnimatedImageView: UIImageView {
     public var framePreloadCount = 10
     /// pre scaling
     public var needsPrescaling = true
-    public var delegate: AnimatedImageViewDelegate?
+    public weak var delegate: AnimatedImageViewDelegate?
     
     private var downloadCancelToken: SessionDataTask.CancelToken = -1
     
@@ -130,7 +130,7 @@ public class AnimatedImageView: UIImageView {
                 }, progress: { [weak self] (precent) in
                     self?.showDownloadProgress(precent: precent)
                 }) ?? -1
-                reset()
+                self.reset()
             }
             self.setNeedsDisplay()
             self.layer.setNeedsDisplay()
@@ -152,8 +152,7 @@ public class AnimatedImageView: UIImageView {
     // A display link that keeps calling the 'updateFrame' method on every screen refresh.
     private lazy var displayLink: CADisplayLink = {
         isDisplayLinkInitialized = true
-        let displayLink = CADisplayLink(
-            target: TargetProxy(target: self), selector: #selector(TargetProxy.onScreenUpdate))
+        let displayLink = CADisplayLink(target: TargetProxy(target: self), selector: #selector(TargetProxy.onScreenUpdate))
         displayLink.add(to: .main, forMode: runLoopMode)
         displayLink.isPaused = true
         return displayLink
@@ -167,6 +166,24 @@ public class AnimatedImageView: UIImageView {
         if self.isDisplayLinkInitialized {
             self.displayLink.invalidate()
         }
+    }
+}
+
+// MARK: AnimatedImageView Life Cyele
+extension AnimatedImageView {
+    /// Clear data when disappear, free the memory
+    override open func willMove(toWindow newWindow: UIWindow?) {
+        guard let _ = newWindow else {
+            //self.clear()
+            return
+        }
+        //self.reset()
+        //self.startAnimating()
+    }
+    
+    override open func didMoveToWindow() {
+        super.didMoveToWindow()
+        didMove()
     }
 }
 
@@ -219,7 +236,7 @@ extension AnimatedImageView {
     /// Stop the animation.
     override open func stopAnimating() {
         super.stopAnimating()
-        self.animator?.resetAnimatedFrames()
+        //self.animator?.resetAnimatedFrames()
         if isDisplayLinkInitialized {
             displayLink.isPaused = true
         }
@@ -230,24 +247,6 @@ extension AnimatedImageView {
             layer.contents = currentFrame.cgImage
         } else {
             //layer.contents = self.placeHolder?.cgImage
-        }
-    }
-    
-    override open func didMoveToWindow() {
-        super.didMoveToWindow()
-        didMove()
-    }
-    
-    override open func didMoveToSuperview() {
-        super.didMoveToSuperview()
-        didMove()
-    }
-    
-    /// Clear data when disappear, free the memory
-    override open func willMove(toWindow newWindow: UIWindow?) {
-        guard let _ = newWindow else {
-            self.clear()
-            return
         }
     }
     
@@ -317,7 +316,6 @@ extension AnimatedImageView {
             let center = CGPoint(x: self.progressLayer.bounds.midX, y: self.progressLayer.bounds.midY)
             
             if self.progressLayer.superlayer == nil, self.progressLayer.frame.width == 0 {
-                //Logger.debug("add progress")
                 self.progressLayer.frame = CGRect(origin: CGPoint(x: (self.bounds.width-width)/2, y: (self.bounds.height-width)/2),
                                                   size: CGSize(width: width, height: width))
                 self.progressLayer.strokeColor = UIColor.white.cgColor

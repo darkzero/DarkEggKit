@@ -12,17 +12,9 @@ import DarkEggKit
 
 class AnimatedImageViewController: UIViewController {
     @IBOutlet weak var aniImgView_1: AnimatedImageView!
-    @IBOutlet weak var aniImgView_2: AnimatedImageView!
-    @IBOutlet weak var aniImgView_3: AnimatedImageView!
-    @IBOutlet weak var aniImgView_4: AnimatedImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        //aniImgView.backgroundColor = .white;
-        
-        //let data = try! Data(contentsOf: URL(fileReferenceLiteralResourceName: "colon_animation.png"))
-        //let apng = AImage(data: data)
         
         Logger.debug("---- Start ----")
         var apng: AnimationImage? // = AImage(url: "https://apng.onevcat.com/assets/elephant.png")
@@ -49,35 +41,49 @@ class AnimatedImageViewController: UIViewController {
         aniImgView_1.aImage = apng
         aniImgView_1.repeatMode = .infinite
         aniImgView_1.delegate = self
-        //
-        aniImgView_2.aImage = apng
-        aniImgView_2.repeatMode = .infinite
-        aniImgView_2.delegate = self
-        //
-        aniImgView_3.aImage = apng
-        aniImgView_3.repeatMode = .infinite
-        aniImgView_3.delegate = self
-        //
-        aniImgView_4.aImage = apng
-        aniImgView_4.repeatMode = .infinite
-        aniImgView_4.delegate = self
+        aniImgView_1.willShowProgress = true
         
         //aniImgView_1.needsPrescaling = false
         //aniImgView_2.needsPrescaling = false
         //aniImgView_3.needsPrescaling = false
         //aniImgView_4.needsPrescaling = false
-        aniImgView_1.willShowProgress = false
-        aniImgView_1.placeHolder = nil
-        aniImgView_2.willShowProgress = false
-        aniImgView_3.placeHolder = nil
+        //aniImgView_1.willShowProgress = false
+        //aniImgView_1.placeHolder = nil
+        //aniImgView_2.willShowProgress = false
+        //aniImgView_3.placeHolder = nil
+        //aniImgView_2.isHidden = true
+        //aniImgView_3.isHidden = true
+        //aniImgView_4.isHidden = true
         
-        Logger.debug("---- End ----")
+        //Logger.debug("---- End ----")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.aniImgView_1.delegate = self
     }
     
     override func viewDidDisappear(_ animated: Bool) {
+        self.aniImgView_1.delegate = nil
     }
     
     deinit {
+        Logger.debug()
+        self.aniImgView_1.clear()
+        self.aniImgView_1.removeFromSuperview()
+        self.aniImgView_1.delegate = nil
+        self.aniImgView_1 = nil
+    }
+}
+
+extension AnimatedImageViewController {
+    
+    override func willMove(toParent parent: UIViewController?) {
+        Logger.debug(parent)
+        guard let _ = parent else {
+            //self.testView.removeFromSuperview()
+            //self.testView = nil
+            return
+        }
     }
 }
 
@@ -87,7 +93,7 @@ extension AnimatedImageViewController: AnimatedImageViewDelegate {
 //    }
     
     func animatedImageView(_ imageView: AnimatedImageView, didFinishAnimating: Void) {
-        imageView.removeFromSuperview()
+        //imageView.removeFromSuperview()
         Logger.debug()
     }
 }
@@ -95,5 +101,11 @@ extension AnimatedImageViewController: AnimatedImageViewDelegate {
 extension AnimatedImageViewController {
     @IBAction func onClearCacheButtonClicked(_ sender: UIButton) {
         AnimatedImageView.clearCache()
+    }
+    
+    @IBAction func onGotoNextButtonClicked(_ sender: UIButton) {
+        if let uv = (storyboard?.instantiateViewController(withIdentifier: "AboutViewController") as? AboutViewController) {
+            self.navigationController?.pushViewController(uv, animated: true)
+        }
     }
 }
