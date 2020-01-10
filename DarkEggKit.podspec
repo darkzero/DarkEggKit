@@ -101,4 +101,11 @@ Pod::Spec.new do |s|
     buttonMenu.resources = ['DarkEggKit/Classes/ButtonMenu/*.xcassets']
     buttonMenu.dependency 'DarkEggKit/Common'
   end
+  
+  # DarkEggKitit/AnnularProgress
+  # will be released in version 0.5.0
+  s.subspec 'AnnularProgress' do |progress|
+    # progress.source_files = ''
+    progress.dependency 'DarkEggKit/Common'
+  end
 end
