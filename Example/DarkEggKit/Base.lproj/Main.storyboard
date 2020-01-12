@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fas-fZ-DYr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fas-fZ-DYr">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -65,6 +65,7 @@
                         <segue destination="mkl-0T-xWW" kind="show" identifier="ShowCommonScene" id="BcC-mQ-cgs"/>
                         <segue destination="LTL-xl-Fdy" kind="show" identifier="ShowAnimationImageScene" id="exl-QU-PYc"/>
                         <segue destination="dbr-6X-dGQ" kind="show" identifier="ShowButtonMenuScene" id="Ek8-uQ-ufc"/>
+                        <segue destination="4Au-sR-MMy" kind="show" identifier="ShowDoughnutChartScene" id="kjL-XT-KuH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -315,6 +316,89 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="78B-lm-6pF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2529" y="-504"/>
+        </scene>
+        <!--Doughnut Chart View Controller-->
+        <scene sceneID="iHf-ng-x15">
+            <objects>
+                <viewController storyboardIdentifier="DoughnutChartScene" id="4Au-sR-MMy" customClass="DoughnutChartViewController" customModule="DarkEggKit_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k2W-8Q-dKW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hvg-6Q-7mE" customClass="DoughnutChart" customModule="DarkEggKit">
+                                <rect key="frame" x="79" y="120" width="256" height="256"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Hvg-6Q-7mE" secondAttribute="height" multiplier="1:1" id="uqN-2h-9uu"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="inner">
+                                        <real key="value" value="128"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="outer">
+                                        <real key="value" value="256"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="displayWithAnimation" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8PN-px-NWe">
+                                <rect key="frame" x="64" y="806" width="286" height="40"/>
+                                <color key="backgroundColor" systemColor="systemFillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="WB0-0i-IiO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onClearButtonClicked:" destination="4Au-sR-MMy" eventType="touchUpInside" id="4LO-Ug-tBm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbR-mH-6vk">
+                                <rect key="frame" x="64" y="750" width="286" height="40"/>
+                                <color key="backgroundColor" systemColor="systemFillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Show">
+                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onShowButtonClicked:" destination="4Au-sR-MMy" eventType="touchUpInside" id="pcI-TS-Cxd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="GbR-mH-6vk" firstAttribute="centerX" secondItem="8PN-px-NWe" secondAttribute="centerX" id="29I-BI-YW3"/>
+                            <constraint firstItem="GbR-mH-6vk" firstAttribute="width" secondItem="8PN-px-NWe" secondAttribute="width" id="4u3-qU-aGp"/>
+                            <constraint firstItem="4pd-m5-Swt" firstAttribute="bottom" secondItem="8PN-px-NWe" secondAttribute="bottom" constant="16" id="8KF-hh-Owt"/>
+                            <constraint firstItem="8PN-px-NWe" firstAttribute="leading" secondItem="4pd-m5-Swt" secondAttribute="leading" constant="64" id="CIl-NF-Gof"/>
+                            <constraint firstItem="8PN-px-NWe" firstAttribute="top" secondItem="GbR-mH-6vk" secondAttribute="bottom" constant="16" id="WMK-Bj-FrQ"/>
+                            <constraint firstItem="Hvg-6Q-7mE" firstAttribute="centerX" secondItem="k2W-8Q-dKW" secondAttribute="centerX" id="YUT-wK-cGa"/>
+                            <constraint firstItem="Hvg-6Q-7mE" firstAttribute="top" secondItem="4pd-m5-Swt" secondAttribute="top" constant="32" id="cKb-mr-xa5"/>
+                            <constraint firstItem="GbR-mH-6vk" firstAttribute="height" secondItem="8PN-px-NWe" secondAttribute="height" id="jMF-E9-Vyy"/>
+                            <constraint firstItem="8PN-px-NWe" firstAttribute="centerX" secondItem="k2W-8Q-dKW" secondAttribute="centerX" id="moF-sg-8x7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4pd-m5-Swt"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YXR-XO-E26"/>
+                    <connections>
+                        <outlet property="dountChart" destination="Hvg-6Q-7mE" id="Dhl-bS-FLy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ov4-65-Pt2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3500.0000000000005" y="-504.24107142857139"/>
         </scene>
         <!--Common-->
         <scene sceneID="qwr-Lq-TsZ">

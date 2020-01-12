@@ -39,4 +39,11 @@
             "segue_id": "ShowButtonMenuScene"
         }]
     },
+    {
+        "section_title": "Doughnut Chart",
+        "cells": [{
+            "title": "Doughnut Chart Sample",
+            "segue_id": "ShowDoughnutChartScene"
+        }]
+    }
 ]

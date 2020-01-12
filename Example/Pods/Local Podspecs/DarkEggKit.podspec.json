@@ -75,6 +75,15 @@
 
         ]
       }
+    },
+    {
+      "name": "DoughnutChart",
+      "source_files": "DarkEggKit/Classes/DoughnutChart/*",
+      "dependencies": {
+        "DarkEggKit/Common": [
+
+        ]
+      }
     }
   ],
   "swift_version": "5.0"

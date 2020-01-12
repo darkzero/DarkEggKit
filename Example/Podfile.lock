@@ -6,6 +6,8 @@ PODS:
   - DarkEggKit/ButtonMenu (0.4.0):
     - DarkEggKit/Common
   - DarkEggKit/Common (0.4.0)
+  - DarkEggKit/DoughnutChart (0.4.0):
+    - DarkEggKit/Common
   - DarkEggKit/PaddingLabel (0.4.0):
     - DarkEggKit/Common
   - DarkEggKit/PopupMessage (0.4.0):
@@ -17,6 +19,7 @@ DEPENDENCIES:
   - DarkEggKit (from `../`)
   - DarkEggKit/AnimatedImageView (from `../`)
   - DarkEggKit/ButtonMenu (from `../`)
+  - DarkEggKit/DoughnutChart (from `../`)
   - DarkEggKit/PaddingLabel (from `../`)
   - DarkEggKit/PopupMessage (from `../`)
   - DarkEggKit/SideMenu (from `../`)
@@ -26,8 +29,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  DarkEggKit: 77c7ab5e9fe4b94cc4b5104873b0cb802678eb07
+  DarkEggKit: 9d8e50a89a7224320f1cc4573f53d407dde8e789
 
-PODFILE CHECKSUM: 4495e418e0e1025e141a09005b3dd67b05dafe64
+PODFILE CHECKSUM: eaf0600c713f013d8ae095f03c11ac462fefee18
 
 COCOAPODS: 1.8.4
