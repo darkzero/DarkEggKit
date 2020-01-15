@@ -16,6 +16,9 @@ func getBackgroundColor() -> UIColor {
     }
 }
 
+/// DoughnutChartArc data
+/// - value: value of arc
+/// - color: color of arc
 public struct DoughnutChartArc {
     var value: CGFloat = 20.0
     var color: UIColor = .orange
@@ -24,6 +27,8 @@ public struct DoughnutChartArc {
       self.value = value
       self.color = color
     }
+    
+    internal init() {}
 }
 
 public struct DoughnutChartData {

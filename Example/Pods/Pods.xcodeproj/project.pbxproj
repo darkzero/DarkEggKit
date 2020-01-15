@@ -41,6 +41,7 @@
 		A3CAD11ED82C8927CA038E68D36224C5 /* DZPopupMessageQueueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32708F58C0F7CB2ED4BB4CF3A18524B8 /* DZPopupMessageQueueManager.swift */; };
 		A3D197A1CA1C70FD176C0C96AE3E3FEA /* DZSideMenuAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C4E1F233395A81E9AB2B184B67EB75 /* DZSideMenuAnimator.swift */; };
 		A58F62F063CEBFE25EA54EDEF89FB68D /* DZSideMenuConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8FDD56F01A76F544291EB46AD162C /* DZSideMenuConfiguration.swift */; };
+		B763A9D523CDBD93002E16F3 /* DoughnutArcLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763A9D423CDBD93002E16F3 /* DoughnutArcLayer.swift */; };
 		B7C3B0A323C92AEB00411E75 /* DoughnutChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C3B0A223C92AEB00411E75 /* DoughnutChartData.swift */; };
 		CD96711DEC5A70AAC4E31B4D002BB414 /* DZSideMenuTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A2FFAA5BEF5E8AE3073437A0354809 /* DZSideMenuTransitioning.swift */; };
 		D4E3F09878C2E757AE8FD5B6C080AFC0 /* AnimatedImageView+Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0473070338D07B5FCD577293A7A597 /* AnimatedImageView+Animator.swift */; };
@@ -114,6 +115,7 @@
 		AE8712CFC69788E561911965FC06F304 /* DoughnutChart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DoughnutChart.swift; path = DarkEggKit/Classes/DoughnutChart/DoughnutChart.swift; sourceTree = "<group>"; };
 		AFC1AE83739A860D053E469B7D324FFA /* DarkEggKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DarkEggKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B30AC4C87A41BA5AFEE3E24A8228E5CD /* Pods-DarkEggKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DarkEggKit_Tests-dummy.m"; sourceTree = "<group>"; };
+		B763A9D423CDBD93002E16F3 /* DoughnutArcLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DoughnutArcLayer.swift; path = DarkEggKit/Classes/DoughnutChart/DoughnutArcLayer.swift; sourceTree = "<group>"; };
 		B7C3B0A223C92AEB00411E75 /* DoughnutChartData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DoughnutChartData.swift; path = DarkEggKit/Classes/DoughnutChart/DoughnutChartData.swift; sourceTree = "<group>"; };
 		B9FFAA5434A57E6D228C2AA7D207D9C5 /* SessionDataTask.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDataTask.swift; path = DarkEggKit/Classes/AnimatedImageView/SessionDataTask.swift; sourceTree = "<group>"; };
 		C0A2FFAA5BEF5E8AE3073437A0354809 /* DZSideMenuTransitioning.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZSideMenuTransitioning.swift; path = DarkEggKit/Classes/SideMenu/DZSideMenuTransitioning.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 			children = (
 				B7C3B0A223C92AEB00411E75 /* DoughnutChartData.swift */,
 				AE8712CFC69788E561911965FC06F304 /* DoughnutChart.swift */,
+				B763A9D423CDBD93002E16F3 /* DoughnutArcLayer.swift */,
 			);
 			name = DoughnutChart;
 			sourceTree = "<group>";
@@ -576,6 +579,7 @@
 				A3D197A1CA1C70FD176C0C96AE3E3FEA /* DZSideMenuAnimator.swift in Sources */,
 				A58F62F063CEBFE25EA54EDEF89FB68D /* DZSideMenuConfiguration.swift in Sources */,
 				3ABB44DF455B802577F63D6EC481EBA2 /* DZSideMenuInteractiveTransition.swift in Sources */,
+				B763A9D523CDBD93002E16F3 /* DoughnutArcLayer.swift in Sources */,
 				1FEAA68F6BB99DBCAF56C3BB8D18C3CC /* DZSideMenuMask.swift in Sources */,
 				CD96711DEC5A70AAC4E31B4D002BB414 /* DZSideMenuTransitioning.swift in Sources */,
 				3C9E944B6628831999B01B52E1E22A1B /* DZUtility.swift in Sources */,
