@@ -289,7 +289,7 @@
             </objects>
             <point key="canvasLocation" x="-259" y="751"/>
         </scene>
-        <!--Button Menu View Controller-->
+        <!--Button Menu-->
         <scene sceneID="gfz-ww-7QJ">
             <objects>
                 <viewController id="dbr-6X-dGQ" customClass="ButtonMenuViewController" customModule="DarkEggKit_Example" customModuleProvider="target" sceneMemberID="viewController">
@@ -311,13 +311,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uIK-5v-gO4"/>
                     </view>
-                    <navigationItem key="navigationItem" id="zcz-pE-tUh"/>
+                    <navigationItem key="navigationItem" title="Button Menu" id="zcz-pE-tUh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="78B-lm-6pF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2529" y="-504"/>
         </scene>
-        <!--Doughnut Chart View Controller-->
+        <!--Doughnut Chart-->
         <scene sceneID="iHf-ng-x15">
             <objects>
                 <viewController storyboardIdentifier="DoughnutChartScene" id="4Au-sR-MMy" customClass="DoughnutChartViewController" customModule="DarkEggKit_Example" customModuleProvider="target" sceneMemberID="viewController">
@@ -465,7 +465,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4pd-m5-Swt"/>
                     </view>
-                    <navigationItem key="navigationItem" id="YXR-XO-E26"/>
+                    <navigationItem key="navigationItem" title="Doughnut Chart" id="YXR-XO-E26"/>
                     <connections>
                         <outlet property="animationSwitch" destination="gZq-D9-hHP" id="Hqw-gG-1nc"/>
                         <outlet property="dountChart" destination="Hvg-6Q-7mE" id="Dhl-bS-FLy"/>
