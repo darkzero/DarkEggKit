@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DarkEggKit'
-  s.version          = '0.4.0'
+  s.version          = '0.5.0'
   s.summary          = 'DarkEgg UI Kit.'
   s.swift_version         = '5.0'
   s.ios.deployment_target = '12.0'
@@ -20,6 +20,12 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
+  * 0.5.0 (2020/01/??)
+    - Add DoughnutChart
+    ```
+    pod 'DarkEggKit/DoughnutChart'
+    ```
+  ---
   * 0.4.0 (2019/10/20)
     - Add ButtonMenu (Is not prefect now)
     ```
@@ -102,10 +108,10 @@ Pod::Spec.new do |s|
     buttonMenu.dependency 'DarkEggKit/Common'
   end
   
-  # DarkEggKitit/AnnularProgress
+  # DarkEggKitit/DoughnutChart
   # will be released in version 0.5.0
-  s.subspec 'AnnularProgress' do |progress|
-    # progress.source_files = ''
-    progress.dependency 'DarkEggKit/Common'
+  s.subspec 'DoughnutChart' do |dount|
+    dount.source_files = 'DarkEggKit/Classes/DoughnutChart/*'
+    dount.dependency 'DarkEggKit/Common'
   end
 end
