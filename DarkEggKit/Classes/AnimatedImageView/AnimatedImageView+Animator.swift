@@ -143,10 +143,6 @@ extension AnimatedImageView {
             self.preloadQueue = preloadQueue
         }
         
-        deinit {
-            //Logger.debug()
-        }
-        
         func frame(at index: Int) -> UIImage? {
             return animatedFrames[safe: index]?.image
         }
@@ -227,9 +223,7 @@ extension AnimatedImageView {
             guard preloadingIsNeeded else {
                 return
             }
-            
             animatedFrames[previousFrameIndex] = animatedFrames[previousFrameIndex].placeholderFrame
-            
             preloadIndexes(start: currentFrameIndex).forEach { index in
                 let currentAnimatedFrame = animatedFrames[index]
                 if !currentAnimatedFrame.isPlaceholder { return }
