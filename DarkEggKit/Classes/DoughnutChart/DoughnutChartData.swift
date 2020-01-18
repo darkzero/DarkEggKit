@@ -2,7 +2,7 @@
 //  DoughnutChartConfiguration.swift
 //  DarkEggKit
 //
-//  Created by Yuhua Hu on 2020/01/10.
+//  Created by darkzero on 2020/01/10.
 //
 
 import UIKit
@@ -27,8 +27,6 @@ public struct DoughnutChartArc {
       self.value = value
       self.color = color
     }
-    
-    internal init() {}
 }
 
 public struct DoughnutChartData {

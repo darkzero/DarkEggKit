@@ -2,7 +2,7 @@
 //  DoughnutArcLayer.swift
 //  DarkEggKit
 //
-//  Created by Yuhua Hu on 2020/01/14.
+//  Created by darkzero on 2020/01/14.
 //
 
 import UIKit

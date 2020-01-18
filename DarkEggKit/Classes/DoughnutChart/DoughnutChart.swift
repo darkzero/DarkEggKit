@@ -25,21 +25,21 @@ public class DoughnutChart: UIView {
     private var layers: [DoughnutArcLayer] = []
     
     required init?(coder: NSCoder) {
-        //self.configuration = DoughnutChartConfiguration()
         super.init(coder: coder)
     }
     
     override init(frame: CGRect) {
-        //self.configuration = DoughnutChartConfiguration()
         super.init(frame: frame)
     }
 }
 
+// MARK: - draw (default display in storyboard)
 extension DoughnutChart {
     public override func draw(_ rect: CGRect) {
         Logger.debug(rect)
         super.draw(rect)
         
+        // default display in storyboard
         #if TARGET_INTERFACE_BUILDER
         var tempData: DoughnutChartData = DoughnutChartData()
         tempData.maxValue = 100.0
@@ -63,19 +63,29 @@ extension DoughnutChart {
         }
         #endif
     }
-    
+}
+
+// MARK: - show and hide animation functions
+extension DoughnutChart {
+    /// Animation
+    /// - Parameters:
+    ///   - animated: animated or not
+    ///   - duration: animation duration
     public func showChart(animated: Bool = false, duration: CFTimeInterval) {
+        // check&set the in progress flag
         guard !self.inProgress else {
             return
         }
         self.inProgress = true
         
+        // clear
         self.layers.forEach { (layer) in
             layer.removeAllAnimations()
             layer.removeFromSuperlayer()
         }
         self.layers.removeAll()
         
+        // make animations
         let lineWidth = (outer - inner)/2
         var startAngle = -(CGFloat(Float.pi) / 2)
         
@@ -97,11 +107,17 @@ extension DoughnutChart {
             startAngle = endAngle
         }
         
+        // run animation
         self.startShowAnimation(animated: animated, completion: {
             self.inProgress = false
         })
     }
     
+    /// Start the animation of display
+    /// - Parameters:
+    ///   - animated: animated or not
+    ///   - index: index of arc
+    ///   - completion: callback function
     private func startShowAnimation(animated: Bool = true, index: Int = 0, completion: (()->Void)? = nil) {
         guard index < self.data.arcs.count else {
             completion?()
@@ -112,6 +128,9 @@ extension DoughnutChart {
         })
     }
     
+    /// Animation
+    /// - Parameters:
+    ///   - animated: animated or not
     public func clearChart(animated: Bool = false) {
         guard !self.inProgress else {
             return
@@ -135,6 +154,11 @@ extension DoughnutChart {
         }
     }
     
+    /// Start the animation of clear
+    /// - Parameters:
+    ///   - animated: animated or not
+    ///   - index: index of arc
+    ///   - completion: callback function
     private func startHideAnimation(animated: Bool = true, index: Int? = nil, completion: (()->Void)? = nil) {
         var idx: Int = 0
         if index == nil {

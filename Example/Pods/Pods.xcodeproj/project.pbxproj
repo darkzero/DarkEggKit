@@ -115,6 +115,7 @@
 		AE8712CFC69788E561911965FC06F304 /* DoughnutChart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DoughnutChart.swift; path = DarkEggKit/Classes/DoughnutChart/DoughnutChart.swift; sourceTree = "<group>"; };
 		AFC1AE83739A860D053E469B7D324FFA /* DarkEggKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DarkEggKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B30AC4C87A41BA5AFEE3E24A8228E5CD /* Pods-DarkEggKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DarkEggKit_Tests-dummy.m"; sourceTree = "<group>"; };
+		B75BABCB23D37FDE00444B91 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = DarkEggKit/Classes/DoughnutChart/README.md; sourceTree = "<group>"; };
 		B763A9D423CDBD93002E16F3 /* DoughnutArcLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DoughnutArcLayer.swift; path = DarkEggKit/Classes/DoughnutChart/DoughnutArcLayer.swift; sourceTree = "<group>"; };
 		B7C3B0A223C92AEB00411E75 /* DoughnutChartData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DoughnutChartData.swift; path = DarkEggKit/Classes/DoughnutChart/DoughnutChartData.swift; sourceTree = "<group>"; };
 		B9FFAA5434A57E6D228C2AA7D207D9C5 /* SessionDataTask.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDataTask.swift; path = DarkEggKit/Classes/AnimatedImageView/SessionDataTask.swift; sourceTree = "<group>"; };
@@ -199,6 +200,7 @@
 				B7C3B0A223C92AEB00411E75 /* DoughnutChartData.swift */,
 				AE8712CFC69788E561911965FC06F304 /* DoughnutChart.swift */,
 				B763A9D423CDBD93002E16F3 /* DoughnutArcLayer.swift */,
+				B75BABCB23D37FDE00444B91 /* README.md */,
 			);
 			name = DoughnutChart;
 			sourceTree = "<group>";

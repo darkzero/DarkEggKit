@@ -593,6 +593,7 @@
 			baseConfigurationReference = 726976D0DD5E3367F7DA73CB /* Pods-DarkEggKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 20200119;
 				DEVELOPMENT_TEAM = XA393XM8GG;
 				INFOPLIST_FILE = DarkEggKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -610,6 +611,7 @@
 			baseConfigurationReference = DDB057709B7B342F63356373 /* Pods-DarkEggKit_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 20200119;
 				DEVELOPMENT_TEAM = XA393XM8GG;
 				INFOPLIST_FILE = DarkEggKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
