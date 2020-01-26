@@ -76,39 +76,39 @@ Pod::Spec.new do |s|
 
     # DarkEggKit/Common
     s.subspec 'Common' do |common|
-        common.source_files = 'DarkEggKit/Classes/Common/*'
+        common.source_files = 'DarkEggKit/Classes/Common/*.swift'
     end
 
     # DarkEggKit/PaddingLabel
     s.subspec 'PaddingLabel' do |paddingLabel|
-        paddingLabel.source_files = 'DarkEggKit/Classes/PaddingLabel/*'
+        paddingLabel.source_files = 'DarkEggKit/Classes/PaddingLabel/*.swift'
         paddingLabel.dependency 'DarkEggKit/Common'
     end
 
     # DarkEggKit/PopupMessage
     s.subspec 'PopupMessage' do |popupMessage|
-        popupMessage.source_files = 'DarkEggKit/Classes/PopupMessage/*'
+        popupMessage.source_files = 'DarkEggKit/Classes/PopupMessage/*.swift'
         popupMessage.resources = ['DarkEggKit/Classes/PopupMessage/*.xcassets']
         popupMessage.dependency 'DarkEggKit/Common'
     end
 
     # DarkEggKit/SideMenu
     s.subspec 'SideMenu' do |sideMenu|
-        sideMenu.source_files = 'DarkEggKit/Classes/SideMenu/*'
+        sideMenu.source_files = 'DarkEggKit/Classes/SideMenu/*.swift'
         sideMenu.dependency 'DarkEggKit/Common'
     end
 
     # DarkEggKit/AnimatedImageView
     # not release in this version
     s.subspec 'AnimatedImageView' do |aImageView|
-        aImageView.source_files = 'DarkEggKit/Classes/AnimatedImageView/*'
+        aImageView.source_files = 'DarkEggKit/Classes/AnimatedImageView/*.swift'
         aImageView.dependency 'DarkEggKit/Common'
     end
 
     # DarkEggKit/ButtonMenu
     # not release in this version
     s.subspec 'ButtonMenu' do |buttonMenu|
-        buttonMenu.source_files = 'DarkEggKit/Classes/ButtonMenu/*'
+        buttonMenu.source_files = 'DarkEggKit/Classes/ButtonMenu/*.swift'
         buttonMenu.resources = ['DarkEggKit/Classes/ButtonMenu/*.xcassets']
         buttonMenu.dependency 'DarkEggKit/Common'
     end
