@@ -32,7 +32,7 @@ class HomeViewController: UIViewController, DarkEggPopupMessageProtocol {
         
         // TODO:
         SubModuleManager.shared.loadJsonFile { (ret) in
-            Logger.debug(ret)
+            //Logger.debug(ret)
             guard ret.count > 0 else {
                 self.showPopupError("Error in Loading JSON!")
                 return

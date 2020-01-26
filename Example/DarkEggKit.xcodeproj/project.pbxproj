@@ -28,6 +28,7 @@
 		B7C3B09F23C87B2900411E75 /* DoughnutChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C3B09E23C87B2900411E75 /* DoughnutChartViewController.swift */; };
 		B7CA18A622DC74E900796008 /* .swift-version in Resources */ = {isa = PBXBuildFile; fileRef = B7CA18A422DC74E800796008 /* .swift-version */; };
 		B7CA18A722DC74E900796008 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = B7CA18A522DC74E900796008 /* .travis.yml */; };
+		B7D52C0223D58D9B006E9DA4 /* BarChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D52C0123D58D9B006E9DA4 /* BarChartViewController.swift */; };
 		DBFA5E0C8C976ACB63A67B73 /* Pods_DarkEggKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E751D432D30C44D306E72F1 /* Pods_DarkEggKit_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,7 @@
 		B7C3B09E23C87B2900411E75 /* DoughnutChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoughnutChartViewController.swift; sourceTree = "<group>"; };
 		B7CA18A422DC74E800796008 /* .swift-version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ".swift-version"; path = "../.swift-version"; sourceTree = "<group>"; };
 		B7CA18A522DC74E900796008 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
+		B7D52C0123D58D9B006E9DA4 /* BarChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartViewController.swift; sourceTree = "<group>"; };
 		DDB057709B7B342F63356373 /* Pods-DarkEggKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DarkEggKit_Example.release.xcconfig"; path = "Target Support Files/Pods-DarkEggKit_Example/Pods-DarkEggKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		DF4F79FD8A091ED75A5061BE /* Pods-DarkEggKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DarkEggKit_Tests.debug.xcconfig"; path = "Target Support Files/Pods-DarkEggKit_Tests/Pods-DarkEggKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F053341F27CE34CDE4151EAA /* DarkEggKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DarkEggKit.podspec; path = ../DarkEggKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -145,6 +147,7 @@
 				B760C493222D01A2003035C5 /* MenuViewController.swift */,
 				B77BA51B224A121C0065D879 /* AnimationImageViewController.swift */,
 				B7C3B09E23C87B2900411E75 /* DoughnutChartViewController.swift */,
+				B7D52C0123D58D9B006E9DA4 /* BarChartViewController.swift */,
 				B790FE6B2341F523000B284D /* AboutViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
@@ -434,6 +437,7 @@
 			files = (
 				607FACD81AFB9204008FA782 /* HomeViewController.swift in Sources */,
 				B790FE7223460FAF000B284D /* ButtonMenuViewController.swift in Sources */,
+				B7D52C0223D58D9B006E9DA4 /* BarChartViewController.swift in Sources */,
 				B760C494222D01A2003035C5 /* MenuViewController.swift in Sources */,
 				B760C49C222E23A6003035C5 /* CommonViewController.swift in Sources */,
 				B790FE6C2341F523000B284D /* AboutViewController.swift in Sources */,
