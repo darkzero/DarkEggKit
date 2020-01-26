@@ -339,7 +339,6 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="outer">
                                         <real key="value" value="256"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="displayWithAnimation" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8PN-px-NWe">
@@ -564,13 +563,6 @@
                                 <rect key="frame" x="64" y="120" width="286" height="229"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="inner">
-                                        <real key="value" value="128"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="outer">
-                                        <real key="value" value="256"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="displayWithAnimation" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="padding">
                                         <real key="value" value="16"/>
                                     </userDefinedRuntimeAttribute>
@@ -754,7 +746,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Padding Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYq-QO-K4e" customClass="DZPaddingLabel" customModule="DarkEggKit">
-                                <rect key="frame" x="137" y="466" width="140.5" height="44.5"/>
+                                <rect key="frame" x="153" y="466" width="108.5" height="20.5"/>
                                 <color key="backgroundColor" red="0.0" green="0.69019607839999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

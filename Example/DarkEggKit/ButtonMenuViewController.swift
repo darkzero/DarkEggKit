@@ -34,7 +34,7 @@ class ButtonMenuViewController: UIViewController, DarkEggPopupMessageProtocol {
 
         let config1 = DZButtonMenuConfiguration.default()
         config1.location = .leftBottom
-        config1.style = .sector
+        config1.style = .line
         config1.direction = .down
         let btnMenu = DZButtonMenu(configuration: config1)
         btnMenu.addButton(title: "A") {

@@ -78,7 +78,6 @@ class AnimatedImageViewController: UIViewController {
 extension AnimatedImageViewController {
     
     override func willMove(toParent parent: UIViewController?) {
-        Logger.debug(parent)
         guard let _ = parent else {
             //self.testView.removeFromSuperview()
             //self.testView = nil
