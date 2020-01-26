@@ -46,6 +46,7 @@
 		B7D52BFC23D55EE2006E9DA4 /* BarLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D52BFB23D55EE2006E9DA4 /* BarLayer.swift */; };
 		B7D52BFE23D55EFE006E9DA4 /* BarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D52BFD23D55EFE006E9DA4 /* BarChart.swift */; };
 		B7D52C0023D55F31006E9DA4 /* BarChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D52BFF23D55F31006E9DA4 /* BarChartData.swift */; };
+		B7D52C0423DE1019006E9DA4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B7D52C0323DE1019006E9DA4 /* README.md */; };
 		CD96711DEC5A70AAC4E31B4D002BB414 /* DZSideMenuTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A2FFAA5BEF5E8AE3073437A0354809 /* DZSideMenuTransitioning.swift */; };
 		D4E3F09878C2E757AE8FD5B6C080AFC0 /* AnimatedImageView+Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0473070338D07B5FCD577293A7A597 /* AnimatedImageView+Animator.swift */; };
 		E7954960CA90753E0C3A6D251A98691E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
@@ -124,6 +125,7 @@
 		B7D52BFB23D55EE2006E9DA4 /* BarLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BarLayer.swift; path = DarkEggKit/Classes/BarChart/BarLayer.swift; sourceTree = "<group>"; };
 		B7D52BFD23D55EFE006E9DA4 /* BarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BarChart.swift; path = DarkEggKit/Classes/BarChart/BarChart.swift; sourceTree = "<group>"; };
 		B7D52BFF23D55F31006E9DA4 /* BarChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BarChartData.swift; path = DarkEggKit/Classes/BarChart/BarChartData.swift; sourceTree = "<group>"; };
+		B7D52C0323DE1019006E9DA4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = DarkEggKit/Classes/BarChart/README.md; sourceTree = "<group>"; };
 		B9FFAA5434A57E6D228C2AA7D207D9C5 /* SessionDataTask.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDataTask.swift; path = DarkEggKit/Classes/AnimatedImageView/SessionDataTask.swift; sourceTree = "<group>"; };
 		C0A2FFAA5BEF5E8AE3073437A0354809 /* DZSideMenuTransitioning.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZSideMenuTransitioning.swift; path = DarkEggKit/Classes/SideMenu/DZSideMenuTransitioning.swift; sourceTree = "<group>"; };
 		C407C87E054462B6F032994059A1A3D7 /* Pods-DarkEggKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DarkEggKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -335,6 +337,7 @@
 		B7D52BFA23D55E92006E9DA4 /* BarChart */ = {
 			isa = PBXGroup;
 			children = (
+				B7D52C0323DE1019006E9DA4 /* README.md */,
 				B7D52BFD23D55EFE006E9DA4 /* BarChart.swift */,
 				B7D52BFB23D55EE2006E9DA4 /* BarLayer.swift */,
 				B7D52BFF23D55F31006E9DA4 /* BarChartData.swift */,
@@ -557,6 +560,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7D52C0423DE1019006E9DA4 /* README.md in Resources */,
 				23DCE649296CC4B12F21B968AF751F21 /* Image.xcassets in Resources */,
 				0CBDD22B33EB8691E8EFD5A17FFF1E8E /* Image.xcassets in Resources */,
 			);
