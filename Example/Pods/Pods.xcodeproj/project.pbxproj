@@ -43,6 +43,10 @@
 		A58F62F063CEBFE25EA54EDEF89FB68D /* DZSideMenuConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8FDD56F01A76F544291EB46AD162C /* DZSideMenuConfiguration.swift */; };
 		B763A9D523CDBD93002E16F3 /* DoughnutArcLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763A9D423CDBD93002E16F3 /* DoughnutArcLayer.swift */; };
 		B7C3B0A323C92AEB00411E75 /* DoughnutChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C3B0A223C92AEB00411E75 /* DoughnutChartData.swift */; };
+		B7D52BFC23D55EE2006E9DA4 /* BarLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D52BFB23D55EE2006E9DA4 /* BarLayer.swift */; };
+		B7D52BFE23D55EFE006E9DA4 /* BarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D52BFD23D55EFE006E9DA4 /* BarChart.swift */; };
+		B7D52C0023D55F31006E9DA4 /* BarChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D52BFF23D55F31006E9DA4 /* BarChartData.swift */; };
+		B7D52C0423DE1019006E9DA4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B7D52C0323DE1019006E9DA4 /* README.md */; };
 		CD96711DEC5A70AAC4E31B4D002BB414 /* DZSideMenuTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A2FFAA5BEF5E8AE3073437A0354809 /* DZSideMenuTransitioning.swift */; };
 		D4E3F09878C2E757AE8FD5B6C080AFC0 /* AnimatedImageView+Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0473070338D07B5FCD577293A7A597 /* AnimatedImageView+Animator.swift */; };
 		E7954960CA90753E0C3A6D251A98691E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
@@ -118,6 +122,10 @@
 		B75BABCB23D37FDE00444B91 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = DarkEggKit/Classes/DoughnutChart/README.md; sourceTree = "<group>"; };
 		B763A9D423CDBD93002E16F3 /* DoughnutArcLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DoughnutArcLayer.swift; path = DarkEggKit/Classes/DoughnutChart/DoughnutArcLayer.swift; sourceTree = "<group>"; };
 		B7C3B0A223C92AEB00411E75 /* DoughnutChartData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DoughnutChartData.swift; path = DarkEggKit/Classes/DoughnutChart/DoughnutChartData.swift; sourceTree = "<group>"; };
+		B7D52BFB23D55EE2006E9DA4 /* BarLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BarLayer.swift; path = DarkEggKit/Classes/BarChart/BarLayer.swift; sourceTree = "<group>"; };
+		B7D52BFD23D55EFE006E9DA4 /* BarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BarChart.swift; path = DarkEggKit/Classes/BarChart/BarChart.swift; sourceTree = "<group>"; };
+		B7D52BFF23D55F31006E9DA4 /* BarChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BarChartData.swift; path = DarkEggKit/Classes/BarChart/BarChartData.swift; sourceTree = "<group>"; };
+		B7D52C0323DE1019006E9DA4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = DarkEggKit/Classes/BarChart/README.md; sourceTree = "<group>"; };
 		B9FFAA5434A57E6D228C2AA7D207D9C5 /* SessionDataTask.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDataTask.swift; path = DarkEggKit/Classes/AnimatedImageView/SessionDataTask.swift; sourceTree = "<group>"; };
 		C0A2FFAA5BEF5E8AE3073437A0354809 /* DZSideMenuTransitioning.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZSideMenuTransitioning.swift; path = DarkEggKit/Classes/SideMenu/DZSideMenuTransitioning.swift; sourceTree = "<group>"; };
 		C407C87E054462B6F032994059A1A3D7 /* Pods-DarkEggKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DarkEggKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -295,6 +303,7 @@
 		AA8B2958103E8DB4FA26E03FF1941A50 /* DarkEggKit */ = {
 			isa = PBXGroup;
 			children = (
+				B7D52BFA23D55E92006E9DA4 /* BarChart */,
 				80530DB05EB83DCAB37D5ECCCDC4D51A /* AnimatedImageView */,
 				CCFC532FEBB7ECECCB6025E8D7C3E6D4 /* ButtonMenu */,
 				8DA7508C118BF125B4778E7D15ECA3D5 /* Common */,
@@ -323,6 +332,17 @@
 			);
 			name = "Pods-DarkEggKit_Tests";
 			path = "Target Support Files/Pods-DarkEggKit_Tests";
+			sourceTree = "<group>";
+		};
+		B7D52BFA23D55E92006E9DA4 /* BarChart */ = {
+			isa = PBXGroup;
+			children = (
+				B7D52C0323DE1019006E9DA4 /* README.md */,
+				B7D52BFD23D55EFE006E9DA4 /* BarChart.swift */,
+				B7D52BFB23D55EE2006E9DA4 /* BarLayer.swift */,
+				B7D52BFF23D55F31006E9DA4 /* BarChartData.swift */,
+			);
+			name = BarChart;
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -540,6 +560,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7D52C0423DE1019006E9DA4 /* README.md in Resources */,
 				23DCE649296CC4B12F21B968AF751F21 /* Image.xcassets in Resources */,
 				0CBDD22B33EB8691E8EFD5A17FFF1E8E /* Image.xcassets in Resources */,
 			);
@@ -591,7 +612,10 @@
 				4C39DC1B36F137C17AEDC32D3043CCD4 /* SourceDownloader.swift in Sources */,
 				536A8013BC57CCAFF352EEA37A4E0A68 /* UIColor+Hex.swift in Sources */,
 				3C3A859F8F588CF294D2AD10AB1717AE /* UIImage+Color.swift in Sources */,
+				B7D52BFC23D55EE2006E9DA4 /* BarLayer.swift in Sources */,
 				44EAD69B054BDAD5D2E954C6ECD58A46 /* UIViewController+PopupMessage.swift in Sources */,
+				B7D52BFE23D55EFE006E9DA4 /* BarChart.swift in Sources */,
+				B7D52C0023D55F31006E9DA4 /* BarChartData.swift in Sources */,
 				3A028B6A3102BB53B10FA8C679EB89AA /* UIViewController+SideMenu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
