@@ -40,10 +40,13 @@
         }]
     },
     {
-        "section_title": "Doughnut Chart",
+        "section_title": "Chart",
         "cells": [{
             "title": "Doughnut Chart Sample",
             "segue_id": "ShowDoughnutChartScene"
+        },{
+            "title": "Bar Chart Sample",
+            "segue_id": "ShowBarChartScene"
         }]
     }
 ]
