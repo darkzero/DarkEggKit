@@ -56,7 +56,9 @@
                     <navigationItem key="navigationItem" title="DarkEggKit" id="8c7-Bx-Elt">
                         <barButtonItem key="backBarButtonItem" title=" " id="EhD-Nm-deJ"/>
                         <barButtonItem key="rightBarButtonItem" title="About" id="pQL-gM-Z2o">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="onAboutButtonClicked:" destination="vXZ-lx-hvc" id="nFe-HL-1tT"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -282,13 +284,30 @@
                     <view key="view" contentMode="scaleToFill" id="BeD-WZ-H59">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="# DarkEggKit" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="f23-Vg-xZX">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="f23-Vg-xZX" firstAttribute="leading" secondItem="kK2-Dn-k5y" secondAttribute="leading" id="9Io-It-WAG"/>
+                            <constraint firstItem="f23-Vg-xZX" firstAttribute="bottom" secondItem="kK2-Dn-k5y" secondAttribute="bottom" id="OAC-9u-cEy"/>
+                            <constraint firstItem="kK2-Dn-k5y" firstAttribute="trailing" secondItem="f23-Vg-xZX" secondAttribute="trailing" id="tKC-Uy-0ht"/>
+                            <constraint firstItem="f23-Vg-xZX" firstAttribute="top" secondItem="kK2-Dn-k5y" secondAttribute="top" id="ud2-Ad-vra"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="kK2-Dn-k5y"/>
                     </view>
+                    <connections>
+                        <outlet property="aboutTextView" destination="f23-Vg-xZX" id="YbB-Jn-82S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p2T-6Y-e95" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-259" y="751"/>
+            <point key="canvasLocation" x="-259.4202898550725" y="750.66964285714278"/>
         </scene>
         <!--Button Menu-->
         <scene sceneID="gfz-ww-7QJ">
@@ -746,7 +765,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Padding Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYq-QO-K4e" customClass="DZPaddingLabel" customModule="DarkEggKit">
-                                <rect key="frame" x="153" y="466" width="108.5" height="20.5"/>
+                                <rect key="frame" x="137" y="466" width="140.5" height="44.5"/>
                                 <color key="backgroundColor" red="0.0" green="0.69019607839999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

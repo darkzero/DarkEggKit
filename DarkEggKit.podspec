@@ -7,9 +7,9 @@
 #
 
 Pod::Spec.new do |s|
-    s.name             = 'DarkEggKit'
-    s.version          = '0.5.1'
-    s.summary          = 'DarkEgg UI Kit.'
+    s.name                  = 'DarkEggKit'
+    s.version               = '0.5.1'
+    s.summary               = 'DarkEgg UI Kit.'
     s.swift_version         = '5.0'
     s.ios.deployment_target = '12.0'
 
@@ -18,48 +18,48 @@ Pod::Spec.new do |s|
     #   * Try to keep it short, snappy and to the point.
     #   * Write the description between the DESC delimiters below.
     #   * Finally, don't worry about the indent, CocoaPods strips it!
-    s.description      = <<-DESC
-    * 0.5.1 (2020/01/27)
-    - Add BarChart
-    ```
-    pod 'DarkEggKit/DoughnutChart'
-    ```
-    ---
-    * 0.5.0 (2020/01/19)
-    - Add DoughnutChart
-    ```
-    pod 'DarkEggKit/DoughnutChart'
-    ```
-    ---
-    * 0.4.0 (2019/10/20)
-    - Add ButtonMenu (Is not prefect now)
-    ```
-    pod 'DarkEggKit/ButtonMenu'
-    ```
-    - Fix some bugs
-    ---
-    * 0.3.1 (2019/09/30)
-    Update to iOS 11
-    ---
-    * 0.3.0 (2019/08/31)
-    Add AnimatedImageView
-    ```
-    pod 'DarkEggKit/AnimatedImageView'
-    ```
-    ---
-    * 0.2.1 (2019/05/16)
-    Set DZPaddinLabel to public
-    Delete column in Logger.debug and Logger.error
-    ---
-    * 0.2.0 (2019/03/17)
-    Fix some bugs
-    ---
-    * 0.1.1 (2019/03/05)
-    Common, PaddingLabel, PopupMessage and SideMenu.
-    Please check README.md on git repo.
-    ---
-    * 0.1.0
-    First commit, with Common, PaddingLabel, PopupMessage and SideMenu
+    s.description = <<-DESC
+      * 0.5.1 (2020/01/27)
+      - Add BarChart
+      ```
+      pod 'DarkEggKit/BarChart'
+      ```
+      ---
+      * 0.5.0 (2020/01/19)
+      - Add DoughnutChart
+      ```
+      pod 'DarkEggKit/DoughnutChart'
+      ```
+      ---
+      * 0.4.0 (2019/10/20)
+      - Add ButtonMenu (Is not prefect now)
+      ```
+      pod 'DarkEggKit/ButtonMenu'
+      ```
+      - Fix some bugs
+      ---
+      * 0.3.1 (2019/09/30)
+      Update to iOS 11
+      ---
+      * 0.3.0 (2019/08/31)
+      Add AnimatedImageView
+      ```
+      pod 'DarkEggKit/AnimatedImageView'
+      ```
+      ---
+      * 0.2.1 (2019/05/16)
+      Set DZPaddinLabel to public
+      Delete column in Logger.debug and Logger.error
+      ---
+      * 0.2.0 (2019/03/17)
+      Fix some bugs
+      ---
+      * 0.1.1 (2019/03/05)
+      Common, PaddingLabel, PopupMessage and SideMenu.
+      Please check README.md on git repo.
+      ---
+      * 0.1.0
+      First commit, with Common, PaddingLabel, PopupMessage and SideMenu
     DESC
 
     s.homepage         = 'https://github.com/darkzero/DarkEggKit'
@@ -76,39 +76,43 @@ Pod::Spec.new do |s|
 
     # DarkEggKit/Common
     s.subspec 'Common' do |common|
-        common.source_files = 'DarkEggKit/Classes/Common/*'
+        common.source_files = 'DarkEggKit/Classes/Common/*.swift'
+        #common.resources = ['DarkEggKit/Classes/Common/*.md']
     end
 
     # DarkEggKit/PaddingLabel
     s.subspec 'PaddingLabel' do |paddingLabel|
-        paddingLabel.source_files = 'DarkEggKit/Classes/PaddingLabel/*'
+        paddingLabel.source_files = 'DarkEggKit/Classes/PaddingLabel/*.swift'
+        #paddingLabel.resources = ['DarkEggKit/Classes/PaddingLabel/*.md']
         paddingLabel.dependency 'DarkEggKit/Common'
     end
 
     # DarkEggKit/PopupMessage
     s.subspec 'PopupMessage' do |popupMessage|
-        popupMessage.source_files = 'DarkEggKit/Classes/PopupMessage/*'
+        popupMessage.source_files = 'DarkEggKit/Classes/PopupMessage/*.swift'
         popupMessage.resources = ['DarkEggKit/Classes/PopupMessage/*.xcassets']
         popupMessage.dependency 'DarkEggKit/Common'
     end
 
     # DarkEggKit/SideMenu
     s.subspec 'SideMenu' do |sideMenu|
-        sideMenu.source_files = 'DarkEggKit/Classes/SideMenu/*'
+        sideMenu.source_files = 'DarkEggKit/Classes/SideMenu/*.swift'
+        #sideMenu.resources = ['DarkEggKit/Classes/SideMenu/*.md']
         sideMenu.dependency 'DarkEggKit/Common'
     end
 
     # DarkEggKit/AnimatedImageView
     # not release in this version
     s.subspec 'AnimatedImageView' do |aImageView|
-        aImageView.source_files = 'DarkEggKit/Classes/AnimatedImageView/*'
+        aImageView.source_files = 'DarkEggKit/Classes/AnimatedImageView/*.swift'
+        #aImageView.resources = ['DarkEggKit/Classes/AnimatedImageView/*.md']
         aImageView.dependency 'DarkEggKit/Common'
     end
 
     # DarkEggKit/ButtonMenu
     # not release in this version
     s.subspec 'ButtonMenu' do |buttonMenu|
-        buttonMenu.source_files = 'DarkEggKit/Classes/ButtonMenu/*'
+        buttonMenu.source_files = 'DarkEggKit/Classes/ButtonMenu/*.swift'
         buttonMenu.resources = ['DarkEggKit/Classes/ButtonMenu/*.xcassets']
         buttonMenu.dependency 'DarkEggKit/Common'
     end
@@ -117,6 +121,7 @@ Pod::Spec.new do |s|
     # will be released in version 0.5.0
     s.subspec 'DoughnutChart' do |dount|
         dount.source_files = 'DarkEggKit/Classes/DoughnutChart/*.swift'
+        #dount.resources = ['DarkEggKit/Classes/DoughnutChart/*.md']
         dount.dependency 'DarkEggKit/Common'
     end
 
@@ -124,6 +129,7 @@ Pod::Spec.new do |s|
     # will be released in version 0.5.1
     s.subspec 'BarChart' do |barDount|
         barDount.source_files = 'DarkEggKit/Classes/BarChart/*.swift'
+        #barDount.resources = ['DarkEggKit/Classes/BarChart/*.md']
         barDount.dependency 'DarkEggKit/Common'
     end
 end

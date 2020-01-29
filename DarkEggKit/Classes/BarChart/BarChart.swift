@@ -33,7 +33,6 @@ public class BarChart: UIView {
 // MARK: - draw (default display in storyboard)
 extension BarChart {
     public override func draw(_ rect: CGRect) {
-        Logger.debug(rect)
         super.draw(rect)
         
         // default display in storyboard

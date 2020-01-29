@@ -21,13 +21,13 @@ class PopupMessageViewController: UIViewController {
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hideKeyboard)))
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        Logger.debug()
-    }
-    
-    deinit {
-        Logger.debug()
-    }
+//    override func viewDidDisappear(_ animated: Bool) {
+//        Logger.debug()
+//    }
+//    
+//    deinit {
+//        Logger.debug()
+//    }
 }
 
 extension PopupMessageViewController {
@@ -82,7 +82,7 @@ extension PopupMessageViewController {
         
         DZPopupMessage.show(msg, theme: theme, type: type, display: display, callback: {
             // Add callback here
-            Logger.debug("aa")
+            Logger.debug("Add callback here")
         })
     }
 }
