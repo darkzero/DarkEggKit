@@ -77,7 +77,7 @@ pod 'DarkEggKit'
 
 ## Author
 
-darkzero, darkzero_mk2@hotmail.com
+darkzero, darkzero_mk2 *[at]* hotmail *[dot]* com
 
 ## License
 
