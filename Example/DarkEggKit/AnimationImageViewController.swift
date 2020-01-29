@@ -55,7 +55,7 @@ class AnimatedImageViewController: UIViewController {
         //aniImgView_3.isHidden = true
         //aniImgView_4.isHidden = true
         
-        //Logger.debug("---- End ----")
+        Logger.debug("---- End ----")
     }
     
     override func viewDidAppear(_ animated: Bool) {

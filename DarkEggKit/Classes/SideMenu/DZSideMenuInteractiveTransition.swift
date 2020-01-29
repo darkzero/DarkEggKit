@@ -21,7 +21,7 @@ public class DZSideMenuInteractiveTransition: UIPercentDrivenInteractiveTransiti
     }
     
     deinit {
-        print(#function)
+        //print(#function)
     }
 }
 

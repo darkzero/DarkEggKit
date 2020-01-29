@@ -25,28 +25,24 @@ class DZSideMenuAnimator: NSObject {
     }
     
     deinit {
-        print("\(#file),\(#function)")
+        //print("\(#file),\(#function)")
     }
 }
 
 extension DZSideMenuAnimator: UIViewControllerTransitioningDelegate {
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        print(#function)
         return DZSideMenuTransitioning.transitioning(with: .show, animationType: self.animationType, configuration: self.configuration)
     }
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        print(#function)
         return DZSideMenuTransitioning.transitioning(with: .hide, animationType: self.animationType, configuration: self.configuration)
     }
     
     func interactionControllerForPresentation(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        print(#function)
         return (self.interactiveShow?.interacting ?? false) ? self.interactiveShow : nil
     }
     
     func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        print(#function)
         return (self.interactiveHidden?.interacting ?? false) ? self.interactiveHidden : nil
     }
 }

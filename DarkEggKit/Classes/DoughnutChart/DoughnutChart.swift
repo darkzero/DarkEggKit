@@ -36,7 +36,6 @@ public class DoughnutChart: UIView {
 // MARK: - draw (default display in storyboard)
 extension DoughnutChart {
     public override func draw(_ rect: CGRect) {
-        Logger.debug(rect)
         super.draw(rect)
         
         // default display in storyboard
