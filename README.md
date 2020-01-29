@@ -46,7 +46,7 @@
 > Common, PaddingLabel, PopupMessage and SideMenu.
 > Please check README.md on git repo.
 
-### *"0.1.0""
+### **0.1.0**
 
 > First commit  
 > Common, PaddingLabel, PopupMessage and SideMenu
