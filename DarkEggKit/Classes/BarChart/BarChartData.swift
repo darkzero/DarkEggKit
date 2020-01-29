@@ -34,7 +34,6 @@ public struct BarChartData {
     internal lazy var maxLength: CGFloat = {
         var _maxLength: CGFloat = 0.0
         if let (maxIndex, maxItem) = items.enumerated().max(by: { $0.element.value < $1.element.value }) {
-            print("The max element is \(maxValue) at index \(maxIndex)")
             _maxLength = maxItem.value
         }
         return max(_maxLength, self.maxValue)

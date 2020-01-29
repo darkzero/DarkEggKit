@@ -8,6 +8,7 @@ target 'DarkEggKit_Example' do
   pod 'DarkEggKit/AnimatedImageView', :path => '../'
   pod 'DarkEggKit/ButtonMenu', :path => '../'
   pod 'DarkEggKit/DoughnutChart', :path => '../'
+  pod 'DarkEggKit/BarChart', :path => '../'
 
   target 'DarkEggKit_Tests' do
     inherit! :search_paths

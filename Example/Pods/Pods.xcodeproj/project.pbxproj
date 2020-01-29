@@ -7,53 +7,52 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		059F69BBFF12276388195870724034F7 /* DZButtonMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5FF80BC842F7BBF55D63BA418D5CC0 /* DZButtonMenuItem.swift */; };
+		0263B301CDF4D8473671CE05A6417C9E /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18706F8E2E87C10A6B320AD9580ABD4F /* UIImage+Color.swift */; };
+		0326DA6FC5B0E7581E493BA269434B67 /* BarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233485CBF3987F4C5A46DC201558F517 /* BarChart.swift */; };
 		07B789E6DEAF42D2707F8FAFCC91CC8A /* Pods-DarkEggKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7259F22F2FC01C7E5E7F7BF107B92C /* Pods-DarkEggKit_Example-dummy.m */; };
 		0855A0186B1F3E519B5A5AC9C2E4FE77 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		0943D364F243E14B601948F6A3AEEB7B /* DoughnutChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8712CFC69788E561911965FC06F304 /* DoughnutChart.swift */; };
-		0AA37C7DC623D038DE979E03A319A483 /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3B6E38925973A15335DC513F7E5A0 /* AnimatedImageView.swift */; };
-		0CBDD22B33EB8691E8EFD5A17FFF1E8E /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67E01EC86029B27FC4418A3A5FCF6E74 /* Image.xcassets */; };
-		1FEAA68F6BB99DBCAF56C3BB8D18C3CC /* DZSideMenuMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77994DC8374632C54D902DEB4DD10BCF /* DZSideMenuMask.swift */; };
-		20B44A5ACCAFC92AC66D34AFC4076B97 /* Array+SafeIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709C2AF7DCF51EFBE0679F39A001F2ED /* Array+SafeIndex.swift */; };
-		229F49F3908068B7EC097B91C34F4954 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		23DCE649296CC4B12F21B968AF751F21 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4678ACC110958D38D1A80D1E6361B612 /* Image.xcassets */; };
-		2A81C77894CC8ECAA65F848793EF82B3 /* DZPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD0D5F6C74A71C73A21A2B3A6A0F2D7 /* DZPaddingLabel.swift */; };
-		2A8E154BDFCEE1DBFD5EB5BE33E3B17D /* DZButtonMenuAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D07958764FBE61F0DB0AF24E10AABB /* DZButtonMenuAttributes.swift */; };
-		2E9941CDDA8847AAD3761B30F045DC63 /* DZPopupMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F28939DCB63CE525C794E006EAF00FD /* DZPopupMessageView.swift */; };
-		3245E4850C374BB3C4E477CB8AD8E60C /* DarkEggKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 636B80078773D5EB474DF8D820843B18 /* DarkEggKit-dummy.m */; };
-		3A028B6A3102BB53B10FA8C679EB89AA /* UIViewController+SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D1FC21A9ADF7FCEC08146FFCE9E6F /* UIViewController+SideMenu.swift */; };
-		3AA43E2E2FDDB9CA66C9B0E44F4AB1DA /* SessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FFAA5434A57E6D228C2AA7D207D9C5 /* SessionDataTask.swift */; };
-		3ABB44DF455B802577F63D6EC481EBA2 /* DZSideMenuInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CD438AE9FD335039B89073CBB6A47 /* DZSideMenuInteractiveTransition.swift */; };
-		3C3A859F8F588CF294D2AD10AB1717AE /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2353CE580DF4652D81022D44AC8C4946 /* UIImage+Color.swift */; };
-		3C9E944B6628831999B01B52E1E22A1B /* DZUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04C57EA02CB4B15CC88284796773800 /* DZUtility.swift */; };
-		411A62B06139AA00587C72705F19BB31 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3F51CBFB91B1FAA41593E4BE7E3530 /* Logger.swift */; };
-		423F17EBFAC55F469FDA3BE4F1472949 /* DZButtonMenuConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26F27ED9DF75E2FC89E76E2C710A302 /* DZButtonMenuConfiguration.swift */; };
+		0B5F09C1798F422BA2702DFE2C240647 /* SessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F02A18F26C08CFCB679F071558A317A /* SessionDataTask.swift */; };
+		0FB5AF3554AC634C63D5212EDA52845F /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F558D0964C077B77C4335776342A3B /* Logger.swift */; };
+		1A3DA7797CA4D84A73DB26F757FCC827 /* BarChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67583F4F6618B6B98745484BADBBD004 /* BarChartData.swift */; };
+		1DAEF7DAC2A4DA46AC93112237371DE7 /* DoughnutChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A69AC4876D1F3F8E81DD361A1FC0C /* DoughnutChart.swift */; };
+		20B19B2E551D1CC2AEAEEC92CFA56A5B /* DZButtonMenuConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BFAA6EC0A92DD5FBAFA18B75D418E7 /* DZButtonMenuConfiguration.swift */; };
+		21C0CF3FC0DF76D2E80B94DCD68C83C0 /* DZButtonMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A22534758D4AA39020AC4BBE52D26DE /* DZButtonMenu.swift */; };
+		29D5FDF3A231D8558C8126C7785DC7D4 /* DZPopupMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFC7C477AF032581177130BEA621606 /* DZPopupMessageView.swift */; };
+		2C3F4182E38ADD3A67C58AA732841D0B /* DZSideMenuTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7CD8CFC5444C00E44E09AE3557AA49 /* DZSideMenuTransitioning.swift */; };
+		30A70A8D09A0F0E18AD04C0F8C4C1A5E /* DZPopupMessageQueueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EBE82DA8B02F72F747F68D795CFF0A /* DZPopupMessageQueueManager.swift */; };
+		3D39F4DBFBA13EE5A680DFAA6A282090 /* SourceCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE1C44B494C3D9269A679F74D08D852 /* SourceCache.swift */; };
 		42B73042F442761476ED6057577AE747 /* Pods-DarkEggKit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8933093AC49CFCE4CD0B6EBFA695D13B /* Pods-DarkEggKit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		44EAD69B054BDAD5D2E954C6ECD58A46 /* UIViewController+PopupMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFEC7681BE86A594AC876A94931F0CF /* UIViewController+PopupMessage.swift */; };
-		4751374F5B5F6819B0B56AC727C9CDBC /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA26304894C3CBF87E5A3CCC673F589 /* Common.swift */; };
-		4C39DC1B36F137C17AEDC32D3043CCD4 /* SourceDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A1D1C379C74F3158A0AFC64F695772 /* SourceDownloader.swift */; };
-		536A8013BC57CCAFF352EEA37A4E0A68 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19F9FA3F6F18802F9789702046EF842 /* UIColor+Hex.swift */; };
-		6612F3FB067D75F8630B9787EBC62B5E /* AnimatedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C71046E4B352F02DCC628A6D992A3 /* AnimatedImage.swift */; };
-		769025FF2E17EF083C4FDE30925EAD40 /* SourceCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF23F058EAF4091047ED24BC7738E76 /* SourceCache.swift */; };
+		42C88B9878979FEA42FB252D5CCA298C /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 770E24E1776834E6E94AC28604C49BA2 /* Image.xcassets */; };
+		4CC8BC7B2BE48F45BC83F1708A56472B /* UIViewController+SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC13B1C85D302EC04725EF5644E98EE /* UIViewController+SideMenu.swift */; };
+		4F9CFB205ED6A18959EF2672F10C8121 /* DZPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D165F17BAF3A4434A807E3ACE352A4A /* DZPaddingLabel.swift */; };
+		57FE89D79B4A4379FD50C5BCC3F39566 /* DoughnutArcLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AED49C91DCA523CF87F052E90CF8FB /* DoughnutArcLayer.swift */; };
+		68D35F6C321D21A39A436C166DBCC333 /* DZPopupMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB27DEE83C3D8A3B86EC1EDAE247C06A /* DZPopupMessage.swift */; };
+		69CAAFE2FCA8D54FC2818B5B8A0124FD /* DoughnutChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FB4AA6EDDA723F762615B9CBFF2268 /* DoughnutChartData.swift */; };
+		6A013113BF06B4E8D60F2BC61440BCA5 /* DZSideMenuInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E89663F307648251539905C0A052F3F /* DZSideMenuInteractiveTransition.swift */; };
+		6F517DFFADBC687D507BA4BA34601BCF /* DZSideMenuMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C77F2D614B3FC605EB2B370E64B05 /* DZSideMenuMask.swift */; };
+		70A40656354FC36539DF043823797A5E /* DZUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDCC9AA21DA8DA39E971545899808F5 /* DZUtility.swift */; };
+		8072D985CD0C031372A86317F5273DD4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		80C2D169816F3B71ADFFE42948BEA48D /* AnimatedImageView+Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD89418546E63F555622E7551C072867 /* AnimatedImageView+Animator.swift */; };
 		85821ACC1DE1214406ABF4E0DA6323B2 /* Pods-DarkEggKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B30AC4C87A41BA5AFEE3E24A8228E5CD /* Pods-DarkEggKit_Tests-dummy.m */; };
-		8B0A9082CF1B72398EDD479EAA77859E /* DZPopupMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EC95F0077F2B98DF75C047356C328C /* DZPopupMessage.swift */; };
-		9FB567897713607DC3CE90E458877FE8 /* DarkEggKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DBFCA558F7E5D6C038CB10A3CEFFDB0F /* DarkEggKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A3CAD11ED82C8927CA038E68D36224C5 /* DZPopupMessageQueueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32708F58C0F7CB2ED4BB4CF3A18524B8 /* DZPopupMessageQueueManager.swift */; };
-		A3D197A1CA1C70FD176C0C96AE3E3FEA /* DZSideMenuAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C4E1F233395A81E9AB2B184B67EB75 /* DZSideMenuAnimator.swift */; };
-		A58F62F063CEBFE25EA54EDEF89FB68D /* DZSideMenuConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8FDD56F01A76F544291EB46AD162C /* DZSideMenuConfiguration.swift */; };
-		B763A9D523CDBD93002E16F3 /* DoughnutArcLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B763A9D423CDBD93002E16F3 /* DoughnutArcLayer.swift */; };
-		B7C3B0A323C92AEB00411E75 /* DoughnutChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C3B0A223C92AEB00411E75 /* DoughnutChartData.swift */; };
-		B7D52BFC23D55EE2006E9DA4 /* BarLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D52BFB23D55EE2006E9DA4 /* BarLayer.swift */; };
-		B7D52BFE23D55EFE006E9DA4 /* BarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D52BFD23D55EFE006E9DA4 /* BarChart.swift */; };
-		B7D52C0023D55F31006E9DA4 /* BarChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D52BFF23D55F31006E9DA4 /* BarChartData.swift */; };
-		B7D52C0423DE1019006E9DA4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B7D52C0323DE1019006E9DA4 /* README.md */; };
-		CD96711DEC5A70AAC4E31B4D002BB414 /* DZSideMenuTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A2FFAA5BEF5E8AE3073437A0354809 /* DZSideMenuTransitioning.swift */; };
-		D4E3F09878C2E757AE8FD5B6C080AFC0 /* AnimatedImageView+Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0473070338D07B5FCD577293A7A597 /* AnimatedImageView+Animator.swift */; };
+		85A452ADC19222C52F629EBF0985A381 /* DZSideMenuConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729C1361376F9C24532DC12FE88F3AE2 /* DZSideMenuConfiguration.swift */; };
+		9569448B3422626FA5554FF7AF959EF8 /* DZButtonMenuAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D689C38BECC4D0F878953CC12FBAB03 /* DZButtonMenuAttributes.swift */; };
+		9C40434FB557A4723D72646CBA07D6E5 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6C524D4426B75FBFC36FA60B319617A /* Image.xcassets */; };
+		9D45A9FA3AAE4871D4D8E053A5E10D18 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2793C42CB94436A628299A2AF39A2F9C /* Common.swift */; };
+		B41E97DE4091351B3C87DA5B34AE74CA /* UIViewController+PopupMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3F2A7E9EA606F25262AD6491036B4C /* UIViewController+PopupMessage.swift */; };
+		BF1A631485270199901BF2AE8BA3E27A /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED39A181195B1871F764C544545997B2 /* UIColor+Hex.swift */; };
+		C4A721CA09636C7F2E1F070F854E334A /* BarLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C30858E5537E38B1659DE4B3524F6F /* BarLayer.swift */; };
+		C813A0D3E49C5F058560E57E26F8BC9B /* DarkEggKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 859BA552DC0502A7B9D46AD2E86F397A /* DarkEggKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA5D9BF192057366995E88C7049FF06F /* DarkEggKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D278EA0BC76531BC994BB6A1C47520 /* DarkEggKit-dummy.m */; };
+		CEA5B1D8FC0B3B6DE83C83D8EBA2C329 /* DZButtonMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4449DF27E76A315000CF0EFF4C23BF8 /* DZButtonMenuItem.swift */; };
+		D228DBE7028ADC9BA3FAB202E99B6BC2 /* SourceDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265264ADFF508AC092D9D14D64DA20DC /* SourceDownloader.swift */; };
+		E0C71E2BE1134752B09B1BB866277B7F /* DZSideMenuAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C743BAF7CACC5ABD7D1F8D8732B058F /* DZSideMenuAnimator.swift */; };
+		E3ADEBD6655C2BCAF436A4F53D8E4612 /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83A712AD7C6E4E5288F7844B0167F56 /* AnimatedImageView.swift */; };
+		E49561A36C11C0C0C433E1F45DBD4593 /* Array+SafeIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464D8A5F557E1B0AC5BFC41D3E34E841 /* Array+SafeIndex.swift */; };
+		E51D0769EB34D147B61A37205815DA43 /* AnimatedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8535EA82B895926822895F35AE859E72 /* AnimatedImage.swift */; };
 		E7954960CA90753E0C3A6D251A98691E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		EA9EA90238F9F5AD9190E9684ACDBBDE /* Pods-DarkEggKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BDD4819497F24074D049BB6EB4CAC2C /* Pods-DarkEggKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F268BBD38335C8D1D394207FDC47944C /* DZButtonMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F910F58B49D5A9928F3CE102E0F95EE /* DZButtonMenu.swift */; };
-		F2CFC67A19E209504DBC5B8D9CFB0516 /* CGRect+Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BF3DAC04F452B08C8CC9FFF0EF270F /* CGRect+Scale.swift */; };
-		F9D1284271139F4E22182978CD8C2D24 /* DZPopupMessageQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ABB8A74A74EBB7B739E331CC162B9B /* DZPopupMessageQueue.swift */; };
+		F22F12C89F8AF046C16D85CF11E6105C /* DZPopupMessageQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369DB1136D02B20FAFC1863E6992A4B2 /* DZPopupMessageQueue.swift */; };
+		FB2B9EBD4E2EBF3746DD066DE02FFDB7 /* CGRect+Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56B9E69CEE651BBF8543DDDD3F274D8 /* CGRect+Scale.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,81 +74,73 @@
 
 /* Begin PBXFileReference section */
 		008FDD30F6E1AC2927FD629FAC008242 /* Pods-DarkEggKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DarkEggKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		030A73A87F87CFCE11437B092D448539 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = DarkEggKit/Classes/AnimatedImageView/README.md; sourceTree = "<group>"; };
-		042381FD732F50498C0FCC2B5954FB01 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		1F28939DCB63CE525C794E006EAF00FD /* DZPopupMessageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZPopupMessageView.swift; path = DarkEggKit/Classes/PopupMessage/DZPopupMessageView.swift; sourceTree = "<group>"; };
-		1F2965079E39A695F09621C87C00AC30 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = DarkEggKit/Classes/ButtonMenu/README.md; sourceTree = "<group>"; };
-		1F910F58B49D5A9928F3CE102E0F95EE /* DZButtonMenu.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZButtonMenu.swift; path = DarkEggKit/Classes/ButtonMenu/DZButtonMenu.swift; sourceTree = "<group>"; };
-		1FFEC7681BE86A594AC876A94931F0CF /* UIViewController+PopupMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+PopupMessage.swift"; path = "DarkEggKit/Classes/PopupMessage/UIViewController+PopupMessage.swift"; sourceTree = "<group>"; };
+		060F079EA83FF5DE7BA793AF0A6F803C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		06D834AE39467878A1D6C9AB8D1E7F60 /* DarkEggKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DarkEggKit-Info.plist"; sourceTree = "<group>"; };
+		0F02A18F26C08CFCB679F071558A317A /* SessionDataTask.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDataTask.swift; path = DarkEggKit/Classes/AnimatedImageView/SessionDataTask.swift; sourceTree = "<group>"; };
+		121726CC373E2AA28C8400569448D5D8 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		151D4BBE5B113F1B568ABCF2C7AA5672 /* DarkEggKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DarkEggKit.modulemap; sourceTree = "<group>"; };
+		179A69AC4876D1F3F8E81DD361A1FC0C /* DoughnutChart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DoughnutChart.swift; path = DarkEggKit/Classes/DoughnutChart/DoughnutChart.swift; sourceTree = "<group>"; };
+		18706F8E2E87C10A6B320AD9580ABD4F /* UIImage+Color.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Color.swift"; path = "DarkEggKit/Classes/Common/UIImage+Color.swift"; sourceTree = "<group>"; };
+		19FB4AA6EDDA723F762615B9CBFF2268 /* DoughnutChartData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DoughnutChartData.swift; path = DarkEggKit/Classes/DoughnutChart/DoughnutChartData.swift; sourceTree = "<group>"; };
 		20D948EE3EAEE8514295C9E5CEEDD2ED /* Pods-DarkEggKit_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DarkEggKit_Tests-Info.plist"; sourceTree = "<group>"; };
-		2353CE580DF4652D81022D44AC8C4946 /* UIImage+Color.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Color.swift"; path = "DarkEggKit/Classes/Common/UIImage+Color.swift"; sourceTree = "<group>"; };
-		28BF3DAC04F452B08C8CC9FFF0EF270F /* CGRect+Scale.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGRect+Scale.swift"; path = "DarkEggKit/Classes/Common/CGRect+Scale.swift"; sourceTree = "<group>"; };
+		233485CBF3987F4C5A46DC201558F517 /* BarChart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarChart.swift; path = DarkEggKit/Classes/BarChart/BarChart.swift; sourceTree = "<group>"; };
+		23EBE82DA8B02F72F747F68D795CFF0A /* DZPopupMessageQueueManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZPopupMessageQueueManager.swift; path = DarkEggKit/Classes/PopupMessage/DZPopupMessageQueueManager.swift; sourceTree = "<group>"; };
+		265264ADFF508AC092D9D14D64DA20DC /* SourceDownloader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SourceDownloader.swift; path = DarkEggKit/Classes/AnimatedImageView/SourceDownloader.swift; sourceTree = "<group>"; };
+		2793C42CB94436A628299A2AF39A2F9C /* Common.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Common.swift; path = DarkEggKit/Classes/Common/Common.swift; sourceTree = "<group>"; };
+		2AC13B1C85D302EC04725EF5644E98EE /* UIViewController+SideMenu.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+SideMenu.swift"; path = "DarkEggKit/Classes/SideMenu/UIViewController+SideMenu.swift"; sourceTree = "<group>"; };
+		2B6C77F2D614B3FC605EB2B370E64B05 /* DZSideMenuMask.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZSideMenuMask.swift; path = DarkEggKit/Classes/SideMenu/DZSideMenuMask.swift; sourceTree = "<group>"; };
+		2C743BAF7CACC5ABD7D1F8D8732B058F /* DZSideMenuAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZSideMenuAnimator.swift; path = DarkEggKit/Classes/SideMenu/DZSideMenuAnimator.swift; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		32708F58C0F7CB2ED4BB4CF3A18524B8 /* DZPopupMessageQueueManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZPopupMessageQueueManager.swift; path = DarkEggKit/Classes/PopupMessage/DZPopupMessageQueueManager.swift; sourceTree = "<group>"; };
-		38A9737B7B93E4AC7798FB36413B8AB3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		369DB1136D02B20FAFC1863E6992A4B2 /* DZPopupMessageQueue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZPopupMessageQueue.swift; path = DarkEggKit/Classes/PopupMessage/DZPopupMessageQueue.swift; sourceTree = "<group>"; };
+		38AED49C91DCA523CF87F052E90CF8FB /* DoughnutArcLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DoughnutArcLayer.swift; path = DarkEggKit/Classes/DoughnutChart/DoughnutArcLayer.swift; sourceTree = "<group>"; };
 		3BDD4819497F24074D049BB6EB4CAC2C /* Pods-DarkEggKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DarkEggKit_Example-umbrella.h"; sourceTree = "<group>"; };
-		3CD0D5F6C74A71C73A21A2B3A6A0F2D7 /* DZPaddingLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZPaddingLabel.swift; path = DarkEggKit/Classes/PaddingLabel/DZPaddingLabel.swift; sourceTree = "<group>"; };
-		3D3D1FC21A9ADF7FCEC08146FFCE9E6F /* UIViewController+SideMenu.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+SideMenu.swift"; path = "DarkEggKit/Classes/SideMenu/UIViewController+SideMenu.swift"; sourceTree = "<group>"; };
 		42DAC4B91B0B92A54E55A6F98536B612 /* Pods-DarkEggKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DarkEggKit_Example.release.xcconfig"; sourceTree = "<group>"; };
-		4678ACC110958D38D1A80D1E6361B612 /* Image.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Image.xcassets; path = DarkEggKit/Classes/ButtonMenu/Image.xcassets; sourceTree = "<group>"; };
-		489DC9C6283DBD671C3A9C7808A7706B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = DarkEggKit/Classes/Common/README.md; sourceTree = "<group>"; };
-		4C085EDEE961E29BBC19440197757392 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = DarkEggKit/Classes/PopupMessage/README.md; sourceTree = "<group>"; };
-		5A5FF80BC842F7BBF55D63BA418D5CC0 /* DZButtonMenuItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZButtonMenuItem.swift; path = DarkEggKit/Classes/ButtonMenu/DZButtonMenuItem.swift; sourceTree = "<group>"; };
-		5B0473070338D07B5FCD577293A7A597 /* AnimatedImageView+Animator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AnimatedImageView+Animator.swift"; path = "DarkEggKit/Classes/AnimatedImageView/AnimatedImageView+Animator.swift"; sourceTree = "<group>"; };
+		464D8A5F557E1B0AC5BFC41D3E34E841 /* Array+SafeIndex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+SafeIndex.swift"; path = "DarkEggKit/Classes/Common/Array+SafeIndex.swift"; sourceTree = "<group>"; };
+		4A22534758D4AA39020AC4BBE52D26DE /* DZButtonMenu.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZButtonMenu.swift; path = DarkEggKit/Classes/ButtonMenu/DZButtonMenu.swift; sourceTree = "<group>"; };
+		4A3F2A7E9EA606F25262AD6491036B4C /* UIViewController+PopupMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+PopupMessage.swift"; path = "DarkEggKit/Classes/PopupMessage/UIViewController+PopupMessage.swift"; sourceTree = "<group>"; };
+		4EDCC9AA21DA8DA39E971545899808F5 /* DZUtility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZUtility.swift; path = DarkEggKit/Classes/Common/DZUtility.swift; sourceTree = "<group>"; };
+		52F558D0964C077B77C4335776342A3B /* Logger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Logger.swift; path = DarkEggKit/Classes/Common/Logger.swift; sourceTree = "<group>"; };
 		5C7259F22F2FC01C7E5E7F7BF107B92C /* Pods-DarkEggKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DarkEggKit_Example-dummy.m"; sourceTree = "<group>"; };
-		5CA26304894C3CBF87E5A3CCC673F589 /* Common.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Common.swift; path = DarkEggKit/Classes/Common/Common.swift; sourceTree = "<group>"; };
-		636B80078773D5EB474DF8D820843B18 /* DarkEggKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DarkEggKit-dummy.m"; sourceTree = "<group>"; };
-		67E01EC86029B27FC4418A3A5FCF6E74 /* Image.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Image.xcassets; path = DarkEggKit/Classes/PopupMessage/Image.xcassets; sourceTree = "<group>"; };
-		6F3F51CBFB91B1FAA41593E4BE7E3530 /* Logger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Logger.swift; path = DarkEggKit/Classes/Common/Logger.swift; sourceTree = "<group>"; };
-		709C2AF7DCF51EFBE0679F39A001F2ED /* Array+SafeIndex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+SafeIndex.swift"; path = "DarkEggKit/Classes/Common/Array+SafeIndex.swift"; sourceTree = "<group>"; };
-		70C4E1F233395A81E9AB2B184B67EB75 /* DZSideMenuAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZSideMenuAnimator.swift; path = DarkEggKit/Classes/SideMenu/DZSideMenuAnimator.swift; sourceTree = "<group>"; };
-		70EDBD5E3EA8E1936D5E721F467AC3EA /* DarkEggKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DarkEggKit-prefix.pch"; sourceTree = "<group>"; };
-		77994DC8374632C54D902DEB4DD10BCF /* DZSideMenuMask.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZSideMenuMask.swift; path = DarkEggKit/Classes/SideMenu/DZSideMenuMask.swift; sourceTree = "<group>"; };
+		5D689C38BECC4D0F878953CC12FBAB03 /* DZButtonMenuAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZButtonMenuAttributes.swift; path = DarkEggKit/Classes/ButtonMenu/DZButtonMenuAttributes.swift; sourceTree = "<group>"; };
+		67583F4F6618B6B98745484BADBBD004 /* BarChartData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarChartData.swift; path = DarkEggKit/Classes/BarChart/BarChartData.swift; sourceTree = "<group>"; };
+		6A08CED8D1C898B3ACF60501CE43888A /* DarkEggKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DarkEggKit.xcconfig; sourceTree = "<group>"; };
+		729C1361376F9C24532DC12FE88F3AE2 /* DZSideMenuConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZSideMenuConfiguration.swift; path = DarkEggKit/Classes/SideMenu/DZSideMenuConfiguration.swift; sourceTree = "<group>"; };
+		770E24E1776834E6E94AC28604C49BA2 /* Image.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Image.xcassets; path = DarkEggKit/Classes/PopupMessage/Image.xcassets; sourceTree = "<group>"; };
 		78D44E8F3A15F0CA108B630C5FA01FDC /* Pods-DarkEggKit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DarkEggKit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		7DFC7C477AF032581177130BEA621606 /* DZPopupMessageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZPopupMessageView.swift; path = DarkEggKit/Classes/PopupMessage/DZPopupMessageView.swift; sourceTree = "<group>"; };
+		7E89663F307648251539905C0A052F3F /* DZSideMenuInteractiveTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZSideMenuInteractiveTransition.swift; path = DarkEggKit/Classes/SideMenu/DZSideMenuInteractiveTransition.swift; sourceTree = "<group>"; };
+		82C30858E5537E38B1659DE4B3524F6F /* BarLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarLayer.swift; path = DarkEggKit/Classes/BarChart/BarLayer.swift; sourceTree = "<group>"; };
+		8535EA82B895926822895F35AE859E72 /* AnimatedImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedImage.swift; path = DarkEggKit/Classes/AnimatedImageView/AnimatedImage.swift; sourceTree = "<group>"; };
+		859BA552DC0502A7B9D46AD2E86F397A /* DarkEggKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DarkEggKit-umbrella.h"; sourceTree = "<group>"; };
 		8933093AC49CFCE4CD0B6EBFA695D13B /* Pods-DarkEggKit_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DarkEggKit_Tests-umbrella.h"; sourceTree = "<group>"; };
-		8B51143E831EFFFF63E8193E032302B8 /* Pods_DarkEggKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DarkEggKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8DF3B6E38925973A15335DC513F7E5A0 /* AnimatedImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedImageView.swift; path = DarkEggKit/Classes/AnimatedImageView/AnimatedImageView.swift; sourceTree = "<group>"; };
-		992C71046E4B352F02DCC628A6D992A3 /* AnimatedImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedImage.swift; path = DarkEggKit/Classes/AnimatedImageView/AnimatedImage.swift; sourceTree = "<group>"; };
-		9C724075AD8560857E28537256206291 /* DarkEggKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DarkEggKit.xcconfig; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A19F9FA3F6F18802F9789702046EF842 /* UIColor+Hex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Hex.swift"; path = "DarkEggKit/Classes/Common/UIColor+Hex.swift"; sourceTree = "<group>"; };
-		A3ABB8A74A74EBB7B739E331CC162B9B /* DZPopupMessageQueue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZPopupMessageQueue.swift; path = DarkEggKit/Classes/PopupMessage/DZPopupMessageQueue.swift; sourceTree = "<group>"; };
+		8B51143E831EFFFF63E8193E032302B8 /* Pods_DarkEggKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DarkEggKit_Tests.framework; path = "Pods-DarkEggKit_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96CD7FCCF8C2EBE3576A10E4B51CBA21 /* DarkEggKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DarkEggKit-prefix.pch"; sourceTree = "<group>"; };
+		9D165F17BAF3A4434A807E3ACE352A4A /* DZPaddingLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZPaddingLabel.swift; path = DarkEggKit/Classes/PaddingLabel/DZPaddingLabel.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A0CF5838EFBB5E6BADB45C564D2CF2E3 /* DarkEggKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = DarkEggKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A56B9E69CEE651BBF8543DDDD3F274D8 /* CGRect+Scale.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGRect+Scale.swift"; path = "DarkEggKit/Classes/Common/CGRect+Scale.swift"; sourceTree = "<group>"; };
 		AB6006CB2252F2ED2B8270BA1EFC2B52 /* Pods-DarkEggKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DarkEggKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		ABE5073E64DA249ADDE8A876E445FE79 /* Pods-DarkEggKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DarkEggKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		AE8712CFC69788E561911965FC06F304 /* DoughnutChart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DoughnutChart.swift; path = DarkEggKit/Classes/DoughnutChart/DoughnutChart.swift; sourceTree = "<group>"; };
-		AFC1AE83739A860D053E469B7D324FFA /* DarkEggKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DarkEggKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE7CD8CFC5444C00E44E09AE3557AA49 /* DZSideMenuTransitioning.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZSideMenuTransitioning.swift; path = DarkEggKit/Classes/SideMenu/DZSideMenuTransitioning.swift; sourceTree = "<group>"; };
+		AFC1AE83739A860D053E469B7D324FFA /* DarkEggKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DarkEggKit.framework; path = DarkEggKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B30AC4C87A41BA5AFEE3E24A8228E5CD /* Pods-DarkEggKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DarkEggKit_Tests-dummy.m"; sourceTree = "<group>"; };
-		B75BABCB23D37FDE00444B91 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = DarkEggKit/Classes/DoughnutChart/README.md; sourceTree = "<group>"; };
-		B763A9D423CDBD93002E16F3 /* DoughnutArcLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DoughnutArcLayer.swift; path = DarkEggKit/Classes/DoughnutChart/DoughnutArcLayer.swift; sourceTree = "<group>"; };
-		B7C3B0A223C92AEB00411E75 /* DoughnutChartData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DoughnutChartData.swift; path = DarkEggKit/Classes/DoughnutChart/DoughnutChartData.swift; sourceTree = "<group>"; };
-		B7D52BFB23D55EE2006E9DA4 /* BarLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BarLayer.swift; path = DarkEggKit/Classes/BarChart/BarLayer.swift; sourceTree = "<group>"; };
-		B7D52BFD23D55EFE006E9DA4 /* BarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BarChart.swift; path = DarkEggKit/Classes/BarChart/BarChart.swift; sourceTree = "<group>"; };
-		B7D52BFF23D55F31006E9DA4 /* BarChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BarChartData.swift; path = DarkEggKit/Classes/BarChart/BarChartData.swift; sourceTree = "<group>"; };
-		B7D52C0323DE1019006E9DA4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = DarkEggKit/Classes/BarChart/README.md; sourceTree = "<group>"; };
-		B9FFAA5434A57E6D228C2AA7D207D9C5 /* SessionDataTask.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDataTask.swift; path = DarkEggKit/Classes/AnimatedImageView/SessionDataTask.swift; sourceTree = "<group>"; };
-		C0A2FFAA5BEF5E8AE3073437A0354809 /* DZSideMenuTransitioning.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZSideMenuTransitioning.swift; path = DarkEggKit/Classes/SideMenu/DZSideMenuTransitioning.swift; sourceTree = "<group>"; };
+		B6C524D4426B75FBFC36FA60B319617A /* Image.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Image.xcassets; path = DarkEggKit/Classes/ButtonMenu/Image.xcassets; sourceTree = "<group>"; };
+		BAE1C44B494C3D9269A679F74D08D852 /* SourceCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SourceCache.swift; path = DarkEggKit/Classes/AnimatedImageView/SourceCache.swift; sourceTree = "<group>"; };
+		BB27DEE83C3D8A3B86EC1EDAE247C06A /* DZPopupMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZPopupMessage.swift; path = DarkEggKit/Classes/PopupMessage/DZPopupMessage.swift; sourceTree = "<group>"; };
+		BD89418546E63F555622E7551C072867 /* AnimatedImageView+Animator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AnimatedImageView+Animator.swift"; path = "DarkEggKit/Classes/AnimatedImageView/AnimatedImageView+Animator.swift"; sourceTree = "<group>"; };
 		C407C87E054462B6F032994059A1A3D7 /* Pods-DarkEggKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DarkEggKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		C5D278EA0BC76531BC994BB6A1C47520 /* DarkEggKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DarkEggKit-dummy.m"; sourceTree = "<group>"; };
+		C83A712AD7C6E4E5288F7844B0167F56 /* AnimatedImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedImageView.swift; path = DarkEggKit/Classes/AnimatedImageView/AnimatedImageView.swift; sourceTree = "<group>"; };
 		CF7CBD82869E23AB26927F0FC4ED56FD /* Pods-DarkEggKit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DarkEggKit_Example-frameworks.sh"; sourceTree = "<group>"; };
-		D04C57EA02CB4B15CC88284796773800 /* DZUtility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZUtility.swift; path = DarkEggKit/Classes/Common/DZUtility.swift; sourceTree = "<group>"; };
-		D274C336930FDE253C2BC2C5241257DF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = DarkEggKit/Classes/SideMenu/README.md; sourceTree = "<group>"; };
-		D4728A798F1F7F091FC858447341DEA4 /* Pods_DarkEggKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DarkEggKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D9EC95F0077F2B98DF75C047356C328C /* DZPopupMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZPopupMessage.swift; path = DarkEggKit/Classes/PopupMessage/DZPopupMessage.swift; sourceTree = "<group>"; };
-		DA7CD438AE9FD335039B89073CBB6A47 /* DZSideMenuInteractiveTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZSideMenuInteractiveTransition.swift; path = DarkEggKit/Classes/SideMenu/DZSideMenuInteractiveTransition.swift; sourceTree = "<group>"; };
-		DBFCA558F7E5D6C038CB10A3CEFFDB0F /* DarkEggKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DarkEggKit-umbrella.h"; sourceTree = "<group>"; };
+		D4449DF27E76A315000CF0EFF4C23BF8 /* DZButtonMenuItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZButtonMenuItem.swift; path = DarkEggKit/Classes/ButtonMenu/DZButtonMenuItem.swift; sourceTree = "<group>"; };
+		D4728A798F1F7F091FC858447341DEA4 /* Pods_DarkEggKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DarkEggKit_Example.framework; path = "Pods-DarkEggKit_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7BFAA6EC0A92DD5FBAFA18B75D418E7 /* DZButtonMenuConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZButtonMenuConfiguration.swift; path = DarkEggKit/Classes/ButtonMenu/DZButtonMenuConfiguration.swift; sourceTree = "<group>"; };
 		DC1767E474F3627770FCEDE1E5FD47F3 /* Pods-DarkEggKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DarkEggKit_Example.modulemap"; sourceTree = "<group>"; };
 		E123E7AA4151C12F7C35D44C74BD4A63 /* Pods-DarkEggKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DarkEggKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		E26F27ED9DF75E2FC89E76E2C710A302 /* DZButtonMenuConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZButtonMenuConfiguration.swift; path = DarkEggKit/Classes/ButtonMenu/DZButtonMenuConfiguration.swift; sourceTree = "<group>"; };
-		E3A1D1C379C74F3158A0AFC64F695772 /* SourceDownloader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SourceDownloader.swift; path = DarkEggKit/Classes/AnimatedImageView/SourceDownloader.swift; sourceTree = "<group>"; };
-		E5C0C2CDB51E7B1D2D81AF68830A4FC2 /* DarkEggKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = DarkEggKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E6B37F0FA3A74D3AC88C00381129A6D6 /* Pods-DarkEggKit_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DarkEggKit_Example-Info.plist"; sourceTree = "<group>"; };
-		E6D07958764FBE61F0DB0AF24E10AABB /* DZButtonMenuAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZButtonMenuAttributes.swift; path = DarkEggKit/Classes/ButtonMenu/DZButtonMenuAttributes.swift; sourceTree = "<group>"; };
-		E9F84599DC2F6ABFF07D483BF6469A2F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = DarkEggKit/Classes/PaddingLabel/README.md; sourceTree = "<group>"; };
-		ECB0FEC765B39E42DF26B79482E5B8D9 /* DarkEggKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DarkEggKit-Info.plist"; sourceTree = "<group>"; };
-		EDF23F058EAF4091047ED24BC7738E76 /* SourceCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SourceCache.swift; path = DarkEggKit/Classes/AnimatedImageView/SourceCache.swift; sourceTree = "<group>"; };
+		ED39A181195B1871F764C544545997B2 /* UIColor+Hex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Hex.swift"; path = "DarkEggKit/Classes/Common/UIColor+Hex.swift"; sourceTree = "<group>"; };
 		EE47B0B7B397525B6F607EDA2EF0385F /* Pods-DarkEggKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DarkEggKit_Tests.modulemap"; sourceTree = "<group>"; };
 		EEF87951D77670378B53AE193876022E /* Pods-DarkEggKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DarkEggKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		F0AFB5538ED16152F1D9FB46766B5D32 /* DarkEggKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DarkEggKit.modulemap; sourceTree = "<group>"; };
-		F5B8FDD56F01A76F544291EB46AD162C /* DZSideMenuConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZSideMenuConfiguration.swift; path = DarkEggKit/Classes/SideMenu/DZSideMenuConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,14 +152,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4926B666DC9687105EB70186A0A9042A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				229F49F3908068B7EC097B91C34F4954 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		69A4355665864D5BAF33635CBD3C3FC0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -177,50 +160,83 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E9174C21545B205F295643EF87069FD9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8072D985CD0C031372A86317F5273DD4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0225D3757CA83C56F9500B297AB47771 /* Resources */ = {
+		1661F9A3C747F35415618D5B2D1A58B4 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				4678ACC110958D38D1A80D1E6361B612 /* Image.xcassets */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		343AE6CF944AD8607F37782AAA182E58 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				F0AFB5538ED16152F1D9FB46766B5D32 /* DarkEggKit.modulemap */,
-				9C724075AD8560857E28537256206291 /* DarkEggKit.xcconfig */,
-				636B80078773D5EB474DF8D820843B18 /* DarkEggKit-dummy.m */,
-				ECB0FEC765B39E42DF26B79482E5B8D9 /* DarkEggKit-Info.plist */,
-				70EDBD5E3EA8E1936D5E721F467AC3EA /* DarkEggKit-prefix.pch */,
-				DBFCA558F7E5D6C038CB10A3CEFFDB0F /* DarkEggKit-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/DarkEggKit";
-			sourceTree = "<group>";
-		};
-		3AB0FE490E9F34BF1328C596EA75631D /* DoughnutChart */ = {
-			isa = PBXGroup;
-			children = (
-				B7C3B0A223C92AEB00411E75 /* DoughnutChartData.swift */,
-				AE8712CFC69788E561911965FC06F304 /* DoughnutChart.swift */,
-				B763A9D423CDBD93002E16F3 /* DoughnutArcLayer.swift */,
-				B75BABCB23D37FDE00444B91 /* README.md */,
-			);
-			name = DoughnutChart;
-			sourceTree = "<group>";
-		};
-		4A9990AEF02256FB61BCD4959D158E72 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				E5C0C2CDB51E7B1D2D81AF68830A4FC2 /* DarkEggKit.podspec */,
-				042381FD732F50498C0FCC2B5954FB01 /* LICENSE */,
-				38A9737B7B93E4AC7798FB36413B8AB3 /* README.md */,
+				A0CF5838EFBB5E6BADB45C564D2CF2E3 /* DarkEggKit.podspec */,
+				121726CC373E2AA28C8400569448D5D8 /* LICENSE */,
+				060F079EA83FF5DE7BA793AF0A6F803C /* README.md */,
 			);
 			name = Pod;
+			sourceTree = "<group>";
+		};
+		168C2DED525C44FD099193CDD9EEC355 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				464D8A5F557E1B0AC5BFC41D3E34E841 /* Array+SafeIndex.swift */,
+				A56B9E69CEE651BBF8543DDDD3F274D8 /* CGRect+Scale.swift */,
+				2793C42CB94436A628299A2AF39A2F9C /* Common.swift */,
+				4EDCC9AA21DA8DA39E971545899808F5 /* DZUtility.swift */,
+				52F558D0964C077B77C4335776342A3B /* Logger.swift */,
+				ED39A181195B1871F764C544545997B2 /* UIColor+Hex.swift */,
+				18706F8E2E87C10A6B320AD9580ABD4F /* UIImage+Color.swift */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		269B8E9FE8F3CF24B6A6221ECAD9783C /* AnimatedImageView */ = {
+			isa = PBXGroup;
+			children = (
+				8535EA82B895926822895F35AE859E72 /* AnimatedImage.swift */,
+				C83A712AD7C6E4E5288F7844B0167F56 /* AnimatedImageView.swift */,
+				BD89418546E63F555622E7551C072867 /* AnimatedImageView+Animator.swift */,
+				0F02A18F26C08CFCB679F071558A317A /* SessionDataTask.swift */,
+				BAE1C44B494C3D9269A679F74D08D852 /* SourceCache.swift */,
+				265264ADFF508AC092D9D14D64DA20DC /* SourceDownloader.swift */,
+			);
+			name = AnimatedImageView;
+			sourceTree = "<group>";
+		};
+		3896CBBBFF676C482E02D653F5FA2296 /* PopupMessage */ = {
+			isa = PBXGroup;
+			children = (
+				BB27DEE83C3D8A3B86EC1EDAE247C06A /* DZPopupMessage.swift */,
+				369DB1136D02B20FAFC1863E6992A4B2 /* DZPopupMessageQueue.swift */,
+				23EBE82DA8B02F72F747F68D795CFF0A /* DZPopupMessageQueueManager.swift */,
+				7DFC7C477AF032581177130BEA621606 /* DZPopupMessageView.swift */,
+				4A3F2A7E9EA606F25262AD6491036B4C /* UIViewController+PopupMessage.swift */,
+				DED2072A8B4EC9A6E0ACC0520FFF3953 /* Resources */,
+			);
+			name = PopupMessage;
+			sourceTree = "<group>";
+		};
+		449209F852CCAEC5EF7DF28694DE7818 /* DarkEggKit */ = {
+			isa = PBXGroup;
+			children = (
+				269B8E9FE8F3CF24B6A6221ECAD9783C /* AnimatedImageView */,
+				E76AD1506C52D7354A6618F43263D71D /* BarChart */,
+				ECC590BAE1860DD8E486E85EFEFB203F /* ButtonMenu */,
+				168C2DED525C44FD099193CDD9EEC355 /* Common */,
+				68D09735794035FB159C82FEB3C7654B /* DoughnutChart */,
+				F298B6BEC25F50EAEA8E15E0E260B333 /* PaddingLabel */,
+				1661F9A3C747F35415618D5B2D1A58B4 /* Pod */,
+				3896CBBBFF676C482E02D653F5FA2296 /* PopupMessage */,
+				C881106E3D6663F10E71EB23429A235F /* SideMenu */,
+				95BFF401F72365FB9685E0A537996715 /* Support Files */,
+			);
+			name = DarkEggKit;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		549EC56812AB2FDAD5FD031A4A505BD8 /* Targets Support Files */ = {
@@ -232,90 +248,28 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		63761543283CA62B213C2A4EDAC9591A /* PaddingLabel */ = {
+		68D09735794035FB159C82FEB3C7654B /* DoughnutChart */ = {
 			isa = PBXGroup;
 			children = (
-				3CD0D5F6C74A71C73A21A2B3A6A0F2D7 /* DZPaddingLabel.swift */,
-				E9F84599DC2F6ABFF07D483BF6469A2F /* README.md */,
+				38AED49C91DCA523CF87F052E90CF8FB /* DoughnutArcLayer.swift */,
+				179A69AC4876D1F3F8E81DD361A1FC0C /* DoughnutChart.swift */,
+				19FB4AA6EDDA723F762615B9CBFF2268 /* DoughnutChartData.swift */,
 			);
-			name = PaddingLabel;
+			name = DoughnutChart;
 			sourceTree = "<group>";
 		};
-		80530DB05EB83DCAB37D5ECCCDC4D51A /* AnimatedImageView */ = {
+		95BFF401F72365FB9685E0A537996715 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				992C71046E4B352F02DCC628A6D992A3 /* AnimatedImage.swift */,
-				8DF3B6E38925973A15335DC513F7E5A0 /* AnimatedImageView.swift */,
-				5B0473070338D07B5FCD577293A7A597 /* AnimatedImageView+Animator.swift */,
-				030A73A87F87CFCE11437B092D448539 /* README.md */,
-				B9FFAA5434A57E6D228C2AA7D207D9C5 /* SessionDataTask.swift */,
-				EDF23F058EAF4091047ED24BC7738E76 /* SourceCache.swift */,
-				E3A1D1C379C74F3158A0AFC64F695772 /* SourceDownloader.swift */,
+				151D4BBE5B113F1B568ABCF2C7AA5672 /* DarkEggKit.modulemap */,
+				6A08CED8D1C898B3ACF60501CE43888A /* DarkEggKit.xcconfig */,
+				C5D278EA0BC76531BC994BB6A1C47520 /* DarkEggKit-dummy.m */,
+				06D834AE39467878A1D6C9AB8D1E7F60 /* DarkEggKit-Info.plist */,
+				96CD7FCCF8C2EBE3576A10E4B51CBA21 /* DarkEggKit-prefix.pch */,
+				859BA552DC0502A7B9D46AD2E86F397A /* DarkEggKit-umbrella.h */,
 			);
-			name = AnimatedImageView;
-			sourceTree = "<group>";
-		};
-		8DA7508C118BF125B4778E7D15ECA3D5 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				709C2AF7DCF51EFBE0679F39A001F2ED /* Array+SafeIndex.swift */,
-				28BF3DAC04F452B08C8CC9FFF0EF270F /* CGRect+Scale.swift */,
-				5CA26304894C3CBF87E5A3CCC673F589 /* Common.swift */,
-				D04C57EA02CB4B15CC88284796773800 /* DZUtility.swift */,
-				6F3F51CBFB91B1FAA41593E4BE7E3530 /* Logger.swift */,
-				489DC9C6283DBD671C3A9C7808A7706B /* README.md */,
-				A19F9FA3F6F18802F9789702046EF842 /* UIColor+Hex.swift */,
-				2353CE580DF4652D81022D44AC8C4946 /* UIImage+Color.swift */,
-			);
-			name = Common;
-			sourceTree = "<group>";
-		};
-		8EA4D6D4F5DAD2066B09D54E56D49E54 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				67E01EC86029B27FC4418A3A5FCF6E74 /* Image.xcassets */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		A341088641E961C7EE1EA8B9FDA4D26D /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				AA8B2958103E8DB4FA26E03FF1941A50 /* DarkEggKit */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		A7B54C3FC45BB9854BF513E124322656 /* SideMenu */ = {
-			isa = PBXGroup;
-			children = (
-				70C4E1F233395A81E9AB2B184B67EB75 /* DZSideMenuAnimator.swift */,
-				F5B8FDD56F01A76F544291EB46AD162C /* DZSideMenuConfiguration.swift */,
-				DA7CD438AE9FD335039B89073CBB6A47 /* DZSideMenuInteractiveTransition.swift */,
-				77994DC8374632C54D902DEB4DD10BCF /* DZSideMenuMask.swift */,
-				C0A2FFAA5BEF5E8AE3073437A0354809 /* DZSideMenuTransitioning.swift */,
-				D274C336930FDE253C2BC2C5241257DF /* README.md */,
-				3D3D1FC21A9ADF7FCEC08146FFCE9E6F /* UIViewController+SideMenu.swift */,
-			);
-			name = SideMenu;
-			sourceTree = "<group>";
-		};
-		AA8B2958103E8DB4FA26E03FF1941A50 /* DarkEggKit */ = {
-			isa = PBXGroup;
-			children = (
-				B7D52BFA23D55E92006E9DA4 /* BarChart */,
-				80530DB05EB83DCAB37D5ECCCDC4D51A /* AnimatedImageView */,
-				CCFC532FEBB7ECECCB6025E8D7C3E6D4 /* ButtonMenu */,
-				8DA7508C118BF125B4778E7D15ECA3D5 /* Common */,
-				3AB0FE490E9F34BF1328C596EA75631D /* DoughnutChart */,
-				63761543283CA62B213C2A4EDAC9591A /* PaddingLabel */,
-				4A9990AEF02256FB61BCD4959D158E72 /* Pod */,
-				EBB760C090839B3B31B41D1DB18FADC5 /* PopupMessage */,
-				A7B54C3FC45BB9854BF513E124322656 /* SideMenu */,
-				343AE6CF944AD8607F37782AAA182E58 /* Support Files */,
-			);
-			name = DarkEggKit;
-			path = ../..;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/DarkEggKit";
 			sourceTree = "<group>";
 		};
 		B413BB7709DDB05B7B799B294F57EAD0 /* Pods-DarkEggKit_Tests */ = {
@@ -332,17 +286,6 @@
 			);
 			name = "Pods-DarkEggKit_Tests";
 			path = "Target Support Files/Pods-DarkEggKit_Tests";
-			sourceTree = "<group>";
-		};
-		B7D52BFA23D55E92006E9DA4 /* BarChart */ = {
-			isa = PBXGroup;
-			children = (
-				B7D52C0323DE1019006E9DA4 /* README.md */,
-				B7D52BFD23D55EFE006E9DA4 /* BarChart.swift */,
-				B7D52BFB23D55EE2006E9DA4 /* BarLayer.swift */,
-				B7D52BFF23D55F31006E9DA4 /* BarChartData.swift */,
-			);
-			name = BarChart;
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -370,24 +313,24 @@
 			path = "Target Support Files/Pods-DarkEggKit_Example";
 			sourceTree = "<group>";
 		};
-		CCFC532FEBB7ECECCB6025E8D7C3E6D4 /* ButtonMenu */ = {
+		C881106E3D6663F10E71EB23429A235F /* SideMenu */ = {
 			isa = PBXGroup;
 			children = (
-				1F910F58B49D5A9928F3CE102E0F95EE /* DZButtonMenu.swift */,
-				E6D07958764FBE61F0DB0AF24E10AABB /* DZButtonMenuAttributes.swift */,
-				E26F27ED9DF75E2FC89E76E2C710A302 /* DZButtonMenuConfiguration.swift */,
-				5A5FF80BC842F7BBF55D63BA418D5CC0 /* DZButtonMenuItem.swift */,
-				1F2965079E39A695F09621C87C00AC30 /* README.md */,
-				0225D3757CA83C56F9500B297AB47771 /* Resources */,
+				2C743BAF7CACC5ABD7D1F8D8732B058F /* DZSideMenuAnimator.swift */,
+				729C1361376F9C24532DC12FE88F3AE2 /* DZSideMenuConfiguration.swift */,
+				7E89663F307648251539905C0A052F3F /* DZSideMenuInteractiveTransition.swift */,
+				2B6C77F2D614B3FC605EB2B370E64B05 /* DZSideMenuMask.swift */,
+				AE7CD8CFC5444C00E44E09AE3557AA49 /* DZSideMenuTransitioning.swift */,
+				2AC13B1C85D302EC04725EF5644E98EE /* UIViewController+SideMenu.swift */,
 			);
-			name = ButtonMenu;
+			name = SideMenu;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				A341088641E961C7EE1EA8B9FDA4D26D /* Development Pods */,
+				E5912748FAE1ACA1D74C7747C6C2C26D /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				E17E2BB4ADF3993CBD78A4A1343019B9 /* Products */,
 				549EC56812AB2FDAD5FD031A4A505BD8 /* Targets Support Files */,
@@ -402,6 +345,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DED2072A8B4EC9A6E0ACC0520FFF3953 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				770E24E1776834E6E94AC28604C49BA2 /* Image.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		E17E2BB4ADF3993CBD78A4A1343019B9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -412,18 +363,50 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EBB760C090839B3B31B41D1DB18FADC5 /* PopupMessage */ = {
+		E5912748FAE1ACA1D74C7747C6C2C26D /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D9EC95F0077F2B98DF75C047356C328C /* DZPopupMessage.swift */,
-				A3ABB8A74A74EBB7B739E331CC162B9B /* DZPopupMessageQueue.swift */,
-				32708F58C0F7CB2ED4BB4CF3A18524B8 /* DZPopupMessageQueueManager.swift */,
-				1F28939DCB63CE525C794E006EAF00FD /* DZPopupMessageView.swift */,
-				4C085EDEE961E29BBC19440197757392 /* README.md */,
-				1FFEC7681BE86A594AC876A94931F0CF /* UIViewController+PopupMessage.swift */,
-				8EA4D6D4F5DAD2066B09D54E56D49E54 /* Resources */,
+				449209F852CCAEC5EF7DF28694DE7818 /* DarkEggKit */,
 			);
-			name = PopupMessage;
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		E76AD1506C52D7354A6618F43263D71D /* BarChart */ = {
+			isa = PBXGroup;
+			children = (
+				233485CBF3987F4C5A46DC201558F517 /* BarChart.swift */,
+				67583F4F6618B6B98745484BADBBD004 /* BarChartData.swift */,
+				82C30858E5537E38B1659DE4B3524F6F /* BarLayer.swift */,
+			);
+			name = BarChart;
+			sourceTree = "<group>";
+		};
+		ECC590BAE1860DD8E486E85EFEFB203F /* ButtonMenu */ = {
+			isa = PBXGroup;
+			children = (
+				4A22534758D4AA39020AC4BBE52D26DE /* DZButtonMenu.swift */,
+				5D689C38BECC4D0F878953CC12FBAB03 /* DZButtonMenuAttributes.swift */,
+				D7BFAA6EC0A92DD5FBAFA18B75D418E7 /* DZButtonMenuConfiguration.swift */,
+				D4449DF27E76A315000CF0EFF4C23BF8 /* DZButtonMenuItem.swift */,
+				FA01F193B65C82C1FE339BE9F0BF9188 /* Resources */,
+			);
+			name = ButtonMenu;
+			sourceTree = "<group>";
+		};
+		F298B6BEC25F50EAEA8E15E0E260B333 /* PaddingLabel */ = {
+			isa = PBXGroup;
+			children = (
+				9D165F17BAF3A4434A807E3ACE352A4A /* DZPaddingLabel.swift */,
+			);
+			name = PaddingLabel;
+			sourceTree = "<group>";
+		};
+		FA01F193B65C82C1FE339BE9F0BF9188 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B6C524D4426B75FBFC36FA60B319617A /* Image.xcassets */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -437,11 +420,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		40A049025DB59DEA78D2D4DF60312984 /* Headers */ = {
+		55124BABDC3C70A574F93F46EC7EBE16 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FB567897713607DC3CE90E458877FE8 /* DarkEggKit-umbrella.h in Headers */,
+				C813A0D3E49C5F058560E57E26F8BC9B /* DarkEggKit-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,12 +441,12 @@
 /* Begin PBXNativeTarget section */
 		0DCDC9027AB1CA37F71B941ED78E825C /* DarkEggKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C1821BEDDE3D53A59EF93F658E043C27 /* Build configuration list for PBXNativeTarget "DarkEggKit" */;
+			buildConfigurationList = 97D498AFFDF351686C162A0F4CAD5B30 /* Build configuration list for PBXNativeTarget "DarkEggKit" */;
 			buildPhases = (
-				40A049025DB59DEA78D2D4DF60312984 /* Headers */,
-				8BB13693D236A0C63600F791AE323B1F /* Sources */,
-				4926B666DC9687105EB70186A0A9042A /* Frameworks */,
-				F4A13B62E3E0F2196D4464FD06E42003 /* Resources */,
+				55124BABDC3C70A574F93F46EC7EBE16 /* Headers */,
+				200485F8537D589473A350CF8C7E7A65 /* Sources */,
+				E9174C21545B205F295643EF87069FD9 /* Frameworks */,
+				23E1C563A1E134DEA3310755D6BD89A2 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -549,20 +532,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		23E1C563A1E134DEA3310755D6BD89A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C40434FB557A4723D72646CBA07D6E5 /* Image.xcassets in Resources */,
+				42C88B9878979FEA42FB252D5CCA298C /* Image.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BD7CB1BFE0151DA21E2FDC79865E065B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F4A13B62E3E0F2196D4464FD06E42003 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B7D52C0423DE1019006E9DA4 /* README.md in Resources */,
-				23DCE649296CC4B12F21B968AF751F21 /* Image.xcassets in Resources */,
-				0CBDD22B33EB8691E8EFD5A17FFF1E8E /* Image.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,46 +559,46 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8BB13693D236A0C63600F791AE323B1F /* Sources */ = {
+		200485F8537D589473A350CF8C7E7A65 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6612F3FB067D75F8630B9787EBC62B5E /* AnimatedImage.swift in Sources */,
-				D4E3F09878C2E757AE8FD5B6C080AFC0 /* AnimatedImageView+Animator.swift in Sources */,
-				0AA37C7DC623D038DE979E03A319A483 /* AnimatedImageView.swift in Sources */,
-				20B44A5ACCAFC92AC66D34AFC4076B97 /* Array+SafeIndex.swift in Sources */,
-				F2CFC67A19E209504DBC5B8D9CFB0516 /* CGRect+Scale.swift in Sources */,
-				4751374F5B5F6819B0B56AC727C9CDBC /* Common.swift in Sources */,
-				3245E4850C374BB3C4E477CB8AD8E60C /* DarkEggKit-dummy.m in Sources */,
-				0943D364F243E14B601948F6A3AEEB7B /* DoughnutChart.swift in Sources */,
-				F268BBD38335C8D1D394207FDC47944C /* DZButtonMenu.swift in Sources */,
-				B7C3B0A323C92AEB00411E75 /* DoughnutChartData.swift in Sources */,
-				2A8E154BDFCEE1DBFD5EB5BE33E3B17D /* DZButtonMenuAttributes.swift in Sources */,
-				423F17EBFAC55F469FDA3BE4F1472949 /* DZButtonMenuConfiguration.swift in Sources */,
-				059F69BBFF12276388195870724034F7 /* DZButtonMenuItem.swift in Sources */,
-				2A81C77894CC8ECAA65F848793EF82B3 /* DZPaddingLabel.swift in Sources */,
-				8B0A9082CF1B72398EDD479EAA77859E /* DZPopupMessage.swift in Sources */,
-				F9D1284271139F4E22182978CD8C2D24 /* DZPopupMessageQueue.swift in Sources */,
-				A3CAD11ED82C8927CA038E68D36224C5 /* DZPopupMessageQueueManager.swift in Sources */,
-				2E9941CDDA8847AAD3761B30F045DC63 /* DZPopupMessageView.swift in Sources */,
-				A3D197A1CA1C70FD176C0C96AE3E3FEA /* DZSideMenuAnimator.swift in Sources */,
-				A58F62F063CEBFE25EA54EDEF89FB68D /* DZSideMenuConfiguration.swift in Sources */,
-				3ABB44DF455B802577F63D6EC481EBA2 /* DZSideMenuInteractiveTransition.swift in Sources */,
-				B763A9D523CDBD93002E16F3 /* DoughnutArcLayer.swift in Sources */,
-				1FEAA68F6BB99DBCAF56C3BB8D18C3CC /* DZSideMenuMask.swift in Sources */,
-				CD96711DEC5A70AAC4E31B4D002BB414 /* DZSideMenuTransitioning.swift in Sources */,
-				3C9E944B6628831999B01B52E1E22A1B /* DZUtility.swift in Sources */,
-				411A62B06139AA00587C72705F19BB31 /* Logger.swift in Sources */,
-				3AA43E2E2FDDB9CA66C9B0E44F4AB1DA /* SessionDataTask.swift in Sources */,
-				769025FF2E17EF083C4FDE30925EAD40 /* SourceCache.swift in Sources */,
-				4C39DC1B36F137C17AEDC32D3043CCD4 /* SourceDownloader.swift in Sources */,
-				536A8013BC57CCAFF352EEA37A4E0A68 /* UIColor+Hex.swift in Sources */,
-				3C3A859F8F588CF294D2AD10AB1717AE /* UIImage+Color.swift in Sources */,
-				B7D52BFC23D55EE2006E9DA4 /* BarLayer.swift in Sources */,
-				44EAD69B054BDAD5D2E954C6ECD58A46 /* UIViewController+PopupMessage.swift in Sources */,
-				B7D52BFE23D55EFE006E9DA4 /* BarChart.swift in Sources */,
-				B7D52C0023D55F31006E9DA4 /* BarChartData.swift in Sources */,
-				3A028B6A3102BB53B10FA8C679EB89AA /* UIViewController+SideMenu.swift in Sources */,
+				E51D0769EB34D147B61A37205815DA43 /* AnimatedImage.swift in Sources */,
+				80C2D169816F3B71ADFFE42948BEA48D /* AnimatedImageView+Animator.swift in Sources */,
+				E3ADEBD6655C2BCAF436A4F53D8E4612 /* AnimatedImageView.swift in Sources */,
+				E49561A36C11C0C0C433E1F45DBD4593 /* Array+SafeIndex.swift in Sources */,
+				0326DA6FC5B0E7581E493BA269434B67 /* BarChart.swift in Sources */,
+				1A3DA7797CA4D84A73DB26F757FCC827 /* BarChartData.swift in Sources */,
+				C4A721CA09636C7F2E1F070F854E334A /* BarLayer.swift in Sources */,
+				FB2B9EBD4E2EBF3746DD066DE02FFDB7 /* CGRect+Scale.swift in Sources */,
+				9D45A9FA3AAE4871D4D8E053A5E10D18 /* Common.swift in Sources */,
+				CA5D9BF192057366995E88C7049FF06F /* DarkEggKit-dummy.m in Sources */,
+				57FE89D79B4A4379FD50C5BCC3F39566 /* DoughnutArcLayer.swift in Sources */,
+				1DAEF7DAC2A4DA46AC93112237371DE7 /* DoughnutChart.swift in Sources */,
+				69CAAFE2FCA8D54FC2818B5B8A0124FD /* DoughnutChartData.swift in Sources */,
+				21C0CF3FC0DF76D2E80B94DCD68C83C0 /* DZButtonMenu.swift in Sources */,
+				9569448B3422626FA5554FF7AF959EF8 /* DZButtonMenuAttributes.swift in Sources */,
+				20B19B2E551D1CC2AEAEEC92CFA56A5B /* DZButtonMenuConfiguration.swift in Sources */,
+				CEA5B1D8FC0B3B6DE83C83D8EBA2C329 /* DZButtonMenuItem.swift in Sources */,
+				4F9CFB205ED6A18959EF2672F10C8121 /* DZPaddingLabel.swift in Sources */,
+				68D35F6C321D21A39A436C166DBCC333 /* DZPopupMessage.swift in Sources */,
+				F22F12C89F8AF046C16D85CF11E6105C /* DZPopupMessageQueue.swift in Sources */,
+				30A70A8D09A0F0E18AD04C0F8C4C1A5E /* DZPopupMessageQueueManager.swift in Sources */,
+				29D5FDF3A231D8558C8126C7785DC7D4 /* DZPopupMessageView.swift in Sources */,
+				E0C71E2BE1134752B09B1BB866277B7F /* DZSideMenuAnimator.swift in Sources */,
+				85A452ADC19222C52F629EBF0985A381 /* DZSideMenuConfiguration.swift in Sources */,
+				6A013113BF06B4E8D60F2BC61440BCA5 /* DZSideMenuInteractiveTransition.swift in Sources */,
+				6F517DFFADBC687D507BA4BA34601BCF /* DZSideMenuMask.swift in Sources */,
+				2C3F4182E38ADD3A67C58AA732841D0B /* DZSideMenuTransitioning.swift in Sources */,
+				70A40656354FC36539DF043823797A5E /* DZUtility.swift in Sources */,
+				0FB5AF3554AC634C63D5212EDA52845F /* Logger.swift in Sources */,
+				0B5F09C1798F422BA2702DFE2C240647 /* SessionDataTask.swift in Sources */,
+				3D39F4DBFBA13EE5A680DFAA6A282090 /* SourceCache.swift in Sources */,
+				D228DBE7028ADC9BA3FAB202E99B6BC2 /* SourceDownloader.swift in Sources */,
+				BF1A631485270199901BF2AE8BA3E27A /* UIColor+Hex.swift in Sources */,
+				0263B301CDF4D8473671CE05A6417C9E /* UIImage+Color.swift in Sources */,
+				B41E97DE4091351B3C87DA5B34AE74CA /* UIViewController+PopupMessage.swift in Sources */,
+				4CC8BC7B2BE48F45BC83F1708A56472B /* UIViewController+SideMenu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -702,15 +684,46 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
 				STRIP_INSTALLED_PRODUCT = NO;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
+		};
+		6EAC6FFB1C17C68E25D37B1BCB7683C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A08CED8D1C898B3ACF60501CE43888A /* DarkEggKit.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DarkEggKit/DarkEggKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DarkEggKit/DarkEggKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DarkEggKit/DarkEggKit.modulemap";
+				PRODUCT_MODULE_NAME = DarkEggKit;
+				PRODUCT_NAME = DarkEggKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		788A766DF51348AA14CEB3198F3EDEAC /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -740,41 +753,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		81F4DE070DA525E6CD885C8976D82E27 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9C724075AD8560857E28537256206291 /* DarkEggKit.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/DarkEggKit/DarkEggKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/DarkEggKit/DarkEggKit-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 0.5.0;
-				MODULEMAP_FILE = "Target Support Files/DarkEggKit/DarkEggKit.modulemap";
-				PRODUCT_MODULE_NAME = DarkEggKit;
-				PRODUCT_NAME = DarkEggKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -809,7 +787,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -868,10 +845,9 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
 				STRIP_INSTALLED_PRODUCT = NO;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -905,7 +881,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -913,9 +888,9 @@
 			};
 			name = Release;
 		};
-		E265B0FA417F0C065E41B24DA6AD3E51 /* Release */ = {
+		C59EFCA46B03D14C91BABEB8FED4D127 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9C724075AD8560857E28537256206291 /* DarkEggKit.xcconfig */;
+			baseConfigurationReference = 6A08CED8D1C898B3ACF60501CE43888A /* DarkEggKit.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -932,21 +907,18 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 0.5.0;
 				MODULEMAP_FILE = "Target Support Files/DarkEggKit/DarkEggKit.modulemap";
 				PRODUCT_MODULE_NAME = DarkEggKit;
 				PRODUCT_NAME = DarkEggKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		F6756274DA862D3202A01D9E6BC93D54 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -976,7 +948,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1014,11 +985,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C1821BEDDE3D53A59EF93F658E043C27 /* Build configuration list for PBXNativeTarget "DarkEggKit" */ = {
+		97D498AFFDF351686C162A0F4CAD5B30 /* Build configuration list for PBXNativeTarget "DarkEggKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				81F4DE070DA525E6CD885C8976D82E27 /* Debug */,
-				E265B0FA417F0C065E41B24DA6AD3E51 /* Release */,
+				C59EFCA46B03D14C91BABEB8FED4D127 /* Debug */,
+				6EAC6FFB1C17C68E25D37B1BCB7683C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
