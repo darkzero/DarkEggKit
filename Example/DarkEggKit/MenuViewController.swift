@@ -16,7 +16,7 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.versionLabel.text = DarkEggKit.Common.fullVersionString
+        self.versionLabel.text = DarkEggKit.Common.bundleDisplayName + "\n" + DarkEggKit.Common.fullVersionString
     }
 }
 

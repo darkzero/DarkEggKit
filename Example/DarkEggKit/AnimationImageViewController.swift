@@ -17,8 +17,9 @@ class AnimatedImageViewController: UIViewController {
         super.viewDidLoad()
         
         Logger.debug("---- Start ----")
-        var apng: AnimationImage? // = AImage(url: "https://apng.onevcat.com/assets/elephant.png")
-        switch Int.random(in: 1...4) {
+        
+        var apng: AnimationImage?
+        switch Int.random(in: 0...4) {
         case 1:
             apng = AnimationImage(url: "https://flif.info/example-animation/spinfox_50.png")
         case 2:
@@ -26,34 +27,19 @@ class AnimatedImageViewController: UIViewController {
         case 3:
             apng = AnimationImage(url: "https://media2.giphy.com/media/xUPGcLbQtBlro61bdm/giphy.gif")
         case 4:
+            // image size is 10MB, test the memory usage
             apng = AnimationImage(url: "https://upload.wikimedia.org/wikipedia/commons/f/ff/Pizigani_1367_Chart_10MB.jpg")
         default:
+            apng = AnimationImage(url: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQrO3IgpmS5egLUegtsy8URBq1iOb75Yx9g2qTd_kxc8YZOxf_w")
             break
         }
-        //apng = AnimationImage(url: "https://media2.giphy.com/media/xUPGcLbQtBlro61bdm/giphy.gif")
-        //apng = AnimationImage(url: "https://upload.wikimedia.org/wikipedia/commons/f/ff/Pizigani_1367_Chart_10MB.jpg")
-        //let apng = AImage(url: "https://orig00.deviantart.net/df6e/f/2012/287/f/8/i_want_to_be_a_hero__apng_animated__by_tamalesyatole-d5ht8eu.png")
-        //let apng = AImage(url: "https://www.bram.us/wordpress/wp-content/uploads/2017/06/GenevaDrive.png")
-        //let apng = AImage(url: "https://pbs.twimg.com/media/D2pMC1nVAAA2VQn.jpg")
-        //let apng = AImage(url: "https://media.tenor.com/images/39fe167bdab90223bcc890bcb067b761/tenor.gif")
-        //https://media2.giphy.com/media/xUPGcLbQtBlro61bdm/giphy.gif
+        //apng = AnimationImage(url: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQrO3IgpmS5egLUegtsy8URBq1iOb75Yx9g2qTd_kxc8YZOxf_w")
         
-        aniImgView_1.aImage = apng
+        aniImgView_1.contentMode = .scaleAspectFit
         aniImgView_1.repeatMode = .infinite
+        aniImgView_1.aImage = apng
         aniImgView_1.delegate = self
         aniImgView_1.willShowProgress = true
-        
-        //aniImgView_1.needsPrescaling = false
-        //aniImgView_2.needsPrescaling = false
-        //aniImgView_3.needsPrescaling = false
-        //aniImgView_4.needsPrescaling = false
-        //aniImgView_1.willShowProgress = false
-        //aniImgView_1.placeHolder = nil
-        //aniImgView_2.willShowProgress = false
-        //aniImgView_3.placeHolder = nil
-        //aniImgView_2.isHidden = true
-        //aniImgView_3.isHidden = true
-        //aniImgView_4.isHidden = true
         
         Logger.debug("---- End ----")
     }
@@ -87,12 +73,11 @@ extension AnimatedImageViewController {
 }
 
 extension AnimatedImageViewController: AnimatedImageViewDelegate {
-//    func animatedImageView(_ imageView: AImageView, didPlayAnimationLoops count: UInt) {
-//        Logger.debug()
-//    }
+    func animatedImageView(_ imageView: AnimatedImageView, didPlayAnimationLoops count: UInt) {
+        Logger.debug(count)
+    }
     
     func animatedImageView(_ imageView: AnimatedImageView, didFinishAnimating: Void) {
-        //imageView.removeFromSuperview()
         Logger.debug()
     }
 }

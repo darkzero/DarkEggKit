@@ -1,12 +1,12 @@
 {
   "name": "DarkEggKit",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "summary": "DarkEgg UI Kit.",
   "swift_versions": "5.0",
   "platforms": {
     "ios": "10.0"
   },
-  "description": "* 0.5.1 (2020/01/27)\n- Add BarChart\n```\npod 'DarkEggKit/BarChart'\n```\n---\n* 0.5.0 (2020/01/19)\n- Add DoughnutChart\n```\npod 'DarkEggKit/DoughnutChart'\n```\n---\n* 0.4.0 (2019/10/20)\n- Add ButtonMenu (Is not prefect now)\n```\npod 'DarkEggKit/ButtonMenu'\n```\n- Fix some bugs\n---\n* 0.3.1 (2019/09/30)\nUpdate to iOS 11\n---\n* 0.3.0 (2019/08/31)\nAdd AnimatedImageView\n```\npod 'DarkEggKit/AnimatedImageView'\n```\n---\n* 0.2.1 (2019/05/16)\nSet DZPaddinLabel to public\nDelete column in Logger.debug and Logger.error\n---\n* 0.2.0 (2019/03/17)\nFix some bugs\n---\n* 0.1.1 (2019/03/05)\nCommon, PaddingLabel, PopupMessage and SideMenu.\nPlease check README.md on git repo.\n---\n* 0.1.0\nFirst commit, with Common, PaddingLabel, PopupMessage and SideMenu",
+  "description": "* 0.5.2 (2020/01/31)\n- fix some bugs\n---\n* 0.5.1 (2020/01/27)\n- Add BarChart\n```\npod 'DarkEggKit/BarChart'\n```\n---\n* 0.5.0 (2020/01/19)\n- Add DoughnutChart\n```\npod 'DarkEggKit/DoughnutChart'\n```\n---\n* 0.4.0 (2019/10/20)\n- Add ButtonMenu (Is not prefect now)\n```\npod 'DarkEggKit/ButtonMenu'\n```\n- Fix some bugs\n---\n* 0.3.1 (2019/09/30)\nUpdate to iOS 11\n---\n* 0.3.0 (2019/08/31)\nAdd AnimatedImageView\n```\npod 'DarkEggKit/AnimatedImageView'\n```\n---\n* 0.2.1 (2019/05/16)\nSet DZPaddinLabel to public\nDelete column in Logger.debug and Logger.error\n---\n* 0.2.0 (2019/03/17)\nFix some bugs\n---\n* 0.1.1 (2019/03/05)\nCommon, PaddingLabel, PopupMessage and SideMenu.\nPlease check README.md on git repo.\n---\n* 0.1.0\nFirst commit, with Common, PaddingLabel, PopupMessage and SideMenu",
   "homepage": "https://github.com/darkzero/DarkEggKit",
   "license": {
     "type": "MIT",
@@ -17,7 +17,7 @@
   },
   "source": {
     "git": "https://github.com/darkzero/DarkEggKit.git",
-    "tag": "0.5.1"
+    "tag": "0.5.2"
   },
   "default_subspecs": "Common",
   "subspecs": [
@@ -58,6 +58,9 @@
     {
       "name": "AnimatedImageView",
       "source_files": "DarkEggKit/Classes/AnimatedImageView/*.swift",
+      "resources": [
+        "DarkEggKit/Classes/AnimatedImageView/*.xcassets"
+      ],
       "dependencies": {
         "DarkEggKit/Common": [
 

@@ -1,20 +1,20 @@
 PODS:
-  - DarkEggKit (0.5.1):
-    - DarkEggKit/Common (= 0.5.1)
-  - DarkEggKit/AnimatedImageView (0.5.1):
+  - DarkEggKit (0.5.2):
+    - DarkEggKit/Common (= 0.5.2)
+  - DarkEggKit/AnimatedImageView (0.5.2):
     - DarkEggKit/Common
-  - DarkEggKit/BarChart (0.5.1):
+  - DarkEggKit/BarChart (0.5.2):
     - DarkEggKit/Common
-  - DarkEggKit/ButtonMenu (0.5.1):
+  - DarkEggKit/ButtonMenu (0.5.2):
     - DarkEggKit/Common
-  - DarkEggKit/Common (0.5.1)
-  - DarkEggKit/DoughnutChart (0.5.1):
+  - DarkEggKit/Common (0.5.2)
+  - DarkEggKit/DoughnutChart (0.5.2):
     - DarkEggKit/Common
-  - DarkEggKit/PaddingLabel (0.5.1):
+  - DarkEggKit/PaddingLabel (0.5.2):
     - DarkEggKit/Common
-  - DarkEggKit/PopupMessage (0.5.1):
+  - DarkEggKit/PopupMessage (0.5.2):
     - DarkEggKit/Common
-  - DarkEggKit/SideMenu (0.5.1):
+  - DarkEggKit/SideMenu (0.5.2):
     - DarkEggKit/Common
 
 DEPENDENCIES:
@@ -32,7 +32,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  DarkEggKit: 6c3e3d04bdbc63d2f75581c83ea5d36437e07bef
+  DarkEggKit: a5ca89fd00f45c4d6453f5d76a3f545b560cdfb5
 
 PODFILE CHECKSUM: 4cd41c5d220008e94d554f81968f303a550f2cc8
 
