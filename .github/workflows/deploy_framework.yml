@@ -4,9 +4,8 @@ on:
   push:
     #branches:
     #  - master
-    push:
-      tags:
-        - '*'
+    tags:
+      - '*'
 
 jobs:
   build:
