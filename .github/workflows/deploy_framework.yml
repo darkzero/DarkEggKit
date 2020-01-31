@@ -15,7 +15,6 @@ jobs:
     strategy:
       matrix:
         destination: ['platform=iOS Simulator,OS=13.2.2,name=iPhone 11']
-        framework_name: 'DarkEggKit'
     steps:
     # Checkout
     - name: Checkout source code
@@ -49,7 +48,7 @@ jobs:
     - name: Package .framework file
       run: |
         carthage build --no-skip-current
-        carthage archive ${{ matrix.framework_name }}
+        carthage archive DarkEggKit
       env:
         CI: true
   check_cocoapods:
