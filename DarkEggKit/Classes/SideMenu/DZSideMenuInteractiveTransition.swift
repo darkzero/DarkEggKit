@@ -19,10 +19,6 @@ public class DZSideMenuInteractiveTransition: UIPercentDrivenInteractiveTransiti
         self.transitionType = transitionType
         NotificationCenter.default.addObserver(self, selector: #selector(self.onMaskViewTapped(_:)), name: NSNotification.Name.DZSideMenu.Tap, object: nil)
     }
-    
-    deinit {
-        //print(#function)
-    }
 }
 
 extension DZSideMenuInteractiveTransition {

@@ -27,7 +27,6 @@ public class Logger: NSObject {
         #endif
     }
     
-    
     /// Print out error log in console
     ///
     /// - Parameters:
