@@ -11,6 +11,12 @@
 
 ## Update history
 
+### **0.5.2** (2020/01/31)
+
+> Fix some bugs in AnimationImageView
+> Add Carthage
+> Others
+
 ### **0.5.1** (2020/01/27)
 
 > Add BarChart
