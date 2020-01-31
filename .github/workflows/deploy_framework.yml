@@ -1,0 +1,67 @@
+name: Deploy Framework
+#
+on: 
+  push:
+    branches:
+      - master
+    tags:
+      - *
+
+jobs:
+  build:
+    name: Build
+    runs-on: macOS-latest
+    strategy:
+      matrix:
+        destination: ['platform=iOS Simulator,OS=13.2.2,name=iPhone 11']
+        framework_name: 'DarkEggKit'
+    steps:
+    # Checkout
+    - name: Checkout source code
+      uses: actions/checkout@master
+    # Pod install
+    - name: Run pod install
+      run: |
+        cd Example
+        pod install
+    # Build
+    - name: Build
+      run: |
+        echo "Start building"
+        xcodebuild -workspace Example/DarkEggKit.xcworkspace -scheme DarkEggKit-Example -sdk iphonesimulator -destination '${{ matrix.destination }}' ONLY_ACTIVE_ARCH=NO
+      env:
+        CI: true
+  carthage:
+    name: Deploy to Carthage
+    runs-on: macOS-latest
+    needs: build
+    steps:
+    # Checkout
+    - name: Checkout source code
+      uses: actions/checkout@master
+    # Install Carthage
+    - name: Install Carthage
+      run: |
+        brew update
+        brew outdated carthage || brew upgrade carthage
+    #
+    - name: Package .framework file
+      run: |
+        carthage build --no-skip-current
+        carthage archive ${{ matrix.framework_name }}
+      env:
+        CI: true
+  check_cocoapods:
+    name: Check cocoapods
+    runs-on: macOS-latest
+    needs: build
+    steps:
+    # Checkout
+    - name: Checkout source code
+      uses: actions/checkout@master
+    # Check cocoapods
+    - name: Check cocoapods spec
+      run: |
+        pod spec lint
+      env:
+        CI: true
