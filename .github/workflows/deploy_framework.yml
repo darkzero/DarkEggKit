@@ -2,8 +2,8 @@ name: Deploy Framework
 #
 on: 
   push:
-    branches:
-      - master
+    #branches:
+    #  - master
     push:
       tags:
         - '*'
@@ -48,7 +48,7 @@ jobs:
     - name: Package .framework file
       run: |
         carthage build --no-skip-current
-        carthage archive DarkEggKit
+        #carthage archive DarkEggKit
       env:
         CI: true
   check_cocoapods:
