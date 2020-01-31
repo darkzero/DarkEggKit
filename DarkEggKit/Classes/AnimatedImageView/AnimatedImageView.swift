@@ -308,7 +308,7 @@ extension AnimatedImageView {
         }
         // show progress
         DispatchQueue.main.async {
-            let width = max(min(self.bounds.width, self.bounds.height)/2.0, 40.0)
+            let width:CGFloat = max(min(self.bounds.width, self.bounds.height)/2.0, 64.0)
             let processPath = UIBezierPath()
             processPath.lineCapStyle    = CGLineCap.round
             let radius: CGFloat = width*0.75
@@ -322,7 +322,7 @@ extension AnimatedImageView {
                 self.progressLayer.cornerRadius = 8.0
                 self.progressLayer.backgroundColor = UIColor.gray.withAlphaComponent(0.3).cgColor
                 self.progressLayer.fillColor = UIColor.clear.cgColor
-                self.progressLayer.lineWidth = 12
+                self.progressLayer.lineWidth = 8.0
                 self.progressLayer.lineCap = .round
                 self.progressLayer.strokeEnd = 0.0
                 self.layer.addSublayer(self.progressLayer)
