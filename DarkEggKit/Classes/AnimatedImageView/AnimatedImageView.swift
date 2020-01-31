@@ -118,6 +118,7 @@ public class AnimatedImageView: UIImageView {
     public var aImage: AnimationImage? {
         didSet {
             if aImage != oldValue {
+                self.addDownloadProgress()
                 self.downloadCancelToken = aImage?.startLoad(completion: { [weak self] (result, aImage) in
                     if result {
                         DispatchQueue.main.async {
@@ -296,7 +297,7 @@ extension AnimatedImageView {
 }
 
 extension AnimatedImageView {
-    internal func showDownloadProgress(precent: Float) {
+    internal func addDownloadProgress() {
         // show placeholder image
         DispatchQueue.main.async {
             self.layer.contents = self.placeHolder?.cgImage
@@ -308,31 +309,42 @@ extension AnimatedImageView {
         // show progress
         DispatchQueue.main.async {
             let width = max(min(self.bounds.width, self.bounds.height)/2.0, 40.0)
-            let processPath = UIBezierPath();
-            processPath.lineCapStyle    = CGLineCap.round;
-            let radius: CGFloat = width*0.75;
-            let startAngle              = -(Float.pi) / 2;
-            let endAngle                = (precent * 2 * Float.pi) + startAngle;
-            let center = CGPoint(x: self.progressLayer.bounds.midX, y: self.progressLayer.bounds.midY)
+            let processPath = UIBezierPath()
+            processPath.lineCapStyle    = CGLineCap.round
+            let radius: CGFloat = width*0.75
+            let startAngle = -(Float.pi) / 2
+            let endAngle = (2 * Float.pi) + startAngle
             
             if self.progressLayer.superlayer == nil, self.progressLayer.frame.width == 0 {
                 self.progressLayer.frame = CGRect(origin: CGPoint(x: (self.bounds.width-width)/2, y: (self.bounds.height-width)/2),
                                                   size: CGSize(width: width, height: width))
-                self.progressLayer.strokeColor = UIColor.white.cgColor
+                self.progressLayer.strokeColor = UIColor.white.withAlphaComponent(0.8).cgColor
                 self.progressLayer.cornerRadius = 8.0
-                self.progressLayer.backgroundColor = UIColor.gray.withAlphaComponent(0.5).cgColor
+                self.progressLayer.backgroundColor = UIColor.gray.withAlphaComponent(0.3).cgColor
                 self.progressLayer.fillColor = UIColor.clear.cgColor
-                self.progressLayer.lineWidth = 6
+                self.progressLayer.lineWidth = 12
                 self.progressLayer.lineCap = .round
+                self.progressLayer.strokeEnd = 0.0
                 self.layer.addSublayer(self.progressLayer)
             }
             
-            processPath.move(to: CGPoint(x: self.progressLayer.bounds.midX,
-                                         y: (self.progressLayer.bounds.height-radius)/2))
+            let center = CGPoint(x: self.progressLayer.bounds.midX, y: self.progressLayer.bounds.midY)
             processPath.addArc(withCenter: center,
                                radius: radius/2, startAngle: CGFloat(startAngle), endAngle: CGFloat(endAngle), clockwise: true);
             self.progressLayer.path = processPath.cgPath
         }
+    }
+    
+    internal func showDownloadProgress(precent: Float) {
+        let arcAnimation = CABasicAnimation(keyPath: #keyPath(CAShapeLayer.strokeEnd))
+        //arcAnimation.beginTime = 0.0
+        arcAnimation.fromValue = self.progressLayer.presentation()?.strokeEnd
+        arcAnimation.toValue  = precent
+        arcAnimation.duration = 0.1
+        arcAnimation.isRemovedOnCompletion = false
+        arcAnimation.fillMode = CAMediaTimingFillMode.both
+        self.progressLayer.add(arcAnimation, forKey: "DarwPathAnimation")
+        CATransaction.commit()
     }
 }
 

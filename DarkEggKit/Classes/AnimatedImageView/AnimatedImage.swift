@@ -42,6 +42,7 @@ public class AnimationImage: NSObject {
 extension AnimationImage {
     internal func startLoad(completion: ((Bool, AnimationImage)->Void)?, progress: ((Float)->Void)? = nil) -> SessionDataTask.CancelToken {
         guard self.imageSource == nil else {
+            completion?(true, self)
             return -1
         }
         // completion handle
@@ -80,7 +81,7 @@ extension AnimationImage {
         guard let property = CGImageSourceCopyPropertiesAtIndex(imageSource, idx, nil) as? [String: Any] else {
             return 0.0
         }
-        let defaultDuration: TimeInterval = 0.0167
+        let defaultDuration: TimeInterval = 1.0/60.0
         var aniInfo: [String: Any]?
         
         if property[kCGImagePropertyGIFDictionary as String] as? [String: Any] != nil {         // gif

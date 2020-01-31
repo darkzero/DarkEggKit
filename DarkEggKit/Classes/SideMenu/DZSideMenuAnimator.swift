@@ -23,10 +23,6 @@ class DZSideMenuAnimator: NSObject {
     class func animator(with configuration: DZSideMenuConfiguration) -> DZSideMenuAnimator {
         return DZSideMenuAnimator(with: configuration)
     }
-    
-    deinit {
-        //print("\(#file),\(#function)")
-    }
 }
 
 extension DZSideMenuAnimator: UIViewControllerTransitioningDelegate {

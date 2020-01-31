@@ -8,6 +8,8 @@
 
 import UIKit
 
+import DarkEggKit
+
 class AboutViewController: UIViewController {
     @IBOutlet var aboutTextView: UITextView!
     
@@ -25,11 +27,12 @@ extension AboutViewController {
     private func loadAboutText() {
         do {
             let attrStr = try getTermString()
-            print(attrStr)
-            self.aboutTextView.text = attrStr
-            //self.aboutTextView.text = "attrStr"
+            let libVersion = DarkEggKit.Common.bundleDisplayName + "\n" + DarkEggKit.Common.fullVersionString
+            let appVersion = Common.bundleDisplayName + "\n" + Common.fullVersionString
+            Logger.debug(attrStr)
+            self.aboutTextView.text = libVersion + "\n\n" + appVersion + "\n\n" + attrStr
         } catch {
-            print("ファイルの読み込みに失敗しました: \(error.localizedDescription)")
+            Logger.error("load txt file failure: \(error.localizedDescription)")
         }
     }
     
@@ -42,10 +45,6 @@ extension AboutViewController {
         if let url =  Bundle.main.url(forResource: aboutFileName, withExtension: aboutFileExtension) {
             do {
                 let terms = try Data(contentsOf: url)
-//                let attributeString = try NSAttributedString(data: terms,
-//                                                             options: [NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.html],
-//                                                             documentAttributes: nil)
-//                return attributeString
                 if let str = String(data: terms, encoding: String.Encoding.utf8) {
                     return str
                 }
@@ -53,11 +52,11 @@ extension AboutViewController {
                     throw FileError.faildRead
                 }
             } catch let error {
-                print("ファイルの読み込みに失敗しました: \(error.localizedDescription)")
+                Logger.error("load txt file failure: \(error.localizedDescription)")
                 throw FileError.faildRead
             }
         } else {
-            print("aaaa")
+            Logger.error("txt file not exist.")
             throw FileError.notExitPath
         }
     }
