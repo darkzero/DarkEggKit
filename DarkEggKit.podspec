@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name                  = 'DarkEggKit'
-    s.version               = '0.5.1'
+    s.version               = '0.5.2'
     s.summary               = 'DarkEgg UI Kit.'
     s.swift_version         = '5.0'
     s.ios.deployment_target = '12.0'
@@ -19,6 +19,9 @@ Pod::Spec.new do |s|
     #   * Write the description between the DESC delimiters below.
     #   * Finally, don't worry about the indent, CocoaPods strips it!
     s.description = <<-DESC
+      * 0.5.2 (2020/01/31)
+      - fix some bugs
+      ---
       * 0.5.1 (2020/01/27)
       - Add BarChart
       ```
@@ -105,7 +108,7 @@ Pod::Spec.new do |s|
     # not release in this version
     s.subspec 'AnimatedImageView' do |aImageView|
         aImageView.source_files = 'DarkEggKit/Classes/AnimatedImageView/*.swift'
-        #aImageView.resources = ['DarkEggKit/Classes/AnimatedImageView/*.md']
+        aImageView.resources = ['DarkEggKit/Classes/AnimatedImageView/*.xcassets']
         aImageView.dependency 'DarkEggKit/Common'
     end
 

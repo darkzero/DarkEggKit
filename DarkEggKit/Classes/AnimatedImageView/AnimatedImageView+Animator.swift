@@ -56,7 +56,7 @@ extension AnimatedImageView {
         private let size: CGSize
         private let maxFrameCount: Int
         private let imageSource: CGImageSource
-        private let repeatMode: RepeatMode
+        private var repeatMode: RepeatMode
         private let maxTimeStep: TimeInterval = 1.0
         private var animatedFrames = [AnimatedFrame]()
         private var frameCount = 0
@@ -154,8 +154,18 @@ extension AnimatedImageView {
         func prepareFramesAsynchronously() {
             frameCount = Int(CGImageSourceGetCount(imageSource))
             animatedFrames.reserveCapacity(frameCount)
-            preloadQueue.async { [weak self] in
-                self?.setupAnimatedFrames()
+            // if only 1 frame, set repeat mode to .once
+            if frameCount <= 1 {
+                self.repeatMode = .once
+            }
+            // load frames
+            if self.repeatMode == .infinite {
+                preloadQueue.async { [weak self] in
+                    self?.setupAnimatedFrames()
+                }
+            }
+            else {
+                self.setupAnimatedFrames()
             }
         }
         
