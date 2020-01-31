@@ -54,34 +54,33 @@ class AnimatedImageViewController: UIViewController {
     
     deinit {
         Logger.debug()
-        self.aniImgView_1.clear()
-        self.aniImgView_1.removeFromSuperview()
-        self.aniImgView_1.delegate = nil
-        self.aniImgView_1 = nil
+        //self.aniImgView_1.clear()
+        //self.aniImgView_1.removeFromSuperview()
+        //self.aniImgView_1.delegate = nil
+        //self.aniImgView_1 = nil
     }
 }
 
-extension AnimatedImageViewController {
-    
-    override func willMove(toParent parent: UIViewController?) {
-        guard let _ = parent else {
-            //self.testView.removeFromSuperview()
-            //self.testView = nil
-            return
-        }
-    }
-}
-
+// MARK: - AnimatedImageViewDelegate
 extension AnimatedImageViewController: AnimatedImageViewDelegate {
+    /// the function that be called when the 'AnimatedImageView' has finished each animation loop.
+    /// - Parameters:
+    ///   - imageView: the AnimatedImageView
+    ///   - count: the loop count, start from 1
     func animatedImageView(_ imageView: AnimatedImageView, didPlayAnimationLoops count: UInt) {
-        Logger.debug(count)
+         Logger.debug(count)
     }
     
+    /// the function that be called when the 'AnimatedImageView' has reached the max repeat count
+    /// - Parameters:
+    ///   - imageView: the AnimatedImageView
+    ///   - didFinishAnimating: nothing
     func animatedImageView(_ imageView: AnimatedImageView, didFinishAnimating: Void) {
         Logger.debug()
     }
 }
 
+// MARK: - Actions
 extension AnimatedImageViewController {
     @IBAction func onClearCacheButtonClicked(_ sender: UIButton) {
         AnimatedImageView.clearCache()
