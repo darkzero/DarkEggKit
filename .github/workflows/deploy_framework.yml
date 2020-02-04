@@ -1,10 +1,11 @@
-name: Check Build
+name: Deploy Framework
 #
 on: 
   push:
-    branches:
-      - develop
-      #- master
+    #branches:
+    #  - master
+    tags:
+      - '*'
 
 jobs:
   build:
@@ -29,6 +30,26 @@ jobs:
         xcodebuild -workspace Example/DarkEggKit.xcworkspace -scheme DarkEggKit-Example -sdk iphonesimulator -destination '${{ matrix.destination }}' ONLY_ACTIVE_ARCH=NO
       env:
         CI: true
+  carthage:
+    name: Deploy to Carthage
+    runs-on: macOS-latest
+    needs: build
+    steps:
+    # Checkout
+    - name: Checkout source code
+      uses: actions/checkout@master
+    # Install Carthage
+    - name: Install Carthage
+      run: |
+        brew update
+        brew outdated carthage || brew upgrade carthage
+    #
+    - name: Package .framework file
+      run: |
+        carthage build --no-skip-current
+        #carthage archive DarkEggKit
+      env:
+        CI: true
   check_cocoapods:
     name: Check cocoapods
     runs-on: macOS-latest
@@ -40,7 +61,6 @@ jobs:
     # Check cocoapods
     - name: Check cocoapods spec
       run: |
-        ls
-        pod lib lint
+        pod spec lint
       env:
         CI: true
