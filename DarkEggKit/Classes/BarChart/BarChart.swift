@@ -22,6 +22,8 @@ public class BarChart: UIView {
     @IBInspectable var direction: Int = BarDirection.horizontal.rawValue
     @IBInspectable var padding: CGFloat = 8.0
     @IBInspectable var barWidth: CGFloat = 32.0
+    @IBInspectable var showText: Bool = false
+    @IBInspectable var textSize: CGFloat = 14.0
     public var animationType: BarAnimationType = .sequence
     
     private var inProgress: Bool = false
@@ -39,9 +41,9 @@ extension BarChart {
         #if TARGET_INTERFACE_BUILDER
         var tempData = BarChartData()
         tempData.maxValue = 100.0
-        tempData.items.append(BarChartItem(value: 45.0, color: .systemPink))
-        tempData.items.append(BarChartItem(value: 35.0, color: .systemOrange))
-        tempData.items.append(BarChartItem(value: 10.0, color: .lightGray))
+        tempData.items.append(BarChartItem(title: "Data 01", value: 45.0, color: .systemPink))
+        tempData.items.append(BarChartItem(title: "Data 02", value: 35.0, color: .systemOrange))
+        tempData.items.append(BarChartItem(title: "Data 03", value: 10.0, color: .lightGray))
 
         let itemCountF: CGFloat = CGFloat(tempData.items.count)
         var lineWidth: CGFloat = 0.0
@@ -78,6 +80,21 @@ extension BarChart {
             path.addLine(to: endPoint)
             item.color.set();
             path.stroke()
+
+            if self.showText {
+                let paragraphStyle = NSMutableParagraphStyle()
+                paragraphStyle.alignment = .left
+                let attrs = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: textSize),
+                             NSAttributedString.Key.paragraphStyle: paragraphStyle,
+                             NSAttributedString.Key.foregroundColor: UIColor.white,
+                             NSAttributedString.Key.backgroundColor: UIColor.clear]
+                let textSize =  NSString(string: item.title).size(withAttributes: attrs)
+                let temp = (lineWidth -  textSize.height)/2
+                let offsetValue: CGFloat = CGFloat(offset) * (lineWidth + self.padding) + temp
+                startPoint = CGPoint(x: 8.0, y: offsetValue)
+                NSString(string: item.title).draw(with: CGRect(origin: startPoint, size: CGSize(width: min(barLength-16.0, textSize.width), height: textSize.height)),
+                                                  options: [.usesLineFragmentOrigin], attributes: attrs, context: nil)
+            }
         })
         #endif
     }
@@ -85,6 +102,10 @@ extension BarChart {
 
 // MARK: - show animation functions
 extension BarChart {
+    private func addBars() {
+        
+    }
+    
     /// Animation of show
     /// - Parameters:
     ///   - animated: animated or not
@@ -144,6 +165,10 @@ extension BarChart {
             let pathLayer = BarLayer.createPath(with: self.frame.size, config: config)
             self.layers.append(pathLayer)
             self.layer.addSublayer(pathLayer)
+
+            if self.direction < 1 && self.showText {
+                pathLayer.drawText(item.title, textSize: self.textSize)
+            }
         }
         
         switch self.animationType {

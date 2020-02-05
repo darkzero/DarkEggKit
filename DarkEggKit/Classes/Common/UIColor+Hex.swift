@@ -59,19 +59,26 @@ extension UIColor {
             alpha: alpha
         );
     }
+}
+
+extension UIColor {
+    /// whiteScale of the color
+    /// .white is 1.0
+    /// .black is 0.0
+    public var whiteScale: CGFloat {
+        get {
+            var white:CGFloat = 0.0
+            self.getWhite(&white, alpha: nil)
+            return white
+        }
+    }
     
-    /**
-     Return gray level of the color object
-     - Return: gray color
-     */
-    public func getGary() -> Int {
-        var r: CGFloat = 1.0
-        var g: CGFloat = 1.0
-        var b: CGFloat = 1.0
-        var a: CGFloat = 1.0
-        self.getRed(&r, green: &g, blue: &b, alpha: &a)
-        var gray = Int(r*255.0*38.0 + g*255.0*75.0 + b*255.0*15.0) >> 7
-        gray = Int(ceil(CGFloat(gray) * a))
-        return gray;
+    /// grayscale of the color
+    /// .white is 0.0
+    /// .black is 1.0
+    public var grayscale: CGFloat {
+        get {
+            return 1.0 - self.whiteScale
+        }
     }
 }
