@@ -19,10 +19,12 @@ public class DoughnutChart: UIView {
             NSLayoutConstraint.activate(constraints)
         }
     }
-    private var inProgress: Bool = false
     
+    public var sortBeforeDisplay: Bool = false
     public var data: DoughnutChartData = DoughnutChartData()
+    
     private var layers: [DoughnutArcLayer] = []
+    private var inProgress: Bool = false
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -83,6 +85,10 @@ extension DoughnutChart {
             layer.removeFromSuperlayer()
         }
         self.layers.removeAll()
+        
+        if self.sortBeforeDisplay {
+            self.data.arcs.sort { $0.value > $1.value }
+        }
         
         // make animations
         let lineWidth = (outer - inner)/2
