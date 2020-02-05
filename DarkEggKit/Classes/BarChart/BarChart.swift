@@ -24,12 +24,13 @@ public class BarChart: UIView {
     @IBInspectable var barWidth: CGFloat = 32.0
     @IBInspectable var showText: Bool = false
     @IBInspectable var textSize: CGFloat = 14.0
+    
+    public var sortBeforeDisplay: Bool = false
     public var animationType: BarAnimationType = .sequence
-    
-    private var inProgress: Bool = false
-    
     public var data: BarChartData = BarChartData()
+    
     private var layers: [BarLayer] = []
+    private var inProgress: Bool = false
 }
 
 // MARK: - draw (default display in storyboard)
@@ -135,6 +136,10 @@ extension BarChart {
         default:
             lineWidth = min((self.bounds.width - self.padding * (itemCountF - 1.0)) / itemCountF, barWidth)
             break
+        }
+        
+        if self.sortBeforeDisplay {
+            self.data.items.sort { $0.value > $1.value }
         }
         
         self.data.items.enumerated().forEach { (offset, item) in

@@ -54,6 +54,7 @@ extension DoughnutChartViewController {
     @IBAction func onShowButtonClicked(_ sender: UIButton) {
         self.dountChart.clearChart(animated: false)
         self.dountChart.data = self.getData()
+        self.dountChart.sortBeforeDisplay = true
         self.dountChart.showChart(animated: chartAnimated, duration: 1.0)
     }
     

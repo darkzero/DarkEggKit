@@ -56,7 +56,7 @@ extension BarChartViewController {
     @IBAction func onShowButtonClicked(_ sender: UIButton) {
         self.barChart.clearChart(animated: false)
         self.barChart.data = self.getData()
-        //self.barChart.animationType = .sequence
+        self.barChart.sortBeforeDisplay = true
         self.barChart.showChart(animated: chartAnimated, duration: 1.0)
     }
     
