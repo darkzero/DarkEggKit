@@ -11,12 +11,14 @@ import UIKit
 /// - value: value of arc
 /// - color: color of arc
 public struct BarChartItem {
+    var title: String = ""
     var value: CGFloat = 20.0
     var color: UIColor = .orange
     
-    public init(value: CGFloat, color: UIColor) {
-      self.value = value
-      self.color = color
+    public init(title: String = "", value: CGFloat, color: UIColor) {
+        self.title = title
+        self.value = value
+        self.color = color
     }
 }
 

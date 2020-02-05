@@ -385,9 +385,9 @@
 		FCEC75EDEBD922AC2341D124F17BE846 /* DoughnutChart */ = {
 			isa = PBXGroup;
 			children = (
-				5AE723D704BBF2BB7FA0F71B6B5CE5B6 /* DoughnutArcLayer.swift */,
 				62083F3048617CD55E6A69665336F2CA /* DoughnutChart.swift */,
 				B6832BC28BED20AB98F936700A19A326 /* DoughnutChartData.swift */,
+				5AE723D704BBF2BB7FA0F71B6B5CE5B6 /* DoughnutArcLayer.swift */,
 			);
 			name = DoughnutChart;
 			sourceTree = "<group>";

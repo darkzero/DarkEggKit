@@ -56,7 +56,7 @@ extension BarChartViewController {
     @IBAction func onShowButtonClicked(_ sender: UIButton) {
         self.barChart.clearChart(animated: false)
         self.barChart.data = self.getData()
-        //self.barChart.animationType = .sequence
+        self.barChart.sortBeforeDisplay = true
         self.barChart.showChart(animated: chartAnimated, duration: 1.0)
     }
     
@@ -94,9 +94,9 @@ extension BarChartViewController {
     private func getData() -> BarChartData {
         var data: BarChartData = BarChartData()
         data.maxValue = 100.0
-        data.items.append(BarChartItem(value: mainValue, color: self.mainSlider.thumbTintColor ?? .systemPink))
-        data.items.append(BarChartItem(value: subValue, color: self.subSlider.thumbTintColor ?? .systemOrange))
-        data.items.append(BarChartItem(value: otherValue, color: self.otherSlider.thumbTintColor ?? .systemGray))
+        data.items.append(BarChartItem(title: "Main", value: mainValue, color: self.mainSlider.thumbTintColor ?? .systemPink))
+        data.items.append(BarChartItem(title: "Sub", value: subValue, color: self.subSlider.thumbTintColor ?? .systemOrange))
+        data.items.append(BarChartItem(title: "Other", value: otherValue, color: self.otherSlider.thumbTintColor ?? .systemGray))
         return data
     }
 }
