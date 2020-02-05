@@ -54,6 +54,32 @@ extension BarLayer {
         self.path = self.bezierPath.cgPath
         self.strokeEnd = 0.0
     }
+
+    internal func drawText(_ text: String, textSize: CGFloat) {
+        let textlayer = CATextLayer()
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = .left
+        let attrs = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: textSize),
+                     NSAttributedString.Key.paragraphStyle: paragraphStyle]
+        let textSize =  NSString(string: text).size(withAttributes: attrs)
+        let positionY: CGFloat = config.startPoint.y - textSize.height/2
+        let startPoint = CGPoint(x: 8.0, y: positionY)
+        let barLength = self.config.endPoint.x
+
+        if barLength-16 > textSize.width {
+            textlayer.contentsScale = UIScreen.main.scale
+            textlayer.frame = CGRect(origin: startPoint, size: CGSize(width: barLength-16.0, height: textSize.height))
+            textlayer.fontSize = 14
+            textlayer.alignmentMode = .left
+            textlayer.string = text
+            textlayer.isWrapped = true
+            textlayer.truncationMode = .end
+            textlayer.backgroundColor = UIColor.clear.cgColor
+            textlayer.foregroundColor = (self.config.barColor.whiteScale < 0.4) ? UIColor.white.cgColor : UIColor.black.cgColor
+            
+            self.addSublayer(textlayer)
+        }
+    }
 }
 
 extension BarLayer {
