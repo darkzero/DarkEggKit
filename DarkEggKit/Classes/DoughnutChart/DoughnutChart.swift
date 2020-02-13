@@ -9,16 +9,7 @@ import UIKit
 
 @IBDesignable
 public class DoughnutChart: UIView {
-    @IBInspectable var inner: CGFloat = 96.0
-    @IBInspectable var outer: CGFloat = 128.0 {
-        didSet {
-            let constraints = [
-                self.widthAnchor.constraint(equalToConstant: self.outer),
-                self.heightAnchor.constraint(equalToConstant: self.outer)
-            ]
-            NSLayoutConstraint.activate(constraints)
-        }
-    }
+    @IBInspectable var lineWidth: CGFloat = 16.0
     
     public var sortBeforeDisplay: Bool = false
     public var data: DoughnutChartData = DoughnutChartData()
@@ -48,14 +39,14 @@ extension DoughnutChart {
         tempData.arcs.append(DoughnutChartArc(value: 35.0, color: .systemOrange))
         tempData.arcs.append(DoughnutChartArc(value: 10.0, color: .lightGray))
 
-        let lineWidth = (outer - inner)/2
+        self.lineWidth = min(self.lineWidth, min(self.bounds.width, self.bounds.height)/2)
         var startAngle = -(CGFloat(Float.pi) / 2)
         for arc in tempData.arcs {
             let path = UIBezierPath()
-            path.lineWidth = lineWidth
+            path.lineWidth = self.lineWidth
             path.lineCapStyle = .butt
             let center: CGPoint = CGPoint(x: self.bounds.width / 2, y: self.bounds.height / 2)
-            let radius: CGFloat = (self.bounds.width - lineWidth) / 2
+            let radius: CGFloat = (min(self.bounds.width, self.bounds.height) - self.lineWidth) / 2
             let endAngle        = ((arc.value/self.data.maxLength) * 2 * CGFloat(Float.pi)) + startAngle
             path.addArc(withCenter: center, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: true);
             arc.color.set();
@@ -91,8 +82,8 @@ extension DoughnutChart {
         }
         
         // make animations
-        let lineWidth = (outer - inner)/2
         var startAngle = -(CGFloat(Float.pi) / 2)
+        self.lineWidth = min(self.lineWidth, min(self.bounds.width, self.bounds.height)/2)
         
         self.data.arcs.enumerated().forEach { (offset, arc) in
             let endAngle = ((arc.value/self.data.maxLength) * 2 * CGFloat(Float.pi)) + startAngle
@@ -103,7 +94,7 @@ extension DoughnutChart {
             config.endAngle = endAngle
             config.animationDuration = arcDuration
             config.arcColor = arc.color
-            config.lineWidth = lineWidth
+            config.lineWidth = self.lineWidth
             
             let pathLayer = DoughnutArcLayer.createPath(with: self.frame.size, config: config)
             self.layers.append(pathLayer)
