@@ -29,7 +29,7 @@ extension AboutViewController {
             let attrStr = try getTermString()
             let libVersion = DarkEggKit.Common.bundleDisplayName + "\n" + DarkEggKit.Common.fullVersionString
             let appVersion = Common.bundleDisplayName + "\n" + Common.fullVersionString
-            Logger.debug(attrStr)
+            //Logger.debug(attrStr)
             self.aboutTextView.text = libVersion + "\n\n" + appVersion + "\n\n" + attrStr
         } catch {
             Logger.error("load txt file failure: \(error.localizedDescription)")
