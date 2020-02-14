@@ -11,10 +11,17 @@
 
 ## Update history
 
+### **0.5.3** (2020/02/14)
+
+> Change property of doughnut chart
+> * delete inner and outer  
+> * add lineWidth  
+> Other 
+
 ### **0.5.2** (2020/01/31)
 
-> Fix some bugs in AnimationImageView
-> Add Carthage
+> Fix some bugs in AnimationImageView  
+> Add Carthage  
 > Others
 
 ### **0.5.1** (2020/01/27)
@@ -49,7 +56,7 @@
 
 ### **0.1.1** (2019/03/05)
 
-> Common, PaddingLabel, PopupMessage and SideMenu.
+> Common, PaddingLabel, PopupMessage and SideMenu.  
 > Please check README.md on git repo.
 
 ### **0.1.0**
