@@ -277,7 +277,7 @@
             </objects>
             <point key="canvasLocation" x="2529" y="299"/>
         </scene>
-        <!--About View Controller-->
+        <!--About-->
         <scene sceneID="Slo-TW-nH4">
             <objects>
                 <viewController storyboardIdentifier="AboutViewController" id="X8m-st-zyl" customClass="AboutViewController" customModule="DarkEggKit_Example" customModuleProvider="target" sceneMemberID="viewController">
@@ -285,7 +285,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="# DarkEggKit" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="f23-Vg-xZX">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="# DarkEggKit" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f23-Vg-xZX">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -301,6 +301,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kK2-Dn-k5y"/>
                     </view>
+                    <navigationItem key="navigationItem" title="About" id="twd-dQ-XkH"/>
                     <connections>
                         <outlet property="aboutTextView" destination="f23-Vg-xZX" id="YbB-Jn-82S"/>
                     </connections>
@@ -353,7 +354,7 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
-                                        <real key="value" value="1"/>
+                                        <real key="value" value="48"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -498,7 +499,7 @@
             </objects>
             <point key="canvasLocation" x="3500.0000000000005" y="-504.24107142857139"/>
         </scene>
-        <!--Bar Chart View Controller-->
+        <!--Bar Chart-->
         <scene sceneID="c6V-az-2gN">
             <objects>
                 <viewController id="qJe-hp-Qk6" customClass="BarChartViewController" customModule="DarkEggKit_Example" customModuleProvider="target" sceneMemberID="viewController">
@@ -669,7 +670,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EOt-jM-Z5E"/>
                     </view>
-                    <navigationItem key="navigationItem" id="P6I-QN-PNG"/>
+                    <navigationItem key="navigationItem" title="Bar Chart" id="P6I-QN-PNG"/>
                     <connections>
                         <outlet property="animationSwitch" destination="wFV-g9-Apk" id="RTS-l6-QT0"/>
                         <outlet property="animationTypeSegment" destination="sa1-ih-wXm" id="3SL-6p-iBH"/>
