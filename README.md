@@ -14,8 +14,8 @@
 ### **0.5.3** (2020/02/14)
 
 > Change property of doughnut chart
-> * delete inner and outer  
-> * add lineWidth
+>> delete inner and outer  
+>> add lineWidth  
 > Other 
 
 ### **0.5.2** (2020/01/31)
