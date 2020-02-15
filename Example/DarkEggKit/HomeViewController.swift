@@ -52,7 +52,6 @@ class HomeViewController: UIViewController, DarkEggPopupMessageProtocol {
 
 extension HomeViewController {
     @IBAction private func onAboutButtonClicked(_ sender: UINavigationItem) {
-        Logger.debug("Show About")
         if let uv = (storyboard?.instantiateViewController(withIdentifier: "AboutViewController") as? AboutViewController) {
             self.navigationController?.pushViewController(uv, animated: true)
         }

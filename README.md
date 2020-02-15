@@ -1,20 +1,31 @@
 # DarkEggKit
 
-[![CI Status](https://img.shields.io/travis/darkzero/DarkEggKit.svg?style=flat)](https://travis-ci.org/darkzero/DarkEggKit)
 [![Version](https://img.shields.io/cocoapods/v/DarkEggKit.svg?style=flat)](https://cocoapods.org/pods/DarkEggKit)
 [![License](https://img.shields.io/cocoapods/l/DarkEggKit.svg?style=flat)](https://cocoapods.org/pods/DarkEggKit)
 [![Platform](https://img.shields.io/cocoapods/p/DarkEggKit.svg?style=flat)](https://cocoapods.org/pods/DarkEggKit)
 
+[![CI Status](https://img.shields.io/travis/darkzero/DarkEggKit.svg?style=flat)](https://travis-ci.org/darkzero/DarkEggKit)
 ![](https://github.com/darkzero/DarkEggKit/workflows/Check%20Build/badge.svg?style=flat)
 
 ## [Wiki](https://github.com/darkzero/DarkEggKit/wiki)
 
 ## Update history
 
+### **0.5.4** (2020/02/14)
+
+> Change property of doughnut chart
+>> delete inner and outer  
+>> add lineWidth
+
+### **0.5.3** (2020/02/05)
+
+> Add text title to bar chart
+> Add sort before draw chart(both in Bar and Doughnut)
+
 ### **0.5.2** (2020/01/31)
 
-> Fix some bugs in AnimationImageView
-> Add Carthage
+> Fix some bugs in AnimationImageView  
+> Add Carthage  
 > Others
 
 ### **0.5.1** (2020/01/27)
@@ -49,7 +60,7 @@
 
 ### **0.1.1** (2019/03/05)
 
-> Common, PaddingLabel, PopupMessage and SideMenu.
+> Common, PaddingLabel, PopupMessage and SideMenu.  
 > Please check README.md on git repo.
 
 ### **0.1.0**
@@ -79,7 +90,7 @@ pod 'DarkEggKit'
 ## Wiki
 
 * [中文](https://github.com/darkzero/DarkEggKit/wiki)
-* [English](https://github.com/darkzero/DarkEggKit/wiki)
+* [English](https://github.com/darkzero/DarkEggKit/wiki)(TODO)
 
 ## Author
 
