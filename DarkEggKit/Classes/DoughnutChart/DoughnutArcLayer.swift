@@ -48,7 +48,7 @@ extension DoughnutArcLayer {
     
     private func drawPath() {
         let center: CGPoint = CGPoint(x: self.bounds.width / 2, y: self.bounds.height / 2)
-        let radius: CGFloat = (self.bounds.width - self.config.lineWidth) / 2
+        let radius: CGFloat = (min(self.bounds.width, self.bounds.height) - self.config.lineWidth) / 2
         self.strokeColor = self.config.arcColor.cgColor
         self.bezierPath.addArc(withCenter: center, radius: radius, startAngle: self.config.startAngle, endAngle: self.config.endAngle, clockwise: true)
         self.lineWidth = self.config.lineWidth
