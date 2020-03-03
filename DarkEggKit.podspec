@@ -105,7 +105,7 @@ Pod::Spec.new do |s|
         popupMessage.dependency 'DarkEggKit/Common'
     end
 
-    # DarkEggKit/SideMenu
+    # DarkEggKit/SideMenucu xiao
     s.subspec 'SideMenu' do |sideMenu|
         sideMenu.source_files = 'DarkEggKit/Classes/SideMenu/*.swift'
         #sideMenu.resources = ['DarkEggKit/Classes/SideMenu/*.md']
