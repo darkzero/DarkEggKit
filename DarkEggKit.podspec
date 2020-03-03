@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name                  = 'DarkEggKit'
-    s.version               = '0.5.4'
+    s.version               = '0.5.5'
     s.summary               = 'DarkEgg UI Kit.'
     s.swift_version         = '5.0'
     s.ios.deployment_target = '12.0'
@@ -19,6 +19,10 @@ Pod::Spec.new do |s|
     #   * Write the description between the DESC delimiters below.
     #   * Finally, don't worry about the indent, CocoaPods strips it!
     s.description = <<-DESC
+      * 0.5.5 (2020/03/04)
+      - Add bar align in BarChart
+      - Others
+      ---
       * 0.5.4 (2020/02/14)
       - Change property of doughnut chart (delete inner and outer, add lineWidth)
       ---
