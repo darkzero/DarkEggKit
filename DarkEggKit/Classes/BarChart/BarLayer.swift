@@ -55,27 +55,41 @@ extension BarLayer {
         self.strokeEnd = 0.0
     }
 
-    internal func drawText(_ text: String, textSize: CGFloat) {
+    internal func drawText(_ text: String, textSize: CGFloat, direction: BarDirection) {
         let textlayer = CATextLayer()
         let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.alignment = .left
+        paragraphStyle.alignment = (direction == .vertical ? .center : .left)
+        paragraphStyle.lineBreakMode = .byWordWrapping
+        //paragraphStyle.lineSpacing = 3.0
         let attrs = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: textSize),
                      NSAttributedString.Key.paragraphStyle: paragraphStyle]
-        let textSize =  NSString(string: text).size(withAttributes: attrs)
-        let positionY: CGFloat = config.startPoint.y - textSize.height/2
-        let startPoint = CGPoint(x: 8.0, y: positionY)
-        let barLength = self.config.endPoint.x
+        let layerSize = NSString(string: text).size(withAttributes: attrs)
+        var positionX: CGFloat = 0.0
+        var positionY: CGFloat = 0.0;
+        var allowableTextWidth = self.config.endPoint.x
+        switch direction {
+        case .horizontal:
+            positionX = 8.0
+            positionY = config.startPoint.y - layerSize.height/2
+            allowableTextWidth = self.config.endPoint.x - 16.0
+        case .vertical:
+            positionX = self.config.startPoint.x - layerSize.width/2
+            positionY = (self.config.startPoint.y + self.config.endPoint.y)/2 - layerSize.height/2
+            allowableTextWidth = self.config.lineWidth
+        }
+        let startPoint = CGPoint(x: positionX, y: positionY)
 
-        if barLength-16 > textSize.width {
+        if allowableTextWidth > layerSize.width {
+            textlayer.font = UIFont.systemFont(ofSize: textSize)
             textlayer.contentsScale = UIScreen.main.scale
-            textlayer.frame = CGRect(origin: startPoint, size: CGSize(width: barLength-16.0, height: textSize.height))
-            textlayer.fontSize = 14
-            textlayer.alignmentMode = .left
-            textlayer.string = text
-            textlayer.isWrapped = true
+            textlayer.frame = CGRect(origin: startPoint, size: CGSize(width: layerSize.width, height: layerSize.height))
+            textlayer.fontSize = textSize
+            textlayer.alignmentMode = (direction == .vertical ? .center : .left)
+            //textlayer.isWrapped = true
             textlayer.truncationMode = .end
             textlayer.backgroundColor = UIColor.clear.cgColor
             textlayer.foregroundColor = (self.config.barColor.whiteScale < 0.4) ? UIColor.white.cgColor : UIColor.black.cgColor
+            textlayer.string = text
             
             self.addSublayer(textlayer)
         }
