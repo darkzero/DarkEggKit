@@ -11,6 +11,10 @@
 
 ## Update history
 
+### **0.5.5** (2020/03/04)
+> Add bar align in BarChart
+> Others
+
 ### **0.5.4** (2020/02/14)
 
 > Change property of doughnut chart

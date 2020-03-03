@@ -43,6 +43,10 @@ class BarChartViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         self.barChart.data = self.getData()
         self.barChart.animationType = .sequence
+        self.barChart.barDirection = .vertical
+        self.barChart.barAlign = .center
+        self.barChart.barWidth = 60.0
+        self.barChart.textSize = 16.0
         self.barChart.showChart(animated: chartAnimated, duration: 1.0)
     }
 }
@@ -94,7 +98,7 @@ extension BarChartViewController {
     private func getData() -> BarChartData {
         var data: BarChartData = BarChartData()
         data.maxValue = 100.0
-        data.items.append(BarChartItem(title: "Main", value: mainValue, color: self.mainSlider.thumbTintColor ?? .systemPink))
+        data.items.append(BarChartItem(title: "Main\nrts", value: mainValue, color: self.mainSlider.thumbTintColor ?? .systemPink))
         data.items.append(BarChartItem(title: "Sub", value: subValue, color: self.subSlider.thumbTintColor ?? .systemOrange))
         data.items.append(BarChartItem(title: "Other", value: otherValue, color: self.otherSlider.thumbTintColor ?? .systemGray))
         return data

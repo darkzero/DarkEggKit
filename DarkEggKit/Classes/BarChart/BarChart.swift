@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum BarDirection: Int {
+public enum BarDirection: Int {
     case horizontal = 0
     case vertical = 1
 }
@@ -17,13 +17,31 @@ public enum BarAnimationType: Int {
     case sequence
 }
 
+public enum BarAlign: Int {
+    case left_top
+    case center
+    case right_bottom
+}
+
 @IBDesignable
 public class BarChart: UIView {
-    @IBInspectable var direction: Int = BarDirection.horizontal.rawValue
-    @IBInspectable var padding: CGFloat = 8.0
-    @IBInspectable var barWidth: CGFloat = 32.0
-    @IBInspectable var showText: Bool = false
-    @IBInspectable var textSize: CGFloat = 14.0
+    @IBInspectable var direction: Int = BarDirection.horizontal.rawValue {
+        didSet {
+            if let temp =  BarDirection(rawValue: direction) {
+                self.barDirection = temp
+            }
+            else {
+                self.barDirection = .horizontal
+            }
+        }
+    }
+    @IBInspectable public var padding: CGFloat = 8.0
+    @IBInspectable public var barWidth: CGFloat = 32.0
+    @IBInspectable public var showText: Bool = false
+    @IBInspectable public var textSize: CGFloat = 14.0
+    
+    public var barDirection: BarDirection = .horizontal
+    public var barAlign: BarAlign = .left_top
     
     public var sortBeforeDisplay: Bool = false
     public var animationType: BarAnimationType = .sequence
@@ -49,11 +67,11 @@ extension BarChart {
         let itemCountF: CGFloat = CGFloat(tempData.items.count)
         var lineWidth: CGFloat = 0.0
         var barLength: CGFloat = 0.0
-        switch self.direction {
-        case BarDirection.horizontal.rawValue:
+        switch self.barDirection {
+        case .horizontal:
             lineWidth = min((self.bounds.height - self.padding * (itemCountF - 1.0)) / itemCountF, barWidth)
             break
-        default:
+        case .vertical:
             lineWidth = min((self.bounds.width - self.padding * (itemCountF - 1.0)) / itemCountF, barWidth)
             break
         }
@@ -63,15 +81,15 @@ extension BarChart {
             path.lineCapStyle = .butt
             var startPoint: CGPoint = .zero
             var endPoint: CGPoint = .zero
-            switch self.direction {
-            case BarDirection.horizontal.rawValue:
-                let offsetValue: CGFloat = CGFloat(offset) * (lineWidth + self.padding) + lineWidth/2
+            switch self.barDirection {
+            case .horizontal:
+                let offsetValue: CGFloat = self.startOffset + CGFloat(offset) * (lineWidth + self.padding) + lineWidth/2
                 barLength = self.bounds.width/tempData.maxLength*item.value
                 startPoint = CGPoint(x: 0.0, y: offsetValue)
                 endPoint = CGPoint(x: barLength, y: offsetValue)
                 break
-            default:
-                let offsetValue: CGFloat = CGFloat(offset) * (lineWidth + self.padding) + lineWidth/2
+            case .vertical:
+                let offsetValue: CGFloat = self.startOffset + CGFloat(offset) * (lineWidth + self.padding) + lineWidth/2
                 barLength = self.bounds.height/tempData.maxLength*item.value
                 startPoint = CGPoint(x: offsetValue, y: self.bounds.height)
                 endPoint = CGPoint(x: offsetValue, y: self.bounds.height - barLength)
@@ -103,6 +121,23 @@ extension BarChart {
 
 // MARK: - show animation functions
 extension BarChart {
+    private var startOffset: CGFloat {
+        get {
+            switch (self.barDirection, self.barAlign) {
+                case (_, .left_top):
+                    return 0.0
+                case (.horizontal, .center):
+                    return (self.bounds.height - CGFloat(self.data.items.count) * (self.barWidth + self.padding) + self.padding) / 2.0
+                case (.vertical, .center):
+                    return (self.bounds.width - CGFloat(self.data.items.count) * (self.barWidth + self.padding) + self.padding) / 2.0
+                case (.horizontal, .right_bottom):
+                    return (self.bounds.height - CGFloat(self.data.items.count) * (self.barWidth + self.padding) + self.padding)
+                case (.vertical, .right_bottom):
+                    return (self.bounds.width - CGFloat(self.data.items.count) * (self.barWidth + self.padding) + self.padding)
+            }
+        }
+    }
+    
     private func addBars() {
         
     }
@@ -129,11 +164,11 @@ extension BarChart {
         let itemCountF: CGFloat = CGFloat(self.data.items.count)
         var lineWidth: CGFloat = 0.0
         var barLength: CGFloat = 0.0
-        switch self.direction {
-        case BarDirection.horizontal.rawValue:
+        switch self.barDirection {
+        case .horizontal:
             lineWidth = min((self.bounds.height - self.padding * (itemCountF - 1.0)) / itemCountF, barWidth)
             break
-        default:
+        case .vertical:
             lineWidth = min((self.bounds.width - self.padding * (itemCountF - 1.0)) / itemCountF, barWidth)
             break
         }
@@ -146,15 +181,15 @@ extension BarChart {
             var startPoint: CGPoint = .zero
             var endPoint: CGPoint = .zero
             let arcDuration: CFTimeInterval = duration * CFTimeInterval(item.value/self.data.maxLength)
-            switch self.direction {
-            case BarDirection.horizontal.rawValue:
-                let offsetValue: CGFloat = CGFloat(offset) * (lineWidth + self.padding) + lineWidth/2
+            switch self.barDirection {
+            case .horizontal:
+                let offsetValue: CGFloat = CGFloat(offset) * (lineWidth + self.padding) + lineWidth/2 + self.startOffset
                 barLength = self.bounds.width/self.data.maxLength*item.value
                 startPoint = CGPoint(x: 0.0, y: offsetValue)
                 endPoint = CGPoint(x: barLength, y: offsetValue)
                 break
-            default:
-                let offsetValue: CGFloat = CGFloat(offset) * (lineWidth + self.padding) + lineWidth/2
+            case .vertical:
+                let offsetValue: CGFloat = CGFloat(offset) * (lineWidth + self.padding) + lineWidth/2 + self.startOffset
                 barLength = self.bounds.height/self.data.maxLength*item.value
                 startPoint = CGPoint(x: offsetValue, y: self.bounds.height)
                 endPoint = CGPoint(x: offsetValue, y: self.bounds.height - barLength)
@@ -171,8 +206,8 @@ extension BarChart {
             self.layers.append(pathLayer)
             self.layer.addSublayer(pathLayer)
 
-            if self.direction < 1 && self.showText {
-                pathLayer.drawText(item.title, textSize: self.textSize)
+            if self.showText {
+                pathLayer.drawText(item.title, textSize: self.textSize, direction: self.barDirection)
             }
         }
         
