@@ -42,7 +42,6 @@ class BarChartViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         self.barChart.data = self.getData()
-        self.barChart.backgroundColor = .white
         self.barChart.animationType = .sequence
         self.barChart.barDirection = .vertical
         self.barChart.barAlign = .center
