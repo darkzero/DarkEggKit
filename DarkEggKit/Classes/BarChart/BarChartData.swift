@@ -14,11 +14,13 @@ public struct BarChartItem {
     var title: String = ""
     var value: CGFloat = 20.0
     var color: UIColor = .orange
+    var textColor: UIColor?
     
-    public init(title: String = "", value: CGFloat, color: UIColor) {
+    public init(title: String = "", value: CGFloat, color: UIColor, textColor: UIColor? = nil) {
         self.title = title
         self.value = value
         self.color = color
+        self.textColor = textColor
     }
 }
 
