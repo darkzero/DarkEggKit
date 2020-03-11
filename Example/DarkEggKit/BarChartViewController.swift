@@ -43,11 +43,11 @@ class BarChartViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         self.barChart.data = self.getData()
         self.barChart.animationType = .sequence
-        self.barChart.barDirection = .horizontal
+        self.barChart.barDirection = .vertical
         self.barChart.barAlign = .center
         self.barChart.barWidth = 60.0
         self.barChart.textSize = 16.0
-        self.barChart.textLocation = .tail
+        self.barChart.textLocation = .head
         self.barChart.showChart(animated: chartAnimated, duration: 1.0)
     }
 }

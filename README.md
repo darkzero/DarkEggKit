@@ -11,6 +11,9 @@
 
 ## Update history
 
+### 0.5.7 (2020/03/11)
+> Add text location (BarChart)
+
 ### 0.5.6 (2020/03/06)
 > Add bar align in BarChart
 > Others
