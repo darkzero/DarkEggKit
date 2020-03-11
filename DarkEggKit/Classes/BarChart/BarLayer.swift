@@ -55,7 +55,7 @@ extension BarLayer {
         self.strokeEnd = 0.0
     }
 
-    internal func drawText(_ text: String, textSize: CGFloat, textColor: UIColor?, direction: BarDirection) {
+    internal func drawText(_ text: String, textSize: CGFloat, textColor: UIColor?, direction: BarDirection, location: BarTextLocation = .middle) {
         let textlayer = CATextLayer()
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = (direction == .vertical ? .center : .left)
@@ -67,15 +67,37 @@ extension BarLayer {
         var positionX: CGFloat = 0.0
         var positionY: CGFloat = 0.0;
         var allowableTextWidth = self.config.endPoint.x
-        switch direction {
-        case .horizontal:
+        switch (direction, location) {
+        case (.horizontal, .middle):
             positionX = 8.0
             positionY = config.startPoint.y - layerSize.height/2
             allowableTextWidth = self.config.endPoint.x - 16.0
-        case .vertical:
+            break
+        case (.vertical, .middle):
             positionX = self.config.startPoint.x - layerSize.width/2
             positionY = (self.config.startPoint.y + self.config.endPoint.y)/2 - layerSize.height/2
             allowableTextWidth = self.config.lineWidth
+            break
+        case (.horizontal, .head):
+            positionX = self.config.endPoint.x + 8
+            positionY = config.startPoint.y - layerSize.height/2
+            allowableTextWidth = layerSize.width + 1
+            break
+        case (.vertical, .head):
+            positionX = self.config.startPoint.x - layerSize.width/2
+            positionY = self.config.endPoint.y - layerSize.height - 8
+            allowableTextWidth = self.config.lineWidth
+            break
+        case (.horizontal, _):
+            positionX = 8.0
+            positionY = config.startPoint.y - layerSize.height/2
+            allowableTextWidth = self.config.endPoint.x - 16.0
+            break
+        case (.vertical, .tail):
+            positionX = self.config.startPoint.x - layerSize.width/2
+            positionY = self.config.startPoint.y + 8
+            allowableTextWidth = self.config.lineWidth
+            break
         }
         let startPoint = CGPoint(x: positionX, y: positionY)
 

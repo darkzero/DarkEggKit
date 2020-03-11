@@ -23,6 +23,12 @@ public enum BarAlign: Int {
     case right_bottom
 }
 
+public enum BarTextLocation: Int {
+    case middle
+    case head
+    case tail
+}
+
 @IBDesignable
 public class BarChart: UIView {
     @IBInspectable var direction: Int = BarDirection.horizontal.rawValue {
@@ -39,6 +45,8 @@ public class BarChart: UIView {
     @IBInspectable public var barWidth: CGFloat = 32.0
     @IBInspectable public var showText: Bool = false
     @IBInspectable public var textSize: CGFloat = 14.0
+    
+    public var textLocation: BarTextLocation = .middle
     
     public var barDirection: BarDirection = .horizontal
     public var barAlign: BarAlign = .left_top
@@ -207,7 +215,7 @@ extension BarChart {
             self.layer.addSublayer(pathLayer)
 
             if self.showText {
-                pathLayer.drawText(item.title, textSize: self.textSize, textColor: item.textColor, direction: self.barDirection)
+                pathLayer.drawText(item.title, textSize: self.textSize, textColor: item.textColor, direction: self.barDirection, location: self.textLocation)
             }
         }
         
