@@ -207,7 +207,7 @@ extension BarChart {
             self.layer.addSublayer(pathLayer)
 
             if self.showText {
-                pathLayer.drawText(item.title, textSize: self.textSize, direction: self.barDirection)
+                pathLayer.drawText(item.title, textSize: self.textSize, textColor: item.textColor, direction: self.barDirection)
             }
         }
         

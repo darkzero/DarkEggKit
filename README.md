@@ -11,6 +11,10 @@
 
 ## Update history
 
+### 0.5.6 (2020/03/06)
+> Add bar align in BarChart
+> Others
+
 ### **0.5.5** (2020/03/04)
 > Add bar align in BarChart
 > Others

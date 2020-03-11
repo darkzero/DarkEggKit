@@ -98,7 +98,7 @@ extension BarChartViewController {
     private func getData() -> BarChartData {
         var data: BarChartData = BarChartData()
         data.maxValue = 100.0
-        data.items.append(BarChartItem(title: "Main\nrts", value: mainValue, color: self.mainSlider.thumbTintColor ?? .systemPink))
+        data.items.append(BarChartItem(title: "Main\nrts", value: mainValue, color: self.mainSlider.thumbTintColor ?? .systemPink, textColor: UIColor.red))
         data.items.append(BarChartItem(title: "Sub", value: subValue, color: self.subSlider.thumbTintColor ?? .systemOrange))
         data.items.append(BarChartItem(title: "Other", value: otherValue, color: self.otherSlider.thumbTintColor ?? .systemGray))
         return data

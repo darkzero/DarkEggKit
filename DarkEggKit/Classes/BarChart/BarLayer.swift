@@ -55,7 +55,7 @@ extension BarLayer {
         self.strokeEnd = 0.0
     }
 
-    internal func drawText(_ text: String, textSize: CGFloat, direction: BarDirection) {
+    internal func drawText(_ text: String, textSize: CGFloat, textColor: UIColor?, direction: BarDirection) {
         let textlayer = CATextLayer()
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = (direction == .vertical ? .center : .left)
@@ -88,7 +88,7 @@ extension BarLayer {
             //textlayer.isWrapped = true
             textlayer.truncationMode = .end
             textlayer.backgroundColor = UIColor.clear.cgColor
-            textlayer.foregroundColor = (self.config.barColor.whiteScale < 0.4) ? UIColor.white.cgColor : UIColor.black.cgColor
+            textlayer.foregroundColor = textColor?.cgColor ?? ((self.config.barColor.whiteScale < 0.4) ? UIColor.white.cgColor : UIColor.black.cgColor)
             textlayer.string = text
             
             self.addSublayer(textlayer)
