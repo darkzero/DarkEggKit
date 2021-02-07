@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name                  = 'DarkEggKit'
-    s.version               = '0.5.7'
+    s.version               = '1.0.0'
     s.summary               = 'DarkEgg UI Kit.'
     s.swift_version         = '5.0'
     s.ios.deployment_target = '12.0'
@@ -19,6 +19,10 @@ Pod::Spec.new do |s|
     #   * Write the description between the DESC delimiters below.
     #   * Finally, don't worry about the indent, CocoaPods strips it!
     s.description = <<-DESC
+      * 1.0.0 (2021/02/28)
+        - Delete text in BarChart
+        -
+      ---
       * 0.5.7 (2020/03/11)
       - Add text location (BarChart)
       ---
@@ -85,15 +89,11 @@ Pod::Spec.new do |s|
     DESC
 
     s.homepage         = 'https://github.com/darkzero/DarkEggKit'
-    # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
     s.author           = { 'darkzero' => 'darkzero_mk2@hotmail.com' }
     s.source           = { :git => 'https://github.com/darkzero/DarkEggKit.git', :tag => s.version.to_s }
-    # s.social_media_url = 'https://twitter.com/darkzero_mk2'
 
     s.ios.deployment_target = '10.0'
-    #s.source_files = 'DarkEggKit/Classes/**/*'
-    #s.resources = ['DarkEggKit/Classes/PopupMessage/*.xcassets']
     s.default_subspec = 'Common'
 
     # DarkEggKit/Common
@@ -133,11 +133,11 @@ Pod::Spec.new do |s|
 
     # DarkEggKit/ButtonMenu
     # not release in this version
-    s.subspec 'ButtonMenu' do |buttonMenu|
-        buttonMenu.source_files = 'DarkEggKit/Classes/ButtonMenu/*.swift'
-        buttonMenu.resources = ['DarkEggKit/Classes/ButtonMenu/*.xcassets']
-        buttonMenu.dependency 'DarkEggKit/Common'
-    end
+#    s.subspec 'ButtonMenu' do |buttonMenu|
+#        buttonMenu.source_files = 'DarkEggKit/Classes/ButtonMenu/*.swift'
+#        buttonMenu.resources = ['DarkEggKit/Classes/ButtonMenu/*.xcassets']
+#        buttonMenu.dependency 'DarkEggKit/Common'
+#    end
 
     # DarkEggKitit/DoughnutChart
     # will be released in version 0.5.0

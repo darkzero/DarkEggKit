@@ -52,6 +52,7 @@ extension DoughnutArcLayer {
         self.strokeColor = self.config.arcColor.cgColor
         self.bezierPath.addArc(withCenter: center, radius: radius, startAngle: self.config.startAngle, endAngle: self.config.endAngle, clockwise: true)
         self.lineWidth = self.config.lineWidth
+        self.lineCap = .butt
         self.path = self.bezierPath.cgPath
         self.strokeEnd = 0.0
     }
@@ -94,7 +95,7 @@ extension DoughnutArcLayer {
             revAnimation.toValue = 0.0
             revAnimation.isRemovedOnCompletion = false
             revAnimation.fillMode = CAMediaTimingFillMode.both
-            self.removeAllAnimations()
+            //self.removeAllAnimations()
             add(revAnimation, forKey: "HidePathAnimation")
             
             CATransaction.commit()
