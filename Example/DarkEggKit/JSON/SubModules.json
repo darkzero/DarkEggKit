@@ -33,13 +33,6 @@
         }]
     },
     {
-        "section_title": "Button Menu",
-        "cells": [{
-            "title": "ButtonMenu Sample",
-            "segue_id": "ShowButtonMenuScene"
-        }]
-    },
-    {
         "section_title": "Chart",
         "cells": [{
             "title": "Doughnut Chart Sample",

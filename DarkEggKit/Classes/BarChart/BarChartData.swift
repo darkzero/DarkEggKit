@@ -20,10 +20,11 @@ public struct BarChartItem {
         self.title = title
         self.value = value
         self.color = color
-        self.textColor = textColor
+        self.textColor = (textColor != nil) ? textColor : color
     }
 }
 
+/// Bar Chart Data
 public struct BarChartData {
     public var maxValue: CGFloat = 100.0
     public var items: [BarChartItem] = []

@@ -39,6 +39,7 @@
 		A94AC62CB219DFD58838A1B972B90BDE /* BarLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD3E0D65D86BB444569B22163989FCD /* BarLayer.swift */; };
 		ADAA86A3CF5A74DD89A37766E2C37484 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFDFC1188911A4EEB878BD1FC166C76 /* Common.swift */; };
 		B22C8D0514581D3DE3A3F7C9766FE10C /* DZButtonMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20E58CFA64F2B2AEFE863FA9C2AD303 /* DZButtonMenu.swift */; };
+		B707160425CAC2F800565EDF /* BarAnimationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B707160325CAC2F800565EDF /* BarAnimationConfiguration.swift */; };
 		C26E0FBF0ED237C6AA60893CFFB4D062 /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE622A8C10BABC86134A40F4107FC0 /* AnimatedImageView.swift */; };
 		C3374A579EABCC45885CA65D62104059 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167DED2F98612FC8B6C8B94B105B05F2 /* Logger.swift */; };
 		C3AD44BCC0D07B91A0C4161FC52C14DA /* DZPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B367B652333BD6F55F87AE98EE69C677 /* DZPaddingLabel.swift */; };
@@ -125,6 +126,7 @@
 		B30AC4C87A41BA5AFEE3E24A8228E5CD /* Pods-DarkEggKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DarkEggKit_Tests-dummy.m"; sourceTree = "<group>"; };
 		B367B652333BD6F55F87AE98EE69C677 /* DZPaddingLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DZPaddingLabel.swift; path = DarkEggKit/Classes/PaddingLabel/DZPaddingLabel.swift; sourceTree = "<group>"; };
 		B6832BC28BED20AB98F936700A19A326 /* DoughnutChartData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DoughnutChartData.swift; path = DarkEggKit/Classes/DoughnutChart/DoughnutChartData.swift; sourceTree = "<group>"; };
+		B707160325CAC2F800565EDF /* BarAnimationConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BarAnimationConfiguration.swift; path = DarkEggKit/Classes/BarChart/BarAnimationConfiguration.swift; sourceTree = "<group>"; };
 		BA2F0236D5DA9D6F039BB5B65F796C85 /* AnimatedImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedImage.swift; path = DarkEggKit/Classes/AnimatedImageView/AnimatedImage.swift; sourceTree = "<group>"; };
 		BEBB9608DE80B82BA560F679366A4CAD /* UIViewController+SideMenu.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+SideMenu.swift"; path = "DarkEggKit/Classes/SideMenu/UIViewController+SideMenu.swift"; sourceTree = "<group>"; };
 		C407C87E054462B6F032994059A1A3D7 /* Pods-DarkEggKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DarkEggKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -176,8 +178,8 @@
 		1C4B276EF6517D2F6496F46FA1AEDA89 /* DarkEggKit */ = {
 			isa = PBXGroup;
 			children = (
-				FF78163A2C9835BAD7141980C7FCFA11 /* AnimatedImageView */,
 				5A42D141EB7C6793E50396D1B32CF971 /* BarChart */,
+				FF78163A2C9835BAD7141980C7FCFA11 /* AnimatedImageView */,
 				3A83962654355CAD3029DAEABAB6166D /* ButtonMenu */,
 				FD52DE09370D64B905861B16B080C1CF /* Common */,
 				FCEC75EDEBD922AC2341D124F17BE846 /* DoughnutChart */,
@@ -241,6 +243,7 @@
 				95EDFD6271D9B4BA38ABF5EF8345DAB1 /* BarChart.swift */,
 				21046F3DD7A12D01E1CACE47311C3DB1 /* BarChartData.swift */,
 				5BD3E0D65D86BB444569B22163989FCD /* BarLayer.swift */,
+				B707160325CAC2F800565EDF /* BarAnimationConfiguration.swift */,
 			);
 			name = BarChart;
 			sourceTree = "<group>";
@@ -572,6 +575,7 @@
 				C26E0FBF0ED237C6AA60893CFFB4D062 /* AnimatedImageView.swift in Sources */,
 				D547ACECF2778591072486976FB551CA /* Array+SafeIndex.swift in Sources */,
 				0BA0B3D1812B1548BD59FE9BB1CCD31F /* BarChart.swift in Sources */,
+				B707160425CAC2F800565EDF /* BarAnimationConfiguration.swift in Sources */,
 				19E4A100B64D9998DAC429F13895A434 /* BarChartData.swift in Sources */,
 				A94AC62CB219DFD58838A1B972B90BDE /* BarLayer.swift in Sources */,
 				93F4BD55ADB77632166A72C91023F379 /* CGRect+Scale.swift in Sources */,

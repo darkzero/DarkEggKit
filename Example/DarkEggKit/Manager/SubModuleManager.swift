@@ -23,7 +23,6 @@ struct ModuleCell: Codable {
 class SubModuleManager: NSObject {
     // MARK: - Properties
     internal var moduleSections: [ModuleSection] = []
-    
     // MARK: - Singleton
     static let shared : SubModuleManager = {SubModuleManager()}()
 }
@@ -36,8 +35,7 @@ private struct FileInfo {
 extension SubModuleManager {
     private var jsonFileInfo: FileInfo {
         get {
-            return FileInfo(name: "SubModules",
-                            type: "json")
+            return FileInfo(name: "SubModules", type: "json")
         }
     }
     

@@ -16,11 +16,14 @@ class DoughnutChartViewController: UIViewController {
     @IBOutlet var mainSlider: UISlider!
     @IBOutlet var subSlider: UISlider!
     @IBOutlet var otherSlider: UISlider!
+    
     @IBOutlet var mainValueLabel: UILabel!
     @IBOutlet var subValueLabel: UILabel!
     @IBOutlet var otherValueLabel: UILabel!
-    @IBOutlet var animationSwitch: UISwitch!
     
+    @IBOutlet var animationSwitch: UISwitch!
+    @IBOutlet var sortSwitch: UISwitch!
+   
     // values
     var mainValue: CGFloat {
         get { return CGFloat(roundf(self.mainSlider.value)) }
@@ -34,13 +37,28 @@ class DoughnutChartViewController: UIViewController {
     var chartAnimated: Bool {
         get { return self.animationSwitch.isOn }
     }
+    var sortBeforeDisplay: Bool {
+        get { return self.sortSwitch.isOn }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // bug in ios14, the init value of slider not work
+        self.mainSlider.value = 45
+        self.subSlider.value = 25
+        self.otherSlider.value = 10
     }
     
     override func viewDidAppear(_ animated: Bool) {
         self.dountChart.data = self.getData()
+        
+        //let angel = CGFloat(M_PI/4)
+        //let trans = CATransform3DMakeRotation(angel, 1, 1, 0)
+        //dountChart.layer.transform = trans
+        
+        self.dountChart.sortBeforeDisplay = sortBeforeDisplay
+        
         self.dountChart.showChart(animated: chartAnimated, duration: 1.0)
     }
 }
@@ -54,12 +72,12 @@ extension DoughnutChartViewController {
     @IBAction func onShowButtonClicked(_ sender: UIButton) {
         self.dountChart.clearChart(animated: false)
         self.dountChart.data = self.getData()
-        self.dountChart.sortBeforeDisplay = true
+        self.dountChart.sortBeforeDisplay = sortBeforeDisplay
         self.dountChart.showChart(animated: chartAnimated, duration: 1.0)
     }
     
     @IBAction func onSliderValueChanged(_ sender: UISlider) {
-        let value = roundf(sender.value)
+        let value = Int(roundf(sender.value))
         switch sender {
         case self.mainSlider:
             self.mainValueLabel.text = "\(value)"
