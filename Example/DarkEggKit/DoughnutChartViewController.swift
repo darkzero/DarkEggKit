@@ -43,6 +43,11 @@ class DoughnutChartViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // bug in ios14, the init value of slider not work
+        self.mainSlider.value = 45
+        self.subSlider.value = 25
+        self.otherSlider.value = 10
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -72,7 +77,7 @@ extension DoughnutChartViewController {
     }
     
     @IBAction func onSliderValueChanged(_ sender: UISlider) {
-        let value = roundf(sender.value)
+        let value = Int(roundf(sender.value))
         switch sender {
         case self.mainSlider:
             self.mainValueLabel.text = "\(value)"

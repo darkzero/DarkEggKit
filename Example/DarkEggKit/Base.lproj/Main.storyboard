@@ -402,7 +402,7 @@
                                     <action selector="onSliderValueChanged:" destination="4Au-sR-MMy" eventType="valueChanged" id="bIn-ks-TrG"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="45" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="eOW-9p-xfw">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="43" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="eOW-9p-xfw">
                                 <rect key="frame" x="62" y="564" width="290" height="31"/>
                                 <color key="minimumTrackTintColor" systemColor="systemPinkColor"/>
                                 <color key="thumbTintColor" systemColor="systemPinkColor"/>
