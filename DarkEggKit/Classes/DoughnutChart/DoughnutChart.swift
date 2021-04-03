@@ -97,6 +97,9 @@ extension DoughnutChart {
             config.lineWidth = self.lineWidth
             
             let pathLayer = DoughnutArcLayer.createPath(with: self.frame.size, config: config)
+//            if offset == self.data.arcs.count-1 || offset == 0 {
+//                pathLayer.lineCap = .round;
+//            }
             self.layers.append(pathLayer)
             self.layer.addSublayer(pathLayer)
             
@@ -170,6 +173,7 @@ extension DoughnutChart {
         }
         
         self.layers[idx].hide(animated: animated, completion: {
+            self.layers[idx].opacity = 0.0
             self.startHideAnimation(animated: animated, index: idx-1, completion: completion)
         })
     }

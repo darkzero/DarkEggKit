@@ -38,14 +38,19 @@ class BarChartViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // bug in ios14, the init value of slider not work
+        self.mainSlider.value = 45
+        self.subSlider.value = 25
+        self.otherSlider.value = 10
     }
     
     override func viewDidAppear(_ animated: Bool) {
         self.barChart.data = self.getData()
         self.barChart.animationType = .sequence
         self.barChart.barDirection = .vertical
-        self.barChart.barAlign = .center
-        self.barChart.barWidth = 60.0
+        self.barChart.barAlign = .left_top
+        self.barChart.barWidth = 32.0
         self.barChart.textSize = 16.0
         self.barChart.textLocation = .head
         self.barChart.showChart(animated: chartAnimated, duration: 1.0)
@@ -62,11 +67,12 @@ extension BarChartViewController {
         self.barChart.clearChart(animated: false)
         self.barChart.data = self.getData()
         self.barChart.sortBeforeDisplay = true
+        //self.barChart.barDirection = .horizontal
         self.barChart.showChart(animated: chartAnimated, duration: 1.0)
     }
     
     @IBAction func onSliderValueChanged(_ sender: UISlider) {
-        let value = roundf(sender.value)
+        let value = Int(roundf(sender.value))
         switch sender {
         case self.mainSlider:
             self.mainValueLabel.text = "\(value)"
@@ -99,7 +105,7 @@ extension BarChartViewController {
     private func getData() -> BarChartData {
         var data: BarChartData = BarChartData()
         data.maxValue = 100.0
-        data.items.append(BarChartItem(title: "Main\nrts", value: mainValue, color: self.mainSlider.thumbTintColor ?? .systemPink))
+        data.items.append(BarChartItem(title: "Main", value: mainValue, color: self.mainSlider.thumbTintColor ?? .systemPink))
         data.items.append(BarChartItem(title: "Sub", value: subValue, color: self.subSlider.thumbTintColor ?? .systemOrange))
         data.items.append(BarChartItem(title: "Other", value: otherValue, color: self.otherSlider.thumbTintColor ?? .systemGray))
         return data

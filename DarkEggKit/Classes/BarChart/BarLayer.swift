@@ -7,17 +7,17 @@
 
 import UIKit
 
-internal struct BarAnimationConfiguration {
-    internal var startPoint: CGPoint = .zero
-    internal var endPoint: CGPoint = .zero
-    internal var animationDuration: CFTimeInterval = 0.4
-    internal var barColor: UIColor = .red
-    internal var lineWidth: CGFloat = 2.0
-}
-
 class BarLayer: CAShapeLayer {
     private let bezierPath: UIBezierPath = UIBezierPath()
-    internal var config: BarAnimationConfiguration = BarAnimationConfiguration()
+    
+    //
+    var config: BarConfiguration = BarConfiguration()
+    
+    // title: String = ""
+    // value: CGFloat = 20.0
+    // color: UIColor = .orange
+    // textColor: UIColor?
+    var item: BarChartItem?
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -27,7 +27,8 @@ class BarLayer: CAShapeLayer {
         super.init(layer: layer)
     }
     
-    init(size: CGSize, config: BarAnimationConfiguration?) {
+    private init(size: CGSize, item: BarChartItem, config: BarConfiguration?) {
+        self.item = item
         super.init()
         self.frame.size = size
         self.bezierPath.lineCapStyle = .butt
@@ -40,22 +41,30 @@ class BarLayer: CAShapeLayer {
 }
 
 extension BarLayer {
-    internal class func createPath(with size: CGSize, config: BarAnimationConfiguration?) -> BarLayer {
-        let layer = BarLayer(size: size, config: config)
+    class func create(size: CGSize, item: BarChartItem, config: BarConfiguration) -> BarLayer {
+        let layer = BarLayer(size: size, item: item, config: config)
+        return layer
+    }
+    
+    internal class func createPath(with size: CGSize, item: BarChartItem, config: BarConfiguration?) -> BarLayer {
+        let layer = BarLayer(size: size, item: item, config: config)
         //layer.drawPath()
         return layer
     }
     
     private func drawPath() {
-        self.strokeColor = self.config.barColor.cgColor
-        self.lineWidth = self.config.lineWidth
-        self.bezierPath.move(to: self.config.startPoint)
-        self.bezierPath.addLine(to: self.config.endPoint)
+        self.strokeColor = self.config.layer.color.cgColor
+        self.lineWidth = self.config.layer.lineWidth
+        self.bezierPath.move(to: self.config.animation.startPoint)
+        self.bezierPath.addLine(to: self.config.animation.endPoint)
         self.path = self.bezierPath.cgPath
         self.strokeEnd = 0.0
+        
+        // not draw text this version
+        //self.drawText(item?.title ?? "", textSize: 14.0, textColor: self.config.layer.color, direction: config.layer.direction, location: config.layer.textLocation)
     }
 
-    internal func drawText(_ text: String, textSize: CGFloat, textColor: UIColor?, direction: BarDirection, location: BarTextLocation = .middle) {
+    internal func drawText(_ text: String, textSize: CGFloat, textColor: UIColor?, direction: BarDirection, location: BarTextLocation = .head) {
         let textlayer = CATextLayer()
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = (direction == .vertical ? .center : .left)
@@ -66,38 +75,39 @@ extension BarLayer {
         let layerSize = NSString(string: text).size(withAttributes: attrs)
         var positionX: CGFloat = 0.0
         var positionY: CGFloat = 0.0;
-        var allowableTextWidth = self.config.endPoint.x
+        var allowableTextWidth = self.config.animation.endPoint.x
         switch (direction, location) {
-        case (.horizontal, .middle):
-            positionX = 8.0
-            positionY = config.startPoint.y - layerSize.height/2
-            allowableTextWidth = self.config.endPoint.x - 16.0
-            break
-        case (.vertical, .middle):
-            positionX = self.config.startPoint.x - layerSize.width/2
-            positionY = (self.config.startPoint.y + self.config.endPoint.y)/2 - layerSize.height/2
-            allowableTextWidth = self.config.lineWidth
-            break
         case (.horizontal, .head):
-            positionX = self.config.endPoint.x + 8
-            positionY = config.startPoint.y - layerSize.height/2
+            positionX = self.config.animation.startPoint.x + 8
+            positionY = config.animation.startPoint.y - lineWidth //+ 16 // - layerSize.height/2
             allowableTextWidth = layerSize.width + 1
             break
         case (.vertical, .head):
-            positionX = self.config.startPoint.x - layerSize.width/2
-            positionY = self.config.endPoint.y - layerSize.height - 8
-            allowableTextWidth = self.config.lineWidth
+            positionX = self.config.animation.startPoint.x - layerSize.width/2
+            positionY = self.config.animation.endPoint.y - layerSize.height - 8
+            allowableTextWidth = self.config.layer.lineWidth
             break
         case (.horizontal, _):
             positionX = 8.0
-            positionY = config.startPoint.y - layerSize.height/2
-            allowableTextWidth = self.config.endPoint.x - 16.0
+            positionY = config.animation.startPoint.y - layerSize.height/2
+            allowableTextWidth = self.config.animation.endPoint.x - 16.0
             break
         case (.vertical, .tail):
-            positionX = self.config.startPoint.x - layerSize.width/2
-            positionY = self.config.startPoint.y + 8
-            allowableTextWidth = self.config.lineWidth
+            positionX = self.config.animation.startPoint.x - layerSize.width/2
+            positionY = self.config.animation.startPoint.y + 8
+            allowableTextWidth = self.config.layer.lineWidth
             break
+// no middle this time, maybe will be added later.
+//        case (.horizontal, .middle):
+//            positionX = 8.0
+//            positionY = config.animation.startPoint.y - layerSize.height/2
+//            allowableTextWidth = self.config.animation.endPoint.x - 16.0
+//            break
+//        case (.vertical, .middle):
+//            positionX = self.config.animation.startPoint.x - layerSize.width/2
+//            positionY = (self.config.animation.startPoint.y + self.config.animation.endPoint.y)/2 - layerSize.height/2
+//            allowableTextWidth = self.config.layer.lineWidth
+//            break
         }
         let startPoint = CGPoint(x: positionX, y: positionY)
 
@@ -110,7 +120,7 @@ extension BarLayer {
             //textlayer.isWrapped = true
             textlayer.truncationMode = .end
             textlayer.backgroundColor = UIColor.clear.cgColor
-            textlayer.foregroundColor = textColor?.cgColor ?? ((self.config.barColor.whiteScale < 0.4) ? UIColor.white.cgColor : UIColor.black.cgColor)
+            textlayer.foregroundColor = textColor?.cgColor ?? ((self.config.layer.color.whiteScale < 0.4) ? UIColor.white.cgColor : UIColor.black.cgColor)
             textlayer.string = text
             
             self.addSublayer(textlayer)
@@ -130,7 +140,7 @@ extension BarLayer {
             //arcAnimation.beginTime = 0.0
             arcAnimation.fromValue = 0.0
             arcAnimation.toValue  = 1
-            arcAnimation.duration = self.config.animationDuration
+            arcAnimation.duration = self.config.animation.duration
             arcAnimation.isRemovedOnCompletion = false
             arcAnimation.fillMode = CAMediaTimingFillMode.both
             self.add(arcAnimation, forKey: "DarwPathAnimation")
@@ -150,7 +160,7 @@ extension BarLayer {
                 completion?()
             }
             let revAnimation = CABasicAnimation(keyPath: #keyPath(CAShapeLayer.strokeEnd))
-            revAnimation.duration = self.config.animationDuration
+            revAnimation.duration = self.config.animation.duration
             revAnimation.fromValue = self.presentation()?.strokeEnd
             revAnimation.toValue = 0.0
             revAnimation.isRemovedOnCompletion = false

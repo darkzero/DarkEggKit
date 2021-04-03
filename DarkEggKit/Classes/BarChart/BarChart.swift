@@ -24,7 +24,7 @@ public enum BarAlign: Int {
 }
 
 public enum BarTextLocation: Int {
-    case middle
+    //case middle
     case head
     case tail
 }
@@ -43,12 +43,12 @@ public class BarChart: UIView {
     }
     @IBInspectable public var padding: CGFloat = 8.0
     @IBInspectable public var barWidth: CGFloat = 32.0
-    @IBInspectable public var showText: Bool = false
+    @IBInspectable public let showText: Bool = false
     @IBInspectable public var textSize: CGFloat = 14.0
     
-    public var textLocation: BarTextLocation = .middle
+    public var textLocation: BarTextLocation = .tail
     
-    public var barDirection: BarDirection = .horizontal
+    public var barDirection: BarDirection = .vertical
     public var barAlign: BarAlign = .left_top
     
     public var sortBeforeDisplay: Bool = false
@@ -146,8 +146,21 @@ extension BarChart {
         }
     }
     
-    private func addBars() {
+    /// Clear bars
+    private func clearBars() {
+        // clear
+        self.layers.forEach { (layer) in
+            layer.removeAllAnimations()
+            layer.removeFromSuperlayer()
+        }
+        self.layers.removeAll()
         
+    }
+    
+    private func addBar(at index: CGFloat, item: BarChartItem, config: BarConfiguration) {
+        let pathLayer = BarLayer.create(size: self.layer.bounds.size, item: item, config: config)
+        self.layers.append(pathLayer)
+        self.layer.addSublayer(pathLayer)
     }
     
     /// Animation of show
@@ -162,11 +175,7 @@ extension BarChart {
         self.inProgress = true
         
         // clear
-        self.layers.forEach { (layer) in
-            layer.removeAllAnimations()
-            layer.removeFromSuperlayer()
-        }
-        self.layers.removeAll()
+        self.clearBars()
         
         // make animations
         let itemCountF: CGFloat = CGFloat(self.data.items.count)
@@ -203,20 +212,24 @@ extension BarChart {
                 endPoint = CGPoint(x: offsetValue, y: self.bounds.height - barLength)
                 break
             }
-            var config: BarAnimationConfiguration = BarAnimationConfiguration()
-            config.startPoint = startPoint
-            config.endPoint = endPoint
-            config.animationDuration = arcDuration
-            config.barColor = item.color
-            config.lineWidth = lineWidth
+            var config: BarConfiguration = BarConfiguration()
             
-            let pathLayer = BarLayer.createPath(with: self.frame.size, config: config)
+            config.animation.startPoint = startPoint
+            config.animation.endPoint = endPoint
+            config.animation.duration = arcDuration
+            
+            config.layer.color = item.color
+            config.layer.lineWidth = lineWidth
+            config.layer.direction = self.barDirection
+            config.layer.textLocation = self.textLocation
+            
+            let pathLayer = BarLayer.createPath(with: self.frame.size, item: item, config: config)
             self.layers.append(pathLayer)
             self.layer.addSublayer(pathLayer)
 
-            if self.showText {
-                pathLayer.drawText(item.title, textSize: self.textSize, textColor: item.textColor, direction: self.barDirection, location: self.textLocation)
-            }
+            //if self.showText {
+            //    pathLayer.drawText(item.title, textSize: self.textSize, textColor: item.textColor, direction: self.barDirection, location: self.textLocation)
+            //}
         }
         
         switch self.animationType {
