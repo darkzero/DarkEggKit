@@ -19,9 +19,9 @@ Pod::Spec.new do |s|
     #   * Write the description between the DESC delimiters below.
     #   * Finally, don't worry about the indent, CocoaPods strips it!
     s.description = <<-DESC
-      * 1.0.0 (2021/02/28)
+      * 1.0.0 (2021/12/01)
         - Delete text in BarChart
-        -
+        - Others
       ---
       * 0.5.7 (2020/03/11)
       - Add text location (BarChart)
