@@ -1,3 +1,5 @@
+# 
+platform :ios, '12.0'
 use_frameworks!
 
 target 'DarkEggKit_Example' do
@@ -6,7 +8,7 @@ target 'DarkEggKit_Example' do
   pod 'DarkEggKit/PopupMessage', :path => '../'
   pod 'DarkEggKit/SideMenu', :path => '../'
   pod 'DarkEggKit/AnimatedImageView', :path => '../'
-  pod 'DarkEggKit/ButtonMenu', :path => '../'
+  # pod 'DarkEggKit/ButtonMenu', :path => '../'
   pod 'DarkEggKit/DoughnutChart', :path => '../'
   pod 'DarkEggKit/BarChart', :path => '../'
 
