@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name                  = 'DarkEggKit'
-    s.version               = '1.0.0'
+    s.version               = '1.0.1'
     s.summary               = 'DarkEgg UI Kit.'
     s.swift_version         = '5.0'
     s.ios.deployment_target = '12.0'
@@ -19,6 +19,10 @@ Pod::Spec.new do |s|
     #   * Write the description between the DESC delimiters below.
     #   * Finally, don't worry about the indent, CocoaPods strips it!
     s.description = <<-DESC
+      * 1.0.1 (2022/12/15)
+        - Add local image file support to AnimatedImageView
+        - Others
+      ---
       * 1.0.0 (2021/12/01)
         - Delete text in BarChart
         - Others
@@ -93,7 +97,7 @@ Pod::Spec.new do |s|
     s.author           = { 'darkzero' => 'darkzero_mk2@hotmail.com' }
     s.source           = { :git => 'https://github.com/darkzero/DarkEggKit.git', :tag => s.version.to_s }
 
-    s.ios.deployment_target = '10.0'
+    s.ios.deployment_target = '12.0'
     s.default_subspec = 'Common'
 
     # DarkEggKit/Common
