@@ -19,7 +19,9 @@ class AnimatedImageViewController: UIViewController {
         Logger.debug("---- Start ----")
         
         var apng: AnimationImage?
-        switch Int.random(in: 0...4) {
+        switch Int.random(in: 0...5) {
+        case 0:
+            apng = AnimationImage(path: Bundle.main.path(forResource: "elephant", ofType: "png")!)
         case 1:
             apng = AnimationImage(url: "https://flif.info/example-animation/spinfox_50.png")
         case 2:
@@ -29,6 +31,8 @@ class AnimatedImageViewController: UIViewController {
         case 4:
             // image size is 10MB, test the memory usage
             apng = AnimationImage(url: "https://upload.wikimedia.org/wikipedia/commons/f/ff/Pizigani_1367_Chart_10MB.jpg")
+        case 5:
+            apng = AnimationImage(path: Bundle.main.path(forResource: "elephant", ofType: "png")!)
         default:
             apng = AnimationImage(url: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQrO3IgpmS5egLUegtsy8URBq1iOb75Yx9g2qTd_kxc8YZOxf_w")
             break

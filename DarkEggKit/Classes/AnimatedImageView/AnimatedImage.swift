@@ -10,13 +10,16 @@ import ImageIO
 import UIKit
 
 public class AnimationImage: NSObject {
-    private let urlString: String
+    private let keyString: String
     internal var imageSource: CGImageSource?
+    let isLocalImage: Bool
     
     public static func ==(l: AnimationImage, r: AnimationImage) -> Bool {
-        return l.urlString == r.urlString
+        return l.keyString == r.keyString
     }
     
+    /// init with image on web (url
+    /// - Parameter url: image url
     public convenience init?(url: String) {
         // if already in cache
         if let src = SourceCache.default.findSource(from: url) {
@@ -26,11 +29,37 @@ public class AnimationImage: NSObject {
         }
     }
     
+    /// init with image in app resource
+    /// - Parameter path: image path
+    public convenience init(path: String) {
+        if let src = SourceCache.default.findSource(from: path) {
+            self.init(source: src, pathStr: path)
+        } else {
+            let url = URL(fileURLWithPath: path) 
+                let data = try! Data(contentsOf: url)
+                let src = CGImageSourceCreateWithData(data as CFData, nil)
+//                let src = CGImageSourceCreateWithURL(url as CFURL, nil)
+                self.init(source: src, pathStr: path)
+//            }
+//            else {
+//                self.init(pathStr: path)
+//            }
+        }
+    }
+    
     private init(source: CGImageSource? = nil, urlStr: String) {
         self.imageSource = source
-        self.urlString = urlStr
+        self.keyString = urlStr
+        self.isLocalImage = false
         super.init()
         //self.delegate?.animationImage(self, loadSuccess: true)
+    }
+    
+    private init (source: CGImageSource? = nil, pathStr: String) {
+        self.imageSource = source
+        self.keyString = pathStr
+        self.isLocalImage = true
+        super.init()
     }
     
     deinit {
@@ -50,8 +79,8 @@ extension AnimationImage {
             switch result {
             case .success(let src):
                 self.imageSource = src
-                SourceCache.default.add(url: self.urlString, source: src)
-                SourceDownloader.default.releaseTask(url: self.urlString)
+                SourceCache.default.add(url: self.keyString, source: src)
+                SourceDownloader.default.releaseTask(url: self.keyString)
                 completion?(true, self)
                 break
             case .failure:
@@ -63,12 +92,12 @@ extension AnimationImage {
         let onProgress = { (precent: Float)->Void in
             progress?(precent)
         }
-        let cancelToken = SourceDownloader.default.downloadImage(from: self.urlString, completion: onCompleted, progress: onProgress)
+        let cancelToken = SourceDownloader.default.downloadImage(from: self.keyString, completion: onCompleted, progress: onProgress)
         return cancelToken
     }
     
     internal func cancelLoad(token: SessionDataTask.CancelToken) {
-        SourceDownloader.default.cancelDownload(self.urlString, token: token)
+        SourceDownloader.default.cancelDownload(self.keyString, token: token)
     }
 }
 
