@@ -51,6 +51,11 @@ extension UIViewController {
         
         //NotificationCenter.default.addObserver(self, selector: #selector(self.onMaskViewTapped(_:)), name: NSNotification.Name.DZSideMenu.Tap, object: nil)
     }
+    
+    public func hideSideMenu(completion: (()->Void)? = nil) {
+        NotificationCenter.default.post(name: Notification.Name.DZSideMenu.Tap, object: self)
+        completion?()
+    }
 }
 
 extension UIViewController {

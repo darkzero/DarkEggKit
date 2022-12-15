@@ -27,7 +27,6 @@
 		B790FE7E234B1E97000B284D /* SubModules.json in Resources */ = {isa = PBXBuildFile; fileRef = B790FE7D234B1E97000B284D /* SubModules.json */; };
 		B7A9FA1323E18FCB0094B667 /* About.txt in Resources */ = {isa = PBXBuildFile; fileRef = B7A9FA1223E18FCB0094B667 /* About.txt */; };
 		B7C3B09F23C87B2900411E75 /* DoughnutChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C3B09E23C87B2900411E75 /* DoughnutChartViewController.swift */; };
-		B7CA18A622DC74E900796008 /* .swift-version in Resources */ = {isa = PBXBuildFile; fileRef = B7CA18A422DC74E800796008 /* .swift-version */; };
 		B7CA18A722DC74E900796008 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = B7CA18A522DC74E900796008 /* .travis.yml */; };
 		B7CA40E923E4202B00BB1FB2 /* deploy_framework.yml in Resources */ = {isa = PBXBuildFile; fileRef = B7CA40E823E4202B00BB1FB2 /* deploy_framework.yml */; };
 		B7D52C0223D58D9B006E9DA4 /* BarChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D52C0123D58D9B006E9DA4 /* BarChartViewController.swift */; };
@@ -74,7 +73,6 @@
 		B790FE7D234B1E97000B284D /* SubModules.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SubModules.json; sourceTree = "<group>"; };
 		B7A9FA1223E18FCB0094B667 /* About.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = About.txt; sourceTree = "<group>"; };
 		B7C3B09E23C87B2900411E75 /* DoughnutChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoughnutChartViewController.swift; sourceTree = "<group>"; };
-		B7CA18A422DC74E800796008 /* .swift-version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ".swift-version"; path = "../.swift-version"; sourceTree = "<group>"; };
 		B7CA18A522DC74E900796008 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
 		B7CA40E823E4202B00BB1FB2 /* deploy_framework.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = deploy_framework.yml; sourceTree = "<group>"; };
 		B7D52C0123D58D9B006E9DA4 /* BarChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartViewController.swift; sourceTree = "<group>"; };
@@ -116,7 +114,6 @@
 			isa = PBXGroup;
 			children = (
 				B790FE6D23438771000B284D /* .github */,
-				B7CA18A422DC74E800796008 /* .swift-version */,
 				B7CA18A522DC74E900796008 /* .travis.yml */,
 				B77BA521224A2D990065D879 /* mario.png */,
 				B77BA51D224A1A900065D879 /* elephant.png */,
@@ -338,7 +335,6 @@
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				B7A9FA1323E18FCB0094B667 /* About.txt in Resources */,
 				B790FE7023438771000B284D /* buildCheck.yml in Resources */,
-				B7CA18A622DC74E900796008 /* .swift-version in Resources */,
 				B7CA18A722DC74E900796008 /* .travis.yml in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 				B7CA40E923E4202B00BB1FB2 /* deploy_framework.yml in Resources */,

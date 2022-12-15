@@ -144,7 +144,7 @@ Pod::Spec.new do |s|
     s.subspec 'DoughnutChart' do |dount|
         dount.source_files = 'DarkEggKit/Classes/DoughnutChart/*.swift'
         #dount.resources = ['DarkEggKit/Classes/DoughnutChart/*.md']
-        dount.dependency 'DarkEggKit/Common'
+        dount.dependency 'DarkEggKit/DoughnutChart'
     end
 
     # DarkEggKitit/BarChart
@@ -152,6 +152,6 @@ Pod::Spec.new do |s|
     s.subspec 'BarChart' do |barDount|
         barDount.source_files = 'DarkEggKit/Classes/BarChart/*.swift'
         #barDount.resources = ['DarkEggKit/Classes/BarChart/*.md']
-        barDount.dependency 'DarkEggKit/Common'
+        barDount.dependency 'DarkEggKit/BarChart'
     end
 end

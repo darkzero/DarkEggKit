@@ -50,7 +50,7 @@ class BarChartViewController: UIViewController {
         self.barChart.animationType = .sequence
         self.barChart.barDirection = .vertical
         self.barChart.barAlign = .left_top
-        self.barChart.barWidth = 32.0
+        self.barChart.barWidth = 12.0
         self.barChart.textSize = 16.0
         self.barChart.textLocation = .head
         self.barChart.showChart(animated: chartAnimated, duration: 1.0)
@@ -67,7 +67,7 @@ extension BarChartViewController {
         self.barChart.clearChart(animated: false)
         self.barChart.data = self.getData()
         self.barChart.sortBeforeDisplay = true
-        //self.barChart.barDirection = .horizontal
+        self.barChart.barDirection = .horizontal
         self.barChart.showChart(animated: chartAnimated, duration: 1.0)
     }
     

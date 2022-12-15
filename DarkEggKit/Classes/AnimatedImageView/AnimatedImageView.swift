@@ -117,7 +117,7 @@ public class AnimatedImageView: UIImageView {
     /// AImage
     public var aImage: AnimationImage? {
         didSet {
-            if aImage != oldValue {
+            if aImage != oldValue, !(aImage?.isLocalImage ?? true) {
                 self.addDownloadProgress()
                 self.downloadCancelToken = aImage?.startLoad(completion: { [weak self] (result, aImage) in
                     if result {
@@ -133,6 +133,7 @@ public class AnimatedImageView: UIImageView {
                 }) ?? -1
                 self.reset()
             }
+            self.reset()
             self.setNeedsDisplay()
             self.layer.setNeedsDisplay()
         }
