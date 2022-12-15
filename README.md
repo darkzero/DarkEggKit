@@ -3,13 +3,20 @@
 [![Version](https://img.shields.io/cocoapods/v/DarkEggKit.svg?style=flat)](https://cocoapods.org/pods/DarkEggKit)
 [![License](https://img.shields.io/cocoapods/l/DarkEggKit.svg?style=flat)](https://cocoapods.org/pods/DarkEggKit)
 [![Platform](https://img.shields.io/cocoapods/p/DarkEggKit.svg?style=flat)](https://cocoapods.org/pods/DarkEggKit)
-
 [![CI Status](https://img.shields.io/travis/darkzero/DarkEggKit.svg?style=flat)](https://travis-ci.org/darkzero/DarkEggKit)
 ![](https://github.com/darkzero/DarkEggKit/workflows/Check%20Build/badge.svg?style=flat)
 
 ## [Wiki](https://github.com/darkzero/DarkEggKit/wiki)
 
 ## Update history
+
+### 1.0.1 (2022/12/15)
+> Add local image file support to AnimatedImageView
+> Others
+
+### 1.0.0 (2021/12/01)
+> Delete text in BarChart
+> Others
 
 ### 0.5.7 (2020/03/11)
 > Add text location (BarChart)
