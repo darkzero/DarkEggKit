@@ -44,6 +44,7 @@ class AnimatedImageViewController: UIViewController {
         aniImgView_1.aImage = apng
         aniImgView_1.delegate = self
         aniImgView_1.willShowProgress = true
+        aniImgView_1.playWhenHighlighted = true
         
         Logger.debug("---- End ----")
     }
@@ -94,5 +95,11 @@ extension AnimatedImageViewController {
         if let uv = (storyboard?.instantiateViewController(withIdentifier: "AboutViewController") as? AboutViewController) {
             self.navigationController?.pushViewController(uv, animated: true)
         }
+    }
+    
+    @IBAction func onImageTapped(_ sender: UITapGestureRecognizer) {
+        // Test for highlight image
+        self.aniImgView_1.isHighlighted.toggle()
+        Logger.debug("onImageTapped, image highlighted: \(self.aniImgView_1.isHighlighted)")
     }
 }
