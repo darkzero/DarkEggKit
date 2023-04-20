@@ -8,10 +8,10 @@
 
 Pod::Spec.new do |s|
     s.name                  = 'DarkEggKit'
-    s.version               = '1.0.1'
+    s.version               = '1.0.2'
     s.summary               = 'DarkEgg UI Kit.'
-    s.swift_version         = '5.0'
-    s.ios.deployment_target = '12.0'
+    s.swift_version         = '5.8'
+    s.ios.deployment_target = '13.0'
 
     # This description is used to generate tags and improve search results.
     #   * Think: What does it do? Why did you write it? What is the focus?
@@ -19,6 +19,11 @@ Pod::Spec.new do |s|
     #   * Write the description between the DESC delimiters below.
     #   * Finally, don't worry about the indent, CocoaPods strips it!
     s.description = <<-DESC
+      * 1.0.2 (2023/04/20)
+        - Add highlighting flag to AnimatedImageView
+        - Change deployment_target to iOS 13.0 ~
+        - Others
+      ---
       * 1.0.1 (2022/12/15)
         - Add local image file support to AnimatedImageView
         - Others
