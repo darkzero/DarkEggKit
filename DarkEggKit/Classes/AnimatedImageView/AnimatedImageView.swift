@@ -36,6 +36,17 @@ extension AnimatedImageViewDelegate {
 }
 
 public class AnimatedImageView: UIImageView {
+    public var playWhenHighlighted: Bool = false
+    public override var isHighlighted: Bool {
+        didSet {
+            if isHighlighted {
+                playWhenHighlighted ? self.startAnimating() : self.stopAnimating()
+            }
+            else {
+                playWhenHighlighted ? self.stopAnimating() : self.startAnimating()
+            }
+        }
+    }
     /// Repeat mode
     ///   - once
     ///   - finite(with count)
@@ -254,7 +265,7 @@ extension AnimatedImageView {
     
     private func didMove() {
         if self.autoPlay && animator != nil {
-            if let _ = superview, let _ = window {
+            if let _ = superview, let _ = window, !self.playWhenHighlighted {
                 startAnimating()
             } else {
                 stopAnimating()
@@ -278,6 +289,11 @@ extension AnimatedImageView {
             animator.needsPrescaling = needsPrescaling
             animator.prepareFramesAsynchronously()
             self.animator = animator
+            
+            if self.image == nil {
+                let img = animator.loadFrame(at: 0)
+                self.image = img
+            }
         }
         didMove()
     }

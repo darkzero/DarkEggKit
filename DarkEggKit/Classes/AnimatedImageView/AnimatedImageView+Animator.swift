@@ -198,7 +198,7 @@ extension AnimatedImageView {
             animatedFrames = []
         }
         
-        private func loadFrame(at index: Int) -> UIImage? {
+        internal func loadFrame(at index: Int) -> UIImage? {
             guard let image = CGImageSourceCreateImageAtIndex(imageSource, index, nil) else {
                 return nil
             }

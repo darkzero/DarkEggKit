@@ -14,6 +14,11 @@ public class AnimationImage: NSObject {
     internal var imageSource: CGImageSource?
     let isLocalImage: Bool
     
+    /// override ==
+    /// - Parameters:
+    ///   - l: left instance
+    ///   - r: right instance
+    /// - Returns: if the keyString is same
     public static func ==(l: AnimationImage, r: AnimationImage) -> Bool {
         return l.keyString == r.keyString
     }
@@ -23,43 +28,35 @@ public class AnimationImage: NSObject {
     public convenience init?(url: String) {
         // if already in cache
         if let src = SourceCache.default.findSource(from: url) {
-            self.init(source: src, urlStr: url)
+            self.init(source: src, key: url, isLocal: false)
         } else {
-            self.init(urlStr: url)
+            self.init(key: url, isLocal: false)
         }
     }
     
-    /// init with image in app resource
+    /// init with image in local resource
     /// - Parameter path: image path
     public convenience init(path: String) {
         if let src = SourceCache.default.findSource(from: path) {
-            self.init(source: src, pathStr: path)
+            self.init(source: src, key: path, isLocal: true)
         } else {
-            let url = URL(fileURLWithPath: path) 
-                let data = try! Data(contentsOf: url)
-                let src = CGImageSourceCreateWithData(data as CFData, nil)
-//                let src = CGImageSourceCreateWithURL(url as CFURL, nil)
-                self.init(source: src, pathStr: path)
-//            }
-//            else {
-//                self.init(pathStr: path)
-//            }
+            let url = URL(fileURLWithPath: path)
+            let src = CGImageSourceCreateWithURL(url as CFURL, nil)
+            self.init(source: src, key: path, isLocal: true)
         }
     }
     
-    private init(source: CGImageSource? = nil, urlStr: String) {
+    /// init
+    /// - Parameters:
+    ///   - source: image source
+    ///   - key: image string key
+    ///   - isLocal: is local image
+    private init(source: CGImageSource? = nil, key: String, isLocal: Bool = false) {
         self.imageSource = source
-        self.keyString = urlStr
-        self.isLocalImage = false
+        self.keyString = key
+        self.isLocalImage = isLocal
         super.init()
         //self.delegate?.animationImage(self, loadSuccess: true)
-    }
-    
-    private init (source: CGImageSource? = nil, pathStr: String) {
-        self.imageSource = source
-        self.keyString = pathStr
-        self.isLocalImage = true
-        super.init()
     }
     
     deinit {
@@ -69,11 +66,18 @@ public class AnimationImage: NSObject {
 
 // MARK: - Load Task
 extension AnimationImage {
+    /// start load web image
+    /// - Parameters:
+    ///   - completion: completion handle
+    ///   - progress: progress %
+    /// - Returns: cancel token for cancel
     internal func startLoad(completion: ((Bool, AnimationImage)->Void)?, progress: ((Float)->Void)? = nil) -> SessionDataTask.CancelToken {
+        // image source already loaded
         guard self.imageSource == nil else {
             completion?(true, self)
             return -1
         }
+        
         // completion handle
         let onCompleted = { (result: DownloadResult) -> Void in
             switch result {
@@ -88,14 +92,20 @@ extension AnimationImage {
                 break
             }
         }
+        
         // progress handle
         let onProgress = { (precent: Float)->Void in
             progress?(precent)
         }
+        
+        // start download task
         let cancelToken = SourceDownloader.default.downloadImage(from: self.keyString, completion: onCompleted, progress: onProgress)
+        
         return cancelToken
     }
     
+    /// cancel load
+    /// - Parameter token: cancel token
     internal func cancelLoad(token: SessionDataTask.CancelToken) {
         SourceDownloader.default.cancelDownload(self.keyString, token: token)
     }
