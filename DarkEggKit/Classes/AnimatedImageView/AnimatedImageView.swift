@@ -39,14 +39,20 @@ public class AnimatedImageView: UIImageView {
     public var playWhenHighlighted: Bool = false
     public override var isHighlighted: Bool {
         didSet {
-            if isHighlighted {
-                playWhenHighlighted ? self.startAnimating() : self.stopAnimating()
+            if playWhenHighlighted {
+                self.startAnimating()
             }
             else {
-                playWhenHighlighted ? self.stopAnimating() : self.startAnimating()
+                if isHighlighted {
+                    self.stopAnimating()
+                }
+                else {
+                    self.startAnimating()
+                }
             }
         }
     }
+    
     /// Repeat mode
     ///   - once
     ///   - finite(with count)
@@ -132,6 +138,7 @@ public class AnimatedImageView: UIImageView {
                 self.addDownloadProgress()
                 self.downloadCancelToken = aImage?.startLoad(completion: { [weak self] (result, aImage) in
                     if result {
+                        self?.aImage = aImage
                         DispatchQueue.main.async {
                             self?.progressLayer.removeFromSuperlayer()
                             self?.reset()
@@ -143,10 +150,13 @@ public class AnimatedImageView: UIImageView {
                     self?.showDownloadProgress(precent: precent)
                 }) ?? -1
                 self.reset()
+                return
             }
             self.reset()
-            self.setNeedsDisplay()
-            self.layer.setNeedsDisplay()
+            DispatchQueue.main.async {
+                self.setNeedsDisplay()
+                self.layer.setNeedsDisplay()
+            }
         }
     }
     
@@ -190,8 +200,8 @@ extension AnimatedImageView {
             //self.clear()
             return
         }
-        //self.reset()
-        //self.startAnimating()
+        self.reset()
+        self.startAnimating()
     }
     
     override open func didMoveToWindow() {
@@ -233,7 +243,7 @@ extension AnimatedImageView {
         if isDisplayLinkInitialized {
             return !displayLink.isPaused
         } else {
-            return super.isAnimating
+            return false
         }
     }
     
@@ -265,7 +275,7 @@ extension AnimatedImageView {
     
     private func didMove() {
         if self.autoPlay && animator != nil {
-            if let _ = superview, let _ = window, !self.playWhenHighlighted {
+            if let _ = superview, let _ = window {
                 startAnimating()
             } else {
                 stopAnimating()
@@ -277,22 +287,24 @@ extension AnimatedImageView {
     private func reset() {
         animator = nil
         if let aImg = self.aImage, let imageSource = aImg.imageSource {
-            let targetSize = self.bounds.size //bounds.scaled(UIScreen.main.scale).size
-            let animator = Animator(
-                imageSource: imageSource,
-                contentMode: contentMode,
-                size: targetSize,
-                framePreloadCount: framePreloadCount,
-                repeatMode: self.repeatMode,
-                preloadQueue: preloadQueue)
-            animator.delegate = self
-            animator.needsPrescaling = needsPrescaling
-            animator.prepareFramesAsynchronously()
-            self.animator = animator
-            
-            if self.image == nil {
-                let img = animator.loadFrame(at: 0)
-                self.image = img
+            DispatchQueue.main.async {
+                let targetSize = self.bounds.size //bounds.scaled(UIScreen.main.scale).size
+                let animator = Animator(
+                    imageSource: imageSource,
+                    contentMode: self.contentMode,
+                    size: targetSize,
+                    framePreloadCount: self.framePreloadCount,
+                    repeatMode: self.repeatMode,
+                    preloadQueue: self.preloadQueue)
+                animator.delegate = self
+                animator.needsPrescaling = self.needsPrescaling
+                animator.prepareFramesAsynchronously()
+                self.animator = animator
+                
+                if self.image == nil {
+                    let img = animator.loadFrame(at: 0)
+                    self.image = img
+                }
             }
         }
         didMove()

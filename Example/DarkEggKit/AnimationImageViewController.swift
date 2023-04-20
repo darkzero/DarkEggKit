@@ -19,11 +19,11 @@ class AnimatedImageViewController: UIViewController {
         Logger.debug("---- Start ----")
         
         var apng: AnimationImage?
-        switch Int.random(in: 0...5) {
+        switch Int.random(in: 0...0) {
         case 0:
             apng = AnimationImage(path: Bundle.main.path(forResource: "elephant", ofType: "png")!)
         case 1:
-            apng = AnimationImage(url: "https://flif.info/example-animation/spinfox_50.png")
+            apng = AnimationImage(url: "https://imgheybox.max-c.com/bbs/2021/11/19/a045e62afe28f4afdeda3c56ee86b871/thumb.jpeg")
         case 2:
             apng = AnimationImage(url: "https://orig00.deviantart.net/df6e/f/2012/287/f/8/i_want_to_be_a_hero__apng_animated__by_tamalesyatole-d5ht8eu.png")
         case 3:
@@ -44,7 +44,7 @@ class AnimatedImageViewController: UIViewController {
         aniImgView_1.aImage = apng
         aniImgView_1.delegate = self
         aniImgView_1.willShowProgress = true
-        aniImgView_1.playWhenHighlighted = true
+//        aniImgView_1.playWhenHighlighted = true
         
         Logger.debug("---- End ----")
     }
