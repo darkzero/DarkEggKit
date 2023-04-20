@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name                  = 'DarkEggKit'
-    s.version               = '1.0.2'
+    s.version               = '1.0.3'
     s.summary               = 'DarkEgg UI Kit.'
     s.swift_version         = '5.8'
     s.ios.deployment_target = '13.0'
@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
     #   * Write the description between the DESC delimiters below.
     #   * Finally, don't worry about the indent, CocoaPods strips it!
     s.description = <<-DESC
-      * 1.0.2 (2023/04/20)
+      * 1.0.3 (2023/04/20)
         - Add highlighting flag to AnimatedImageView
         - Change deployment_target to iOS 13.0 ~
         - Others
