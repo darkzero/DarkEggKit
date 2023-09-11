@@ -43,6 +43,10 @@ class HomeViewController: UIViewController, DarkEggPopupMessageProtocol {
             }
         }
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        Logger.debug("AAAAA")
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -117,6 +121,26 @@ extension HomeViewController: UITableViewDelegate {
                     break
                 default:
                     break
+                }
+            case 3:
+                if let vc = storyboard?.instantiateViewController(withIdentifier: "TempMenuVC") as? DZSideMenuViewController {
+                    switch indexPath.row {
+                    case 0:
+                        vc.scale = 0.8
+                        vc.location = .left
+                    case 1:
+                        vc.scale = 0.8
+                        vc.location = .right
+                    case 2:
+                        vc.scale = 0.4
+                        vc.location = .top
+                    case 3:
+                        vc.scale = 0.4
+                        vc.location = .bottom
+                    default:
+                        vc.location = .bottom
+                    }
+                    self.present(vc, animated: true)
                 }
             default:
                 self.showPopupWarning("Nothing is here.")

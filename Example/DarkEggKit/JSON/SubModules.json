@@ -5,15 +5,13 @@
             "title": "Color to Image Sample",
             "segue_id": "ShowCommonScene"
         }]
-    },
-    {
+    },{
         "section_title": "Popup Message",
         "cells": [{
             "title": "Popup Message Sample Page",
             "segue_id": "ShowPopupMessageScene"
         }]
-    },
-    {
+    },{
         "section_title": "Side Menu",
         "cells": [{
             "title": "Left - (default)"
@@ -24,15 +22,27 @@
         },{
             "title": "Right - (cover)"
         }]
-    },
-    {
+    },{
+      "section_title": "Custom panel",
+      "cells": [{
+          "title": "Left"
+      },{
+          "title": "Right"
+      },{
+          "title": "Top"
+      },{
+          "title": "Bottom"
+      }]
+    },{
         "section_title": "Animated Image",
         "cells": [{
             "title": "Animated Image Sample",
             "segue_id": "ShowAnimationImageScene"
+        },{
+            "title": "System Animated Image",
+            "segue_id": "ShowAnimationImageScene"
         }]
-    },
-    {
+    },{
         "section_title": "Chart",
         "cells": [{
             "title": "Doughnut Chart Sample",

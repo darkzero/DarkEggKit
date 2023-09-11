@@ -10,7 +10,7 @@ import UIKit
 
 class DZSideMenuAnimator: NSObject {
     var configuration: DZSideMenuConfiguration = DZSideMenuConfiguration()
-    var animationType: DZSideMenuTransitioning.AnimationType = .default
+    var animationType: AnimationType = .default
     
     var interactiveShow: DZSideMenuInteractiveTransition?
     var interactiveHidden: DZSideMenuInteractiveTransition?

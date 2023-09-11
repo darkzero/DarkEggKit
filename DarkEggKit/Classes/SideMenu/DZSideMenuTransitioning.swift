@@ -14,11 +14,6 @@ public class DZSideMenuTransitioning: NSObject, UIViewControllerAnimatedTransiti
         case hide
     }
     
-    public enum AnimationType: String {
-        case `default`
-        case cover
-    }
-    
     var transitionType: TransitionType = .show
     //var animationType: AnimationType = .default
     var configuration: DZSideMenuConfiguration = DZSideMenuConfiguration()
@@ -32,7 +27,12 @@ public class DZSideMenuTransitioning: NSObject, UIViewControllerAnimatedTransiti
     }
     
     public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 0.3
+        switch self.transitionType {
+        case .show:
+            return self.configuration.displayDuration
+        case .hide:
+            return self.configuration.hiddenDuration
+        }
     }
     
     public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
@@ -48,12 +48,106 @@ public class DZSideMenuTransitioning: NSObject, UIViewControllerAnimatedTransiti
 
 extension DZSideMenuTransitioning {
     private func animationViewShow(_ context: UIViewControllerContextTransitioning) {
+        let containerView = context.containerView
+        guard let fromVC = context.viewController(forKey: ((self.transitionType == .show) ? .from : .to)),
+            let fromView = fromVC.view,
+            let toVC = context.viewController(forKey:  ((self.transitionType == .show) ? .to : .from)),
+            let toView = toVC.view else {
+            return
+        }
+//        // set mask
+//        let maskView = DZSideMenuMask.shared
+//        maskView.frame = fromVC.view.bounds;
+//        fromVC.view.addSubview(maskView)
+//
+//        let panelSize       = CGFloat(self.configuration.distance)
+//        let screenWidth     = UIScreen.main.bounds.width
+//        let screenHeight    = UIScreen.main.bounds.height
+//
+//        let startFrame      = CGRectMake(0, screenHeight, screenWidth, panelSize)
+//        let targetFrame     = CGRectMake(0, screenHeight-panelSize, screenWidth, panelSize)
+//
+//        toView.layer.shadowColor = UIColor.black.cgColor
+//        toView.layer.shadowOffset = CGSize(width: 4, height: 4)
+//        toView.layer.shadowRadius = 2
+//        toView.frame = CGRect(origin: CGPoint(x: x, y: 0), size: CGSize(width: panelSize, height: containerView.bounds.size.height))
+//        let (fromTransform, toTransform) = self.makeRects(in: UIScreen.main.bounds)
+//
+//        UIView.animateKeyframes(withDuration: self.transitionDuration(using: context), delay: 0.0, options: [.layoutSubviews], animations: {
+//            UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 1.0, animations: {
+//                fromView.transform = fromTransform
+//                toView.transform = toTransform
+//                maskView.alpha = CGFloat(self.configuration.maskAlpha)
+//            })
+//        }) { (finished) in
+//            if !context.transitionWasCancelled {
+//                maskView.isUserInteractionEnabled = true
+//                if toVC.isKind(of: UINavigationController.self) {
+//                    //maskView.toViewSubViews = fromVC.view.subviews;
+//                }
+//                context.completeTransition(!(context.transitionWasCancelled))
+//                containerView.addSubview(fromView)
+//            }
+//            else {
+//                context.completeTransition(!(context.transitionWasCancelled))
+//            }
+//        }
+        
+//        switch self.transitionType {
+//        case .show:
+//            toView.frame = startFrame
+//            containerView.addSubview(toView)
+//            break
+//        case .hide:
+//            toView.frame = targetFrame
+//            containerView.insertSubview(toView, belowSubview: fromView)
+//            break
+//        }
+        // add toVC
+//        containerView.addSubview(toVC.view)
+
         switch self.configuration.animationType {
         case .default:
             self.animationViewShowDefault(context)
         case .cover:
             self.animationViewShowCover(context)
         }
+    }
+    
+    private func makeRects(in containerRect: CGRect) -> (from: CGAffineTransform, to: CGAffineTransform) {
+//        switch self.configuration.position {
+//        case .left
+//        }
+        let panelSize       = CGFloat(self.configuration.distance)
+        //let screenWidth     = UIScreen.main.bounds.width
+        //let screenHeight    = UIScreen.main.bounds.height
+        
+        // default from left
+        //let fromRect    = CGRectMake(0, containerRect.width, containerRect.width, panelSize)
+        //let toRect      = CGRectMake(0, containerRect.width-panelSize, containerRect.width, panelSize)
+        
+        var fromTransform   = CGAffineTransform()
+        var toTransform     = CGAffineTransform()
+        switch self.configuration.position {
+        case .left:
+            fromTransform = CGAffineTransform(translationX: CGFloat(panelSize), y: 0.0)
+            toTransform = CGAffineTransform(translationX: (panelSize / 2), y: 0.0)
+            break
+        case .right:
+            fromTransform = CGAffineTransform(translationX: CGFloat(-1 * panelSize), y: 0.0)
+            toTransform = CGAffineTransform(translationX: (-1 * ((containerRect.width - panelSize/2.0) - containerRect.width + panelSize)), y: 0.0)
+            break
+        case .top:
+            fromTransform = CGAffineTransform(translationX: 0.0, y: CGFloat(-1 * panelSize))
+            toTransform = CGAffineTransform(translationX: 0.0, y: (panelSize / 2))
+            break
+        case .bottom:
+            fromTransform = CGAffineTransform(translationX: 0.0, y: CGFloat(panelSize))
+            toTransform = CGAffineTransform(translationX: 0.0, y:  (-1 * ((containerRect.height - panelSize/2.0) - containerRect.height + panelSize)))
+            break
+        }
+        
+        return (fromTransform, toTransform)
     }
     
     private func animationViewShowDefault(_ context: UIViewControllerContextTransitioning) {
@@ -64,7 +158,7 @@ extension DZSideMenuTransitioning {
         // get container view
         let containerView = context.containerView
         containerView.addSubview(toVC.view)
-        containerView.addSubview(fromVC.view)
+//        containerView.addSubview(fromVC.view)
         // set mask
         let maskView = DZSideMenuMask.shared
         maskView.frame = fromVC.view.bounds;

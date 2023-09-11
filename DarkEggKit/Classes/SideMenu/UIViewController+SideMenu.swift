@@ -26,7 +26,7 @@ extension UIViewController {
         // fix for iOS 13,
         // in iOS 13 default modalPresentationStyle is .automatic
         // must be .currentContext
-        vc.modalPresentationStyle = .currentContext
+        vc.modalPresentationStyle = .custom
         
         var _config = configuration
         if _config == nil {
@@ -48,7 +48,6 @@ extension UIViewController {
         //animator?.animationType = .default
         
         self.present(vc, animated: true, completion: nil)
-        
         //NotificationCenter.default.addObserver(self, selector: #selector(self.onMaskViewTapped(_:)), name: NSNotification.Name.DZSideMenu.Tap, object: nil)
     }
     

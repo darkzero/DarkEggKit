@@ -94,7 +94,7 @@ extension AnimationImage {
         }
         
         // progress handle
-        let onProgress = { (precent: Float)->Void in
+        let onProgress = { (precent: Float) -> Void in
             progress?(precent)
         }
         
